@@ -35,11 +35,11 @@
       "blocks": [
         [
           "p",
-          "The starting point was a ninth birthday and a gift: a grey two-wheel scooter. I wanted the present to arrive at the end of an adventure. The original idea, ‘The Island of Nine Treasures’, connected nine treasures with personal qualities and wishes: courage, curiosity, ingenuity, speed, agility, persistence, good friends, luck and a big dream. During production I reduced the route to four actual trials. The original title kept its link with the birthday."
+          "It began with a ninth birthday and a gift: a grey two-wheeled scooter. I wanted it to become the reward at the end of an adventure. In the original “Island of Nine Treasures”, the treasures represented qualities and wishes: courage, curiosity, ingenuity, speed, agility, persistence, loyal friends, luck and a big dream. Long generation times and a tight deadline led me to shorten the route to four trials. The title kept its connection to the ninth birthday."
         ],
         [
           "p",
-          "Treasure Island inspired the pirate atmosphere and the mock-serious character dossier. I made that dossier deliberately illustrated; the rest of the film uses a photorealistic character based on the reference photographs. For the dossier I supplied a voice recording, a ticking-clock sound and the sea ambience. When lettering appeared and disappeared in an early animation, holding part of the image helped keep it readable. The acceptance stamp had to visibly land on the page with a sound."
+          "Treasure Island inspired the pirate atmosphere and the mock-serious dossier. I made the dossier illustrated and used a photorealistic character based on photographic references for the other scenes. For the dossier, I supplied a voice recording and a ticking-clock sound, then added sea ambience. When the text started appearing and disappearing in an early animation, part of the image had to stay still. Codex helped me solve this: it quickly cropped the video to separate the text from the character animation. The result reminded me of photographs in Harry Potter, where the people in the pictures repeat their movements."
         ],
         [
           "figure",
@@ -128,7 +128,7 @@
         ],
         [
           "p",
-          "A bell starts a large hourglass and opens a distant gate. The character gets distracted by the falling sand before realizing that the clock is already running. He puts away the map and sprints. The edit alternates the run, the sand and the closing gate. He makes it through, catches his breath and earns the fourth achievement. There are no magical stamps to collect on the map: he simply needs to reach the marked treasure."
+          "A bell starts a large hourglass and opens the distant gate. The character watches the sand while time is already running out. Then he puts away the map and takes off. The edit alternates between the run, the falling sand and the closing passage. He makes it through, catches his breath and earns the fourth achievement. All that remains is to reach the marked treasure."
         ],
         [
           "figure",
@@ -160,11 +160,11 @@
         ],
         [
           "p",
-          "I removed extra locks, seals and a proposed scroll sending the character back to port. Instead, I wanted a Tomb Raider-style exit after finding the treasure: a sloping cable down to the beach. The scooter goes into a carrying case. The final setup uses a suspended trolley handle held with both hands rather than the ice-axe idea considered earlier."
+          "I decided to end the story in the spirit of the Tomb Raider series: after finding the treasure, the character escapes the cave along a sloping zipline leading straight to the beach. The scooter goes into a case. In the final staging, the character holds the handle of a suspended trolley with both hands, replacing the earlier idea of using ice axes."
         ],
         [
           "p",
-          "Day transitions into night. The narrator gives the new captain a mission to explore roads and remember the helmet, and the character descends to the bay. I removed a separate first-ride clip from the latest edit, so the descent leads into the final greeting. On the beach, beside the scooter and wearing the helmet, the character looks toward a sky filling with stars. A shooting star accompanies the closing birthday wish."
+          "Day turns to night. The narrator tells the new captain to discover routes and remember his helmet as the character descends toward the bay. On the beach, now with helmet and scooter, the character watches the stars light up. A shooting star accompanies the final birthday wish."
         ],
         [
           "figure",
@@ -248,11 +248,7 @@
         ],
         [
           "p",
-          "I had to unload idle ComfyUI models before heavy video jobs. Leaving speech or image models resident could starve the next stage of memory. Another trap was confusing portable ComfyUI’s Python with the MCP service environment. Installing missing packages one by one into the wrong interpreter did not fix the real launch problem; I eventually documented the correct startup procedure."
-        ],
-        [
-          "p",
-          "Speech was comparatively quick even on the CPU. Video took about a minute and a half per output second at 24 fps in my working setup. The baseline was 1344 × 768, a single pass and 16 steps. A ten-second experiment could therefore mean around fifteen minutes of waiting. A wrong keyframe was expensive, which made checking connected images before rendering video worth the effort. This is a practical estimate, not a total measured production time."
+          "Speech generated relatively quickly even on the CPU. In my working setup, video took about a minute and a half per second of output at 24 fps. The basic settings were 1344 × 768, one pass and 16 steps. A ten-second test could mean fifteen minutes of waiting. A bad keyframe was expensive, so reviewing connected images before starting the video paid off."
         ]
       ]
     },
@@ -301,11 +297,11 @@
         ],
         [
           "h3",
-          "Water surprised me; the source images did not always help"
+          "“Simulating” water with a local model"
         ],
         [
           "p",
-          "Trial three was the most demanding sequence. The water needed to visibly flow, stop against a wrongly aligned channel, reach the next obstruction after one turn and eventually drive the wheel. I was surprised by how convincing the water’s physical behaviour could look in the successful MiniMax shots. That is my visual impression, not a claim that the model runs a fluid simulation."
+          "Trial three was the most demanding sequence. The water needed to flow, stop against a wrongly aligned channel, reach the next obstruction after one turn and eventually drive the wheel. In the successful MiniMax shots, I was surprised by how plausible the movement looked."
         ],
         [
           "clip",
@@ -319,7 +315,7 @@
         ],
         [
           "p",
-          "I changed the puzzle pieces from square tiles to round discs so the turning action would read. Between states, the source, channels, wheel and door had to stay in the same place. The prompt also had to say what remained still: the wheel should not start just because water exists somewhere in the shot."
+          "The prompt also had to specify what stayed still: the wheel should not start turning just because there is water somewhere in the shot."
         ],
         [
           "h3",
@@ -327,7 +323,7 @@
         ],
         [
           "p",
-          "I liked how MiniMax handled the character collecting the gift. Hands, lid, clothing, scooter and helmet needed to interact within one scene. First I replaced an unconvincing keyframe in which the chest seemed to open by itself; the character now held its lid. Later he actually took the things with him. I still shortened the pause after packing, because a good action can be followed by a bad hold."
+          "I liked how MiniMax handled the character collecting the gift. Hands, lid, clothing, scooter and helmet needed to interact within one scene. First I replaced an unconvincing keyframe in which the chest seemed to open by itself; the character now held its lid. Later he actually took the things with him."
         ],
         [
           "figure",
@@ -355,7 +351,7 @@
         ],
         [
           "p",
-          "Trial four had a weaker detail: the hourglass. Its sand and mechanism were less convincing than the water in trial three. I liked the speed, camera angles and parrot much more than this prop. Keeping that flaw in the account matters: a model can impress with subtle hair movement or water in one scene and struggle with a seemingly simple object in the next."
+          "Trial four had a weaker detail: the hourglass. Its sand and mechanism were less convincing than the water in trial three. I liked the speed, camera angles and parrot much more than this prop."
         ],
         [
           "h3",
@@ -375,27 +371,13 @@
         ],
         [
           "p",
-          "The first attempt was interrupted while I refined that direction. Feeding the whole clip directly as a video guide then copied too much: the result brought over the anime look and another character. The successful version used only the character and corridor image references. I translated the full motion reference into written staging: surprised close-up with streaks above and below, rear tracking, a move to the side, blurred walls and golden sparks around the feet. FreeVideo generated the streaks and sparks inside the shot."
+          "An early attempt fed the whole clip directly as a video guide and copied too much: the result brought over the anime look and another character. The successful version used only image references of my character and the corridor. The full motion reference was translated into written staging: a surprised close-up with streaks above and below, rear tracking, a move to the side, blurred walls and golden sparks around the shoes. FreeVideo generated the streaks and sparks inside the shot."
         ],
         [
           "clip",
           "speed-dynamic",
           "Accepted speed insert v5 · 6.58 seconds, rear-to-side camera movement, generated streaks/sparks, retained music and the revised Russian cue.",
           "speed-dynamic"
-        ],
-        [
-          "p",
-          "There was a second round of work on sound. I first asked for Drama 3 “Стой!” (“Stop!”), then changed it to “Бежи!” (“Run!”). The picture worked, but FreeVideo added nonsense voices at the end. Muting its whole soundtrack also removed the music I wanted to keep. For the accepted v5, a CPU source-separation pass with Demucs removed the vocal stem and kept the instrumental/background mix; the Drama 3 cue was mixed back in. The accepted picture was reused without another video generation."
-        ],
-        [
-          "p",
-          "This insert replaced the earlier static sprint in the scene rather than adding a second run. The next wide view at the gate is a direct edit, not a claim of one uninterrupted camera move. I liked the energy of this shot much more than the hourglass detail in the same trial."
-        ],
-        [
-          "figure",
-          "zipline",
-          "03:45 · The final descent required consistent rope direction, height, grip and moving waves.",
-          "A night-time zipline descent toward the beach"
         ]
       ]
     },
@@ -410,7 +392,7 @@
         ],
         [
           "p",
-          "For the parrot I wanted a rolled ‘r’, a pause after the cannons and an excited finish. One attempt had a wonderfully inarticulate opening cry; another was cut off. I combined the first two seconds of the early cry with a later spoken version, removing its first half-second. The accident became a character moment: the chest opens, the parrot wakes with a squawk and launches into its rehearsed speech. The final voice insert lasted 11.16 seconds."
+          "For the parrot I wanted a rolled ‘r’, a pause after the cannons and an excited finish. One attempt had a wonderfully inarticulate opening cry; another was cut off. I combined the first two seconds of the early cry with a later spoken version, removing its first half-second. The accident became a character moment: the chest opens, the parrot wakes with a squawk and launches into its rehearsed speech."
         ],
         [
           "p",
@@ -474,7 +456,7 @@
       "blocks": [
         [
           "p",
-          "Using the same keyframe at the end of one clip and the start of the next kept compositions connected, but sometimes produced a visible freeze. I trimmed those duplicate held poses and moved the narration and achievement timing with the edit. I also moved the line about a failed attempt until after the wrong turn actually happened."
+          "Using the same keyframe at the end of one clip and the start of another preserved the composition but sometimes created a noticeable pause. I trimmed repeated poses and moved the lines and achievements with the edit. I also moved the narrator’s line about the failed attempt to a point on the timeline after the wrong turn had actually happened. To be honest, GPT Luna itself carried out all these editing changes."
         ],
         [
           "table",
@@ -512,7 +494,7 @@
         ],
         [
           "p",
-          "The v2 assembly lasted 253.208 seconds; v3 lasts 250.250 seconds. Those few seconds matter when a character seems to wait for the next clip to begin. I preserved the raw media, and the edit notes record SHA-256 checks of the sources. The final assembly is 1344 × 768 at 24 fps with 48 kHz stereo audio."
+          "Assembly v2 ran for 253.208 seconds; v3 for 250.250. A few seconds matter when the character seems to be waiting for the next clip to start."
         ],
         [
           "p",
@@ -525,10 +507,6 @@
       "nav": "The film",
       "title": "Four minutes of local filmmaking",
       "blocks": [
-        [
-          "p",
-          "Here is the v3 assembly discussed in this article. The film keeps its original Russian speech and on-screen lettering; the language selector translates the article."
-        ],
         [
           "film"
         ],
