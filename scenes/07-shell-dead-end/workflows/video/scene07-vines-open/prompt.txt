@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Continue exactly from the supplied mid-turn frame. The sign arrow remains pointing into the former dead end. The same vine curtains continue sliding apart left and right, widening the narrow gap until a clear passable trail is visible through the wall. Matvey remains beside the sign and watches the mechanism; keep one boy only, stable clothes, map, shell and camera geography. End exactly on the supplied fully opened passage frame. Make the physical movement of foliage clear and natural. No magic, no upward lifting, no text.
+
+overall_soundscape: Dense leaves and vines rustling apart, a soft wooden mechanism settling, jungle ambience. No speech.
+
+non_diegetic_music: N/A

@@ -1,0 +1,11 @@
+{
+  "id": "shell_glow_oh",
+  "workflow": "scene07-glow-oh.json",
+  "prompt_id": "f37c37c5-cc42-42d4-b266-daf04d7bee6f",
+  "seed": 11070111,
+  "model": "Qwen Image 2.1",
+  "steps": 28,
+  "status": "completed",
+  "input": "inputs/scene07-deadend-start.png",
+  "output": "../../../frames/drafts/f37c37c5_000.png"
+}

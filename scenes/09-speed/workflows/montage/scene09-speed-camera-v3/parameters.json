@@ -1,0 +1,9 @@
+{
+  "source": "../../../video/raw/scene09-speed-camera-v3.mp4",
+  "voice_start_seconds": 0.05,
+  "status": "pending_user_review",
+  "voice": "../../../audio/voice/drafts/scene09-stop-v1.flac",
+  "original_audio_volume": 0.65,
+  "output": "../../../video/drafts/scene09-speed-camera-v3-with-stop.mp4",
+  "streaks": "Generated natively by FreeVideo at beginning; no extra drawn overlay"
+}

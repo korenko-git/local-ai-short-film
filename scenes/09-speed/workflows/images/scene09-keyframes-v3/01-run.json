@@ -1,0 +1,13 @@
+{
+  "prompt_id": "86344acd-74b7-4bc8-9291-9cddabd166fb",
+  "status": "completed",
+  "seed": 11090121,
+  "model": "Qwen Image 2.1",
+  "workflow": "01-establish.json",
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "media": "frames/drafts/scene09-01-establish-v3.png",
+  "review": "awaiting_user"
+}

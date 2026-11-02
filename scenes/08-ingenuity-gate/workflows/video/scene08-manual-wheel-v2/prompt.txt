@@ -1,0 +1,9 @@
+integrated_multimodal_description: [Shot 1] One continuous overhead live-action shot. Begin exactly on the final frame of the approved approach clip: Matvey stands beside the wooden waterwheel with both hands lightly on its rim; the heavy stone double doors are closed. He braces and forcefully turns the wheel by hand. The wheel turns only under his direct effort. As the wheel turns, the two heavy carved stone door leaves slide apart horizontally from the center, moving outward into the side recesses and revealing the passage behind them. The opening is gradual, clearly visible, and synchronized with Matvey's effort on the wheel. The doors do not move independently or before the wheel turns. End exactly on the supplied frame 5: Matvey is still straining at the wheel and the doorway is open.
+
+WATER CONTINUITY IS STRICT: Water visibly ripples and splashes only from the source up to and inside the first circular turntable, where it hits the solid inner stone wall and stops. The stream never passes the first turntable. The second turntable, all downstream channels, the channel to the wheel, and the wheel remain completely dry. Do not add downstream water, wet shine, reflections, or splashes.
+
+Preserve the same boy, face, short brown hair, dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes. Preserve the fixed overhead camera, courtyard geometry, lighting, and puzzle layout. No extra people, no text, no cuts.
+
+overall_soundscape: Continuous moving water and small splashes only at the first turntable, birds, Matvey's footsteps and effort, a restrained wooden wheel creak while he turns it, and heavy stone door leaves rumbling apart in sync with the wheel. No dialogue.
+
+non_diegetic_music: N/A

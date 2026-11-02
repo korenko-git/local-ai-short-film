@@ -1,0 +1,90 @@
+{
+  "narrator_reference": "../../../../../shared/refs/audio/synthetic-voice-a.mp3",
+  "matvey_reference": "../../../../../shared/refs/audio/synthetic-voice-b.mp3",
+  "comfy_input_files": [
+    "synthetic-voice-a.mp3",
+    "synthetic-voice-b.mp3"
+  ],
+  "lines": [
+    {
+      "prompt": "[mature male Russian baritone narrator, solemn adventure announcement, clear diction, warm dry humor] На пути Матвея ждала каменная головоломка. [language: ru]",
+      "seed": 11080121,
+      "voice": "narrator",
+      "text": "На пути Матвея ждала каменная головоломка.",
+      "cue": "00:01-00:05",
+      "id": "01-opening"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, curious adventure tone, moderate pace] Он положил карту и стал разбираться в каналах. [language: ru]",
+      "seed": 11080122,
+      "voice": "narrator",
+      "text": "Он положил карту и стал разбираться в каналах.",
+      "cue": "00:07-00:11",
+      "id": "02-map"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, gently amused, restrained dry humor] Первая попытка оказалась ошибочной. [language: ru]",
+      "seed": 11080123,
+      "voice": "narrator",
+      "text": "Первая попытка оказалась ошибочной.",
+      "cue": "00:14-00:18",
+      "id": "03-wrong-turn"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, thoughtful adventure tone] Вода не доходила до колеса. [language: ru]",
+      "seed": 11080124,
+      "voice": "narrator",
+      "text": "Вода не доходила до колеса.",
+      "cue": "00:24-00:28",
+      "id": "04-water-stop"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, warm dry humor] Матвей попробовал открыть проход силой. [language: ru]",
+      "seed": 11080125,
+      "voice": "narrator",
+      "text": "Матвей попробовал открыть проход силой.",
+      "cue": "00:30-00:32",
+      "id": "05-manual-wheel"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, playful suspense, slight comic pause] Стоило отпустить колесо — дверь сразу закрылась. [language: ru]",
+      "seed": 11080126,
+      "voice": "narrator",
+      "text": "Стоило отпустить колесо — дверь сразу закрылась.",
+      "cue": "00:35-00:36",
+      "id": "06-door-closes"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, building confidence and wonder] Тогда он повернул первый диск. [pause] Вода дошла до второй преграды. [language: ru]",
+      "seed": 11080127,
+      "voice": "narrator",
+      "text": "Тогда он повернул первый диск. Вода дошла до второй преграды.",
+      "cue": "00:37-00:42",
+      "id": "07-first-disc"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, gently triumphant adventure tone] Ещё один поворот направил поток к колесу. [language: ru]",
+      "seed": 11080128,
+      "voice": "narrator",
+      "text": "Ещё один поворот направил поток к колесу.",
+      "cue": "00:43-00:47",
+      "id": "08-second-disc"
+    },
+    {
+      "prompt": "[mature male Russian baritone narrator, clear diction, warm concluding tone] Забрав карту, Матвей шагнул в открытый проход. [language: ru]",
+      "seed": 11080129,
+      "voice": "narrator",
+      "text": "Забрав карту, Матвей шагнул в открытый проход.",
+      "cue": "00:50-00:55",
+      "id": "09-exit"
+    },
+    {
+      "prompt": "[young boy, pleased and curious, short triumphant phrase, warm natural Russian pronunciation, clear articulation, not shouted] «Смекалка — есть!» [language: ru]",
+      "seed": 11080130,
+      "voice": "matvey",
+      "text": "Смекалка — есть!",
+      "cue": "badge",
+      "id": "10-achievement"
+    }
+  ]
+}

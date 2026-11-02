@@ -1,0 +1,14 @@
+{
+  "base_steps": 16,
+  "seconds": 6.5,
+  "two_pass": false,
+  "status": "rendered_pending_user_review",
+  "height": 768,
+  "conditioning_mode": "first_only",
+  "seed": 11090154,
+  "width": 1344,
+  "provider": "FreeVideo",
+  "actual_seconds": 6.583333,
+  "fps": 24,
+  "output": "../../../video/raw/scene09-pass-v1.mp4"
+}

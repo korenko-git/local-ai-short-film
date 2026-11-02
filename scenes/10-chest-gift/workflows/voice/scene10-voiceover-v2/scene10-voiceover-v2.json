@@ -1,0 +1,148 @@
+{
+  "2": {
+    "class_type": "Drama3CodecLoader",
+    "inputs": {
+      "codec_name": "drama3_codec.safetensors"
+    }
+  },
+  "1": {
+    "class_type": "Drama3Loader",
+    "inputs": {
+      "model_name": "drama3_w4a8experts_bf16.safetensors",
+      "experts": "in RAM",
+      "expert_cache_gb": 6.0,
+      "second_gpu": "none",
+      "split_layer": 0
+    }
+  },
+  "32": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "31",
+        0
+      ],
+      "filename_prefix": "scene10_parrot_scooter_v2"
+    }
+  },
+  "30": {
+    "class_type": "Drama3Generate",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "text": "[warm raspy male pirate captain, playful and comically overconfident, animated theatrical swagger, clear Russian diction, strongly rolled Russian R on р-р-руль and скор-р-рость, short comic pause after ни одной пушки, little amused pirate chuckle at the end] Два колеса! Один р-р-руль! [pause] Ни одной пушки! Зато какая скор-р-рость! [laughs] [language: ru]",
+      "voices.voice0": [
+        "6",
+        0
+      ],
+      "seed": 11101004,
+      "temperature": 1.0,
+      "top_p": 0.9,
+      "top_k": 0,
+      "max_frames": 600,
+      "split_long_text": false,
+      "speakers": "one take per line"
+    }
+  },
+  "22": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "21",
+        0
+      ],
+      "filename_prefix": "scene10_narrator_shipbuilding_v2"
+    }
+  },
+  "20": {
+    "class_type": "Drama3Generate",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "text": "[mature male Russian baritone narrator, solemn adventure announcement, warm dry humor, restrained theatrical grandeur; say the line once, no repetition; crisp clear pronunciation, measured pace] Перед нами [pause] новейшее достижение мирового кораблестроения. [language: ru]",
+      "voices.voice0": [
+        "5",
+        0
+      ],
+      "seed": 11101003,
+      "temperature": 1.0,
+      "top_p": 0.9,
+      "top_k": 0,
+      "max_frames": 600,
+      "split_long_text": false,
+      "speakers": "one take per line"
+    }
+  },
+  "5": {
+    "class_type": "Drama3EncodeVoice",
+    "inputs": {
+      "codec": [
+        "2",
+        0
+      ],
+      "audio": [
+        "3",
+        0
+      ],
+      "transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write."
+    }
+  },
+  "3": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "synthetic-voice-a.mp3"
+    }
+  },
+  "21": {
+    "class_type": "Drama3Decode",
+    "inputs": {
+      "codec": [
+        "2",
+        0
+      ],
+      "codes": [
+        "20",
+        0
+      ],
+      "shorten_long_pauses": true
+    }
+  },
+  "31": {
+    "class_type": "Drama3Decode",
+    "inputs": {
+      "codec": [
+        "2",
+        0
+      ],
+      "shorten_long_pauses": true,
+      "codes": [
+        "30",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "synthetic-pirate-ref.wav"
+    }
+  },
+  "6": {
+    "class_type": "Drama3EncodeVoice",
+    "inputs": {
+      "codec": [
+        "2",
+        0
+      ],
+      "audio": [
+        "4",
+        0
+      ],
+      "transcript": "Ah! In 200 meters, turn starboard onto Maple Street."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "prepared",
+  "command": "See separate FFmpeg commands in command.txt",
+  "outputs": [
+    "video/drafts/voiced-review-v1/scene10-01-arrival-vo-v1.mp4",
+    "video/drafts/voiced-review-v1/scene10-02-open-chest-vo-v1.mp4",
+    "video/drafts/voiced-review-v1/scene10-03-parrot-vo-v1.mp4",
+    "work/scene10-voiced-preview-v1.mp4"
+  ]
+}

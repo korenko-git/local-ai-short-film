@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene07-deadend-start.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a direct visual bridge from the previous island scene. The same single 9-year-old Matvey, exact glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes, has just finished crossing the suspension bridge and takes his first steps onto the island footpath toward dense tropical jungle. The rope bridge remains clearly visible behind him, the forest path continues ahead, and he holds his rolled map. Medium-wide cinematic photoreal frame, same face and proportions. Preserve believable island geography. No title card, no text or graphics, no duplicate child, no extra people, no modern clothes, no sign or shell yet.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene07_arrival_v1"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11070110,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene06-last-frame.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "tool": "ffmpeg",
+  "command": "ffmpeg -i scene10-parrot-scooter-v1.flac -i scene10-parrot-scooter-v3.flac -filter_complex [0:a]atrim=start=0:duration=2,asetpts=PTS-STARTPTS[v1];[1:a]atrim=start=0.5,asetpts=PTS-STARTPTS[v3];[v1][v3]concat=n=2:v=0:a=1[out] -map [out] -c:a flac -compression_level 8 scene10-parrot-scooter-v4.flac",
+  "status": "approved_by_user",
+  "sources_untouched": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "cancelled",
+  "model": "Qwen Image 2.1",
+  "prompt_id": "8cc8857d-5f55-45a3-bf86-9985b1e34d0e",
+  "seed": 11080103,
+  "host": "127.0.0.1",
+  "port": 8188,
+  "workflow": "scene08-puzzle-solved.json",
+  "output_dir": "../../../../frames/drafts/",
+  "previous_attempt": {"prompt_id": "a10b2e30-feb4-4091-87ce-2cde85ba682b", "output": "../../../../frames/drafts/a10b2e30_000.png", "note": "Первый черновик: буквы A/Б с чертежа появились в изображении."}
+}

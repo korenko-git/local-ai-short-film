@@ -1,0 +1,18 @@
+{
+  "provider": "Drama 3",
+  "status": "rendered_pending_audio_review",
+  "text": "Вот ты где!",
+  "seed": 11101006,
+  "voice_reference": "inputs/synthetic-voice-b.mp3",
+  "reference_transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write.",
+  "model": "drama3_w4a8experts_bf16.safetensors",
+  "codec": "drama3_codec.safetensors",
+  "temperature": 1.0,
+  "top_p": 0.9,
+  "top_k": 0,
+  "max_frames": 600,
+  "split_long_text": false,
+  "shorten_long_pauses": true,
+  "output": "../../audio/voice/scene10-matvey-found-chest-v1.flac",
+  "prompt_id": "37e1b1cc-1c1a-4925-be71-0dd341d0de58"
+}

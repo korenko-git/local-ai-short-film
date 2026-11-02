@@ -1,0 +1,14 @@
+{
+  "provider": "GPT Image (built-in image generation)",
+  "status": "draft_pending_user_review",
+  "seed": null,
+  "seed_note": "The built-in image tool did not expose a seed.",
+  "width": 1660,
+  "height": 960,
+  "transparent_background": false,
+  "inputs": [
+    "../../../workflows/video/scene08-approach-wheel-v2/inputs/scene08-reset-end.png",
+    "../../../frames/approved/scene08-wheel-touch-doors-closed-v10.png"
+  ],
+  "output": "../../../frames/drafts/scene08-wheel-touch-final-gpt-image-v1.png"
+}

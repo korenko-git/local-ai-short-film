@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene11-night-beach-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic cinematic family-adventure night shot continuing the exact same moonlit island beach from image 2. Image 1 is the identity reference for the same nine-year-old boy Matvey: preserve his face, short dark hair, glasses, body proportions, cream shirt, dark vest and red necktie. Exactly one boy. The same gray bicycle helmet stays properly worn. The same single compact gray two-wheeled kick scooter from image 2 is beside him, fully readable with both wheels, gray deck and handlebar; no motor, no seat, no second scooter. Matvey has just slowed to a gentle stop on the firm sandy path near the shoreline; one foot rests on the ground, one hand lightly holds the handlebar, and he turns his face upward toward the night sky with a quiet, delighted expression. Keep the same beach layout, cliff silhouette, dark sea and camera geography as image 2; a few faint stars are beginning to appear. Medium-wide cinematic shot, soft moonlight makes his face and scooter readable, natural proportions, no text.",
+      "negative_prompt": "second boy, duplicate person, extra people, changed face, changed clothes, missing glasses, helmet missing, extra helmet, second scooter, motor scooter, scooter with seat, bicycle, skateboard, altered beach geography, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs, looking at camera",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene12_01_looks_at_stars"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 12120101,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene11-night-beach-continuity.png"
+    }
+  }
+}

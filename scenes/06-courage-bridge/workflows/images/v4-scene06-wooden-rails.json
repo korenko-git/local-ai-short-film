@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit image1 into a corrected photorealistic live-action family adventure movie still. PRESERVE the same composition, deep rocky jungle gorge with distant stream far below, morning lighting, far rocky ledge, and the exact same real nine-year-old Matvey face, glasses, short light brown hair, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers and brown shoes. Images2 and3 remain his exact costume and real facial references. REPLACE THE ENTIRE ROPE SUSPENSION BRIDGE AND ITS OLD ANCHOR POSTS with a SIMPLE STRAIGHT TIMBER BEAM FOOTBRIDGE. There are ABSOLUTELY NO ROPES, CABLES, STRINGS, LASHINGS OR HANGING LINES ANYWHERE. The bridge has a straight horizontal wooden plank deck resting on TWO THICK SOLID LONGITUDINAL TIMBER BEAMS, one directly underneath each deck edge, spanning between the solid near rock ledge and solid far rock ledge. Both ends of these beams visibly REST ON STONE-SUPPORTED WOODEN SILLS, not floating. The deck is a straight rigid timber beam bridge, NOT sagging and NOT suspension. On EACH SIDE of the walkway is ONE SIMPLE WOODEN GUARDRAIL: evenly spaced vertical wooden balusters bolted directly to the side beam, connected by one continuous straight top handrail. Clear ordinary carpentry, visible mortise joints and a few iron bolt heads; handrails end flush at their upright end posts, no stray beam ends. The near entrance opening is completely clear, no rail or brace crosses the walking path. Remove the giant diagonal braced wooden frame at the far left foreground and all the old rope posts; replace them with ordinary modest square railing posts integrated into the two deck side beams. No diagonal timber crosses Matveys body or legs. The bridge still recedes diagonally from near LEFT FOREGROUND to far RIGHT MIDGROUND across the deep gorge. Keep Matvey standing on firm near rock BEFORE the bridge entry, full body large in the left foreground, BOTH shoes on rock. Adjust ONLY HIS HAND POSE so he holds the rolled parchment map naturally with BOTH HANDS at his waist, not gripping any rope. His exact face and clothes stay unchanged. Show believable plank-to-beam attachment, secure landings, clear depth below. Real natural wood, no rope substitute, no metal suspension structure, no text, no CGI, no cartoon, no illustration.",
+      "negative_prompt": "rope, ropes, cable, cables, string, suspension bridge, hanging lines, sagging deck, floating beam, floating post, disconnected rail, railing across entrance, railing crossing person, diagonal beam across person, tangled structure, extra limbs, distorted face, adult, cartoon, CGI, text, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v4_06_wooden_rails"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11066234,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene-06-courage-new-frame.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

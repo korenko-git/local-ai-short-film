@@ -1,0 +1,8 @@
+{
+  "provider": "Qwen Image 2.1",
+  "status": "rejected_user_feedback_disconnected_from_existing_frames",
+  "workflow": "scene10-map-discovery-v1.json",
+  "prompt_id": "f332952d-ba1b-4945-ba53-08689314ad7a",
+  "seed": 11100109,
+  "output": "../../../frames/drafts/rejected/scene10-05-map-away-discovery-v1.png"
+}

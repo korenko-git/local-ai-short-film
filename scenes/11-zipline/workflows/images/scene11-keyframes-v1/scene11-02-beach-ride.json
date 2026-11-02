@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a photorealistic cinematic night scene on the same island beach geography as image 2, now viewed from a firm sandy path just above the shoreline. Use image 1 as the exact identity reference for the same nine-year-old boy Matvey: preserve his face, short dark hair, glasses, body proportions and exact cream shirt, dark vest and red necktie; exactly one boy, no other people. He is wearing a properly fitted gray bicycle helmet and riding the same single compact gray two-wheeled kick scooter from image 2, with the front and rear wheels, gray deck and simple handlebar clearly visible; no motor, no seat, no extra scooter. Capture the clear first push-off moment: one foot planted on the scooter deck, the other foot pushing against the firm path, natural balanced posture and hands holding the handlebar. Show the moonlit beach and dark calm sea in the background, a faint warm glow from the cliff launch area far behind, cinematic family adventure realism, enough soft moonlight to read Matvey's face, helmet and both scooter wheels, medium-wide side view, no text.",
+      "negative_prompt": "second boy, duplicate person, extra people, changed face, changed clothes, missing glasses, no helmet, extra helmet, second scooter, scooter with motor, scooter with seat, bicycle, floating wheels, misshapen scooter, skateboard, running, foot not touching ground during push, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_02_beach_first_ride"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110102,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  }
+}

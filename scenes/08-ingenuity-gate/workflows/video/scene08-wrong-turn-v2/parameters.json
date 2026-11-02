@@ -1,0 +1,16 @@
+{
+  "provider": "FreeVideo",
+  "quality_profile": "max",
+  "task": "fl2va",
+  "seed": 11080104,
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 20,
+  "step_cache": "easycache-av",
+  "two_pass": false,
+  "conditioning_mode": "first_last_only",
+  "character_reference": null,
+  "status": "rendered_pending_review",
+  "output": "../../../video/raw/scene08-wrong-turn-v2.mp4"
+}

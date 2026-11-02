@@ -1,0 +1,13 @@
+{
+  "base_steps": 16,
+  "map_seals": false,
+  "seed": 11090224,
+  "width": 1344,
+  "motion_inspiration": "Full user reference reviewed; not directly conditioned because guide copied anime",
+  "seconds": 6.5,
+  "height": 768,
+  "provider": "FreeVideo",
+  "two_pass": false,
+  "conditioning_mode": "image_references_only",
+  "status": "rendered_pending_user_review"
+}

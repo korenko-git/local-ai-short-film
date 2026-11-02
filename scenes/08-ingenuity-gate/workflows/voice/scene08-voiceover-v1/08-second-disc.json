@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "line": "08-second-disc",
+  "cue": "00:43-00:47",
+  "text": "Ещё один поворот направил поток к колесу.",
+  "prompt": "[mature male Russian baritone narrator, clear diction, gently triumphant adventure tone] Ещё один поворот направил поток к колесу. [language: ru]",
+  "seed": 11080128,
+  "voice": "narrator",
+  "reference": "../../../../../shared/refs/audio/synthetic-voice-a.mp3",
+  "parameters": {
+    "top_k": 0,
+    "speakers": "one take per line",
+    "max_frames": 600,
+    "temperature": 1.0,
+    "top_p": 0.9
+  },
+  "output": "../../audio/voice/drafts/scene08-vo-08-second-disc.flac",
+  "status": "rendered_pending_user_review"
+}

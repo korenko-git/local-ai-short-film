@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-jungle-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create the first cinematic 16:9 continuity frame after the jungle gate challenge. Exactly one Matvey, matching image 2: same nine-year-old boy, short brown hair, black rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes. He has just followed the map from image 3 and arrived at a small ancient stone clearing in the same tropical island jungle and warm late-afternoon daylight as image 1. Wide establishing shot: Matvey stands beside one closed, waist-high treasure chest in the clearing, looking down at it with anticipation. Canonical chest: dark weathered teak, rounded domed lid, exactly two narrow brass bands across the lid and front, one centered round brass lock, no extra locks or decorations. A colorful realistic green-and-blue island parrot with a small red forehead patch perches calmly on a nearby low branch, clearly visible but secondary. In the distant background, through foliage on the right, a steep rocky drop and a single taut zipline cable descend toward a thin glimpse of beach and sea, establishing that the chest clearing is above the beach. Keep the geography natural and readable. Photorealistic family adventure film, natural proportions, cinematic wide shot. No text.",
+      "negative_prompt": "extra people, duplicate boy, wrong face, no glasses, changed clothes, pirate costume, open chest, multiple chests, extra locks, multiple brass bands, modern objects, scooter visible, extra parrots, cartoon, illustration, CGI, text, lettering, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene10_01_arrival_v1"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11100101,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-map-stow-continuity.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  }
+}

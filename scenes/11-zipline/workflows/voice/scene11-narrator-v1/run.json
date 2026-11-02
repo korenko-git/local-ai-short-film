@@ -1,0 +1,7 @@
+{
+  "output": "../../audio/voice/scene11-narrator-mission-v1.flac",
+  "status": "completed_pending_user_review",
+  "seed": 11110111,
+  "prompt_id": "67def388-5d83-4c51-a0b3-415b9ea5c2b3",
+  "workflow": "scene11-narrator-v1.json"
+}

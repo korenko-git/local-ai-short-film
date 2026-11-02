@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a photorealistic wide night establishing frame. Exact identity and costume of nine-year-old Matvey from reference image 1. On a tropical cliff above a crescent beach, show the launch area and the beach landing clearly at once. Camera is behind Matvey at the edge of the cliff, aimed steeply DOWN the slope at the beach landing, so the zipline visibly descends toward the sand. There is EXACTLY ONE zipline cable in the entire image: one taut, uninterrupted line, with no parallel line, no second cable, no guy wires and no extra rope. Its upper end is attached directly to a single large steel anchor ring bolted into solid cliff rock beside Matvey. It runs in a straight diagonal downhill path, away from the cliff and toward the beach landing. Its lower end is visibly fastened with one metal shackle to one thick upright timber landing post driven deep into the sand, clearly visible against pale sand at the lower center of the image. The cable physically touches and terminates at both supports; never floats, never ends in midair, never crosses the coastline sideways, never points over open water. Matvey stands beside the upper rock anchor, wearing one gray bicycle helmet, cream sailor shirt, dark vest, red necktie and tan trousers, holding one small ice axe in each hand; one dark-gray scooter case strapped securely to his back. Lantern lights the launch; moonlight reveals the single cable and both endpoints. Clean uncluttered composition, simple believable engineering, family adventure film, no text.",
+      "negative_prompt": "two cables, parallel cables, multiple ropes, guy wires, extra support lines, rope ladder, cable running sideways along coast, cable parallel to horizon, cable over open sea, cable missing beach, missing landing post, missing upper anchor, floating cable, rope ending in midair, pulley trolley, extra anchor posts, second boy, extra people, changed face, changed costume, extra bag, extra scooter, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_01_night_zipline_cliff_v4"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110127,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  }
+}

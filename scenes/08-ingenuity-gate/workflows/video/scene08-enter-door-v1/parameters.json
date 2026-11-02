@@ -1,0 +1,20 @@
+{
+  "provider": "FreeVideo",
+  "quality_profile": "automatic VDN engine policy",
+  "task": "fl2va",
+  "seed": 11080113,
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "base_steps": 16,
+  "resolved_steps": 16,
+  "step_cache": "easycache-av",
+  "two_pass": false,
+  "conditioning_mode": "first_last_only",
+  "character_reference": null,
+  "status": "approved_by_user",
+  "output": "../../../output/clips/scene08-enter-door-v1.mp4",
+  "actual_frames": 158,
+  "fps": 24
+}
+

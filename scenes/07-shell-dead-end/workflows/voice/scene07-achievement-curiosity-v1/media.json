@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "inputs": [
+    "inputs/synthetic-voice-b.mp3"
+  ],
+  "output": "../../audio/voice/scene07-achievement-curiosity-v1.flac",
+  "sentence": "Любознательность — есть!",
+  "reference_voice": "young character voice, existing synthetic-voice-b"
+}

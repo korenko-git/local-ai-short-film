@@ -1,0 +1,11 @@
+{
+  "id": "walk_away_open_path",
+  "workflow": "scene07-walk-away-open.json",
+  "prompt_id": "68d38f35-b2bc-49dd-93f3-0395e2aa5917",
+  "seed": 11070113,
+  "model": "Qwen Image 2.1",
+  "steps": 28,
+  "status": "superseded_map_not_visible",
+  "input": "inputs/scene07-arrow-open-v1.png",
+  "output": "../../../frames/drafts/68d38f35_000.png"
+}

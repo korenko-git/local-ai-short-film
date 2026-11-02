@@ -1,0 +1,120 @@
+{
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "negative_prompt": "cartoon, illustration, CGI, giant ship, duplicate ship, extra masts, broken rigging, sails missing, modern ship, text, lettering, watermark",
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Photorealistic live-action family pirate adventure film, cinematic natural sunrise, 16:9. Image 1 only sets the wide aspect ratio; replace it entirely. Image 2 is the exact island geography reference: retain the same lush steep central rocky mountain, tropical forest, bright curved beach and small wooden harbor on the right. New lower aerial camera placement above the sea, looking diagonally past ONE wooden two-masted sailing brig towards that island. The ship occupies the lower LEFT quarter of the frame, large enough to see its wooden railings and deck, viewed from behind and slightly to port. Its bow points diagonally toward the harbor on the RIGHT. Exactly two masts, several taut cream square sails catching a steady breeze, rigging, dark wooden hull, no skull motif, no modern machinery, no cannons. A foamy narrow wake clearly trails behind its stern toward the lower left corner, establishing forward travel to the harbor. Clear water, small rolling sea waves, early golden light from left. Entire ship and all sails fit inside frame, island fills upper two-thirds. Beautiful coherent real materials and sensible ship construction. No people close enough to identify, no writing, no logos, no cartoon, no collage.",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "resolution": 768
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "Matvey_v3_01_ship_island",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "5",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11015233,
+      "sampler_name": "euler",
+      "negative": [
+        "5",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "5",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": "Matvey_story_01_island_00001_.png"
+    },
+    "class_type": "LoadImage"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "provider": "Drama 3",
+  "status": "completed_then_superseded_by_v4_edit",
+  "workflow": "scene10-parrot-scooter-v3.json",
+  "prompt_id": "7bc4dc38-7fe3-4502-b695-b9e24a64ac92",
+  "outputs": [
+    "audio/voice/scene10-parrot-scooter-v3.flac"
+  ],
+  "seed": 11101005
+}

@@ -1,0 +1,20 @@
+{
+  "provider": "Qwen Image 2.1",
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-approved-gift-reveal.png",
+    "inputs/scene11-night-cliff-reference.png"
+  ],
+  "prompt": "scene11-00-sunset-departure-prompt.txt",
+  "steps": 28,
+  "cfg": 1,
+  "scheduler": "simple",
+  "resolution": 1024,
+  "negative_prompt": "duplicate scooter, duplicate helmet, second boy, duplicate person, extra people, changed face or clothes, closed chest, different chest, missing parrot, extra parrot, extra bag, second case, backpack, helmet on head, dark night, stars, lit lantern, daylight noon, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+  "prompt_id": "96843c91-6543-4e0a-ad5f-40b99e178673",
+  "status": "superseded_internal_quality_issue",
+  "output": "../../../frames/drafts/rejected/scene11-00-sunset-departure-v1-duplicate-props.png",
+  "reason": "Rejected internally: scooter remained in the chest while in the case, and helmet was duplicated.",
+  "sampler": "euler",
+  "seed": 11110105
+}

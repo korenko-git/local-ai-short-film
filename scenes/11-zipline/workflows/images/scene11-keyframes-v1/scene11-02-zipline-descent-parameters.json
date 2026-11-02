@@ -1,0 +1,18 @@
+{
+  "status": "rejected_no_beach_anchor",
+  "prompt_id": "7d5162c3-9038-484b-a18b-6794d9092233",
+  "seed": 11110104,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-gift-reveal-continuity.png"
+  ],
+  "scheduler": "simple",
+  "prompt": "scene11-02-zipline-descent-prompt.txt",
+  "resolution": 1024,
+  "output": "../../../frames/drafts/rejected/scene11-02-zipline-descent-v1-rejected-no-beach-anchor.png",
+  "negative_prompt": "second boy, duplicate person, extra people, changed face, changed clothes, missing helmet, extra helmet, extra scooter, scooter with motor, scooter with seat, loose unsecured bag, multiple bags, pulley trolley, extra ropes, hands not gripping rope, falling, dangling upside down, cliff jump, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs"
+}

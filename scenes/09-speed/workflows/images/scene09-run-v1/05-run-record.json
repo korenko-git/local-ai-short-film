@@ -1,0 +1,13 @@
+{
+  "prompt_id": "8de6149b-67f3-495f-bd4f-8b6a3dc74d9d",
+  "status": "completed",
+  "seed": 11090141,
+  "model": "Qwen Image 2.1",
+  "workflow": "05-run.json",
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "media": "frames/approved/scene09-05-run-v1.png",
+  "review": "approved_by_user"
+}

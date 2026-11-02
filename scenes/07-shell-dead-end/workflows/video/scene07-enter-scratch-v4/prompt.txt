@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Start exactly on the supplied empty dead-end frame with the ordinary spiral shell attached to the sign, completely unlit. The same single Matvey enters from the right edge, walks two small steps toward the sign, stops beside it and scratches the side of his head once with a puzzled expression. End exactly on the supplied final frame: Matvey scratching his head beside the same sign, holding his rolled map. The shell remains physically present, matte and unlit for the entire shot. Absolutely no glow, blinking, sparkle, starburst, flare or emitted light on the shell, sign or foliage. Preserve the blocked path, camera angle, same sign and daylight. Match Matvey's face, glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes. Do not turn the sign or open the vines yet. No duplicate boy, extra people, extra props, text or overlays.
+
+overall_soundscape: Quiet ominous jungle ambience, soft footsteps and leaves only. No chime, magical sound or speech.
+
+non_diegetic_music: N/A

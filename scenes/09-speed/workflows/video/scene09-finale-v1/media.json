@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "references": [
+    {
+      "path": "inputs/matvey-identity.png",
+      "kind": "image"
+    },
+    {
+      "path": "inputs/gate-architecture.png",
+      "kind": "image"
+    },
+    {
+      "path": "inputs/map-at-right-hip.png",
+      "kind": "image"
+    }
+  ]
+}

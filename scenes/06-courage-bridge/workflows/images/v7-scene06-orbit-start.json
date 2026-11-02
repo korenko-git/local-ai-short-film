@@ -1,0 +1,140 @@
+{
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v7_06_midspan_orbit_start"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene06-entry-last-frame.png"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a NEW photorealistic live-action family adventure movie still, 16:9, cinematic soft misty jungle light, detailed natural textures. IMAGE1 is a blank wide canvas only defining aspect ratio; replace it entirely. IMAGE2 defines the EXACT same long narrow U-shaped rope suspension bridge with thin spaced wooden cross-slats, four coherent side support/hand ropes and regular vertical hangers, deep green jungle gorge, and the boy body/costume/hand pose. IMAGE3 defines costume, IMAGE4 is exact real nine-year-old Matvey facial identity, short light brown hair and dark rectangular glasses. NEW SHOT AT THE MIDDLE OF THIS SAME SAGGING BRIDGE, not near an entrance: Matvey is walking on the lowest central section, both shores far away outside the immediate view. He wears the same cream sailor shirt, navy waistcoat, red scarf, tan trousers and brown shoes. The aerial camera is about four meters BEHIND and slightly to his LEFT, about one meter above the wooden deck, looking forward along his walking direction toward the FAR bank. Show his FULL BODY from a REAR THREE-QUARTER angle, with a little left facial profile and glasses visible, no other people. His LEFT hand grips the LEFT-side handrope, which is on the LEFT of the image from this rear camera position; RIGHT hand holds the same rolled parchment map at his right waist. Preserve exact child height and build. One foot advances onto an intact cross-slat, knees slightly bent with focused cautious posture, bridge gently tilted under his weight. The deck curves away from lower foreground to the upper RIGHT distant jungle landing, dense jungle canopies fall far below both sides. The camera is close enough that the boy occupies about sixty percent of image height, with both boots on real wooden slats, visible gaps between boards and thin dark river and mossy rocks VERY FAR BELOW through the gaps and beside the bridge. The great height must be unmistakable, layered mist and forested cliff walls give scale. Keep the SAME ordinary cable/hanger layout as reference, no rigid wood railings, no extra cables crossing the boy, no disconnected rope ends, no landing platform nearby, no new bridge, no damaged boards yet, no text, no CGI, no cartoon.",
+      "negative_prompt": "rigid timber bridge, solid wooden railings, thick wooden beams, park footbridge, solid continuous walkway, concrete deck, shallow ditch, tiny low bridge, giant anchoring A-frame, tangled ropes, disconnected cables, extra horizontal ropes across person, floating deck, duplicate boy, yellow jacket, adult, hoodie, extra limbs, distorted face, text, watermark, illustration, CGI",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ],
+      "images.image_4": [
+        "12",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11070233,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Use case: cinematic storyboard keyframe
+Asset type: final reference image for Scene 08 video clip
+Input image: Image 1 is the exact overhead solved courtyard and doorway state from the preceding clip.
+Primary request: Matvey has picked up the single rolled parchment map from the dry paving and is now walking through the already-open stone doorway at the upper right. Show him from behind, clearly crossing the threshold into the warmly lit passage, one foot inside and one leaving the courtyard, holding the rolled map in one hand.
+Scene/backdrop: Same overhead courtyard, solved circular channels, foliage, lighting and open doorway.
+Subject: Same boy, dark rectangular glasses, short brown hair, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes.
+Style/medium: Photorealistic live-action family adventure film.
+Composition/framing: Wide overhead 16:9, stable camera.
+Constraints: Keep water flowing through both discs and onto the wooden waterwheel; wheel is turning. Keep the stone doorway open. The map is no longer on the ground; only one Matvey.
+Avoid: extra people, text, collage, watermark.

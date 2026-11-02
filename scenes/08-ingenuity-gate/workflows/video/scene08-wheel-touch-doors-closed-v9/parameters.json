@@ -1,0 +1,20 @@
+{
+  "provider": "FFmpeg",
+  "operation": "extend the closed-door crop 25 pixels left and overlay it on the final wheel-touch frame",
+  "door_source": "../../../work/scene08-approach-wheel-v1-review/frame-0.png",
+  "base_frame": "../../../work/scene08-approach-wheel-v1-review/frame-6-4.png",
+  "crop": {
+    "x": 1145,
+    "y": 0,
+    "width": 199,
+    "height": 280
+  },
+  "overlay_position": {
+    "x": 1145,
+    "y": 0
+  },
+  "output": "../../../frames/drafts/scene08-wheel-touch-doors-closed-v9.png",
+  "width": 1344,
+  "height": 768,
+  "status": "superseded_by_v10_additional_25px_left"
+}

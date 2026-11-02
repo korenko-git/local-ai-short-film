@@ -1,0 +1,21 @@
+{
+  "method": "torchaudio HDEMUCS_HIGH_MUSDB_PLUS",
+  "device": "cpu",
+  "threads": 2,
+  "sample_rate": 44100,
+  "sources": [
+    "drums",
+    "bass",
+    "other",
+    "vocals"
+  ],
+  "removed": "vocals",
+  "kept": [
+    "drums",
+    "bass",
+    "other"
+  ],
+  "source": "work/speed-source.wav",
+  "output": "audio/sfx/scene09-speed-instrumental-v1.wav",
+  "status": "separated_pending_review"
+}

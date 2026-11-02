@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "16668c40-ab4f-4064-8619-dc2b78106c2f",
+  "seed": 11110131,
+  "workflow": "scene11-01-night-cliff-v5.json",
+  "prompt": "scene11-01-night-cliff-v5-prompt.txt",
+  "parameters": "scene11-01-night-cliff-v5-parameters.json",
+  "output": "../../../frames/approved/scene11-01-night-cliff-v5.png",
+  "status": "approved_by_user",
+  "validation": "valid",
+  "notes": "Preserves launch composition while making the cliff much higher and the beach a small distant strip below."
+}

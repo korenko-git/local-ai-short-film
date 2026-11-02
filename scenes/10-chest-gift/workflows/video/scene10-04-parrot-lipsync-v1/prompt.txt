@@ -1,0 +1,11 @@
+subject_definitions: (S1) The single green-and-blue parrot from <Picture 1>, with its red forehead, pale eye rings, green body and dark curved beak.
+
+summary: A photorealistic cinematic close-up of the same parrot delivering one complete Russian pirate line. Use <Audio 1> as the exact timing reference for its cry and beak articulation.
+
+retention_analysis: Keep the parrot as the only speaking subject and the clear focus in every frame. Preserve its recognizable colors, head markings, proportions, species and the late-afternoon island setting. The parrot stays perched on the same branch. Any chest, boy or bay visible in <Picture 1> remains only a soft, stable background element; do not animate the chest lid or move the boy. No other bird or person enters.
+
+detailed_description: [Shot 1] Live-action photorealistic adventure film, intimate close-up of the parrot's head and upper body, matching the parrot in <Picture 1>, with softly blurred foliage and bay behind it. At 00:00, the parrot jolts at the beginning of <Audio 1>, gives the same brief startled cry, ruffles its feathers, then steadies on the branch. Starting at 00:02.000, as the Russian sentence starts in <Audio 1>, the parrot clearly opens and closes its beak in visible, natural syllable-by-syllable articulation, closely following the supplied voice, its consonants, pauses and emphasis through the last word. The parrot (S1) says: <d>[Russian] Два колеса, один руль, ни одной пушки. Зато какая скорость!</d> Keep the parrot's eye line lively and comic. Use tiny natural head bobs and one small feather ruffle, not large body movement. Keep the framing close and steady so the beak stays large, unobstructed and easy to read throughout the full 11.54 seconds. Do not cut away. No Matvey in the foreground, no lid movement, no flying away, no subtitles or text.
+
+overall_soundscape: Quiet jungle ambience and subtle branch movement. <Audio 1> is the only voice reference. Do not invent speech, singing or music.
+
+non_diegetic_music: N/A.

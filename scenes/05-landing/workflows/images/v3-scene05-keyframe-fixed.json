@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit image1 as a photorealistic live-action adventure movie still. Preserve this exact tropical beach, the SAME single little beached wooden rowboat, jungle path on right, mountain, sea, and the SAME nine-year-old boy facial identity, glasses, cream sailor shirt, navy waistcoat, red scarf, tan trousers and brown shoes. Images2 and3 define exact costume and real face. CHANGE THE BOY POSITION: remove him entirely from the sand in front of the boat and place him SEATED INSIDE the FRONT RIGHT END of the rowboat, on its low bow bench facing the RIGHT shore. His bottom is on the inside bow bench, knees bent, BOTH brown boots and lower legs are INSIDE THE BOAT WELL, entirely BEHIND its right gunwale. NO foot touches sand. His torso rises above the rim, he holds rolled map in his LEFT hand close to his chest and his RIGHT palm rests on the right gunwale to push himself up. He is about to stand up and step out of the boat onto dry sand to the RIGHT; this is BEFORE disembarking. Clear side-front view of the boy seated inside the boat, unobstructed face, credible relative size and anatomy. Lower the boat right side to just thirty centimeters above the boat floor so a child can easily step over it. A little empty dry sand immediately to the right of the bow, sandy path continuing into palm trees. Ground-level medium-wide shot including full boat, boy and surrounding beach. The distant anchored sailing ship at far left is small and has EXACTLY TWO masts, REMOVE the third mast. Warm golden morning light, consistent sunrise color with previous ship scene. No other foreground person, no second boy, no one standing beside the boat, no duplicate limbs, no text or writing, no CGI, no cartoon.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_05_landing_fixed"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11055234,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "v3-scene05-landing-initial.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

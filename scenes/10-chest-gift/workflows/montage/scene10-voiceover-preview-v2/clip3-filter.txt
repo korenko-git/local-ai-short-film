@@ -1,0 +1,1 @@
+[0:a]aresample=48000,atrim=duration=6.583333,asetpts=PTS-STARTPTS,volume=0.50[a]

@@ -1,0 +1,35 @@
+{
+  "provider": "Drama 3",
+  "status": "rejected_user_feedback",
+  "model": "drama3_w4a8experts_bf16.safetensors",
+  "codec": "drama3_codec.safetensors",
+  "temperature": 1.0,
+  "top_p": 0.9,
+  "top_k": 0,
+  "max_frames": 600,
+  "split_long_text": true,
+  "shorten_long_pauses": true,
+  "outputs": [
+    {
+      "name": "narrator-shipbuilding",
+      "text": "Перед нами новейшее достижение мирового кораблестроения.",
+      "seed": 11101001,
+      "voice_reference": "inputs/synthetic-voice-a.mp3",
+      "reference_transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write.",
+      "prompt": "narrator-prompt.txt",
+      "output": "../../audio/voice/scene10-narrator-shipbuilding-v1.flac",
+      "status": "rejected_user_feedback"
+    },
+    {
+      "name": "parrot-scooter",
+      "text": "Два колеса, один руль, ни одной пушки. Зато какая скорость!",
+      "seed": 11101002,
+      "voice_reference": "inputs/synthetic-pirate-ref.wav",
+      "reference_transcript": "Ah! In 200 meters, turn starboard onto Maple Street.",
+      "prompt": "parrot-prompt.txt",
+      "output": "../../audio/voice/scene10-parrot-scooter-v1.flac",
+      "status": "rejected_user_feedback"
+    }
+  ],
+  "prompt_id": "fbfc0fe1-3a49-4c94-bbfb-b29b3755fa0c"
+}

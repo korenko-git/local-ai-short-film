@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-approved-gift-reveal.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a photorealistic cinematic continuity frame immediately after the daytime gift reveal, on the exact same lush tropical stone clearing shown in image 3. Use image 1 as the exact identity reference for the same nine-year-old boy Matvey: preserve his face, short dark hair, glasses, proportions and exact cream sailor shirt, dark vest, red necktie, tan trousers and brown shoes. Use image 2 for the existing sunset composition and the same single empty open chest, the single dark-gray protective scooter case on his back and exactly one gray helmet in his hand. Keep this same chest location and camera direction, but restore and preserve the full rich vegetation density from image 3: thick tropical foliage and vines on the stone wall at left, broad leafy plants in the foreground and right edge, dense trees and layered jungle vegetation around the clearing and along the cliff. Do not remove, thin, simplify, or replace the plants; the setting must remain visibly lush, with greenery framing both sides of the shot. Matvey stands at the left third of the frame in a three-quarter back/side view. His head and eyes clearly look outward toward the distant bay horizon at far right, past the chest; he does not look at the camera, does not make eye contact and does not turn his face toward the lens. Preserve one boy, one empty open chest, one case containing the folded scooter, and one helmet; no duplicate props. Keep the warm low golden sunset, long soft shadows and realistic family-adventure film look. No text.",
+      "negative_prompt": "looking at camera, eye contact, facing lens, front-facing portrait, sparse vegetation, cleared plants, bare rock clearing, empty background, removed foliage, fewer plants than image 3, duplicate boy, duplicate scooter, scooter in chest, duplicate helmet, helmet in chest, extra case, second chest, closed chest, changed clothes, extra people, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_00_sunset_departure_v3"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110108,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene11-sunset-departure-v2-reference.png"
+    }
+  }
+}

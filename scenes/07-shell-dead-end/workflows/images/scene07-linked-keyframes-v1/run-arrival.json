@@ -1,0 +1,11 @@
+{
+  "id": "arrival_from_bridge",
+  "workflow": "scene07-arrival.json",
+  "prompt_id": "1b9c9963-1d77-40bc-a64f-b2f2cd419e2e",
+  "seed": 11070110,
+  "model": "Qwen Image 2.1",
+  "steps": 28,
+  "status": "rejected_duplicate_character",
+  "input": "inputs/scene06-last-frame.png",
+  "output": "../../../frames/drafts/1b9c9963_000.png"
+}

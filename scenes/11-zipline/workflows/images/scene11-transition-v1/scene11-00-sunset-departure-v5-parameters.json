@@ -1,0 +1,19 @@
+{
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-approved-gift-reveal.png",
+    "inputs/scene10-approved-gift-reveal.png"
+  ],
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "resolution": 1024,
+  "prompt": "scene11-00-sunset-departure-v5-prompt.txt",
+  "status": "completed_pending_user_review",
+  "seed": 11110134,
+  "provider": "Qwen Image 2.1",
+  "output": "../../../frames/drafts/scene11-00-sunset-departure-v5.png",
+  "negative_prompt": "different mountain silhouette, moved mountains, changed ridge positions, replaced cliffs, new hills, changed coastline, changed bay, changed beach, camera moved, new camera angle, changed lens, recompose, zoom, crop, shifted perspective, removed vegetation, sparse plants, missing trees, extra mountains, duplicate boy, extra people, duplicate scooter, scooter in chest, helmet in chest, extra case, second chest, closed chest, changed clothes, missing parrot, extra parrot, looking at camera, eye contact, frontal eyes, text, watermark, cartoon, CGI, deformed hands, extra limbs",
+  "prompt_id": "e3aa9e2a-ff00-498c-b2ba-db11f8ac3b67"
+}

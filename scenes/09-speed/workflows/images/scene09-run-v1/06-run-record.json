@@ -1,0 +1,13 @@
+{
+  "prompt_id": "e2113c3f-d7ec-4eb2-b70c-a1a22c643667",
+  "status": "completed",
+  "seed": 11090142,
+  "model": "Qwen Image 2.1",
+  "workflow": "06-pass.json",
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "media": "frames/approved/scene09-06-gate-approach-v1.png",
+  "review": "approved_by_user"
+}

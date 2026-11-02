@@ -1,0 +1,8 @@
+{
+  "status": "rendered_pending_user_review",
+  "audio_tracks": 5,
+  "output": "video/drafts/scene11-review-v1.mp4",
+  "workflow": "workflows/montage/scene11-assembly-v1/concat.txt",
+  "segments": 5,
+  "duration_seconds": 37.285
+}

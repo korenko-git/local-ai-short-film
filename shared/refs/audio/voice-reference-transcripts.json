@@ -1,0 +1,6 @@
+{
+  "synthetic-voice-a.mp3": "Hi there, I'm one of the voices this model can make up on its own, and I'm ready to read anything you write.",
+  "synthetic-pirate-ref.wav": "Ah! In 200 meters, turn starboard onto Maple Street.",
+  "verified_with": "Qwen3-ASR 0.6B, English",
+  "source": "https://pedromarinhodev.github.io/ComfyUI-Drama3/"
+}

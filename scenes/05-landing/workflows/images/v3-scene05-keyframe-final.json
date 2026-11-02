@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit image1 minimally: REMOVE ONLY the distant sailing ship in the far LEFT BACKGROUND, replacing that small background area with continuous empty turquoise sea below the horizon and pale morning sky above it. The large brig is anchored outside this camera view. Keep EVERYTHING ELSE EXACTLY UNCHANGED: the SAME nine-year-old boy seated INSIDE the bow of the beached wooden rowing boat, exact real face, glasses, hair, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers, brown boots inside boat, hands, rolled map, low boat, sandy beach, palm-lined path, green rocky mountain, lighting, composition and camera viewpoint. Do not move boy or boat. Do not add any ship, sail, mast, object or writing in the background. Natural photorealistic materials and child proportions. Images2 and3 remain facial identity and costume reference.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_05_landing_final"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11055235,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "v3-scene05-landing-seated.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

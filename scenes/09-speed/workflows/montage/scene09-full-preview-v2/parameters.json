@@ -1,0 +1,24 @@
+{
+  "map_seals": false,
+  "voice_cues": [
+    {
+      "start": 4.5,
+      "text": "Твоё любопытство сыграет с тобой злую шутку!"
+    },
+    {
+      "start": 12.0,
+      "text": "Матвей, быстрее!"
+    },
+    {
+      "start": 25.5,
+      "text": "Скорость — есть!"
+    }
+  ],
+  "badge_start": 25.3,
+  "audio": "AAC 192k",
+  "pass_cut_seconds": 2.5,
+  "duration_seconds": 28.874349,
+  "video": "1344x768 24 fps H264 CRF18",
+  "status": "preview_pending_user_review",
+  "output": "../../../work/scene09-full-preview-v2.mp4"
+}

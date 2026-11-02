@@ -1,0 +1,19 @@
+{
+  "sampler": "euler",
+  "prompt_id": "9b6e60ad-412e-4b70-bcbf-588c55e79412",
+  "negative_prompt": "second boy, duplicate person, extra people, changed face or outfit, different glasses, extra scooter, motor scooter, bicycle, loose scooter, multiple bags, missing helmet, extra helmet, bright daylight, full black night, many stars, multiple lanterns, pulleys, trolley, extra ropes, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+  "resolution": 1024,
+  "status": "completed_pending_user_review",
+  "seed": 11110106,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-approved-gift-reveal.png",
+    "inputs/scene11-night-cliff-reference.png"
+  ],
+  "prompt": "scene11-01-blue-hour-arrival-prompt.txt",
+  "cfg": 1,
+  "steps": 28,
+  "provider": "Qwen Image 2.1",
+  "output": "../../../frames/drafts/scene11-01-blue-hour-arrival-v1.png",
+  "scheduler": "simple"
+}

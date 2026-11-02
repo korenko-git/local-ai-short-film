@@ -1,0 +1,16 @@
+{
+  "sequence": "Stop close-up with top-bottom streaks; rear tracking swings to side profile; low dynamic angles and sparks",
+  "guide_range_seconds": [
+    0,
+    16.066667
+  ],
+  "status": "rejected_by_agent_anime_copy",
+  "base_steps": 16,
+  "two_pass": false,
+  "conditioning_mode": "image_references_plus_full_video_motion_guide",
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "provider": "FreeVideo",
+  "seed": 11090222
+}

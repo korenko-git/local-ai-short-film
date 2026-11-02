@@ -1,0 +1,4 @@
+file '../../../video/drafts/voiced-review-v2/scene10-01-arrival-vo-v2.mp4'
+file '../../../video/drafts/voiced-review-v2/scene10-02-open-chest-vo-v2.mp4'
+file '../../../video/drafts/voiced-review-v2/scene10-03-parrot-reaction-v2.mp4'
+file '../../../video/drafts/voiced-review-v2/scene10-04-parrot-vo-v2.mp4'

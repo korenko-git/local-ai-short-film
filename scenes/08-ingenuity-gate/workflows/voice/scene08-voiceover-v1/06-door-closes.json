@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "line": "06-door-closes",
+  "cue": "00:35-00:36",
+  "text": "Стоило отпустить колесо — дверь сразу закрылась.",
+  "prompt": "[mature male Russian baritone narrator, clear diction, playful suspense, slight comic pause] Стоило отпустить колесо — дверь сразу закрылась. [language: ru]",
+  "seed": 11080126,
+  "voice": "narrator",
+  "reference": "../../../../../shared/refs/audio/synthetic-voice-a.mp3",
+  "parameters": {
+    "top_k": 0,
+    "speakers": "one take per line",
+    "max_frames": 600,
+    "temperature": 1.0,
+    "top_p": 0.9
+  },
+  "output": "../../audio/voice/drafts/scene08-vo-06-door-closes.flac",
+  "status": "rendered_pending_user_review"
+}

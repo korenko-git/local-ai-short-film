@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] A locked straight-on close shot of the illustrated captain dossier page shown in the first frame, flat and filling the frame. The paper, printed Russian text, portrait and page border remain absolutely still. At 00:00.5 a large traditional dark wooden rubber stamp with a rounded wooden handle descends from above the frame towards the lower right of the dossier page. At 00:01.2 its rectangular rubber base firmly strikes the paper at a slight diagonal angle, clearly contacting the page with a brief compression. At 00:01.6 the stamp lifts straight back up and exits, revealing one dark red rectangular ink imprint in the lower right of the same page. The imprint stays fixed on the paper until the end. Only the stamp moves; keep the exact page layout and portrait unchanged, no camera movement, no cuts, no zoom, no new captions. A playful decisive bureaucratic approval stamp for a pirate captain dossier.
+
+overall_soundscape: One crisp heavy wooden rubber stamp impact at the instant of contact, with a short paper thud and a very brief wooden resonance. Otherwise quiet. No speech.
+
+non_diegetic_music: N/A

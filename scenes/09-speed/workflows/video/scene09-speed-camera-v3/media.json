@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "references": [
+    {
+      "kind": "image",
+      "path": "inputs/matvey-identity.png"
+    },
+    {
+      "kind": "image",
+      "path": "inputs/corridor-running.png"
+    }
+  ]
+}

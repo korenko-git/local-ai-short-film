@@ -1,0 +1,22 @@
+{
+  "operation": "audio splice",
+  "status": "approved_by_user",
+  "output": "../../audio/voice/scene10-parrot-scooter-v4.flac",
+  "sources": [
+    {
+      "path": "../../audio/voice/scene10-parrot-scooter-v1.flac",
+      "start_seconds": 0.0,
+      "duration_seconds": 2.0,
+      "role": "opening startled cry"
+    },
+    {
+      "path": "../../audio/voice/scene10-parrot-scooter-v3.flac",
+      "start_seconds": 0.5,
+      "duration_seconds": "to end",
+      "role": "rest of v3 line"
+    }
+  ],
+  "join": "direct concatenation",
+  "output_format": "FLAC mono 44100 Hz",
+  "duration_seconds": 11.159501
+}

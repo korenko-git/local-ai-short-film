@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "e3aa9e2a-ff00-498c-b2ba-db11f8ac3b67",
+  "seed": 11110134,
+  "workflow": "scene11-00-sunset-departure-v5.json",
+  "prompt": "scene11-00-sunset-departure-v5-prompt.txt",
+  "parameters": "scene11-00-sunset-departure-v5-parameters.json",
+  "output": "../../../frames/drafts/scene11-00-sunset-departure-v5.png",
+  "status": "completed_pending_user_review",
+  "validation": "valid",
+  "notes": "Keep scene10 geography/camera fixed; change only sunset lighting and Matvey continuity."
+}

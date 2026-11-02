@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-platform-environment.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create the first linked cinematic 16:9 frame for scene 10. Exactly one Matvey, matching the boy in image 1: same face, short brown hair, rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes. He has just come out of the existing stone passage and onto a broad weathered stone platform high above a turquoise bay. The stone passage entrance is behind him, clearly connected to the platform by a short path; do not add another passage. Matvey stands on the platform looking down at an unfolded parchment map in both hands, checking it. Several steps ahead, near the overlook but safely back from the edge, stands one closed dark teak treasure chest with rounded domed lid, two brass bands and one round central lock. A green-and-blue parrot with a red forehead patch sits on a branch beside the chest. The cove and sea are visible below the platform. Photorealistic family adventure film, warm late-afternoon daylight, medium-wide shot, natural proportions. No text.",
+      "negative_prompt": "second boy, duplicate Matvey, extra people, changed face, no glasses, costume change, extra passage, second doorway, multiple openings, multiple chests, open chest, extra locks, extra brass bands, extra parrots, map text, signs, lettering, watermark, cartoon, illustration, CGI, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene10_map_platform_v1"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11100108,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-map-continuity.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-platform-environment.png"
+    }
+  }
+}

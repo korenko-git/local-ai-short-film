@@ -1,0 +1,15 @@
+{
+  "sampler": "euler",
+  "resolution": 1024,
+  "steps": 28,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene11-night-beach-continuity.png"
+  ],
+  "scheduler": "simple",
+  "provider": "Qwen Image 2.1",
+  "seed": 12120101,
+  "cfg": 1,
+  "status": "prepared_for_validation",
+  "workflow": "scene12-01-matvey-looks-at-stars-v1.json"
+}

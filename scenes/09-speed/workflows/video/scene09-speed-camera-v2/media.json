@@ -1,0 +1,19 @@
+{
+  "references": [
+    {
+      "kind": "image",
+      "path": "inputs/matvey-identity.png"
+    },
+    {
+      "kind": "image",
+      "path": "inputs/corridor-running.png"
+    },
+    {
+      "guide": true,
+      "sound": false,
+      "path": "inputs/full-speed-motion-guide.mp4",
+      "kind": "video"
+    }
+  ],
+  "version": 1
+}

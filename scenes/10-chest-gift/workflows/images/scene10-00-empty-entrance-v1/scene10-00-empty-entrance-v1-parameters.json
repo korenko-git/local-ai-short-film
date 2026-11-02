@@ -1,0 +1,17 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11100106,
+  "steps": 28,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "rejected_added_unrequested_passage",
+  "output": "../../../frames/drafts/scene10-00-empty-entrance-v1.png",
+  "input_references": [
+    "inputs/scene10-01-arrival-reference.png",
+    "inputs/scene07-empty-passage-reference.png",
+    "inputs/scene07-empty-passage-reference.png"
+  ],
+  "prompt_id": "b035de44-11bd-454b-9e74-2b1b0d2548c9"
+}

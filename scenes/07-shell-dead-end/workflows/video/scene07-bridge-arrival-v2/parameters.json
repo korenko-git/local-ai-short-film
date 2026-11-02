@@ -1,0 +1,20 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070311,
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "superseded_by_video_only_revision_v4",
+  "reference_frames": [
+    "inputs/scene06-last-frame.png",
+    "inputs/scene07-arrival-endpoint-v2.png"
+  ],
+  "output": "../../../video/raw/scene07-bridge-arrival-v2.mp4",
+  "revision_of": "scene07-bridge-arrival-v1.mp4",
+  "reason": "Correct ending anchor: Matvey from behind on the trail, blocked dead end in the distance; no bridge.",
+  "rendered_duration_seconds": 6.583008,
+  "run_record": "../../../work/scene07-bridge-arrival-v2-run.json",
+  "superseded_by": "scene07-bridge-arrival-v4.mp4"
+}

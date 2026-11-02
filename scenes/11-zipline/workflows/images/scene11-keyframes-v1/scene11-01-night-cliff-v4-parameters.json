@@ -1,0 +1,18 @@
+{
+  "status": "completed_pending_user_review",
+  "seed": 11110127,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "scheduler": "simple",
+  "resolution": 1024,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-gift-reveal-continuity.png"
+  ],
+  "prompt": "scene11-01-night-cliff-v4-prompt.txt",
+  "negative_prompt": "two cables, parallel cables, multiple ropes, guy wires, extra support lines, rope ladder, cable running sideways along coast, cable parallel to horizon, cable over open sea, cable missing beach, missing landing post, missing upper anchor, floating cable, rope ending in midair, pulley trolley, extra anchor posts, second boy, extra people, changed face, changed costume, extra bag, extra scooter, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+  "output": "../../../frames/drafts/scene11-01-night-cliff-v4.png",
+  "prompt_id": "0e8fbcba-273f-4f98-a45e-8b992325002d"
+}

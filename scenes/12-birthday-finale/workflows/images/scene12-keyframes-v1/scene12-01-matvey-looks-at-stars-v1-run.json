@@ -1,0 +1,9 @@
+{
+  "seed": 12120101,
+  "steps": 28,
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "29d432d7-75aa-4ca6-b638-5d930f70e821",
+  "status": "completed_pending_user_review",
+  "output": "../../../frames/drafts/scene12-01-matvey-looks-at-stars-v1.png",
+  "workflow": "scene12-01-matvey-looks-at-stars-v1.json"
+}

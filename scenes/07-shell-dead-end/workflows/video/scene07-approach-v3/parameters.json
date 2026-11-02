@@ -1,0 +1,11 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070235,
+  "seconds": 4.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "interrupted_by_user",
+  "result": "no output"
+}

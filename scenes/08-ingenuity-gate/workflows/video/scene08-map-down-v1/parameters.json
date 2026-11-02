@@ -1,0 +1,15 @@
+{
+  "provider": "FreeVideo",
+  "quality_profile": "max",
+  "seed": 11080103,
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 20,
+  "step_cache": "easycache-av",
+  "two_pass": false,
+  "status": "approved_by_user",
+  "output": "../../../video/raw/scene08-map-down-v1.mp4",
+  "accepted_output": "../../../output/clips/scene08-map-down-v1.mp4"
+}
+

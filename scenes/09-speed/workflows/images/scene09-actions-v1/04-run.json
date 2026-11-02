@@ -1,0 +1,13 @@
+{
+  "prompt_id": "fdae926b-0f04-4440-a8fb-d766a8901dda",
+  "status": "completed",
+  "seed": 11090132,
+  "model": "Qwen Image 2.1",
+  "workflow": "04-map-stow.json",
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "media": "frames/approved/scene09-04-map-stow-v1.png",
+  "review": "approved_by_user"
+}

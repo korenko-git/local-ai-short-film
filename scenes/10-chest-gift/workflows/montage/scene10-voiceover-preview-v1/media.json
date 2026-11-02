@@ -1,0 +1,5 @@
+[
+  {"clip":"video/raw/scene10-01-arrival-v1.mp4","voice":"audio/voice/scene10-matvey-found-chest-v1.flac","voice_start_in_clip_seconds":4.15,"voice_status":"pending_audio_review","output":"video/drafts/voiced-review-v1/scene10-01-arrival-vo-v1.mp4"},
+  {"clip":"video/raw/scene10-02-open-chest-v1.mp4","voice":"audio/voice/scene10-narrator-shipbuilding-v2.flac","voice_start_in_clip_seconds":1.5,"voice_status":"approved_by_user","output":"video/drafts/voiced-review-v1/scene10-02-open-chest-vo-v1.mp4"},
+  {"clip":"video/raw/scene10-03-parrot-lipsync-v2.mp4","voice":"audio/voice/scene10-parrot-scooter-v4.flac","voice_start_in_clip_seconds":0.0,"voice_status":"approved_by_user","ambience_source":"video/raw/scene10-03-parrot-reaction-v1.mp4","output":"video/drafts/voiced-review-v1/scene10-03-parrot-vo-v1.mp4"}
+]

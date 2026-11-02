@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic live-action cinematic family pirate adventure movie still, 16:9 widescreen, richly detailed natural materials, warm dappled tropical morning light, realistic face and hands. Image1 is ONLY a blank wide canvas defining the aspect ratio; replace entirely. Image2 defines the costume, image3 defines the exact real facial identity of Matvey: SAME nine-year-old boy, short straight light brown hair, dark rectangular glasses, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers, brown shoes. Preserve his real face and age, no beautifying. NEW STAGING FOR A COURAGE TEST: a sturdy traditional wooden suspension footbridge crosses a DEEP NARROW ROCKY JUNGLE CHASM, about EIGHT METERS DOWN to the stream and rocks below, not a shallow ditch. The bridge is about FIVE METERS LONG and one person wide; its wooden deck recedes diagonally from the NEAR LEFT FOREGROUND to the FAR RIGHT MIDGROUND, with both solid rocky landing ledges visible. The deep empty space below the bridge, sheer mossy rock walls and distant stream clearly communicate real height. The bridge has a sensible strong structure: two thick continuous load-bearing side ropes, one on each side, securely tied around pairs of heavy wooden braced end posts on BOTH rock ledges; visible solid diagonal post braces and heavy rope lashings at the near entrance; vertical hanger ropes connect the side ropes to the continuous wooden deck at regular intervals. Sturdy weathered planks, no broken boards, no missing planks, no dangling rope ends, no floating supports. Each bridge end rests on a solid wooden sill supported directly by the rock ledge. The bridge is intact and clearly attached to both banks. Matvey stands on the safe near LEFT rock bank BEFORE stepping onto the bridge, BOTH brown shoes on firm ground, right hand resting on the entrance handrope, left hand holding his single rolled parchment map at his waist. Frame him fairly CLOSE in the left foreground, FULL BODY occupying about TWO THIRDS of image height, face clearly readable in three-quarter view, looking from the first plank towards the far landing with cautious determination. Camera at the boys eye level a few steps in front and to his right, wide-angle perspective showing his face, both shoes, near anchorage, the diagonal bridge and the far bank in one coherent shot. Bridge is not a flat horizontal strip across foreground. Deep layered jungle, ferns on rock, thin soft mist far below, adventure movie lighting. No other people, no other bridge, no text, no logos, no cartoon, no CGI, no collage.",
+      "negative_prompt": "cartoon, illustration, CGI, shallow stream, tiny low bridge, bridge over puddle, flat ground under bridge, broken bridge, floating posts, floating ropes, disconnected rope, unattached deck, missing planks, duplicate boy, adult face, distorted hands, extra limbs, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v4_06_courage_frame"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11066233,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

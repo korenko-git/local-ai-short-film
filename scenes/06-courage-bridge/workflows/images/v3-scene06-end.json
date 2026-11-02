@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit image1 into the END FRAME of the exact same locked-camera scene. Keep EVERY background and bridge detail unchanged: the same entire short wooden bridge at center, same four end posts, same two rope handrails, same planks, shallow flowing stream, rocks, sunlit jungle, same camera framing and scale. MOVE THE ONE BOY FROM LEFT BANK TO RIGHT BANK: remove the boy completely from the left bank and put that SAME real nine-year-old Matvey on the dry RIGHT BANK just beyond the right bridge exit post. His whole body must fit inside frame from hair to both brown shoes; put him centered around x900, feet on the dry ground to the right of the last bridge plank. BOTH shoes are fully on firm RIGHT-bank ground, NOT on bridge planks and NOT in water. He has completed crossing the entire bridge from left to right. Preserve exact real face and glasses from image3, costume from image2: cream sailor shirt, navy waistcoat, red scarf, tan trousers, brown shoes, small rolled map in left hand. He has released the rope and stands naturally with a small relieved proud smile, body slightly angled toward camera and head glancing back LEFT at the bridge. Same child age, height and proportions as original. There is EXACTLY ONE boy, now only on right shore. Left bank is EMPTY. Do not move the bridge, do not replace it, do not change camera, do not crop the right bank or boy. Photorealistic materials, no writing or text, no CGI, no illustration.",
+      "negative_prompt": "cartoon, illustration, CGI, duplicate boy, adult, extra limbs, distorted face, broken bridge, dangerous ravine, high bridge, missing bank, cropped bridge end, text, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_06_bridge_end"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11065236,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "v3-scene06-bridge-wide-start.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

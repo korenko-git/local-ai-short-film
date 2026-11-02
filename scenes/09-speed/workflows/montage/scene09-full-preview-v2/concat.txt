@@ -1,0 +1,5 @@
+file '../../../video/raw/scene09-start-v1.mp4'
+file '../../../video/raw/scene09-map-stow-v1.mp4'
+file '../../../video/raw/scene09-sprint-v1.mp4'
+file '../../../work/scene09-pass-v1-cut.mp4'
+file '../../../video/raw/scene09-finale-v1.mp4'

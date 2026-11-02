@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "model": "Qwen Image 2.1",
+  "prompt_id": "3e2fda7f-ab3f-482e-b065-69acebbde6e0",
+  "seed": 11080101,
+  "host": "127.0.0.1",
+  "port": 8188,
+  "workflow": "scene08-puzzle-start.json",
+  "output": "../../../../frames/drafts/3e2fda7f_000.png",
+  "output_dir": "../../../../frames/drafts/",
+  "previous_attempt": {"prompt_id": "f3460ea8-fc68-4ef3-9c7b-02be6106b6dd", "output": "../../../../frames/drafts/f3460ea8_000.png", "note": "Первый черновик: с чертежа перенеслись буквы, геометрия канала неточная."}
+}

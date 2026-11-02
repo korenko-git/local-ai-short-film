@@ -1,0 +1,16 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11070119,
+  "steps": 28,
+  "sampler": "euler",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "prepared",
+  "workflow": "scene07-unlit-sign-v2.json",
+  "input_references": [
+    "inputs/scene07-deadend-with-matvey.png",
+    "inputs/scene07-deadend-start.png",
+    "Matvey_story_master_matvey_00001_.png"
+  ],
+  "output": "../../../frames/drafts/scene07-deadend-with-matvey-unlit-v2.png"
+}

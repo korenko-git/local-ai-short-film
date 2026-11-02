@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Photoreal cinematic island adventure, one continuous medium-wide shot. Begin exactly on the supplied frame: the same 9-year-old Matvey with dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes, holding his rolled map. Dense vines block the trail. He searches for a way forward, visibly turns his head left and right, then spots a tiny spiral shell fixed to the wooden signpost catching a small pinpoint sun glint. He looks directly at the shell, his worried face shifts to curious surprise, his mouth briefly forms a silent “Oh!”, and he takes two careful steps toward the sign, ending close beside it with the shell still visible. Keep the wall of vines fully closed and the sign still in its original orientation for the entire shot. Preserve the same single boy, face, outfit, map and bright jungle continuity. Natural daylight, subtle camera push, believable motion, family adventure realism. No cuts, no extra people, no dialogue or voice, no text, no path opening.
+
+overall_soundscape: Quiet tropical jungle ambience, soft birds and leaves, no speech.
+
+non_diegetic_music: N/A

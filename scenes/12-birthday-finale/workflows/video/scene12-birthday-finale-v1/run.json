@@ -1,0 +1,21 @@
+{
+  "provider": "FreeVideo",
+  "width": 1344,
+  "status": "approved_by_user",
+  "video_codec": "H.264",
+  "rendered_seconds": 17.208,
+  "height": 768,
+  "review_output": "video/drafts/scene12-birthday-finale-v1-review.mp4",
+  "seed": 12120121,
+  "two_pass": false,
+  "voiceover": "audio/voice/scene12-narrator-birthday-v1.flac",
+  "media": "workflows/video/scene12-birthday-finale-v1/media.json",
+  "audio_codec": "AAC",
+  "scene": "12",
+  "output": "video/raw/scene12-birthday-finale-v1.mp4",
+  "prompt": "workflows/video/scene12-birthday-finale-v1/prompt.txt",
+  "task": "scene12-birthday-finale-v1",
+  "seconds": 17.0,
+  "steps": 16,
+  "user_review": "2026-11-02: user replied “принял” to the review cut"
+}

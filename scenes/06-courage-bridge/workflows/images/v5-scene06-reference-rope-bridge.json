@@ -1,0 +1,140 @@
+{
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v5_06_reference_rope_bridge"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-02.png"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic live-action family pirate adventure film still. Use the TWO REAL BRIDGE PHOTOGRAPHS as direct structural references, not the previous wooden bridge. IMAGE1 defines the long dramatically sagging U-shaped suspension bridge, steep deep tropical forest gorge, converging perspective and natural coherent suspension geometry. IMAGE2 defines its narrow wooden cross-slats with VISIBLE OPEN GAPS and thin sparse cable/rope sides. IMAGE3 defines Matvey costume. IMAGE4 is the exact real facial identity of the SAME nine-year-old boy Matvey: short straight light brown hair, dark rectangular glasses, preserve real face and child age. He wears cream sailor shirt, navy waistcoat, red neckerchief, tan trousers and brown shoes. CREATE ONE WIDE 16:9 ADVENTURE COMPOSITION: viewed from the near entrance looking straight along a LONG NARROW SWAYING ROPE SUSPENSION BRIDGE that dips steeply into the middle of a deep lush jungle ravine and climbs to a far narrow stone landing in the mist. The bridge has NO rigid timber beams or wooden railings. Its walking surface consists of narrow weathered wooden cross-planks, spaced regularly with visible open gaps of about ten to fifteen centimeters between them, so the deep drop and stream far below can be seen THROUGH THE DECK. Slight variation in slat angles and a gentle sag make the bridge feel exposed, airy and precarious like image2, but not broken apart. Reproduce the believable cable and rope arrangement of the real references: exactly one continuous upper handline per side and a lower load-bearing line under each slat edge; short regular vertical rope hangers connect handlines to deck edges, a light sparse side safety net near the lower edge. All lines follow the SAME U-shaped sagging span and connect continuously along the bridge, no extra crossing ropes, no tangled near-post knots, no floating supports. Primary suspension lines extend naturally out of frame at the entrance just like the real reference photograph. There are no large A-frames or rigid modern wooden balustrades. REMOVE the original distant yellow-jacketed person in image1. There is ONLY ONE person: Matvey is close in the LEFT FOREGROUND at the very first two wooden slats beside the near rocky entrance, FULL BODY occupying about SIXTY PERCENT of frame height, both shoes visible carefully planted on actual planks, face clearly seen in three-quarter view. He grips the LEFT-side handrope with his right hand at waist height, holds his single rolled map in the other hand, and looks cautiously along the deep dipping span with focused determination. Keep his exact real face, glasses and costume detailed and unobstructed; no hoodie or raincoat. Camera eye level near the bank, boy close, bridge and its exposed gaps recede behind/right of him towards the center background; deep void below is plainly visible, same jungle island environment, soft mist in distance, restrained warm highlights on face and wood. Realistic material and anatomy, no text, no logo, no illustration, no cartoon, no CGI.",
+      "negative_prompt": "rigid timber bridge, solid wooden railings, thick wooden beams, park footbridge, solid continuous walkway, concrete deck, shallow ditch, tiny low bridge, giant anchoring A-frame, tangled ropes, disconnected cables, extra horizontal ropes across person, floating deck, duplicate boy, yellow jacket, adult, hoodie, extra limbs, distorted face, text, watermark, illustration, CGI",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ],
+      "images.image_4": [
+        "12",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-03.png"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11067233,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  }
+}

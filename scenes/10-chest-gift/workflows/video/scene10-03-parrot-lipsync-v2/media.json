@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "first": null,
+  "last": null,
+  "references": [
+    {
+      "kind": "image",
+      "path": "inputs/scene10-02-gift-reveal-v3.png"
+    },
+    {
+      "kind": "image",
+      "path": "inputs/scene10-03-parrot-reaction-v2.png"
+    }
+  ]
+}

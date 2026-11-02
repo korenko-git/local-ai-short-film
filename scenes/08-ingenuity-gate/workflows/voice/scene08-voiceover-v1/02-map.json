@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "line": "02-map",
+  "cue": "00:07-00:11",
+  "text": "Он положил карту и стал разбираться в каналах.",
+  "prompt": "[mature male Russian baritone narrator, clear diction, curious adventure tone, moderate pace] Он положил карту и стал разбираться в каналах. [language: ru]",
+  "seed": 11080122,
+  "voice": "narrator",
+  "reference": "../../../../../shared/refs/audio/synthetic-voice-a.mp3",
+  "parameters": {
+    "top_k": 0,
+    "speakers": "one take per line",
+    "max_frames": 600,
+    "temperature": 1.0,
+    "top_p": 0.9
+  },
+  "output": "../../audio/voice/drafts/scene08-vo-02-map.flac",
+  "status": "rendered_pending_user_review"
+}

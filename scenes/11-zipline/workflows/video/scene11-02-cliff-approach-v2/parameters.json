@@ -1,0 +1,16 @@
+{
+  "output": "../../../video/raw/scene11-02-cliff-approach-v2.mp4",
+  "seconds": 7.3,
+  "rendered_seconds": 8.0,
+  "seed": 11110137,
+  "height": 768,
+  "provider": "FreeVideo",
+  "base_steps": 16,
+  "status": "approved_by_user",
+  "audio": "FreeVideo-generated AAC ambience and music; no speech",
+  "width": 1344,
+  "two_pass": false,
+  "prompt": "prompt.txt",
+  "media": "media.json",
+  "user_review": "2026-11-02: user said clip 2 was okay and requested clip 3."
+}

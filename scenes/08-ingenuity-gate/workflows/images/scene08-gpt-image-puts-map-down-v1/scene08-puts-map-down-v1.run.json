@@ -1,0 +1,15 @@
+{
+  "provider": "GPT Image",
+  "tool": "image_gen.imagegen",
+  "status": "generated_pending_user_review",
+  "seed": null,
+  "seed_note": "Seed is not exposed by the image generation tool.",
+  "parameters": {"aspect_ratio": "16:9", "transparent_background": false},
+  "output": "../../../frames/drafts/scene08-puts-map-down-gpt-image-v1.png",
+  "references": [
+    "../../../frames/approved/scene08-puzzle-start-gpt-image-v3.png",
+    "../../../frames/approved/scene08-first-turntable-action-gpt-image-v2.png",
+    "../../../../../shared/refs/images/Matvey_story_master_matvey_00001_.png"
+  ],
+  "prompt": "scene08-puts-map-down.prompt.txt"
+}

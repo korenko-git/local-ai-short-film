@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "inputs": [],
+  "output": "../../audio/sfx/scene07-curiosity-achievement.wav",
+  "montage": "../../work/scene07-full-preview-v4.mp4",
+  "placement_seconds": 27.9,
+  "note": "New SFX is mixed after the badge fade-in. The source montage video stream is kept unchanged."
+}

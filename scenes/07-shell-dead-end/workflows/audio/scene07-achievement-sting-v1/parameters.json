@@ -1,0 +1,12 @@
+{
+  "provider": "procedural audio synthesis",
+  "seed": 11070330,
+  "duration_seconds": 2.2,
+  "sample_rate": 48000,
+  "channels": 2,
+  "format": "PCM 16-bit WAV",
+  "output": "audio/sfx/scene07-curiosity-achievement.wav",
+  "prompt": "prompt.txt",
+  "method": "Rising four-note bell/chime, quiet low pulse, filtered noise shimmer, deterministic short reflections/reverb, fade tail. No speech.",
+  "placement": "Montage only, 0.588 seconds after achievement badge fade-in completes."
+}

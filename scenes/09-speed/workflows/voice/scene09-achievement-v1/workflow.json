@@ -1,0 +1,193 @@
+{
+  "1": {
+    "class_type": "Drama3Loader",
+    "inputs": {
+      "second_gpu": "none",
+      "model_name": "drama3_w4a8experts_bf16.safetensors",
+      "experts": "in RAM",
+      "split_layer": 0,
+      "expert_cache_gb": 6.0
+    }
+  },
+  "2": {
+    "class_type": "Drama3CodecLoader",
+    "inputs": {
+      "codec_name": "drama3_codec.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "synthetic-voice-b.mp3"
+    }
+  },
+  "6": {
+    "class_type": "Drama3EncodeVoice",
+    "inputs": {
+      "audio": [
+        "5",
+        0
+      ],
+      "codec": [
+        "2",
+        0
+      ],
+      "transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write."
+    }
+  },
+  "40": {
+    "class_type": "Drama3Generate",
+    "inputs": {
+      "top_k": 0,
+      "model": [
+        "1",
+        0
+      ],
+      "text": "[young boy, pleased, slightly breathless after a sprint, short proud triumphant phrase, warm natural Russian pronunciation, clear articulation, not shouted] Скорость — есть! [language: ru]",
+      "split_long_text": true,
+      "voices.voice0": [
+        "6",
+        0
+      ],
+      "speakers": "one take per line",
+      "seed": 11090211,
+      "temperature": 1.0,
+      "max_frames": 600,
+      "top_p": 0.9
+    }
+  },
+  "41": {
+    "class_type": "Drama3Decode",
+    "inputs": {
+      "shorten_long_pauses": true,
+      "codes": [
+        "40",
+        0
+      ],
+      "codec": [
+        "2",
+        0
+      ]
+    }
+  },
+  "42": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "41",
+        0
+      ],
+      "filename_prefix": "scene09_speed_achievement_v1"
+    }
+  },
+  "3": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "synthetic-voice-a.mp3"
+    }
+  },
+  "4": {
+    "class_type": "Drama3EncodeVoice",
+    "inputs": {
+      "audio": [
+        "3",
+        0
+      ],
+      "codec": [
+        "2",
+        0
+      ],
+      "transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write."
+    }
+  },
+  "13": {
+    "class_type": "Drama3Generate",
+    "inputs": {
+      "top_k": 0,
+      "model": [
+        "1",
+        0
+      ],
+      "text": "[mature male Russian baritone narrator, urgent encouraging adventure tone, clear diction, lively but not shouted] Матвей, быстрее! [language: ru]",
+      "split_long_text": true,
+      "voices.voice0": [
+        "4",
+        0
+      ],
+      "speakers": "one take per line",
+      "seed": 11090212,
+      "temperature": 1.0,
+      "max_frames": 600,
+      "top_p": 0.9
+    }
+  },
+  "14": {
+    "class_type": "Drama3Decode",
+    "inputs": {
+      "shorten_long_pauses": true,
+      "codes": [
+        "13",
+        0
+      ],
+      "codec": [
+        "2",
+        0
+      ]
+    }
+  },
+  "15": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "14",
+        0
+      ],
+      "filename_prefix": "scene09_narrator_faster_v1"
+    }
+  },
+  "16": {
+    "class_type": "Drama3Generate",
+    "inputs": {
+      "top_k": 0,
+      "model": [
+        "1",
+        0
+      ],
+      "text": "[mature male Russian baritone narrator, playful warning, warm dry humor, building urgency, natural clear Russian diction] Твоё любопытство сыграет с тобой злую шутку! [language: ru]",
+      "split_long_text": true,
+      "voices.voice0": [
+        "4",
+        0
+      ],
+      "speakers": "one take per line",
+      "seed": 11090213,
+      "temperature": 1.0,
+      "max_frames": 600,
+      "top_p": 0.9
+    }
+  },
+  "17": {
+    "class_type": "Drama3Decode",
+    "inputs": {
+      "shorten_long_pauses": true,
+      "codes": [
+        "16",
+        0
+      ],
+      "codec": [
+        "2",
+        0
+      ]
+    }
+  },
+  "18": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "17",
+        0
+      ],
+      "filename_prefix": "scene09_narrator_curiosity_v1"
+    }
+  }
+}

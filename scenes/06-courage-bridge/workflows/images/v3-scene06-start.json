@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic live-action family adventure movie still, same natural tropical jungle, warm morning light, 16:9. Use image1 as the exact bridge/location reference, image2 as costume, image3 as the exact real boys face. Preserve the SAME real nine-year-old Matvey with short straight light brown hair, dark rectangular eyeglasses, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers and brown shoes. WIDEN THE CAMERA VIEW to show the ENTIRE SHORT FOOTBRIDGE AND BOTH DRY BANKS inside frame. A three-meter simple wooden footbridge spans a shallow narrow jungle stream horizontally from LEFT grassy bank to RIGHT grassy bank, about half a meter above water, with exactly two continuous rope handrails tied to wooden end posts. Clear straight wooden walkway, six wide planks, normal stable construction, no gaps or broken boards, no extreme ravine, water and smooth rocks beneath. The bridge starts around x250 and ends around x780 in the 1024-wide frame, leaving clear dry shore on BOTH ends. Matvey stands with BOTH shoes on DRY LEFT BANK just BEFORE the first plank, body facing RIGHT, three-quarter side view with face visible. His RIGHT hand lightly grips the near rope handrail at its left entry post; his LEFT hand holds one small rolled parchment map at his waist. He is hesitating and about to test the first board with his front shoe. Whole boy head to both shoes clearly in frame, no limb hidden behind a large tree. Eye-level wide fixed side camera, bridge and both banks remain the main scene. Dense tropical ferns, palms, dappled warm sunlight. NO other boy, no pirate, no other bridge, no alternative path, no text or writing, no cartoon or CGI.",
+      "negative_prompt": "cartoon, illustration, CGI, duplicate boy, adult, extra limbs, distorted face, broken bridge, dangerous ravine, high bridge, missing bank, cropped bridge end, text, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_06_bridge_start"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11065233,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "v2-bridge-start.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

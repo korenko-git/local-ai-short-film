@@ -1,0 +1,8 @@
+{
+  "provider": "Drama 3",
+  "status": "completed_pending_audio_review",
+  "workflow": "scene10-voice-found-chest-v1.json",
+  "prompt_id": "37e1b1cc-1c1a-4925-be71-0dd341d0de58",
+  "seed": 11101006,
+  "output": "audio/voice/scene10-matvey-found-chest-v1.flac"
+}

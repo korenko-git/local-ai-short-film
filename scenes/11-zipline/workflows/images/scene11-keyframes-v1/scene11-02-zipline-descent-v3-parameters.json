@@ -1,0 +1,18 @@
+{
+  "status": "rejected_bent_cable_at_trolley",
+  "seed": 11110132,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "scheduler": "simple",
+  "resolution": 1024,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "scene11-01-night-cliff-v4.png"
+  ],
+  "prompt": "scene11-02-zipline-descent-v3-prompt.txt",
+  "negative_prompt": "visible mountain anchor, visible cliff cable attachment, visible bolts in mountain, hands holding bare cable, rope below boy, cable beside boy at waist height, trolley behind boy, trolley on backpack, ice axes, boy standing on rope, unsupported freefall, no trolley, missing handlebar, one-handed grip, hands lowered, extra cables, multiple ropes, guy wires, beach close, beach same height as boy, duplicate boy, extra people, changed face, changed clothes, extra scooter, daylight, sunset, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+  "output": "../../../frames/drafts/rejected/scene11-02-zipline-descent-v3-rejected-bent-cable.png",
+  "prompt_id": "e71ca7ae-adea-489b-b9a7-ca5b3f8042a5"
+}

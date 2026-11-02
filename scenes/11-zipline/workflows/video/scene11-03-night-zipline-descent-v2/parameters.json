@@ -1,0 +1,25 @@
+{
+  "output": "../../../video/raw/scene11-03-night-zipline-descent-v2.mp4",
+  "seconds": 10.0,
+  "seed": 11110138,
+  "height": 768,
+  "provider": "FreeVideo",
+  "base_steps": 16,
+  "status": "approved_by_user",
+  "audio": "FreeVideo-generated ambience and instrumental music, including moving surf; mix existing Drama 3 voiceover after video generation",
+  "width": 1344,
+  "two_pass": false,
+  "prompt": "prompt.txt",
+  "media": "media.json",
+  "voiceover_source": "inputs/scene11-narrator-mission-v1.flac; mix as a separate Drama 3 track after FreeVideo generation.",
+  "visible_first_frame": "inputs/clip02-last-frame.png (exact last frame of clip 2)",
+  "supporting_display_frames": [
+    "inputs/night-cliff-v5.png (approved launch geography; displayed only, same geometry already appears in the first frame)",
+    "inputs/beach-arrival-context-v1.png (existing approved clip 5 context only; not changed or used as a generation endpoint)"
+  ],
+  "rendered_seconds": 10.125,
+  "review_output": "../../../video/drafts/scene11-03-night-zipline-descent-v2-review.mp4",
+  "voiceover_mix": "Drama 3 FLAC starts at +0.7 s; mixed over FreeVideo AAC ambience/music with limiter; review file only, FreeVideo source preserved in video/raw.",
+  "preview_contact_sheet": "preview/contact-sheet.png",
+  "user_review": "2026-11-02: user said okay and requested the final assembly."
+}

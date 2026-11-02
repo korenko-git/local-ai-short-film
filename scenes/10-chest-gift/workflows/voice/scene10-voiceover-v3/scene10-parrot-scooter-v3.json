@@ -1,0 +1,83 @@
+{
+  "1": {
+    "class_type": "Drama3Loader",
+    "inputs": {
+      "second_gpu": "none",
+      "model_name": "drama3_w4a8experts_bf16.safetensors",
+      "experts": "in RAM",
+      "split_layer": 0,
+      "expert_cache_gb": 6.0
+    }
+  },
+  "2": {
+    "class_type": "Drama3CodecLoader",
+    "inputs": {
+      "codec_name": "drama3_codec.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "synthetic-pirate-ref.wav"
+    }
+  },
+  "4": {
+    "class_type": "Drama3EncodeVoice",
+    "inputs": {
+      "audio": [
+        "3",
+        0
+      ],
+      "codec": [
+        "2",
+        0
+      ],
+      "transcript": "Ah! In 200 meters, turn starboard onto Maple Street."
+    }
+  },
+  "13": {
+    "class_type": "Drama3Generate",
+    "inputs": {
+      "top_k": 0,
+      "model": [
+        "1",
+        0
+      ],
+      "text": "[sleepy parrot perched on a nearby branch beside the treasure chest, not inside it; the chest lid creaks, the parrot is startled awake, gives one loud comic squawk, then blurts out a memorized pirate slogan; raspy pirate voice, funny and overconfident, clear Russian, strongly rolled r on р-р-руль and скор-р-рость; finish the whole line] [startled squawk] [short breath] Два колеса! Один р-р-руль! Ни одной пушки! [pause] Зато какая скор-р-рость! [language: ru]",
+      "split_long_text": false,
+      "voices.voice0": [
+        "4",
+        0
+      ],
+      "speakers": "one take per line",
+      "seed": 11101005,
+      "temperature": 1.0,
+      "max_frames": 1600,
+      "top_p": 0.9
+    }
+  },
+  "14": {
+    "class_type": "Drama3Decode",
+    "inputs": {
+      "shorten_long_pauses": true,
+      "codes": [
+        "13",
+        0
+      ],
+      "codec": [
+        "2",
+        0
+      ]
+    }
+  },
+  "15": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "14",
+        0
+      ],
+      "filename_prefix": "scene10_parrot_scooter_v3"
+    }
+  }
+}

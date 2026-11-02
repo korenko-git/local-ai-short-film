@@ -1,0 +1,11 @@
+{
+  "id": "walk_away",
+  "workflow": "scene07-walk-away.json",
+  "prompt_id": "ecb0ceff-8f54-41cb-9f16-b00524328c18",
+  "seed": 11070109,
+  "model": "Qwen Image 2.1",
+  "steps": 28,
+  "status": "completed",
+  "input": "inputs/scene07-sign-open-v1.png",
+  "output": "../../../frames/drafts/ecb0ceff_000.png"
+}

@@ -1,0 +1,9 @@
+integrated_multimodal_description: [Shot 1] One continuous photorealistic cinematic live-action shot. Begin on the supplied first frame: Matvey is small and far up the jungle path, walking toward the stone puzzle platform. He approaches naturally along the same path, carrying the rolled map; keep his face, dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers, brown shoes, body proportions and map consistent in every frame. Preserve the exact stone puzzle geometry, both circular turntables, closed door, wooden water wheel, foliage, sunlight and camera angle from the references. Use a steady camera with only a very gentle forward push; do not distort or reframe the puzzle.
+
+The stream and channel water must be visibly moving continuously throughout the entire shot: clear current runs from the left stream toward the first circular disc; moving ripples and small splashes are visible as the current reaches and strikes the solid stone barrier at the end of the first channel. The water keeps flowing and eddying against that barrier, with shifting highlights and droplets; it does not freeze into a still blue surface and does not pass the barrier. The two discs remain stationary and unchanged, the second channel stays dry, the water wheel remains still, and the door stays closed.
+
+Matvey reaches the near edge of the platform, slows, stops, and looks down at the puzzle. End matching the supplied last frame exactly. Natural continuous footsteps and body motion, stable photoreal detail, crisp stone and fabric texture, no flicker, no smeared face or hands, no duplicate person, no sudden camera move, no text or overlays.
+
+overall_soundscape: Soft island birds, light footsteps on stone and leaves, and a clearly audible flowing stream with a small splash where water meets the stone barrier. No dialogue.
+
+non_diegetic_music: N/A

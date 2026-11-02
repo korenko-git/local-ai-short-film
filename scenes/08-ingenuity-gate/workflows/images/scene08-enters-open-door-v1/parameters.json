@@ -1,0 +1,11 @@
+{
+  "provider": "GPT Image (built-in image generation)",
+  "status": "draft_pending_user_review",
+  "seed": null,
+  "seed_note": "The built-in image tool did not expose a seed.",
+  "width": 1660,
+  "height": 960,
+  "transparent_background": false,
+  "inputs": ["../../../workflows/video/scene08-enter-door-v1/inputs/scene08-second-turn-approved-end.png"],
+  "output": "../../../frames/drafts/scene08-enters-open-door-gpt-image-v1.png"
+}

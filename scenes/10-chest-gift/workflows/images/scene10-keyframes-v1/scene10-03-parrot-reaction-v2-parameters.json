@@ -1,0 +1,18 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11100105,
+  "steps": 28,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "completed_pending_user_review",
+  "output": "../../../frames/drafts/scene10-03-parrot-reaction-v2.png",
+  "input_references": [
+    "inputs/scene10-02-gift-reveal-v2.png",
+    "inputs/scene09-jungle-continuity.png",
+    "inputs/scene09-jungle-continuity.png"
+  ],
+  "supersedes": "scene10-03-parrot-reaction-v1",
+  "prompt_id": "a22259b7-96f0-4732-ad41-09670a3b643c"
+}

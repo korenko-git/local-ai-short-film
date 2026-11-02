@@ -1,0 +1,23 @@
+{
+  "provider": "FreeVideo",
+  "task": "ref2va_av",
+  "conditioning_mode": "image_and_audio_reference",
+  "width": 1344,
+  "height": 768,
+  "requested_seconds": 11.2,
+  "expected_aligned_seconds": 11.541667,
+  "fps": 24,
+  "base_steps": 16,
+  "two_pass": false,
+  "seed": 11100124,
+  "audio_reference": "inputs/scene10-parrot-scooter-v4.flac",
+  "audio_reference_duration": 11.159501,
+  "output": "../../../video/raw/scene10-03-parrot-lipsync-v2.mp4",
+  "visual_references": [
+    "inputs/scene10-02-gift-reveal-v3.png",
+    "inputs/scene10-03-parrot-reaction-v2.png"
+  ],
+  "actual_seconds": 11.55,
+  "status": "rejected_internal_continuity_failure",
+  "review_note": "Клюв артикулирует, но FreeVideo меняет открытый сундук на закрытый и меняет позу Матвея. Сохранён для истории; не использовать в монтаже."
+}

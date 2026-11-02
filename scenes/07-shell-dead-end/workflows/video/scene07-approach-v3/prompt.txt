@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One continuous photoreal family-adventure shot. Begin exactly from the wide reference: the same single 9-year-old Matvey in dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes, holding the rolled map. He clearly turns his head to look left, then right across the dense vine wall, spots the spiral shell's brief pinpoint sun glint, and walks decisively two steps to the sign. He puts both hands on the wooden board and begins to turn it. Finish exactly on the close reference with the same boy beside the sign, hands on its board and shell visible. Keep the path blocked throughout. Preserve one boy only, stable face and costume, same natural daylight, believable continuous body motion. No cuts, no other people, no dialogue, no text, no vines opening.
+
+overall_soundscape: Soft jungle birds and rustling leaves, no speech.
+
+non_diegetic_music: N/A

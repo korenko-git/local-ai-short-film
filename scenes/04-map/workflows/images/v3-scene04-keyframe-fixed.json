@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit image1 as a photorealistic live-action family pirate adventure still. Preserve the exact same real nine-year-old boy, his face, dark rectangular glasses, hair, cream sailor shirt, navy waistcoat, red scarf, tan trousers, hands, offered parchment roll and adult navy-sleeved forearm. Images2 and3 remain the same costume and real face identity references. CORRECT ONLY THE SHIP DECK AND BACKGROUND CAMERA HEIGHT: this is a small wooden sailing brig foredeck, the rail and camera are ONLY TWO METERS ABOVE THE WATER. The boy stands at deck level just above the sea, NOT high on a tower, balcony, cliff or aerial platform. The water surface is immediately behind the waist-high rail, its nearby wavelets seen almost horizontally. The horizon is at the boy shoulder height. The same steep conical tropical island mountain, green palms, small curved sandy beach and a tiny harbor are in the distance to the RIGHT, seen from WATER LEVEL with the island shoreline nearly horizontal across the frame, NOT an overhead aerial view. REMOVE THE ENTIRE SAILING SHIP IN THE BACKGROUND; no other ships, no sails or masts rising behind the boy, no duplicate boats. A wooden deck floor, rope coils and dark waist-high rail belong to the ONLY ship on which the boy stands. Rigging lines along the far left edge are okay. Golden sunrise from LEFT, soft warm natural light. Keep boy left of center with both hands and offered parchment visible. No text, no cartoon, no CGI, no modern objects.",
+      "negative_prompt": "cartoon, anime, 3d render, text, letters, watermark, disfigured, adult, different child, extra limbs, extra wheels, third wheel, missing glasses",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_04_deck_map_fixed"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11045234,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "v3-scene04-deck-map.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

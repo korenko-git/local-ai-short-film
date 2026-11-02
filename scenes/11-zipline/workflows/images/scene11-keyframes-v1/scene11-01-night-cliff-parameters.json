@@ -1,0 +1,18 @@
+{
+  "steps": 28,
+  "provider": "Qwen Image 2.1",
+  "resolution": 1024,
+  "prompt": "scene11-01-night-cliff-prompt.txt",
+  "negative_prompt": "second boy, duplicate person, extra people, changed face, changed outfit, different glasses, extra scooter, scooter with motor, scooter with seat, bicycle, extra helmet, backpack, bag, invented rope hardware, cliff jump, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+  "status": "completed_pending_user_review",
+  "cfg": 1,
+  "output": "../../../frames/drafts/scene11-01-night-cliff-v1.png",
+  "sampler": "euler",
+  "prompt_id": "79805f6e-3a0d-42e3-91ce-44b3e31953c0",
+  "scheduler": "simple",
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-gift-reveal-continuity.png"
+  ],
+  "seed": 11110101
+}

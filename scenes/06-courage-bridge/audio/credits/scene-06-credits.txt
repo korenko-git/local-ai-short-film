@@ -1,0 +1,8 @@
+Сцена 6: первое испытание — смелость
+Исходные кадры: локальный Qwen Image 2.1. Движение: локальный FreeVideo.
+Диктор: локальная Drama 3, синтетический референс.
+Шум ручья, шаги и скрип досок: FreeVideo.
+Музыка: Adventures in Adventureland — Kevin MacLeod (incompetech.com).
+Лицензия: Creative Commons Attribution 4.0, https://creativecommons.org/licenses/by/4.0/
+Источник: https://incompetech.com/music/royalty-free/
+Монтаж, изменение громкости, графическая отметка и сведение выполнены для этого фрагмента.

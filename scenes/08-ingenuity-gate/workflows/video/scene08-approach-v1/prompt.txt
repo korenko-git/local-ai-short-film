@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One continuous cinematic live-action shot. Begin on the supplied first frame: Matvey is small and far up the jungle path, walking toward the stone puzzle platform. He approaches naturally along the same path, carrying the rolled map; his cream sailor shirt, navy vest, red neckerchief, tan trousers, brown shoes, dark rectangular glasses, face and proportions remain consistent. The camera makes only a very gentle forward push while keeping the stone puzzle and closed door in view. Matvey reaches the edge of the puzzle area, slows to a stop, and looks down at the channels. End matching the supplied last frame exactly: Matvey stands at the near edge of the platform, studying the puzzle; the water route and both round discs remain unchanged, the water is blocked at the first channel, the wheel is still, and the door is closed. Preserve the scene geography and lighting. No teleporting, no sudden camera move, no extra people, no text or overlays.
+
+overall_soundscape: Soft island birds, light footsteps on stone and leaves, and a quiet stream. No dialogue.
+
+non_diegetic_music: N/A

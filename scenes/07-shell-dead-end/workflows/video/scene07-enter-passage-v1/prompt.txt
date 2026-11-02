@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One continuous cinematic live-action shot. Start exactly on the supplied last frame of clip 5. Preserve the same wooden sign on the left, the arrow pointing into the already open vine passage, the same foliage arrangement and the same natural daylight. The character releases the sign, turns away from camera toward the open gap, then walks into the passage. Keep the character seen from behind as he enters the opening, matching the supplied final frame. The character carries the rolled map. Keep the sign visible at left and the open passage visible throughout; vines stay open and do not shift further. The camera gently follows from behind without changing the sign or vegetation layout. End exactly on the supplied final frame. One character only. No extra people, no sign rotation, no vines closing, no new path, no text or overlays.
+
+overall_soundscape: Quiet jungle ambience, soft footsteps on dirt and leaves. No speech.
+
+non_diegetic_music: N/A

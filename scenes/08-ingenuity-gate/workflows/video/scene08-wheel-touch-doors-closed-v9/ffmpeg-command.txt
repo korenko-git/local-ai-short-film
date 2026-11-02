@@ -1,0 +1,1 @@
+ffmpeg -i frame-0.png -i frame-6-4.png -filter_complex "[0:v]crop=199:280:1145:0[door];[1:v][door]overlay=1145:0:shortest=1[out]" -map "[out]" -frames:v 1 scene08-wheel-touch-doors-closed-v9.png

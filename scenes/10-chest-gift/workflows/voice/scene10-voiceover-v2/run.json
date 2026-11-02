@@ -1,0 +1,14 @@
+{
+  "provider": "Drama 3",
+  "status": "completed_pending_audio_review",
+  "workflow": "scene10-voiceover-v2.json",
+  "prompt_id": "6ae59348-ac12-49fb-830a-53dbf047a0a0",
+  "outputs": [
+    "audio/voice/scene10-narrator-shipbuilding-v2.flac",
+    "audio/voice/scene10-parrot-scooter-v2.flac"
+  ],
+  "seeds": {
+    "narrator": 11101003,
+    "parrot": 11101004
+  }
+}

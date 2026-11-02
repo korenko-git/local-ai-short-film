@@ -1,0 +1,17 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11100108,
+  "steps": 28,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "rejected_user_feedback_disconnected_from_existing_frames",
+  "input_references": [
+    "inputs/scene09-map-continuity.png",
+    "inputs/scene10-platform-environment.png",
+    "inputs/scene10-platform-environment.png"
+  ],
+  "output": "../../../frames/drafts/rejected/scene10-04-map-platform-v1.png",
+  "prompt_id": "fe0bd827-51dd-4436-a2a5-db2e1098cc4b"
+}

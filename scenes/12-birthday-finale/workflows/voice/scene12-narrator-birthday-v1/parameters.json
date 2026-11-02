@@ -1,0 +1,20 @@
+{
+  "status": "approved_in_user_approved_video",
+  "model": "drama3_w4a8experts_bf16.safetensors",
+  "text": "Дорогой Матвей, сегодня тебе девять лет. Пусть впереди ждут великие открытия, невероятные приключения и верные друзья. Пусть смелости хватит на любые испытания, а самая большая мечта обязательно сбудется. С днём рождения, капитан! Полный вперёд.",
+  "seed": 12120111,
+  "temperature": 1.0,
+  "top_k": 0,
+  "prompt": "prompt.txt",
+  "top_p": 0.9,
+  "workflow": "scene12-narrator-birthday-v1.json",
+  "codec": "drama3_codec.safetensors",
+  "split_long_text": false,
+  "shorten_long_pauses": true,
+  "reference_transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write.",
+  "provider": "Drama 3",
+  "voice_reference": "inputs/synthetic-voice-a.mp3",
+  "max_frames": 900,
+  "output": "../../audio/voice/scene12-narrator-birthday-v1.flac",
+  "prompt_id": "66adb998-99b1-4527-b55e-36ab28135ac0"
+}

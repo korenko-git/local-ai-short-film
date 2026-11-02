@@ -1,0 +1,1 @@
+[0:a]volume=0.65[amb];[1:a]adelay=50:all=1[stop];[amb][stop]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]

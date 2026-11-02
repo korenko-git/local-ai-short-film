@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Continue from the same dead-end composition. The shell blinks once again, brighter and clearly visible. Matvey notices the clue, his puzzled face turns to curious surprise, and he mouths a brief “Oh!” without audible speech. He then walks the short distance to the sign and finishes beside it, holding the rolled map in his left hand and reaching toward the board with his right. End exactly on the supplied frame. The vines remain fully closed and the sign does not rotate yet. One Matvey only, stable face and costume, no extra people, no text.
+
+overall_soundscape: Soft jungle insects and leaves, a tiny bright shell chime, gentle footsteps. No speech; the spoken “О!” will be added separately.
+
+non_diegetic_music: N/A

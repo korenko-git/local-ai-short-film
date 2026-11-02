@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a photorealistic cinematic night scene on the same tropical island cliff shown in image 2. Use image 1 as the exact identity reference for the same nine-year-old boy Matvey: preserve his face, short dark hair, glasses, body proportions and exact cream shirt, dark vest and red necktie; exactly one boy, no other people. Keep the same cliff edge, taut steeply descending zipline and distant beach geography from image 2, now under deep blue moonlight with a warm lantern near the launch point and a readable beach far below. Wide cinematic composition: Matvey stands ready at the safe launch platform beside the start of the rope, wearing a gray bicycle helmet. The same compact gray two-wheeled non-motor kick scooter is folded inside one neat dark-gray protective scooter carrying case worn close against his back with a secure shoulder strap. He holds one small climbing ice axe in each hand, ready to hook and grip the rope for a hand-controlled slide. Keep the equipment compact and believable, the ice axes visibly separate from the zipline, no extra gadgets or people. Focused, brave expression, clear face and silhouette, cinematic family adventure film, no text.",
+      "negative_prompt": "second boy, duplicate person, extra people, changed face, changed clothes, extra scooter, scooter with motor, scooter with seat, bicycle, bare scooter strapped loosely, extra bag, oversized backpack, extra rope, pulleys, trolley, motorized device, unsafe cliff jump, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_01_night_zipline_cliff_v2"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110103,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  }
+}

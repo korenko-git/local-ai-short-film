@@ -1,0 +1,18 @@
+{
+  "temperature": 1.0,
+  "codec": "drama3_codec.safetensors",
+  "status": "completed_pending_user_review",
+  "provider": "Drama 3",
+  "output": "../../audio/voice/scene11-narrator-mission-v1.flac",
+  "reference_transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write.",
+  "model": "drama3_w4a8experts_bf16.safetensors",
+  "shorten_long_pauses": true,
+  "split_long_text": false,
+  "voice_reference": "inputs/synthetic-voice-a.mp3",
+  "top_k": 0,
+  "seed": 11110111,
+  "max_frames": 600,
+  "top_p": 0.9,
+  "prompt_id": "67def388-5d83-4c51-a0b3-415b9ea5c2b3",
+  "duration_seconds": 8.219864
+}

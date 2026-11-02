@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a NEW photorealistic live-action family adventure movie still, 16:9, wide landscape composition. Image1 is ONLY a blank wide canvas defining the aspect ratio; replace it entirely. Image2 defines Matvey costume; image3 is his exact real facial identity. SAME real nine-year-old boy, short light brown hair, dark rectangular glasses, cream sailor shirt, navy waistcoat, red scarf, tan trousers and brown shoes. A SMALL SHORT LOW WOODEN FOOTBRIDGE across a narrow shallow tropical jungle stream. IMPORTANT COMPOSITION: center the ENTIRE bridge in the MIDDLE HALF of the image. Its LEFT END with two wooden posts is at about one-third frame width, its RIGHT END with two wooden posts is at about two-thirds frame width. Both entire grassy banks beyond both ends are clearly visible, filling the left and right thirds. No part of the bridge or handrails exits the image. The bridge is only TWO METERS LONG, one person wide, half a meter above shallow water, four wide wooden boards, two rope handrails tied between the entry/exit posts. There is wide dry ground before the left entry and beyond the right exit. Matvey stands on DRY GROUND to the LEFT of the left entry, BOTH shoes on the left shore, body facing RIGHT. He grips the left-entry rope with his right hand and holds a small rolled map in left hand, looking along the little bridge. The boy and bridge are both fully visible head-to-toe, eye-level FIXED SIDE-ON WIDE SHOT from a few meters away, no dramatic closeup. Tropical ferns and palms on both banks, smooth stones in flowing water, warm dappled morning sun. Calm realistic family adventure, no danger, no ravine, no cliffs, no other people, no other bridge, no lettering, no CGI, no cartoon.",
+      "negative_prompt": "cartoon, illustration, CGI, duplicate boy, adult, extra limbs, distorted face, broken bridge, dangerous ravine, high bridge, missing bank, cropped bridge end, text, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_06_bridge_wide"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11065235,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

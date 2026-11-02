@@ -1,0 +1,10 @@
+{
+  "status": "rendered_pending_user_review",
+  "workflow": "workflows/video/scene10-03-parrot-lipsync-v2",
+  "provider": "FreeVideo",
+  "seed": 11100124,
+  "audio": "scene10-parrot-scooter-v4.flac",
+  "output": "video/raw/scene10-03-parrot-lipsync-v2.mp4",
+  "started_at": "2026-11-02T12:11:44.9475272+02:00",
+  "completed_at": "2026-11-02T12:27:58.2642632+02:00"
+}

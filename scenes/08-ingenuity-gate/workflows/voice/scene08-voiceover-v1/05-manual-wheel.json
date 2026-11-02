@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "line": "05-manual-wheel",
+  "cue": "00:30-00:32",
+  "text": "Матвей попробовал открыть проход силой.",
+  "prompt": "[mature male Russian baritone narrator, clear diction, warm dry humor] Матвей попробовал открыть проход силой. [language: ru]",
+  "seed": 11080125,
+  "voice": "narrator",
+  "reference": "../../../../../shared/refs/audio/synthetic-voice-a.mp3",
+  "parameters": {
+    "top_k": 0,
+    "speakers": "one take per line",
+    "max_frames": 600,
+    "temperature": 1.0,
+    "top_p": 0.9
+  },
+  "output": "../../audio/voice/drafts/scene08-vo-05-manual-wheel.flac",
+  "status": "rendered_pending_user_review"
+}

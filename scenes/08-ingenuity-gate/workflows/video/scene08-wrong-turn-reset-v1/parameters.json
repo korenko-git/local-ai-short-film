@@ -1,0 +1,25 @@
+{
+  "provider": "FFmpeg",
+  "operation": "append reversed disc-turn segment",
+  "source": "../../../video/raw/scene08-wrong-turn-v2.mp4",
+  "output": "../../../output/clips/scene08-wrong-turn-reset-v1.mp4",
+  "source_duration_seconds": 6.583333,
+  "reverse_segment_start_seconds": 3.5,
+  "reverse_segment_end_seconds": 6.583333,
+  "hold_at_wrong_position_seconds": 0.4,
+  "reverse_audio_with_video": true,
+  "video": {
+    "codec": "libx264",
+    "preset": "medium",
+    "crf": 18,
+    "width": 1344,
+    "height": 768,
+    "fps": 24
+  },
+  "audio": {
+    "codec": "aac",
+    "bitrate": "160k"
+  },
+  "status": "approved"
+}
+

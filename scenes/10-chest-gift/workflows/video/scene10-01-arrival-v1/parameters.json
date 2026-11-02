@@ -1,0 +1,18 @@
+{
+  "provider": "FreeVideo",
+  "conditioning_mode": "first_last_only",
+  "width": 1344,
+  "height": 768,
+  "seconds": 6.5,
+  "base_steps": 16,
+  "two_pass": false,
+  "seed": 11100121,
+  "output": "../../../video/raw/scene10-01-arrival-v1.mp4",
+  "keyframes": [
+    "inputs/scene10-01-arrival-no-matvey-v1.png",
+    "inputs/scene10-01-arrival-v1.png"
+  ],
+  "status": "rendered_pending_user_review",
+  "actual_seconds": 6.583333,
+  "fps": 24
+}

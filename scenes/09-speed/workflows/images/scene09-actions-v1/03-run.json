@@ -1,0 +1,13 @@
+{
+  "prompt_id": "bb8deabd-90c8-40c2-958a-e9e0e5c8dd71",
+  "status": "completed",
+  "seed": 11090131,
+  "model": "Qwen Image 2.1",
+  "workflow": "03-bell.json",
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "media": "frames/approved/scene09-03-bell-v1.png",
+  "review": "approved_by_user"
+}

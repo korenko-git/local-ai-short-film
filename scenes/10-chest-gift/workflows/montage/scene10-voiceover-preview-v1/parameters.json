@@ -1,0 +1,35 @@
+{
+  "status": "superseded_by_voiceover_preview_v2",
+  "provider": "FFmpeg",
+  "purpose": "voiceover review assembly",
+  "video": "1344x768 24fps H.264 CRF18",
+  "audio": "AAC 192k stereo",
+  "duration_seconds": 24.708333,
+  "lines": [
+    {
+      "approval": "pending_audio_review",
+      "source": "audio/voice/scene10-matvey-found-chest-v1.flac",
+      "speaker": "Matvey",
+      "start_seconds": 4.15,
+      "text": "Вот ты где!"
+    },
+    {
+      "approval": "approved_by_user",
+      "source": "audio/voice/scene10-narrator-shipbuilding-v2.flac",
+      "speaker": "Narrator",
+      "start_seconds": 8.083333,
+      "text": "Перед нами новейшее достижение мирового кораблестроения."
+    },
+    {
+      "duration_seconds": 11.159501,
+      "start_seconds": 13.166667,
+      "speaker": "Parrot",
+      "text": "Два колеса, один руль, ни одной пушки. Зато какая скорость!",
+      "approval": "approved_by_user",
+      "source": "audio/voice/scene10-parrot-scooter-v4.flac"
+    }
+  ],
+  "parrot_visual": "scene10-03-parrot-lipsync-v2.mp4",
+  "output": "../../work/scene10-voiced-preview-v1.mp4",
+  "accepted_full_film": false
+}

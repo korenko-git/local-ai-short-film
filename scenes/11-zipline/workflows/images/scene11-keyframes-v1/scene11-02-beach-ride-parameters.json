@@ -1,0 +1,18 @@
+{
+  "status": "completed_pending_user_review",
+  "prompt_id": "d19b04bc-f1bb-46f2-8771-01ec1501bae4",
+  "seed": 11110102,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-gift-reveal-continuity.png"
+  ],
+  "scheduler": "simple",
+  "prompt": "scene11-02-beach-ride-prompt.txt",
+  "resolution": 1024,
+  "output": "../../../frames/drafts/scene11-02-beach-first-ride-v1.png",
+  "negative_prompt": "second boy, duplicate person, extra people, changed face, changed clothes, missing glasses, no helmet, extra helmet, second scooter, scooter with motor, scooter with seat, bicycle, floating wheels, misshapen scooter, skateboard, running, foot not touching ground during push, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs"
+}

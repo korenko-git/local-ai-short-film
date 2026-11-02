@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One continuous cinematic live-action shot, directly continuing from the previous bridge scene. Start on the same Matvey at the bridge exit, wearing the cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes, with dark rectangular glasses and rolled map. The title badge fades away. Matvey turns away from the bridge and walks along the narrow island jungle trail. The camera follows from behind as he moves deeper into dense foliage. Gradually the bridge recedes behind camera and disappears from view. End exactly on the supplied last frame: Matvey seen from behind on the trail, with the blocked vine-covered dead end clearly visible far ahead. Keep one child only, match his clothes and map, no teleporting. No bridge visible in the ending. No signpost, no shell, no text or overlays.
+
+overall_soundscape: Island birds and soft footsteps on the trail; jungle ambience grows slightly ominous as he walks deeper. No speech.
+
+non_diegetic_music: N/A

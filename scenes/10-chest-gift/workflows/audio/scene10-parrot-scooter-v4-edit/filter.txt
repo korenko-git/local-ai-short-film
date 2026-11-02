@@ -1,0 +1,3 @@
+[0:a]atrim=start=0:duration=2,asetpts=PTS-STARTPTS[v1];
+[1:a]atrim=start=0.5,asetpts=PTS-STARTPTS[v3];
+[v1][v3]concat=n=2:v=0:a=1[out]

@@ -1,0 +1,11 @@
+{
+  "source": "../../../video/raw/scene09-speed-camera-v3.mp4",
+  "source_audio": "Completely excluded, including ambience/footsteps, to remove generated gibberish",
+  "output": "../../../video/drafts/scene09-speed-camera-v4-run-clean.mp4",
+  "video": "stream copy, unchanged",
+  "voice": "../../../audio/voice/drafts/scene09-run-cue-v1.flac",
+  "status": "pending_user_audio_review",
+  "text": "Бежи!",
+  "visual": "approved_by_user",
+  "voice_start_seconds": 0.05
+}

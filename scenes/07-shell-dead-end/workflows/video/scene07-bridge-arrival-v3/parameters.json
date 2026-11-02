@@ -1,0 +1,18 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070312,
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "superseded_by_video_only_revision_v4",
+  "reference_frames": [
+    "inputs/scene06-last-frame.png",
+    "inputs/scene07-arrival-endpoint-v2.png"
+  ],
+  "output": "../../../video/raw/scene07-bridge-arrival-v3.mp4",
+  "revision_of": "scene07-bridge-arrival-v2.mp4",
+  "reason": "Video-only revision: walk to screen-left across safe ground, camera pans to reveal inland trail, then follow Matvey from behind toward distant dead end. Reuse both frame anchors unchanged.",
+  "superseded_by": "scene07-bridge-arrival-v4.mp4"
+}

@@ -1,0 +1,10 @@
+{
+  "max_frames": 600,
+  "top_p": 0.9,
+  "status": "prepared",
+  "provider": "Drama 3",
+  "temperature": 1,
+  "text": "Стой!",
+  "reference": "inputs/synthetic-voice-a.mp3",
+  "seed": 11090223
+}

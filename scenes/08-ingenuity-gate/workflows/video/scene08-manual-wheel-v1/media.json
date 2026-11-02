@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "first": "inputs/scene08-manual-wheel-start.png",
+  "last": "inputs/scene08-door-closes-end.png",
+  "source_approved_frames": [
+    "../../../frames/approved/scene08-manual-wheel-test-gpt-image-v1.png",
+    "../../../frames/approved/scene08-door-closes-when-wheel-stops-gpt-image-v1.png"
+  ]
+}

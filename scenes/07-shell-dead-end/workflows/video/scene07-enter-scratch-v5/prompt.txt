@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Preserve the supplied composition and the exact natural exposure of the opening frame throughout the whole shot. Continuous flat, soft, diffuse daylight with absolutely constant brightness; no change in lighting anywhere in frame. The signpost and the small beige spiral shell attached to it are passive matte objects, naturally lit exactly like the surrounding wood and leaves. Matvey enters from the right edge, walks two steps and scratches his head once. End exactly on the supplied final frame. No source of light is attached to or near the sign or shell. No localized brightening, no light rays, no flashing, no shimmering, no sparkle, no star-shaped glint, no lens flare. Keep the shell visible and matte. Preserve one Matvey, his outfit, map, the exact jungle path, sign and blocked vines. No speech, no text or overlays.
+
+overall_soundscape: Quiet ominous jungle ambience, soft footsteps and leaves only. No chime or magical sound.
+
+non_diegetic_music: N/A

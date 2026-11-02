@@ -1,0 +1,20 @@
+{
+  "provider": "FFmpeg",
+  "operation": "copy closed-door region from the first frame onto the final wheel-touch frame",
+  "door_source": "../../../work/scene08-approach-wheel-v1-review/frame-0.png",
+  "base_frame": "../../../work/scene08-approach-wheel-v1-review/frame-6-4.png",
+  "crop": {
+    "x": 1170,
+    "y": 0,
+    "width": 174,
+    "height": 280
+  },
+  "overlay_position": {
+    "x": 1170,
+    "y": 0
+  },
+  "output": "../../../frames/drafts/scene08-wheel-touch-doors-closed-v8.png",
+  "width": 1344,
+  "height": 768,
+  "status": "superseded_by_v9_left_shift"
+}

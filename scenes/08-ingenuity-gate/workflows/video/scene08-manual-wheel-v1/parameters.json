@@ -1,0 +1,16 @@
+{
+  "provider": "FreeVideo",
+  "quality_profile": "max",
+  "task": "fl2va",
+  "seed": 11080105,
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 20,
+  "step_cache": "easycache-av",
+  "two_pass": false,
+  "conditioning_mode": "first_last_only",
+  "character_reference": null,
+  "status": "deferred_superseded_open_door_first_frame",
+  "output": "../../../video/raw/scene08-manual-wheel-v1.mp4"
+}

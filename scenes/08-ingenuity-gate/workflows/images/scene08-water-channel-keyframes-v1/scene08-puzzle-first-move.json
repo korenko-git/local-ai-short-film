@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "channels-first-move-clean.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Recreate a photoreal cinematic scene of the same stone water puzzle. Image 3 is a cropped clean layout guide; match its exact channel geometry and water route. Camera directly overhead, show the full puzzle and the same stream pool at left, wheel and closed stone door at upper right. The same single 9-year-old Matvey from image 2, wearing black rectangular glasses, cream sailor shirt with sailor collar, navy vest, red neckerchief, tan trousers and brown shoes, crouches at the upper-left movable square tile and has just rotated it one quarter-turn counterclockwise. Water flows from the left into tile A, turns downward from that tile and follows the central channel to the lower edge of the second movable square tile, where it stops. The second tile remains in its starting orientation. Exactly match image 3 for both tile orientations and every blue water segment; all other channels remain dry dark stone. No letters, labels, numbers, icons or writing anywhere. Tropical jungle around a damp weathered stone platform, realistic water, photoreal cinematic daylight, 16:9.",
+      "negative_prompt": "cartoon, illustration, CGI, text, lettering, labels, letters, numbers, symbols, watermarks, diagrams, infographic, grid labels, signage, extra people, duplicate child, adult, wrong clothing, hat, modern clothes, extra limbs, deformed hands, missing fingers",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "scene08-puzzle-first-move"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11080102,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene07-exit.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "matvey-master.png"
+    }
+  }
+}

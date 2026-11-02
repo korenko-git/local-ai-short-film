@@ -1,0 +1,24 @@
+{
+  "status": "rejected_user_feedback",
+  "seed": 11110133,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "scheduler": "simple",
+  "resolution": 1024,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "../../../frames/drafts/scene11-01-night-cliff-v5.png",
+    "../../../frames/drafts/rejected/scene11-02-zipline-descent-v3-rejected-bent-cable.png"
+  ],
+  "prompt": "scene11-02-zipline-descent-v4-prompt.txt",
+  "negative_prompt": "bent cable, cable kink at trolley, forked cable, two cable segments at different angles, two cables, parallel cables, branch, split rope, rope below boy, boy holding bare cable, hand holding ice axe, ice axes, missing trolley, trolley below head, trolley on backpack, one-handed grip, arms down, visible mountain anchor, visible cliff attachment, bolts, beach close, large beach filling frame, low cliff, shallow drop, extra ropes, extra person, duplicate boy, changed face, changed clothes, extra equipment, falling, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+  "output": "../../../frames/drafts/rejected/scene11-02-zipline-descent-v4-rejected-user-feedback.png",
+  "prompt_id": "1a41ee2c-7f6c-4b9a-a724-28524f58b9c6",
+  "comfy_input_names": [
+    "Matvey_story_master_matvey_00001_.png",
+    "scene11-01-night-cliff-v5.png",
+    "e71ca7ae_000.png"
+  ]
+}

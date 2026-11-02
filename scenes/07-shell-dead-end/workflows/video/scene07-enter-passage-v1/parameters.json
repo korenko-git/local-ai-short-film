@@ -1,0 +1,18 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070329,
+  "seconds": 4.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "rendered_pending_review",
+  "reference_frames": [
+    "inputs/clip5-last-frame.png",
+    "inputs/character-enters-passage.png"
+  ],
+  "output": "../../../video/raw/scene07-enter-passage-v1.mp4",
+  "revision_of": "deleted clips 6 and 7",
+  "reason": "User approved frame; character enters the open passage after clip 5, matching the arrow and foliage state.",
+  "rendered_seconds": 5.175
+}

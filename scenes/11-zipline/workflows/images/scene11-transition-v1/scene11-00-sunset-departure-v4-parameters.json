@@ -1,0 +1,18 @@
+{
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-approved-gift-reveal.png",
+    "inputs/scene10-approved-gift-reveal.png"
+  ],
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "prompt": "scene11-00-sunset-departure-v4-prompt.txt",
+  "status": "rejected_user_feedback_landscape_changed",
+  "seed": 11110109,
+  "provider": "Qwen Image 2.1",
+  "output": "../../../frames/drafts/rejected/scene11-00-sunset-departure-v4-rejected-landscape-changed.png",
+  "negative_prompt": "looking at camera, eye contact, visible frontal eyes, front-facing boy, direct portrait, sparse vegetation, cleared plants, bare stone clearing, removed leaves, thinned jungle, duplicate boy, extra people, duplicate scooter, scooter in chest, duplicate helmet, helmet in chest, extra case, second chest, closed chest, changed clothes, missing parrot, extra parrot, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+  "scheduler": "simple",
+  "resolution": 1024
+}

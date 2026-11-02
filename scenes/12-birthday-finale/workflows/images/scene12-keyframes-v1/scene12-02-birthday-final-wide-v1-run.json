@@ -1,0 +1,9 @@
+{
+  "workflow": "scene12-02-birthday-final-wide-v1.json",
+  "prompt_id": "0c76d2bd-b990-4fce-ad92-3af3d14862a5",
+  "provider": "Qwen Image 2.1",
+  "status": "completed_pending_user_review",
+  "output": "../../../frames/drafts/scene12-02-birthday-final-wide-v1.png",
+  "seed": 12120102,
+  "steps": 28
+}

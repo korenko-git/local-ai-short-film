@@ -1,0 +1,18 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070301,
+  "seconds": 6.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "superseded_wrong_endpoint",
+  "reference_frames": [
+    "inputs/scene06-last-frame.png",
+    "inputs/scene07-arrival.png"
+  ],
+  "output": "../../../video/raw/scene07-bridge-arrival-v1.mp4",
+  "rendered_duration_seconds": 6.583333,
+  "run_record": "../../../work/scene07-bridge-arrival-v1-run.json",
+  "superseded_by": "scene07-bridge-arrival-v2.mp4"
+}

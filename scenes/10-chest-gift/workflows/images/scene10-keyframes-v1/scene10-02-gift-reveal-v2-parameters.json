@@ -1,0 +1,18 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11100103,
+  "steps": 28,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "completed_pending_user_review",
+  "output": "../../../frames/drafts/scene10-02-gift-reveal-v2.png",
+  "input_references": [
+    "inputs/scene10-01-arrival-v1.png",
+    "inputs/scene09-jungle-continuity.png",
+    "inputs/scene09-jungle-continuity.png"
+  ],
+  "supersedes": "scene10-02-gift-reveal-v1",
+  "prompt_id": "b951572f-f5bc-4aa9-8116-a5bb2648ea0e"
+}

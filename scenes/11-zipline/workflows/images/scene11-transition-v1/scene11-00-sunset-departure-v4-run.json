@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "82b34557-40f2-4881-bb3e-8a019448a615",
+  "seed": 11110109,
+  "workflow": "scene11-00-sunset-departure-v4.json",
+  "prompt": "scene11-00-sunset-departure-v4-prompt.txt",
+  "parameters": "scene11-00-sunset-departure-v4-parameters.json",
+  "output": "../../../frames/drafts/rejected/scene11-00-sunset-departure-v4-rejected-landscape-changed.png",
+  "status": "rejected_user_feedback_landscape_changed",
+  "validation": "valid",
+  "notes": "Rear view toward distant horizon; dense foliage restored; earlier v2 rejected by user for sparse vegetation and eye contact."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "dead_end_empty_frame_1_5",
+  "workflow": "scene07-empty-deadend.json",
+  "prompt_id": "7b9b8712-abc1-4c03-bdcf-a60744c48bdb",
+  "seed": 11070117,
+  "model": "Qwen Image 2.1",
+  "steps": 28,
+  "status": "completed",
+  "input": "inputs/scene07-deadend-start.png",
+  "output": "../../../frames/drafts/7b9b8712_000.png"
+}

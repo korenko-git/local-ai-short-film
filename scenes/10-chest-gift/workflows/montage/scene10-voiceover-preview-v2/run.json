@@ -1,0 +1,13 @@
+{
+  "status": "approved_by_user",
+  "outputs": [
+    "output/scene10-chest-gift-v1.mp4",
+    "output/clips/scene10-01-arrival-v1.mp4",
+    "output/clips/scene10-02-open-chest-v1.mp4",
+    "output/clips/scene10-03-parrot-reaction-v1.mp4",
+    "output/clips/scene10-04-parrot-lipsync-v1.mp4",
+    "work/scene10-voiced-preview-v2.mp4"
+  ],
+  "completed_at": "2026-11-02T12:42:44.1808559+02:00",
+  "user_approval": "норм"
+}

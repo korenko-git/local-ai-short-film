@@ -1,0 +1,4 @@
+[0:v]setpts=PTS-STARTPTS[v0];
+[1:v]setpts=PTS-STARTPTS[v1];
+[2:v]setpts=PTS-STARTPTS[v2];
+[v0][v1][v2]concat=n=3:v=1:a=0[v]

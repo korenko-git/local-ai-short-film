@@ -1,0 +1,8 @@
+{
+  "output": "audio/voice/scene12-narrator-birthday-v1.flac",
+  "status": "approved_by_user_in_final_video",
+  "workflow": "scene12-narrator-birthday-v1.json",
+  "provider": "Drama 3",
+  "seed": 12120111,
+  "prompt_id": "66adb998-99b1-4527-b55e-36ab28135ac0"
+}

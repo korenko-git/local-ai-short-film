@@ -1,0 +1,9 @@
+integrated_multimodal_description: [Shot 1] One continuous photorealistic live-action overhead wide shot. Begin exactly on the supplied first frame. Matvey is crouched beside the first circular turntable. Keep the same boy and face, short brown hair, dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers, and brown shoes. He stands, looks toward the wooden waterwheel, walks carefully across the stone paving, and reaches it. At the end he only rests both hands lightly on the wooden rim. He does not rotate, push, pull, or operate the wheel. The wooden waterwheel remains completely stationary, in the same orientation and position, from the first frame to the last. The stone doorway remains shut and motionless for the whole shot.
+
+CRITICAL WATER ACTION: The stream has continuous, clearly visible movement ONLY from its source up to and inside the FIRST circular turntable. Show flowing ripples and small moving splashes in that upstream channel and first disc; the stream visibly strikes the solid stone wall inside the first disc and stops there. The water does not pass the first turntable. The second turntable, every channel beyond the first disc, the channel leading toward the waterwheel, and the wooden wheel are completely dry throughout the shot. Do not add downstream water, wet shine, reflections, or splashes. Animate the upstream water continuously from the opening frame through the ending frame.
+
+End exactly on the supplied last frame. Preserve the fixed overhead camera, courtyard geometry, lighting, character and costume. The rolled map stays on dry paving. Natural body motion, stable face and hands, no extra people, no text, no cuts.
+
+overall_soundscape: Continuous moving stream and small splashes only at the source channel and first turntable; birds in the background; Matvey's footsteps on stone. The wooden wheel and stone doorway stay completely silent and still. No dialogue.
+
+non_diegetic_music: N/A

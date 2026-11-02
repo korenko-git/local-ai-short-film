@@ -1,0 +1,86 @@
+[
+  {
+    "asset": "assets/cover.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 4,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/dossier.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 25,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/map.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 42,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/landing.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 51,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/bridge.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 64,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/bridge-achievement.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 71,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/shell.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 91,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/puzzle.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 141,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/speed.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 174,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/gift.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 196,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/parrot.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 204,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/belongings.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 213,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/zipline.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 225,
+    "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/stars.jpg",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "seconds": 246,
+    "kind": "frame_from_assembly_v3"
+  }
+]

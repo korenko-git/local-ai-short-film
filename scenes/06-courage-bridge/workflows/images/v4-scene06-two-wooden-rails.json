@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit image1 minimally, keeping the SAME real boy face, body, hands, rolled map, costume, rock ledges, jungle, gorge, lighting, exact camera and existing wooden bridge. Images2 and3 remain facial/costume references. FIX ONE MISSING STRUCTURAL DETAIL: ADD THE SECOND WOODEN GUARDRAIL ALONG THE FAR/LEFT EDGE OF THE BRIDGE WALKWAY. The current image has only the near/right guardrail. The corrected bridge must have TWO COMPLETE PARALLEL WOODEN GUARDRAILS, one down each side of the walkway, with a clear open walkable lane between them. Keep the current near/right railing completely unchanged. The NEW far/left railing has matching square vertical wooden balusters bolted onto the far deck side beam and one continuous wooden top handrail, with the same ordinary carpentry and perspective as the existing rail. It begins at the far-left corner of the near bridge entrance, BEHIND and to the LEFT of Matvey, and runs diagonally across the image to the far-bank landing. Its top handrail is visibly ABOVE/LEFT of the existing near rail in image space because it is on the opposite edge of the deck. At the near entrance, the new far-side post is visible just LEFT of the boy around image x260, with top around y270 and base at the far-left edge of the bridge floor around y520. The new top beam continues BEHIND the boy, naturally OCCLUDED BY HIS BODY where necessary, then reappears beyond his right shoulder and continues to the far landing. Never paint a rail across the FRONT of his torso, hands, face or legs. Further along the span, both rail tops and both rows of posts are visible with the wooden planked walkway between them; the far row is slightly higher in the image and smaller in perspective than the near row. Both end posts terminate flush on the same rock-supported wooden sills. No railing across the entrance opening. No ropes, no cables, no diagonal clutter, no bridge duplication, no extra person. Real photorealistic woodwork. Change nothing else.",
+      "negative_prompt": "rope, ropes, cable, cables, string, suspension bridge, hanging lines, sagging deck, floating beam, floating post, disconnected rail, railing across entrance, railing crossing person, diagonal beam across person, tangled structure, extra limbs, distorted face, adult, cartoon, CGI, text, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v4_06_two_wooden_rails"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11066235,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene06-wood-one-rail.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

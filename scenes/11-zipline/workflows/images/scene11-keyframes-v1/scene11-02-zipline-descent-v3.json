@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene11-01-night-cliff-v4.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic cinematic night action shot over a tropical island beach. Preserve the exact identity of nine-year-old Matvey, face, glasses and clothing from reference image 1: cream sailor shirt, dark vest, red necktie, tan trousers, gray helmet and a dark-gray scooter case secured tightly on his back. One boy only. The zipline cable is ABOVE Matvey's head, sloping steeply downhill toward a small faraway beach below. Show the moving zipline trolley clearly: a compact metal carriage with small wheels riding ON TOP OF the cable, and a short hanging grip bar attached directly beneath the trolley. Matvey is suspended below it, arms raised overhead, gripping that hanging bar firmly with BOTH hands; both hands are visibly wrapped around the grip. His weight hangs from his hands, legs bent and clear of the cable as he slides toward the distant beach. The trolley is the thing carrying him along the cable. Camera is a wide side/rear action angle along the route; show the cable continuing above him and the far beach below, but crop the cliff launch point out of frame. Do NOT show the mountain anchor, attachment, bolts, or any fastening point. No ice axes, no hand gripping the bare rope, no pulley attached to his backpack. Keep the cable above him, the trolley above his hands, and both hands on the trolley's suspended handle. Moonlit deep blue night, strong height and distance, clear readable action, family adventure film, no text.",
+      "negative_prompt": "visible mountain anchor, visible cliff cable attachment, visible bolts in mountain, hands holding bare cable, rope below boy, cable beside boy at waist height, trolley behind boy, trolley on backpack, ice axes, boy standing on rope, unsupported freefall, no trolley, missing handlebar, one-handed grip, hands lowered, extra cables, multiple ropes, guy wires, beach close, beach same height as boy, duplicate boy, extra people, changed face, changed clothes, extra scooter, daylight, sunset, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_02_zipline_descent_v3"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110132,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene11-01-night-cliff-v4.png"
+    }
+  }
+}

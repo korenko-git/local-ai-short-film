@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene11-night-cliff-reference.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a photorealistic cinematic continuity frame immediately after the approved daytime gift reveal in image 2, on the exact same stone clearing above the tropical island bay. Use image 1 as the exact identity reference for the same nine-year-old boy Matvey: preserve face, short dark hair, glasses, proportions and exact cream shirt, dark vest, red necktie, tan trousers and brown shoes; exactly one boy, no other people. Preserve the same chest, parrot branch, cliff edge, beach and camera direction. Time has gently advanced toward sunset, with warm low golden light, long soft shadows, peach tones at the horizon, no lantern light and no stars. The gift has now been removed from the chest: its lid remains open, but the chest interior is completely empty. Matvey wears one slim dark-gray protective scooter carry case securely on his back; the case contains the single folded gray scooter. He carries exactly one gray bicycle helmet in one hand; his head is bare. There is no scooter or helmet anywhere else in the image. He stands beside the empty chest, ready to leave for the distant zipline. Keep the parrot perched nearby, cinematic family adventure realism, no text.",
+      "negative_prompt": "duplicate scooter, scooter in chest, duplicate helmet, helmet in chest, second boy, duplicate person, extra people, changed face or clothes, closed chest, different chest, missing parrot, extra parrot, extra bag, second case, backpack, helmet on head, dark night, stars, lit lantern, daylight noon, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_00_sunset_departure_v2"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110107,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-approved-gift-reveal.png"
+    }
+  }
+}

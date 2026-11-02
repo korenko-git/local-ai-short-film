@@ -1,0 +1,11 @@
+{
+  "id": "sign_arrow_vines_part",
+  "workflow": "scene07-sign-turn-arrow.json",
+  "prompt_id": "9b29bb27-e470-4ae0-afc3-539e3921c530",
+  "seed": 11070112,
+  "model": "Qwen Image 2.1",
+  "steps": 28,
+  "status": "completed",
+  "input": "inputs/scene07-matvey-at-shell-v1.png",
+  "output": "../../../frames/drafts/9b29bb27_000.png"
+}

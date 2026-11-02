@@ -1,0 +1,10 @@
+{
+  "status": "completed_pending_user_review",
+  "model": "Qwen Image 2.1",
+  "prompt_id": "ea636fe5-71e0-4d4d-88e4-987ba154210d",
+  "seed": 11070107,
+  "host": "127.0.0.1",
+  "port": 8188,
+  "workflow": "scene07-same-sign.json",
+  "output": "frames/drafts/ea636fe5_000.png"
+}

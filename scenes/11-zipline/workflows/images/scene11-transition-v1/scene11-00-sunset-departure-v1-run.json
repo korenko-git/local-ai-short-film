@@ -1,0 +1,8 @@
+{
+  "reason": "Rejected internally: scooter remained in the chest while in the case, and helmet was duplicated.",
+  "prompt_id": "96843c91-6543-4e0a-ad5f-40b99e178673",
+  "output": "../../../frames/drafts/rejected/scene11-00-sunset-departure-v1-duplicate-props.png",
+  "seed": 11110105,
+  "status": "superseded_internal_quality_issue",
+  "workflow": "scene11-00-sunset-departure.json"
+}

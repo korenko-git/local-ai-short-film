@@ -1,0 +1,111 @@
+{
+  "status": "approved_by_user",
+  "video": "../../../output/scene08-ingenuity-gate-v1.mp4",
+  "duration_seconds": 56.208,
+  "resolution": "1344x768",
+  "frame_rate": "24 fps",
+  "video_codec": "H.264, CRF 18",
+  "audio_codec": "AAC 192 kbps stereo",
+  "clip_order": [
+    {
+      "duration": 6.583,
+      "start": 0.0,
+      "file": "../../../output/clips/scene08-approach-v2.mp4"
+    },
+    {
+      "duration": 6.583,
+      "start": 6.583,
+      "file": "../../../output/clips/scene08-map-down-v1.mp4"
+    },
+    {
+      "duration": 10.083,
+      "start": 13.167,
+      "file": "../../../output/clips/scene08-wrong-turn-reset-v1.mp4"
+    },
+    {
+      "duration": 6.583,
+      "start": 23.25,
+      "file": "../../../output/clips/scene08-approach-wheel-v3.mp4"
+    },
+    {
+      "duration": 6.583,
+      "start": 29.833,
+      "file": "../../../output/clips/scene08-manual-wheel-v3.mp4"
+    },
+    {
+      "duration": 6.583,
+      "start": 36.416,
+      "file": "../../../output/clips/scene08-correct-first-turn-v1.mp4"
+    },
+    {
+      "duration": 6.583,
+      "start": 42.999,
+      "file": "../../../output/clips/scene08-correct-second-turn-v1.mp4"
+    },
+    {
+      "duration": 6.583,
+      "start": 49.583,
+      "file": "../../../output/clips/scene08-enter-door-v1.mp4"
+    }
+  ],
+  "audio": "Original FreeVideo audio retained and mixed with Drama 3 lines at gain 0.9; limiter 0.96",
+  "voice_timeline": [
+    {
+      "id": "01-opening",
+      "start": 1.0
+    },
+    {
+      "id": "02-map",
+      "start": 7.0
+    },
+    {
+      "id": "03-wrong-turn",
+      "start": 14.0
+    },
+    {
+      "id": "04-water-stop",
+      "start": 24.0
+    },
+    {
+      "id": "05-manual-wheel",
+      "start": 30.0
+    },
+    {
+      "id": "06-door-closes",
+      "start": 32.7
+    },
+    {
+      "id": "07-first-disc",
+      "start": 37.0
+    },
+    {
+      "id": "08-second-disc",
+      "start": 43.0
+    },
+    {
+      "id": "09-exit",
+      "start": 49.65
+    },
+    {
+      "id": "10-achievement",
+      "start": 53.0
+    }
+  ],
+  "achievement": {
+    "raster": "../../../work/achievement-3-of-4.png",
+    "fade_in_seconds": 0.45,
+    "start": 51.64,
+    "position": "upper-right, 30px inset",
+    "duration_seconds": 4.5,
+    "svg": "../../../work/achievement-3-of-4.svg"
+  },
+  "model_seeds": {
+    "freevideo": "unchanged approved source clips",
+    "drama3": "11080121-11080130"
+  },
+  "outputs": {
+    "source_clips_unchanged": true,
+    "video": "../../../../work/scene08-full-preview-v1.mp4"
+  }
+}
+

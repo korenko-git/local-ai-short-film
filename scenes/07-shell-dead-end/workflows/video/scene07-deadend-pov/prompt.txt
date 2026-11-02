@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Begin exactly on the supplied island-trail frame with Matvey in view. The camera makes a smooth deliberate turn over his shoulder into his point of view, leaving him outside the shot. Reveal exactly the supplied empty dead-end composition: same left-side wooden signpost with the spiral shell, dense vine wall blocking the path, same light and jungle geography. Settle on the empty view for a beat so the dead end is unmistakable. Keep the shell unlit in this shot. No Matvey visible in the final view, no extra people, no new trail, no text.
+
+overall_soundscape: Ominous jungle insects, distant birds, soft rustling leaves. No dialogue; narration will be added separately.
+
+non_diegetic_music: N/A

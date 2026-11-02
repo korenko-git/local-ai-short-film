@@ -1,0 +1,1 @@
+Preserve the same frame and remove only the light flare at the shell; the shell and sign remain physically present and unlit.

@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "base_frame": "../../../work/scene08-approach-wheel-v1-review/frame-6-4.png",
+  "door_source": "../../../frames/approved/scene08-door-closes-when-wheel-stops-gpt-image-v1.png"
+}

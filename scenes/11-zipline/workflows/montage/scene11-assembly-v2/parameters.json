@@ -1,0 +1,17 @@
+{
+  "narration": "Drama 3 review mix from clip 3",
+  "status": "assembled_pending_full_scene_review",
+  "output": "output/scene11-final-v2.mp4",
+  "clips": [
+    "scene11-01-departure-v2.mp4",
+    "scene11-02-cliff-approach-v2.mp4",
+    "scene11-03-night-zipline-descent-v2.mp4",
+    "scene11-05-beach-first-ride-v1.mp4"
+  ],
+  "scene": "11",
+  "duration_seconds": 32.041667,
+  "version": "v2",
+  "video_transitions": "0.15 s fades at linked transitions; 0.283 s fade into beach ride",
+  "duplicate_shared_frames": "trim first frame from clips 2 and 3 because each starts on preceding clip last frame",
+  "audio_transitions": "0.15 s + 0.15 s + 0.283 s acrossfades"
+}

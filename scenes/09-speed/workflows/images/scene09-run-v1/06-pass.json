@@ -1,0 +1,110 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Advance this exact shot in time, locked camera. Move the ONE existing boy much farther AWAY from camera to the far doorway. He is now sprinting THROUGH the gate threshold, back toward camera, his body already halfway past the stone wall plane, one leg trailing just inside the corridor. He is smaller due to distance, anatomically proportional to the existing doorway. Erase his previous central position, only one boy. Same navy sailor vest with cream collar, tan trousers, brown shoes, short hair; rolled map securely tucked at RIGHT HIP waistband with small top visible, hands empty. Rotate the two existing wooden gate leaves somewhat toward CLOSED on their exact original hinges, but leave a central gap at least 80 cm wide so the boy passes easily without touching either leaf. Do NOT move, resize or redesign the doorway, fixed masonry, walls or camera. Hourglass in left foreground: UPPER bulb now nearly EMPTY with only a small spoonful of gold sand at neck; LOWER bulb contains almost ALL the same gold sand supply as a large mound about half the bulb volume. Sand is transferred from upper to lower, never added. Keep hourglass glass frame, pedestal, bell and jungle lighting identical. Full scene photoreal cinematic still, no extra people, no duplicate boy, no captions.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark"
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene09_06_pass_v1"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11090142,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-05-run-v1.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "ca04522a-62c5-4bbc-ab09-5c4f169bda09",
+  "seed": 11110125,
+  "workflow": "scene11-01-night-cliff-v3.json",
+  "prompt": "scene11-01-night-cliff-v3-prompt.txt",
+  "parameters": "scene11-01-night-cliff-v3-parameters.json",
+  "output": "../../../frames/drafts/rejected/scene11-01-night-cliff-v3-rejected-duplicate-cables.png",
+  "status": "rejected_duplicate_cables",
+  "validation": "valid",
+  "notes": "Rejected after visual inspection: generated more than one cable; replaced by v4."
+}

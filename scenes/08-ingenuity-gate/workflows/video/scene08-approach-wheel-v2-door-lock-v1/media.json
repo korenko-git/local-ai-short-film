@@ -1,0 +1,8 @@
+{
+  "source_video": "../../../video/drafts/rejected/scene08-approach-wheel-v2-source/scene08-approach-wheel-v2.mp4",
+  "door_patch_source": "../../../frames/approved/scene08-wheel-touch-doors-closed-v10.png",
+  "door_patch_also_present_in": "../scene08-approach-wheel-v2/inputs/scene08-reset-end.png",
+  "patch": { "x": 1120, "y": 0, "width": 224, "height": 280, "placement_x": 1120, "placement_y": 0 },
+  "operation": "Hold the closed-door region from the first frame over the full duration of the rendered clip; preserve original audio."
+}
+

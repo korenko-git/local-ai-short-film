@@ -1,0 +1,16 @@
+{
+  "width": 1344,
+  "seed": 11090221,
+  "provider": "FreeVideo",
+  "base_steps": 16,
+  "two_pass": false,
+  "seconds": 6.5,
+  "height": 768,
+  "status": "interrupted_for_user_revision",
+  "conditioning_mode": "image_references_plus_video_motion_guide",
+  "guide_range_seconds": [
+    9.5,
+    16.0
+  ],
+  "guide_source": "../../../refs/speed-camera/user-speed-reference.mp4"
+}

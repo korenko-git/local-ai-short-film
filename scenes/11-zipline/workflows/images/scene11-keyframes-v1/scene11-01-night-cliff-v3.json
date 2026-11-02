@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic cinematic wide establishing shot at deep blue moonlit night. Preserve the exact identity, age, glasses, face and cream sailor shirt, dark vest, red necktie, tan trousers and brown shoes of nine-year-old Matvey from reference image 1. One boy only. Show the tropical cliff launch and the beach landing in the same clear composition. Camera is positioned just behind and above Matvey at the cliff launch, looking DOWN the route toward the beach below. The zipline is one single straight, taut, clearly visible rope running downhill from the cliff edge directly to the beach; its path points toward the beach, not sideways along the coastline and not out across the sea. The UPPER END is visibly tied with a large metal shackle to a heavy timber anchor post firmly bolted into solid rock at the cliff edge. The LOWER END is visibly tied with a large metal shackle to a separate tall timber landing post planted and braced securely in the sand at the beach. Show both anchor posts and the complete uninterrupted rope from post to post; make the beach post unmistakable against the pale sand. No floating rope, no midair pulley, no intermediate support, no loose end. Matvey stands safely next to the upper anchor, wearing one gray bicycle helmet, with a single dark gray scooter carry case strapped to his back and one ice axe in each hand. Warm lantern beside him, moonlight reveals the beach and both anchor points. The beach lies directly below and ahead of the launch platform. Strong depth perspective along the descending rope, realistic engineering, family adventure film, no text.\r\n",
+      "negative_prompt": "rope going sideways, cable parallel to horizon, cable heading over the ocean, rope not reaching beach, missing beach anchor, missing cliff anchor, floating rope, rope ending in midair, suspended pulley, cable crossing coastline sideways, extra ropes, extra posts, boy riding already, second boy, extra people, missing glasses, changed face, changed clothes, extra scooter, loose bag, extra equipment, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_01_night_zipline_cliff_v3"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110125,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-gift-reveal-continuity.png"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070306,
+  "seconds": 4.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "deleted_by_user",
+  "reference_frames": [
+    "inputs/scene07-turn-action.png",
+    "inputs/scene07-open.png"
+  ],
+  "output": "../../../video/raw/scene07-vines-open-v1.mp4",
+  "rendered_duration_seconds": 5.175,
+  "run_record": "../../../work/scene07-vines-open-v1-run.json"
+}

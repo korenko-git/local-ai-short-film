@@ -1,0 +1,18 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11100107,
+  "steps": 28,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "completed_pending_user_review",
+  "output": "../../../frames/drafts/scene10-01-arrival-no-matvey-v1.png",
+  "input_references": [
+    "inputs/scene10-01-arrival-source.png",
+    "inputs/scene10-01-arrival-source.png",
+    "inputs/scene10-01-arrival-source.png"
+  ],
+  "supersedes": "scene10-00-empty-entrance-v1",
+  "prompt_id": "9a014e5f-b306-4c74-b570-74abd85f480d"
+}

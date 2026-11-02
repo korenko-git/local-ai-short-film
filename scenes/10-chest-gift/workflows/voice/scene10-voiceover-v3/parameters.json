@@ -1,0 +1,20 @@
+{
+  "provider": "Drama 3",
+  "status": "superseded_by_v4_edit",
+  "supersedes": "../scene10-voiceover-v2/parrot-scooter",
+  "text": "Два колеса, один руль, ни одной пушки. Зато какая скорость!",
+  "delivery": "sleeping on a nearby branch beside the chest; startled squawk at chest creak; recites memorized pirate line; comic, rushed but intelligible; rolled r; complete ending",
+  "voice_reference": "inputs/synthetic-pirate-ref.wav",
+  "reference_transcript": "Ah! In 200 meters, turn starboard onto Maple Street.",
+  "seed": 11101005,
+  "model": "drama3_w4a8experts_bf16.safetensors",
+  "codec": "drama3_codec.safetensors",
+  "temperature": 1.0,
+  "top_p": 0.9,
+  "top_k": 0,
+  "max_frames": 1600,
+  "split_long_text": false,
+  "shorten_long_pauses": true,
+  "output": "../../audio/voice/scene10-parrot-scooter-v3.flac",
+  "prompt_id": "7bc4dc38-7fe3-4502-b695-b9e24a64ac92"
+}

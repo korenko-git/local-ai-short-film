@@ -1,0 +1,140 @@
+{
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v7_06_midspan_orbit_end"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "v7-scene06-midspan-start.png"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a NEW photorealistic live-action family adventure still from the OPPOSITE CAMERA SIDE of the SAME bridge scene in IMAGE2. IMAGE1 blank canvas only sets wide aspect ratio. IMAGE2 defines the same exact long narrow U-sag rope bridge, spaced thin wooden slats, four consistent hand/support rope lines, regular hangers, deep V-shaped forested jungle gorge with river far below, and Matvey body and costume. IMAGE3 defines costume, IMAGE4 exact real nine-year-old Matvey face: short straight light brown hair, dark rectangular glasses, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers, brown shoes. END OF A CLOCKWISE CAMERA ORBIT AROUND THE WALKING BOY: the camera has moved from behind him around his side to about four meters IN FRONT and slightly to his RIGHT, roughly his eye level with a slight downward tilt to keep the drop visible. Matvey has taken a few cautious forward steps along the MIDDLE of the bridge and now comes TOWARDS the camera. Show his WHOLE BODY LARGE, about sixty percent of frame height, centered a little to the RIGHT, real face clearly visible in FRONT THREE-QUARTER view, looking down to place a shoe on the next intact slat, knees softly bent. His PHYSICAL LEFT HAND holds the same LEFT-SIDE handrope which, from this FRONT camera position, is now on the RIGHT SIDE OF THE IMAGE. His PHYSICAL RIGHT HAND holds the same rolled parchment map at his right waist, now LEFT SIDE OF THE IMAGE. Preserve exact real facial identity, normal child age and proportions. The same bridge deck extends from the LOWER RIGHT foreground beneath him towards the UPPER LEFT misty distance behind his back, showing the other shore far away. Both shores remain far from the boy; no nearby landing platform, no near stone bank in foreground. There is a great exposed drop underneath and beside the thin planks, with the river and layered jungle rock walls visible far below. Both rope handlines and their regular vertical hangers keep plausible matching geometry, no giant rigid posts, no wooden guardrails. This is a genuine opposite 3D viewpoint around the same scene, NOT a horizontal mirror and NOT the boy merely turning around: he keeps walking towards his original far destination, only the CAMERA has gone around him. Keep hands, glasses and face detailed, all planks intact, no crack or jump yet, no other person, no writing, no CGI or cartoon.",
+      "negative_prompt": "rigid timber bridge, solid wooden railings, thick wooden beams, park footbridge, solid continuous walkway, concrete deck, shallow ditch, tiny low bridge, giant anchoring A-frame, tangled ropes, disconnected cables, extra horizontal ropes across person, floating deck, duplicate boy, yellow jacket, adult, hoodie, extra limbs, distorted face, text, watermark, illustration, CGI",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ],
+      "images.image_4": [
+        "12",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11070234,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  }
+}

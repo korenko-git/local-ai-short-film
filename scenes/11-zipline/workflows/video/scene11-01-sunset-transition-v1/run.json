@@ -1,0 +1,10 @@
+{
+  "media": "media.json",
+  "seed": 11110120,
+  "status": "prepared_not_started_freevideo_agent_unavailable",
+  "seconds": 6.5,
+  "task": "scene11-01-sunset-transition-v1",
+  "output": "../../../video/raw/scene11-01-sunset-transition-v1.mp4",
+  "prompt": "prompt.txt",
+  "note": "FreeVideo preflight returned no_token; rendering has not started."
+}

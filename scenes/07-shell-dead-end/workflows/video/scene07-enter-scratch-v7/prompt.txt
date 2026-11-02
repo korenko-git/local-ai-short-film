@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One natural, uninterrupted live-action shot. Match the supplied empty jungle frame exactly. Keep steady soft cloudy daylight with constant exposure from start to finish. The wooden sign is weathered matte wood. The small cream spiral shell attached to the sign is a normal physical seashell with visible ridges and the same pale color throughout; it does not change brightness. Matvey enters from the right, walks two small steps to the sign and scratches his head once, puzzled. Preserve the same jungle, blocked trail, single child, outfit, glasses and rolled map. Finish on the supplied final image. The only action is Matvey entering and scratching his head. Nothing else animates or changes in the scene. No text or extra props.
+
+overall_soundscape: Quiet jungle ambience, soft footsteps and leaves, no speech.
+
+non_diegetic_music: N/A

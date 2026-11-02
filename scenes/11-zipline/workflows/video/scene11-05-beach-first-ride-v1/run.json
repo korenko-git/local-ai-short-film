@@ -1,0 +1,10 @@
+{
+  "media": "media.json",
+  "seed": 11110124,
+  "status": "prepared_not_started_freevideo_agent_unavailable",
+  "seconds": 7.0,
+  "task": "scene11-05-beach-first-ride-v1",
+  "output": "../../../video/raw/scene11-05-beach-first-ride-v1.mp4",
+  "prompt": "prompt.txt",
+  "note": "FreeVideo preflight returned no_token; rendering has not started."
+}

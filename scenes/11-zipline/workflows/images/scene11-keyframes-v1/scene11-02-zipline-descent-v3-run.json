@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "e71ca7ae-adea-489b-b9a7-ca5b3f8042a5",
+  "seed": 11110132,
+  "workflow": "scene11-02-zipline-descent-v3.json",
+  "prompt": "scene11-02-zipline-descent-v3-prompt.txt",
+  "parameters": "scene11-02-zipline-descent-v3-parameters.json",
+  "output": "../../../frames/drafts/rejected/scene11-02-zipline-descent-v3-rejected-bent-cable.png",
+  "status": "rejected_bent_cable_at_trolley",
+  "validation": "valid",
+  "notes": "Matvey holds an overhead handle attached to a visible trolley riding above him; upper mountain anchor is outside frame."
+}

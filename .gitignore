@@ -1,0 +1,59 @@
+# Rejected generations at every nesting level.
+**/rejected/
+
+# Local production history and media; files stay on disk.
+/archive/
+/work/
+/tmp/
+**/work/
+**/video/raw/
+**/video/drafts/
+**/frames/drafts/
+/output/
+
+# Private photographs and uploaded inputs; selected voice references are public.
+/shared/refs/*
+!/shared/refs/audio/
+**/workflows/**/inputs/
+**/refs/comfy-inputs/
+
+# Workstation-specific inventories and previous storyboard export.
+/COMFY-INPUTS.json
+/MANIFEST.json
+/RELOCATION.json
+/SOURCE-INVENTORY.json
+/STORYBOARD-OLD.jpg
+/tools/FreeVideo/
+
+# Production audio/video; selected web media are the explicit exception.
+*.mp4
+*.mov
+*.wav
+*.flac
+*.mp3
+!docs/article/assets/*.mp4
+!docs/article/assets/*.mp3
+
+# Runtimes, models and secrets.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.env
+.env.*
+!.env.example
+*.safetensors
+*.gguf
+*.ckpt
+*.log
+*.pid
+.DS_Store
+Thumbs.db
+/docs/article/local-short-film-*.html
+/docs/article/matvey-island.html
+
+# Explicitly approved voice-reference clips and their small encoded embeddings.
+!/shared/refs/audio/*.mp3
+!/shared/refs/audio/*.wav
+!/shared/refs/audio/*-encoded.safetensors

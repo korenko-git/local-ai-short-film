@@ -1,0 +1,23 @@
+[
+  {
+    "asset": "assets/film.mp4",
+    "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
+    "purpose": "public viewing copy",
+    "video": "H.264 CRF 25",
+    "audio": "AAC 128 kbps"
+  },
+  {
+    "asset": "assets/bridge-camera.mp4",
+    "source": "scenes/06-courage-bridge/output/clips/scene06-orbit-hq.mp4",
+    "purpose": "public viewing copy",
+    "video": "H.264 CRF 25",
+    "audio": "AAC 128 kbps"
+  },
+  {
+    "asset": "assets/curiosity-camera.mp4",
+    "source": "scenes/07-shell-dead-end/output/clips/scene07-deadend-pov-v1.mp4",
+    "purpose": "public viewing copy",
+    "video": "H.264 CRF 25",
+    "audio": "AAC 128 kbps"
+  }
+]

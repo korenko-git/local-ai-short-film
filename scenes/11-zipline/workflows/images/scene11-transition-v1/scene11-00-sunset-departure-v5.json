@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-approved-gift-reveal.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a photorealistic continuation of reference image 2 at warm sunset. Treat reference image 2 as the exact original location plate. LOCK the camera and geography to it: same camera position, height, lens, framing and perspective; preserve the exact silhouette and on-screen position of every mountain ridge and cliff, the bay opening, coastline, waterline, distant beach, trees, foreground plants, stone wall and path. Do not move, reshape, replace, add or remove any mountain, cliff, hill, beach or plant. Do not change camera angle or recompose. The landscape must match reference image 2 exactly; only the time-of-day lighting changes from daylight to warm sunset.\n\nKeep the stone clearing and chest in the same screen positions and at the same scale. Keep the parrot on the same branch at the same position. Use reference image 1 for Matvey's exact face, age, glasses and clothes. One nine-year-old boy only, same cream sailor shirt, dark vest, red necktie, tan trousers and brown shoes. Keep Matvey in the same place beside the chest; turn only his body and head enough that he is seen from behind in a rear three-quarter view and is looking toward the distant horizon, never at the camera. The chest is open and empty. The one folded gray scooter is inside one dark-gray carry case strapped on Matvey's back; he holds exactly one gray helmet in his hand. Match the original scene's geometry and composition exactly while changing the light to sunset. Photorealistic cinematic family adventure, no text.",
+      "negative_prompt": "different mountain silhouette, moved mountains, changed ridge positions, replaced cliffs, new hills, changed coastline, changed bay, changed beach, camera moved, new camera angle, changed lens, recompose, zoom, crop, shifted perspective, removed vegetation, sparse plants, missing trees, extra mountains, duplicate boy, extra people, duplicate scooter, scooter in chest, helmet in chest, extra case, second chest, closed chest, changed clothes, missing parrot, extra parrot, looking at camera, eye contact, frontal eyes, text, watermark, cartoon, CGI, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_00_sunset_departure_v5"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110134,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-approved-gift-reveal.png"
+    }
+  }
+}

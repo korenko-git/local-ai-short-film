@@ -1,0 +1,10 @@
+Use case: cinematic storyboard keyframe
+Asset type: image-to-video final frame for Scene 08
+Input images: Image 1 is authoritative for overhead layout, courtyard and exact water state. Image 2 is only a pose/composition reference for Matvey standing by the wooden wheel; ignore its water arrangement.
+Primary request: Create one coherent photorealistic overhead frame. Matvey moves from crouching by the first circular disc to standing at the wooden wheel on the right, leaning forward and placing both hands on its rim.
+Scene/backdrop: Match the stone courtyard, high fixed overhead camera, foliage, circular turntables, lighting and wooden wheel from Image 1.
+Subject: Same boy, short brown hair, dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes.
+Style/medium: Photorealistic live-action family adventure film.
+Composition/framing: Wide overhead composition; stable perspective; clear visible pose and location change from Image 1.
+Constraints: Water comes from the left and flows only into the FIRST circular turntable, with visible ripples/small splash ending against the solid stone wall inside that disc. Absolutely no water beyond the first turntable: second disc, channels past first disc, channel to wheel and wooden waterwheel are completely dry, with no wet shine or splash. Stone doorway stays shut and motionless.
+Avoid: any stream or reflections downstream of the first disc; collage; extra people; text; watermark.

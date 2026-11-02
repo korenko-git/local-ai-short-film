@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "line": "09-exit",
+  "cue": "00:50-00:55",
+  "text": "Забрав карту, Матвей шагнул в открытый проход.",
+  "prompt": "[mature male Russian baritone narrator, clear diction, warm concluding tone] Забрав карту, Матвей шагнул в открытый проход. [language: ru]",
+  "seed": 11080129,
+  "voice": "narrator",
+  "reference": "../../../../../shared/refs/audio/synthetic-voice-a.mp3",
+  "parameters": {
+    "top_k": 0,
+    "speakers": "one take per line",
+    "max_frames": 600,
+    "temperature": 1.0,
+    "top_p": 0.9
+  },
+  "output": "../../audio/voice/drafts/scene08-vo-09-exit.flac",
+  "status": "rendered_pending_user_review"
+}

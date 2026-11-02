@@ -1,0 +1,10 @@
+{
+  "text": "Скорость — есть!",
+  "top_p": 0.9,
+  "temperature": 1.0,
+  "seed": 11090211,
+  "max_frames": 600,
+  "provider": "Drama 3",
+  "status": "prepared",
+  "voice_reference": "inputs/synthetic-voice-b.mp3"
+}

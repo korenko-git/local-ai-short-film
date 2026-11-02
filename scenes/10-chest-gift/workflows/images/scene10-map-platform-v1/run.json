@@ -1,0 +1,8 @@
+{
+  "provider": "Qwen Image 2.1",
+  "status": "rejected_user_feedback_disconnected_from_existing_frames",
+  "workflow": "scene10-map-platform-v1.json",
+  "prompt_id": "fe0bd827-51dd-4436-a2a5-db2e1098cc4b",
+  "seed": 11100108,
+  "output": "../../../frames/drafts/rejected/scene10-04-map-platform-v1.png"
+}

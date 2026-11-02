@@ -1,0 +1,11 @@
+{
+  "provider": "FFmpeg",
+  "operation": "assemble approved clips, overlay achievement badge, mix Drama 3 voiceover",
+  "status": "approved_by_user",
+  "output": "../../../output/scene08-ingenuity-gate-v1.mp4",
+  "sha256": "1937FE3EADEBD45D4E37C135CFCABBD0AFF907DE772AC51B87C93C552943B1A4",
+  "duration_seconds": 56.208,
+  "source_clip_count": 8,
+  "voice_line_count": 10,
+  "badge_start_seconds": 51.64
+}

@@ -1,0 +1,17 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11070118,
+  "steps": 28,
+  "sampler": "euler",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "completed_pending_video_review",
+  "workflow": "scene07-arrival-endpoint-v2.json",
+  "input_references": [
+    "inputs/scene06-last-frame.png",
+    "inputs/scene07-deadend-start.png",
+    "Matvey_story_master_matvey_00001_.png"
+  ],
+  "output": "../../../frames/drafts/scene07-arrival-endpoint-v2.png",
+  "prompt_id": "fdc3d2c6-6739-4c91-a6d5-718a3b4f77be"
+}

@@ -1,0 +1,14 @@
+{
+  "provider": "GPT Image (built-in image generation)",
+  "status": "selected_as_video_end_frame_by_user",
+  "seed": null,
+  "seed_note": "The built-in image tool did not expose a seed.",
+  "width": 1660,
+  "height": 960,
+  "transparent_background": false,
+  "inputs": [
+    "../../../frames/approved/scene08-wheel-touch-final-gpt-image-v2.png",
+    "../../../frames/approved/scene08-door-closes-when-wheel-stops-gpt-image-v1.png"
+  ],
+  "output": "../../../frames/drafts/scene08-manual-wheel-end-gpt-image-v2.png"
+}

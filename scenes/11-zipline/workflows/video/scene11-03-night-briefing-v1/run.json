@@ -1,0 +1,10 @@
+{
+  "media": "media.json",
+  "seed": 11110122,
+  "status": "prepared_not_started_freevideo_agent_unavailable",
+  "seconds": 8.5,
+  "task": "scene11-03-night-briefing-v1",
+  "output": "../../../video/raw/scene11-03-night-briefing-v1.mp4",
+  "prompt": "prompt.txt",
+  "note": "FreeVideo preflight returned no_token; rendering has not started."
+}

@@ -1,0 +1,18 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070325,
+  "seconds": 4.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "rejected_glow_on_sign",
+  "reference_frames": [
+    "inputs/scene07-empty-deadend.png",
+    "inputs/scene07-deadend-with-matvey-unlit-v4.png"
+  ],
+  "output": "../../../video/drafts/rejected/scene07-enter-scratch-v4.mp4",
+  "revision_of": "scene07-enter-scratch-v1.mp4",
+  "anchor": "../../../frames/drafts/scene07-deadend-with-matvey-unlit-v4.png",
+  "reason": "Retry after FreeVideo worker was interrupted. Preserve approved frames and keep shell and sign unlit."
+}

@@ -1,0 +1,22 @@
+{
+  "media": "media.json",
+  "provider": "FreeVideo",
+  "voiceover_mix": "Voice begins at 0.0 s; background music and ambience reduced to 0.35 gain; limiter 0.95",
+  "width": 1344,
+  "status": "approved_by_user",
+  "rendered_seconds": 17.208,
+  "height": 768,
+  "audio": "FreeVideo-generated ambience and original instrumental closing music; narration mixed separately",
+  "output": "../../../video/raw/scene12-birthday-finale-v1.mp4",
+  "review_output": "../../../video/drafts/scene12-birthday-finale-v1-review.mp4",
+  "seed": 12120121,
+  "two_pass": false,
+  "star_timing": "Prompt requests one shooting star around 11 to 13 s; timing in final clip awaits user review",
+  "last": "inputs/scene12-end-birthday-wide.png",
+  "voiceover_duration_seconds": 16.997,
+  "prompt": "prompt.txt",
+  "first": "inputs/scene12-start-looks-at-stars.png",
+  "voiceover_source": "inputs/scene12-narrator-birthday-v1.flac; mix after render as Drama 3 track",
+  "seconds": 17.0,
+  "base_steps": 16
+}

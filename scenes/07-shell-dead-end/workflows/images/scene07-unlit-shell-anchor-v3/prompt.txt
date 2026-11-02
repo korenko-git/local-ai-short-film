@@ -1,0 +1,1 @@
+Keep the shell attached, matte and unlit; remove only the light flare from the previous frame.

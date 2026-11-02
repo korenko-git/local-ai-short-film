@@ -1,0 +1,13 @@
+{
+  "prompt_id": "1ef0d753-ed55-4eb5-a3a0-9dd43a23044a",
+  "status": "completed",
+  "seed": 11090113,
+  "model": "Qwen Image 2.1",
+  "workflow": "02-timer-v3.json",
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "media": "frames/drafts/1ef0d753_000.png",
+  "review": "rejected_gate_and_sand_unchanged"
+}

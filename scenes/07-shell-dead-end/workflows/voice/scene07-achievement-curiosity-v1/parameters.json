@@ -1,0 +1,15 @@
+{
+  "provider": "Drama 3",
+  "model": "drama3_w4a8experts_bf16.safetensors",
+  "codec": "drama3_codec.safetensors",
+  "seed": 11070331,
+  "voice_reference": "inputs/synthetic-voice-b.mp3",
+  "text": "Любознательность — есть!",
+  "status": "completed_pending_audio_review",
+  "output": "../../audio/voice/scene07-achievement-curiosity-v1.flac",
+  "target_montage": "../../work/scene07-full-preview-v6.mp4",
+  "placement_seconds": 27.9,
+  "notes": "Replace the procedural chime with this spoken line. Keep source clips and badge/video unchanged.",
+  "prompt_id": "5aed808f-7255-4418-aa79-e57c1758fa99",
+  "generated_output": "audio/voice/scene07-achievement-curiosity-v1.flac"
+}

@@ -1,0 +1,10 @@
+{
+  "background": "../../../audio/sfx/scene09-speed-instrumental-v1.wav",
+  "voice": "../../../audio/voice/drafts/scene09-run-cue-v1.flac",
+  "status": "pending_user_listen",
+  "source": "../../../video/raw/scene09-speed-camera-v3.mp4",
+  "output": "../../../video/drafts/scene09-speed-camera-v5-music-no-vocals.mp4",
+  "separation": "CPU HDEMUCS_HIGH_MUSDB_PLUS; vocals excluded, drums/bass/other retained",
+  "voice_start_seconds": 0.05,
+  "video": "stream copy"
+}

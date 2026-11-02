@@ -1,0 +1,9 @@
+{
+  "workflow": "scene07-achievement-curiosity-v1.json",
+  "prompt_id": "5aed808f-7255-4418-aa79-e57c1758fa99",
+  "provider": "Drama 3",
+  "status": "completed_pending_audio_review",
+  "seed": 11070331,
+  "output": "audio/voice/scene07-achievement-curiosity-v1.flac",
+  "prompt": "Любознательность — есть!"
+}

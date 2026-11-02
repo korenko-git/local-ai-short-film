@@ -1,0 +1,17 @@
+{
+  "provider": "FreeVideo",
+  "seed": 11070323,
+  "seconds": 4.5,
+  "width": 1344,
+  "height": 768,
+  "steps": 16,
+  "two_pass": false,
+  "status": "rejected_glow_remained_in_source_endpoint",
+  "reference_frames": [
+    "inputs/scene07-empty-deadend.png",
+    "inputs/scene07-deadend-with-matvey.png"
+  ],
+  "output": "../../../video/drafts/rejected/scene07-enter-scratch-v2.mp4",
+  "revision_of": "scene07-enter-scratch-v1.mp4",
+  "reason": "Remove all shell/sign glow from clip 3; preserve both frame references unchanged."
+}

@@ -1,0 +1,15 @@
+{
+  "output": "../../../video/raw/scene11-01-departure-v2.mp4",
+  "seconds": 6.6,
+  "seed": 11110136,
+  "height": 768,
+  "provider": "FreeVideo",
+  "base_steps": 16,
+  "status": "approved_by_user",
+  "audio": "FreeVideo-generated soundtrack and ambience; supplied Drama 3 narration only for clip 3",
+  "width": 1344,
+  "two_pass": false,
+  "prompt": "prompt.txt",
+  "media": "media.json",
+  "user_review": "2026-11-02: user said the clip was okay and requested the next clip."
+}

@@ -1,0 +1,140 @@
+{
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v6_06_far_bank_safe"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-02.png"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit IMAGE1 into the END FRAME of the exact SAME locked-camera adventure scene. Preserve ALL environment pixels and bridge/rock geometry as closely as possible: same spaced wooden slats, same rope suspension bridge receding into misty jungle, same deep gorge, same large dry stone platform on the RIGHT FOREGROUND, same light, same camera and scale. Images2-4 remain secondary bridge, costume and exact real face references. TWO PRECISE CHANGES ONLY: (1) MOVE the SAME ONE nine-year-old Matvey OFF the bridge onto the dry RIGHT stone platform. Remove him completely from his original position on the wooden plank. He now stands around x1000 with BOTH brown shoes firmly on the RIGHT rock surface, clearly beyond the rope/bridge exit, whole body still visible. Preserve exact face, glasses, hair, cream sailor shirt, navy waistcoat, red scarf, tan trousers and the same rolled parchment map in his LEFT hand at waist height. He has RELEASED the side rope; right hand free at his side, shoulders slightly relaxed, looking back LEFT towards the bridge with relieved alert expression after a narrow escape. Normal child age and anatomy, no falling, no injury, no second boy. (2) The ONE nearest foreground wooden cross-plank that had a dark crack under his front boot is NOW SPLIT near its center-right: the two splintered halves bend down into the gap, still tethered at their outer ends to the side ropes, leaving a clearly visible small opening where his shoe used to be. Show light splintered wood at that single fracture. This is the ONLY damaged plank; all other boards and the main bridge cables remain intact in exactly the same positions. Keep the broken board visible in the LOWER LEFT/CENTER, below the empty former standing position, behind the now safely landed boy. Do not remove the whole bridge, do not add extra ropes, do not create a giant hole, no modern timber rails. Photorealistic live-action textures, no writing, no captions, no CGI or cartoon.",
+      "negative_prompt": "rigid timber bridge, solid wooden railings, thick wooden beams, park footbridge, solid continuous walkway, concrete deck, shallow ditch, tiny low bridge, giant anchoring A-frame, tangled ropes, disconnected cables, extra horizontal ropes across person, floating deck, duplicate boy, yellow jacket, adult, hoodie, extra limbs, distorted face, text, watermark, illustration, CGI",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ],
+      "images.image_4": [
+        "12",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "v6-scene06-escape-start.png"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11069234,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  }
+}

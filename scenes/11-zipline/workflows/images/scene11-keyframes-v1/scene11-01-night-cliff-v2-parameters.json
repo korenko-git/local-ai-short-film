@@ -1,0 +1,18 @@
+{
+  "status": "rejected_no_clear_anchor_route",
+  "prompt_id": "0a26a4b8-9a2c-43cf-bdb3-49b09248ec97",
+  "seed": 11110103,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-gift-reveal-continuity.png"
+  ],
+  "scheduler": "simple",
+  "prompt": "scene11-01-night-cliff-v2-prompt.txt",
+  "resolution": 1024,
+  "output": "../../../frames/drafts/rejected/scene11-01-night-cliff-v2-rejected-no-clear-anchor-route.png",
+  "negative_prompt": "second boy, duplicate person, extra people, changed face, changed clothes, extra scooter, scooter with motor, scooter with seat, bicycle, bare scooter strapped loosely, extra bag, oversized backpack, extra rope, pulleys, trolley, motorized device, unsafe cliff jump, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs"
+}

@@ -1,0 +1,140 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic live-action family pirate adventure film, 16:9, warm golden sunrise, real skin and natural child proportions. Image1 blank wide canvas defines aspect ratio only. Image2 defines the boy costume; image3 is his exact real facial identity: the SAME nine-year-old boy, short straight light brown hair, dark rectangular glasses, preserve his face and age without beautifying. He wears cream cotton sailor shirt, navy waistcoat, red neckerchief, tan trousers, no hat, no weapons. Image4 defines the exact dark wooden two-masted sailing brig, island with steep green mountain, turquoise bay and sandy harbor; preserve this environment. Medium-wide eye-level three-quarter shot on that brig foredeck, camera faces towards the bow and the island. Matvey stands LEFT of center, visible from head to upper thighs, his face looking slightly toward camera and LEFT at the offered map. A single adult captain forearm enters from the left frame edge, wearing navy-blue sleeve with gold cuff, and holds ONE small tightly rolled cream parchment treasure map horizontally twenty centimeters in front of the boy. The boy hands are open at waist level, reaching forward but not yet touching the roll; the adult still holds it. The roll has no visible writing. The boys face and both hands are completely unobstructed. Dark polished wood railing at his waist behind him, rope coils on deck, rigging lines at sides; the SAME island mountain and beach visible clearly in the RIGHT background beyond the bow. Sea breeze, inviting adventure, coherent realistic lighting. No other visible faces or full adults, no modern objects, no text, no logos, no cartoon or illustration.",
+      "negative_prompt": "cartoon, anime, 3d render, text, letters, watermark, disfigured, adult, different child, extra limbs, extra wheels, third wheel, missing glasses",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ],
+      "images.image_4": [
+        "12",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_04_deck_map"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": "v3-scene01-ship-island.png"
+    },
+    "class_type": "LoadImage"
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11045233,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

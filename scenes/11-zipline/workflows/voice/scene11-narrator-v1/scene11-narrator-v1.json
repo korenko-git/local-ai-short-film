@@ -1,0 +1,83 @@
+{
+  "1": {
+    "class_type": "Drama3Loader",
+    "inputs": {
+      "model_name": "drama3_w4a8experts_bf16.safetensors",
+      "experts": "in RAM",
+      "expert_cache_gb": 6.0,
+      "second_gpu": "none",
+      "split_layer": 0
+    }
+  },
+  "2": {
+    "class_type": "Drama3CodecLoader",
+    "inputs": {
+      "codec_name": "drama3_codec.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "synthetic-voice-a.mp3"
+    }
+  },
+  "5": {
+    "class_type": "Drama3EncodeVoice",
+    "inputs": {
+      "codec": [
+        "2",
+        0
+      ],
+      "audio": [
+        "3",
+        0
+      ],
+      "transcript": "Hi there! I'm one of the voices this model can make up on its own, and I'm ready to read anything you write."
+    }
+  },
+  "20": {
+    "class_type": "Drama3Generate",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "text": "[mature male Russian baritone narrator, solemn adventure mission, warm dry humor, restrained theatrical grandeur; address the boy clearly and encouragingly, crisp Russian diction, measured confident pace; say the line once, no repetition] Капитан Матвей, вам поручается новое задание — покорять дороги, открывать маршруты и не забывать о шлеме. [language: ru]",
+      "voices.voice0": [
+        "5",
+        0
+      ],
+      "seed": 11110111,
+      "temperature": 1.0,
+      "top_p": 0.9,
+      "top_k": 0,
+      "max_frames": 600,
+      "split_long_text": false,
+      "speakers": "one take per line"
+    }
+  },
+  "21": {
+    "class_type": "Drama3Decode",
+    "inputs": {
+      "codec": [
+        "2",
+        0
+      ],
+      "codes": [
+        "20",
+        0
+      ],
+      "shorten_long_pauses": true
+    }
+  },
+  "22": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "21",
+        0
+      ],
+      "filename_prefix": "scene11_narrator_mission_v1"
+    }
+  }
+}

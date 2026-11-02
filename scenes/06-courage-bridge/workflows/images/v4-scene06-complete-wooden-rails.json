@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Edit image1 minimally to correct ONLY the incomplete last section of the FAR/LEFT wooden bridge guardrail. Everything else including Matvey face and costume, hands and map, near/right railing, bridge beams and deck, rock ledges, camera and jungle remains EXACTLY unchanged. The existing far/left railing currently stops too early, near the upper-middle-right of the span, leaving the last quarter of the far edge without its rail. CONTINUE THIS SAME FAR/LEFT TOP HANDRAIL ALL THE WAY TO THE FAR ROCK LANDING at the upper RIGHT end of the bridge, and add its matching evenly spaced vertical wooden balusters underneath along that final section. It must terminate in a wooden end post at the far-left corner of the far-bank landing, level in world space with the end of the near/right guardrail. BOTH wooden handrails extend for the FULL length of the SAME deck and end on the SAME far-bank landing, without an unguarded last section, no missing rear railing, no floating ends. The far top rail follows its existing straight perspective line diagonally up and right, remaining visibly a little ABOVE the near top rail in the image; the two rails approach the same perspective vanishing region. Keep the clear planked walking lane between both rows of posts. Do not create another bridge, do not change the near rail, do not add ropes, do not obscure or change the boy, no text. Photorealistic consistent wood and iron bolts. Images2 and3 remain identity and costume references only.",
+      "negative_prompt": "rope, ropes, cable, cables, string, suspension bridge, hanging lines, sagging deck, floating beam, floating post, disconnected rail, railing across entrance, railing crossing person, diagonal beam across person, tangled structure, extra limbs, distorted face, adult, cartoon, CGI, text, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v4_06_complete_wooden_rails"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11066236,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene06-two-wood-rails-draft.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

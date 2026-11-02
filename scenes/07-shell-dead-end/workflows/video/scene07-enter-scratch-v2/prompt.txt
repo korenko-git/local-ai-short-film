@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Begin on the supplied empty view of the blocked jungle dead end. The same single Matvey enters from the right edge, walks two small steps toward the wooden sign, stops beside it and scratches the side of his head once with a puzzled expression. Keep the sign and the spiral shell completely ordinary and unlit throughout the entire shot: no glow, no blinking, no sparkle, no flash, no luminous effect on the sign or shell. Preserve the exact blocked path, camera angle, foliage and daylight. Match Matvey's face, glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers, brown shoes and rolled map. Do not turn the sign or open the vines yet. No duplicate boy, no extra people, no text or added props.
+
+overall_soundscape: Quiet ominous jungle ambience, leaves and soft footsteps only. No chime, magical sound or speech.
+
+non_diegetic_music: N/A

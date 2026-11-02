@@ -1,0 +1,9 @@
+file '../../../output/clips/scene08-approach-v2.mp4'
+file '../../../output/clips/scene08-map-down-v1.mp4'
+file '../../../output/clips/scene08-wrong-turn-reset-v1.mp4'
+file '../../../output/clips/scene08-approach-wheel-v3.mp4'
+file '../../../output/clips/scene08-manual-wheel-v3.mp4'
+file '../../../output/clips/scene08-correct-first-turn-v1.mp4'
+file '../../../output/clips/scene08-correct-second-turn-v1.mp4'
+file '../../../output/clips/scene08-enter-door-v1.mp4'
+

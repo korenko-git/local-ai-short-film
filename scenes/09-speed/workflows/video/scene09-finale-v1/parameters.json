@@ -1,0 +1,14 @@
+{
+  "notes": "Reverse angle after passage; no new keyframe per user authorization. Speech and exact fourth seal handled separately.",
+  "width": 1344,
+  "base_steps": 16,
+  "height": 768,
+  "seed": 11090201,
+  "two_pass": false,
+  "seconds": 6.5,
+  "conditioning_mode": "references_only",
+  "provider": "FreeVideo",
+  "status": "rendered_pending_user_review",
+  "actual_seconds": 6.583333,
+  "output": "../../../video/raw/scene09-finale-v1.mp4"
+}

@@ -1,0 +1,11 @@
+subject_definitions: <Subject 1> is Matvey, the same nine-year-old boy. Use Picture 3 only for his exact identity: face, dark rectangular glasses, short brown hair, age, proportions and sailor costume. Ignore Picture 3's beach, ship and background; do not add another map or any beach details.
+
+summary: In the same stone courtyard, Matvey leaves the rolled map on the dry paving, moves to the first round turntable, and makes a wrong attempt to rotate it. Water remains blocked at the first channel barrier.
+
+retention_analysis: Picture 1 is the opening pose and scene layout: Matvey crouched beside the map already on the ground. Picture 2 is the target action and ending pose: Matvey crouched at the first circular disc with both hands on its center, attempting the wrong turn. Picture 3 is the character identity reference only. Preserve the same camera angle and exact courtyard geometry from Pictures 1 and 2, including both level circular discs, the closed door, still wheel and the map on dry stone. Keep Matvey's face and clothes consistent with Picture 3 and the scene frames.
+
+detailed_description: [Shot 1] A single steady, cinematic overhead wide shot. Begin with the composition and body position shown in Picture 1. The stream visibly flows toward the first disc and ripples against its solid stone barrier; it does not pass the barrier. Matvey glances from the map to the first disc, shifts his knees and body across the dry paving, and reaches the first round stone disc. He grips its central bronze knob with both hands and rotates the disc clockwise in the wrong direction. The disc turns only into a visibly incorrect channel alignment. The water remains blocked and does not advance. End in a pose close to Picture 2: Matvey crouched over the first disc with both hands gripping the knob. The map remains on the same dry spot. The second disc, door and water wheel do not move. One continuous action, stable facial detail, natural hands and weight, no sudden camera move, no text or subtitles.
+
+overall_soundscape: Continuous flowing stream and birds, soft footsteps on stone, a scrape and resistant stone clunk as Matvey tries the wrong turn. No dialogue.
+
+non_diegetic_music: N/A

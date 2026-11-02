@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Start on the exact empty dead-end view. The same single Matvey enters the frame from the right edge, walks two small steps toward the sign, stops in the same position as the supplied final frame, and scratches the side of his head once with a puzzled expression. At the same time the spiral shell gives one brief, distinct blink of warm light. Keep the same face, glasses, sailor shirt, navy vest, red neckerchief, tan trousers, brown shoes and rolled map. Hold the blocked path and sign still. Do not turn the sign or open the vines yet. No duplicate boy, no extra people, no text.
+
+overall_soundscape: Quiet ominous jungle ambience, leaves and soft footsteps, one subtle shell-like chime on the blink. No speech.
+
+non_diegetic_music: N/A

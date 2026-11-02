@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-platform-environment.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create the next linked cinematic 16:9 frame from image 1. Exactly one Matvey, the same boy with the same face, rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes. Continue on the exact same broad stone platform above the turquoise bay, with the same single closed rounded dark teak chest, brass bands and round lock, and the same green-and-blue parrot on its branch. Matvey has reached the chest. He is putting the folded parchment map into the waistband pocket at his right hip, matching the map-stowing action from image 2. His other hand rests lightly on the chest lid. He looks at the chest with relieved delight and a small open-mouth expression, as if saying “Вот ты где!” The bay remains clearly visible behind the platform. Keep the camera closer than image 1 but show Matvey, chest and parrot together. Photorealistic family adventure film, natural hands, no text.",
+      "negative_prompt": "second boy, duplicate Matvey, extra people, changed face, missing glasses, costume change, map still open, multiple maps, map held in both hands, map in chest, bag, extra chest, open chest, changed chest, extra parrot, different bay, text, subtitles, lettering, watermark, cartoon, illustration, CGI, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene10_map_discovery_v1"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11100109,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-map-platform-v1.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-platform-environment.png"
+    }
+  }
+}

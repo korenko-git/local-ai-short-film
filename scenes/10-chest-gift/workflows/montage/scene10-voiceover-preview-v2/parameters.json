@@ -1,0 +1,36 @@
+{
+  "status": "approved_by_user",
+  "provider": "FFmpeg",
+  "purpose": "approved full scene assembly",
+  "video": "1344x768 24fps H.264 CRF18",
+  "audio": "AAC 192k stereo",
+  "duration_seconds": 31.321333,
+  "lines": [
+    {
+      "source": "audio/voice/scene10-matvey-found-chest-v1.flac",
+      "text": "Вот ты где!",
+      "start_seconds": 4.15,
+      "speaker": "Matvey",
+      "approval": "approved_by_user"
+    },
+    {
+      "source": "audio/voice/scene10-narrator-shipbuilding-v2.flac",
+      "text": "Перед нами новейшее достижение мирового кораблестроения.",
+      "start_seconds": 8.083333,
+      "speaker": "Narrator",
+      "approval": "approved_by_user"
+    },
+    {
+      "text": "Два колеса, один руль, ни одной пушки. Зато какая скорость!",
+      "speaker": "Parrot",
+      "source": "audio/voice/scene10-parrot-scooter-v4.flac",
+      "duration_seconds": 11.159501,
+      "approval": "approved_by_user",
+      "start_seconds": 19.75
+    }
+  ],
+  "parrot_visual": "video/raw/scene10-04-parrot-lipsync-v1.mp4",
+  "parrot_video_duration": 11.55,
+  "output": "output/scene10-chest-gift-v1.mp4",
+  "accepted_full_film": true
+}

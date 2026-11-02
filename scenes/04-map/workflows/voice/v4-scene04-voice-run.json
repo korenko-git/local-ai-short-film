@@ -1,0 +1,13 @@
+{
+  "prompt_id": "962d48ca-1ec4-4cc9-94e5-0156d6c2ed94",
+  "status": "completed",
+  "model": "Drama 3",
+  "seed": 11045233,
+  "voice_reference": "synthetic-voice-a.mp3",
+  "text": "Капитан Матвей! Ваша карта. Впереди — четыре испытания!",
+  "workflow": "v4-scene04-voice.json",
+  "audio_output": "audio/voice/v4-scene04-captain.flac",
+  "draft_copy": "audio/voice/drafts/962d48ca_000.flac",
+  "mixed_output": "output/scene-04-matvey-gets-map-v4.mp4",
+  "mix_script": "work/mix_scene04_v4.py"
+}

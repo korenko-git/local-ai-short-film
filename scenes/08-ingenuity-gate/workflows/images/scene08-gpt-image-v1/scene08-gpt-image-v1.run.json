@@ -1,0 +1,28 @@
+{
+  "provider": "GPT Image",
+  "tool": "image_gen.imagegen",
+  "status": "generated_pending_user_review",
+  "seed": null,
+  "seed_note": "Seed is not exposed by the image generation tool.",
+  "parameters": {
+    "aspect_ratio": "16:9",
+    "transparent_background": false
+  },
+  "outputs": [
+    "../../../frames/drafts/scene08-puzzle-start-gpt-image-v1.png",
+    "../../../frames/drafts/scene08-puzzle-first-move-gpt-image-v1.png",
+    "../../../frames/drafts/scene08-puzzle-solved-gpt-image-v1.png"
+  ],
+  "reference_media": {
+    "shared": ["../../../../../shared/refs/images/Matvey_story_master_matvey_00001_.png"],
+    "scene": [
+      "../../../../07-shell-dead-end/work/scene07-enter-passage-v1-last.png",
+      "../scene08-water-channel-keyframes-v1/inputs/channels-start-clean.png",
+      "../scene08-water-channel-keyframes-v1/inputs/channels-first-move-clean.png",
+      "../scene08-water-channel-keyframes-v1/inputs/channels-solved-clean.png",
+      "../../../frames/drafts/scene08-puzzle-start-gpt-image-v1.png",
+      "../../../frames/drafts/scene08-puzzle-first-move-gpt-image-v1.png"
+    ]
+  },
+  "notes": "Per-frame reference combinations are documented in this folder README and prompt files."
+}

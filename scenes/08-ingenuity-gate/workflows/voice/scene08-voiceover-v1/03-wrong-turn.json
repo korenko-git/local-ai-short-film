@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "line": "03-wrong-turn",
+  "cue": "00:14-00:18",
+  "text": "Первая попытка оказалась ошибочной.",
+  "prompt": "[mature male Russian baritone narrator, clear diction, gently amused, restrained dry humor] Первая попытка оказалась ошибочной. [language: ru]",
+  "seed": 11080123,
+  "voice": "narrator",
+  "reference": "../../../../../shared/refs/audio/synthetic-voice-a.mp3",
+  "parameters": {
+    "top_k": 0,
+    "speakers": "one take per line",
+    "max_frames": 600,
+    "temperature": 1.0,
+    "top_p": 0.9
+  },
+  "output": "../../audio/voice/drafts/scene08-vo-03-wrong-turn.flac",
+  "status": "rendered_pending_user_review"
+}

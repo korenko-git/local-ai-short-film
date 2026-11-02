@@ -1,0 +1,15 @@
+{
+  "provider": "GPT Image",
+  "tool": "image_gen.imagegen",
+  "status": "generated_not_used_user_requested_original_composition",
+  "seed": null,
+  "seed_note": "Seed is not exposed by the image generation tool.",
+  "parameters": {"aspect_ratio": "16:9", "transparent_background": false},
+  "output": "../../../frames/drafts/scene08-puzzle-start-gpt-image-v2.png",
+  "references": [
+    "../../../../../shared/refs/images/Matvey_story_master_matvey_00001_.png",
+    "../../../frames/drafts/scene08-puzzle-start-gpt-image-v1.png",
+    "../../../../07-shell-dead-end/work/scene07-enter-passage-v1-last.png"
+  ],
+  "prompt": "scene08-puzzle-start.prompt.txt"
+}

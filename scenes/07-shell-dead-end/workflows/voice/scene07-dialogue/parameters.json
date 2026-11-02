@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "narrator_seed": 11070321,
+  "matvey_seed": 11070322,
+  "narrator_reference": "inputs/synthetic-voice-a.mp3",
+  "matvey_reference": "inputs/synthetic-voice-b.mp3",
+  "status": "rendered_pending_review",
+  "prompt_id": "979ebfdb-f4c8-4aa2-8a0c-f705ea69c6dc",
+  "outputs": [
+    "audio/voice/scene07-narrator-deadend.flac"
+  ],
+  "removed_outputs": [
+    {
+      "status": "deleted_by_user",
+      "reason": "The exclamation is already present in the video.",
+      "path": "audio/voice/scene07-matvey-oh.flac"
+    }
+  ]
+}

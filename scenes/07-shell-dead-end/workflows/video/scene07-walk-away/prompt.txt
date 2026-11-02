@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Start on the fully opened passage. The same single Matvey turns away from the sign and walks into the newly revealed trail, seen from behind. He takes two natural steps deeper into the opening with the rolled map clearly visible in his left hand; his right hand is free. The arrow stays pointed into the open trail and the vines remain fully parted. End exactly on the supplied final frame. Stable costume and proportions, no branch touching, no extra people, no text.
+
+overall_soundscape: Soft jungle ambience, footsteps on leaf litter, light leaves moving in the breeze. No speech.
+
+non_diegetic_music: N/A

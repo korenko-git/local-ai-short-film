@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "12ad860c-5074-4cde-968d-47e95cb6110c",
+  "seed": 11110128,
+  "workflow": "scene11-02-zipline-descent-v2.json",
+  "prompt": "scene11-02-zipline-descent-v2-prompt.txt",
+  "parameters": "scene11-02-zipline-descent-v2-parameters.json",
+  "output": "../../../frames/drafts/rejected/scene11-02-zipline-descent-v2-rejected-no-trolley-grip.png",
+  "status": "rejected_no_trolley_grip",
+  "validation": "valid",
+  "notes": "Wide action frame with one visible cable, bolted cliff anchor, and separate timber beach landing post."
+}

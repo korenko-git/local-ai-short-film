@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Use soft, fully overcast diffuse daylight across the entire jungle, with no direct sunbeam anywhere. Keep exposure and lighting perfectly even and unchanged for the whole shot. All wood and the small beige spiral shell on the sign are matte, non-reflective ordinary objects; the shell has exactly the same color and brightness as in the supplied frames. Show no localized highlight or bright point on the sign, shell, or post. Start on the supplied empty dead-end frame. Matvey enters from the right, walks two small steps toward the sign, stops beside it and scratches his head once, puzzled. End on the supplied final frame. Keep the shell visible and unlit throughout. No flash, sparkle, reflection, star-shaped glint, lens flare or light source near the sign. Preserve the camera, blocked vines, face, outfit and rolled map. No sign turn, no opening vines, no extra people, no added props, no text or overlays.
+
+overall_soundscape: Quiet jungle ambience, soft footsteps and leaves only. No chime, magic sound or speech.
+
+non_diegetic_music: N/A

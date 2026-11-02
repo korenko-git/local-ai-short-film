@@ -1,0 +1,18 @@
+{
+  "status": "rejected_duplicate_cables",
+  "seed": 11110125,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "scheduler": "simple",
+  "resolution": 1024,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-gift-reveal-continuity.png"
+  ],
+  "prompt": "scene11-01-night-cliff-v3-prompt.txt",
+  "negative_prompt": "rope going sideways, cable parallel to horizon, cable heading over the ocean, rope not reaching beach, missing beach anchor, missing cliff anchor, floating rope, rope ending in midair, suspended pulley, cable crossing coastline sideways, extra ropes, extra posts, boy riding already, second boy, extra people, missing glasses, changed face, changed clothes, extra scooter, loose bag, extra equipment, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+  "output": "../../../frames/drafts/rejected/scene11-01-night-cliff-v3-rejected-duplicate-cables.png",
+  "prompt_id": "ca04522a-62c5-4bbc-ab09-5c4f169bda09"
+}

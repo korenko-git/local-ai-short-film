@@ -1,0 +1,3 @@
+[0:a]aresample=48000,atrim=duration=6.583333,asetpts=PTS-STARTPTS,volume=0.55[amb];
+[1:a]aresample=48000,adelay=4150:all=1,apad=pad_dur=6.583333,atrim=duration=6.583333,volume=1[voice];
+[amb][voice]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]

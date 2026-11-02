@@ -1,0 +1,22 @@
+{
+  "narrator_reference": "inputs/synthetic-voice-a.mp3",
+  "lines": [
+    {
+      "text": "Скорость — есть!",
+      "voice": "matvey",
+      "seed": 11090211
+    },
+    {
+      "text": "Матвей, быстрее!",
+      "voice": "narrator",
+      "seed": 11090212
+    },
+    {
+      "text": "Твоё любопытство сыграет с тобой злую шутку!",
+      "voice": "narrator",
+      "seed": 11090213
+    }
+  ],
+  "matvey_reference": "inputs/synthetic-voice-b.mp3",
+  "version": 1
+}

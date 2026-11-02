@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Photoreal cinematic island adventure. Start exactly on the reference: same 9-year-old boy with dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers, brown shoes, rolled map; dense vines block the trail. The boy looks worried, turns his head clearly left and right searching for another path, looks back at the vine wall, then notices a tiny spiral shell glinting on the back of the nearby wooden sign. His expression changes to recognition. He walks two clear steps toward the sign and reaches toward the shell. End exactly on the reference image with boy standing close to the sign. Keep the wall of vines closed throughout this shot; do not open the way yet. Smooth camera, stable face and outfit, no cuts, no text.
+
+overall_soundscape: Soft jungle birds, leaves, no speech.
+
+non_diegetic_music: N/A

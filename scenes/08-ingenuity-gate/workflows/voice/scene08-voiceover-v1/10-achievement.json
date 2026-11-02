@@ -1,0 +1,19 @@
+{
+  "provider": "Drama 3",
+  "line": "10-achievement",
+  "cue": "badge",
+  "text": "Смекалка — есть!",
+  "prompt": "[young boy, pleased and curious, short triumphant phrase, warm natural Russian pronunciation, clear articulation, not shouted] «Смекалка — есть!» [language: ru]",
+  "seed": 11080130,
+  "voice": "matvey",
+  "reference": "../../../../../shared/refs/audio/synthetic-voice-b.mp3",
+  "parameters": {
+    "top_k": 0,
+    "speakers": "one take per line",
+    "max_frames": 600,
+    "temperature": 1.0,
+    "top_p": 0.9
+  },
+  "output": "../../audio/voice/drafts/scene08-vo-10-achievement.flac",
+  "status": "rendered_pending_user_review"
+}

@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One continuous overhead live-action shot. Begin exactly on the solved final frame of the preceding clip. The water continues flowing through both circular discs and onto the turning wooden waterwheel; the heavy stone doorway stays open. Matvey stands, picks up the single rolled parchment map from the dry paving, then walks across the courtyard and passes through the open doorway into the warmly lit passage. End exactly on the supplied final frame, showing Matvey from behind crossing the threshold while holding the map. Keep the doorway open and the water flowing to the turning wheel throughout; do not close the doors. Preserve the same boy, costume, courtyard geometry, fixed overhead camera, lighting and continuous action. No extra people, no text, no cuts.
+
+overall_soundscape: Continuous flowing water and splashes onto the wheel, birds, Matvey's footsteps on stone, then quieter footsteps as he enters the passage. The wheel continues to creak softly. No dialogue.
+
+non_diegetic_music: N/A

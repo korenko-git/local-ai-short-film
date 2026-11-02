@@ -1,0 +1,14 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11070122,
+  "steps": 28,
+  "sampler": "euler",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "frame_ready_pending_user_review",
+  "workflow": "scene07-enter-passage-after-clip5-v1.json",
+  "base": "clip5 end frame from scene07-sign-turn-v1.mp4",
+  "identity_reference": "shared/refs/images/Matvey_story_master_matvey_00001_.png",
+  "output": "../../../frames/drafts/scene07-enter-passage-after-clip5-v1.png",
+  "prompt_id": "215cb980-001f-4a23-ae42-7e9696cefba8"
+}

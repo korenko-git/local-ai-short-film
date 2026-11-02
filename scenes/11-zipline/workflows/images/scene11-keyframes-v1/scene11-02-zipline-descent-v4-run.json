@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "1a41ee2c-7f6c-4b9a-a724-28524f58b9c6",
+  "seed": 11110133,
+  "workflow": "scene11-02-zipline-descent-v4.json",
+  "prompt": "scene11-02-zipline-descent-v4-prompt.txt",
+  "parameters": "scene11-02-zipline-descent-v4-parameters.json",
+  "output": "../../../frames/drafts/rejected/scene11-02-zipline-descent-v4-rejected-user-feedback.png",
+  "status": "rejected_user_feedback",
+  "validation": "valid",
+  "notes": "Straight single cable with consistent angle through trolley, no cliff attachment in frame, both hands raised on trolley handle."
+}

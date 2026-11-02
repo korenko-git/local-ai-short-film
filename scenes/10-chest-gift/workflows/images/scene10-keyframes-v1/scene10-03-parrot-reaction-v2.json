@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-jungle-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a tighter linked parrot-reaction shot in the same clearing and warm late-afternoon light as image 1. Show exactly ONE child, only once: the existing Matvey already in image 1 is visible at the far left edge as a single shoulder, the back of his head and partial side profile, turning toward the parrot. He wears the same cream sailor shirt, navy vest and red neckerchief. Do not create a full-body or second version of him. The same green-and-blue parrot with small red forehead patch fills the right foreground on its branch, beak open as if delivering a funny line, one wing slightly raised. The same open dark teak treasure chest remains below them, with the folded gray two-wheel scooter and gray helmet still visible inside. Preserve the same clearing and distant cable-to-beach geography. Photorealistic family adventure film, medium close-up, parrot and Matvey’s single partial reaction both readable, no text.",
+      "negative_prompt": "second child, duplicate boy, full body boy, additional human, extra head, repeated face, two boys, two versions of Matvey, extra parrot, changed costume, changed parrot colors, extra chest, closed chest, scooter missing, extra scooter, cartoon, CGI, text, watermark, deformed body",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene10_03_parrot_reaction_v2"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11100105,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-02-gift-reveal-v2.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-jungle-continuity.png"
+    }
+  }
+}

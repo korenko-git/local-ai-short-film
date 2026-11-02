@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "model": "Qwen Image 2.1",
+  "prompt_id": "9ea021c6-3744-46ce-a020-46dfb2134de0",
+  "seed": 11080102,
+  "host": "127.0.0.1",
+  "port": 8188,
+  "workflow": "scene08-puzzle-first-move.json",
+  "output": "../../../../frames/drafts/9ea021c6_000.png",
+  "output_dir": "../../../../frames/drafts/",
+  "previous_attempt": {"prompt_id": "fd3899b1-698e-4830-96d0-6876af7136cd", "output": "../../../../frames/drafts/fd3899b1_000.png", "note": "Первый черновик: маршрут воды отличается от схемы."}
+}

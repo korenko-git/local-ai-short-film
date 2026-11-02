@@ -1,0 +1,17 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11100102,
+  "steps": 28,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "rejected_duplicate_matvey",
+  "output": "../../../frames/drafts/e67b2589_000.png",
+  "input_references": [
+    "inputs/scene10-01-arrival-v1.png",
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene09-jungle-continuity.png"
+  ],
+  "prompt_id": "e67b2589-b1f3-4646-9d59-ff10b5db922a"
+}

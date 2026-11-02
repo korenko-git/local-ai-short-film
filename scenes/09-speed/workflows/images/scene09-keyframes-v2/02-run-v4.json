@@ -1,0 +1,13 @@
+{
+  "prompt_id": "becaf5b9-d8c2-482c-80f9-bf2451f795fc",
+  "status": "completed",
+  "seed": 11090114,
+  "model": "Qwen Image 2.1",
+  "workflow": "02-timer-v4.json",
+  "steps": 28,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "media": "frames/drafts/scene09-02-timer-v4.png",
+  "review": "awaiting_user"
+}

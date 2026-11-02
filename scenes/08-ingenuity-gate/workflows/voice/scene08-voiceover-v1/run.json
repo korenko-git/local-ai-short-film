@@ -1,0 +1,18 @@
+{
+  "provider": "Drama 3",
+  "workflow": "scene08-voiceover-v1.json",
+  "prompt_id": "59a436bf-e05b-4178-b81b-472c066f2239",
+  "status": "rendered_pending_user_audio_review",
+  "outputs": [
+    "../../audio/voice/drafts/scene08-vo-01-opening.flac",
+    "../../audio/voice/drafts/scene08-vo-02-map.flac",
+    "../../audio/voice/drafts/scene08-vo-03-wrong-turn.flac",
+    "../../audio/voice/drafts/scene08-vo-04-water-stop.flac",
+    "../../audio/voice/drafts/scene08-vo-05-manual-wheel.flac",
+    "../../audio/voice/drafts/scene08-vo-06-door-closes.flac",
+    "../../audio/voice/drafts/scene08-vo-07-first-disc.flac",
+    "../../audio/voice/drafts/scene08-vo-08-second-disc.flac",
+    "../../audio/voice/drafts/scene08-vo-09-exit.flac",
+    "../../audio/voice/drafts/scene08-vo-10-achievement.flac"
+  ]
+}

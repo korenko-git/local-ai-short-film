@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene07-empty-passage-reference.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a clean cinematic 16:9 empty establishing frame for the same treasure clearing as image 1. Absolutely NO Matvey and no people or human figures anywhere. Match the exact warm late-afternoon light, tropical jungle, rocky drop, distant taut zipline to the beach, one closed dark teak treasure chest with rounded domed lid and brass bands, and one green-and-blue parrot with a small red forehead patch on its branch from image 1. Make the way Matvey entered unmistakable: behind the chest, on the left side of the clearing, show a clearly visible ancient stone passage entrance opening from the jungle wall into this clearing. The entrance is a broad, dark, rectangular stone archway, and the dirt path visibly runs out from that opening toward the chest; the passage mouth is clearly in the background behind the place where Matvey stood. Use image 2 only as reference for dense tropical foliage and dappled light; do not copy its signpost or shell. Keep the clearing completely empty, as if a moment before Matvey steps out of the passage. Photorealistic family adventure film, wide shot, no text.",
+      "negative_prompt": "Matvey, boy, child, person, human, face, head, body, silhouette, reflection, duplicate person, extra animals, open chest, scooter, helmet, signpost, shell, text, writing, watermark, cartoon, illustration, CGI",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene10_00_empty_entrance_v1"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11100106,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-01-arrival-reference.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene07-empty-passage-reference.png"
+    }
+  }
+}

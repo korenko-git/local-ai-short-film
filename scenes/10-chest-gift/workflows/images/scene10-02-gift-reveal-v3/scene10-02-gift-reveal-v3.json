@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-01-arrival-no-matvey-v1.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create one photorealistic cinematic still, preserving the same exact rocky clearing above the bay, same camera angle, same late-afternoon light, same chest position and framing as image 1. Keep exactly one Matvey, the same boy already present in image 1, with the same face, black rectangular glasses and exact cream sailor shirt, navy vest, red neckerchief and tan trousers. The chest lid is open and Matvey is actively holding it up himself: both of his hands are clearly visible gripping the raised lid edge, fingers wrapped around the edge, both arms bent and visibly supporting the lid. The lid must not float or appear to have opened by itself. Matvey stands close behind the chest, leaning in and looking inside with a clear surprised “oh!” expression: widened eyes behind glasses, raised eyebrows, mouth slightly open in amazement. Preserve the same single rounded dark teak chest with the same brass trim and round lock, now open. Inside, show one compact gray children’s kick scooter neatly folded, with two small wheels, gray deck and folded handlebar stem, no motor and no seat, plus one closed gray bicycle helmet beside it. Keep the same single green-and-blue parrot perched at the right, the same rocky drop, taut descending cable and glimpse of the beach. Maintain the same medium-wide composition and continuity. No text, no lettering.",
+      "negative_prompt": "second boy, duplicate Matvey, extra person, background person, repeated face, changed face, changed clothes, Matvey standing with arms at sides, hands away from lid, lid floating, self-opening chest, invisible hands, hidden hands, malformed fingers, extra fingers, extra arms, extra limbs, extra chest, changed chest, multiple chests, extra locks, extra brass bands, second scooter, scooter with motor, scooter with seat, bicycle, extra helmet, extra parrot, cartoon, illustration, CGI, text, lettering, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene10_02_gift_reveal_v3"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11100110,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-02-gift-reveal-v2.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-01-arrival-no-matvey-v1.png"
+    }
+  }
+}

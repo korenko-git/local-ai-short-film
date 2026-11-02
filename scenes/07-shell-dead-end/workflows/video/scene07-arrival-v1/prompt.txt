@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Recreate the short bridge-to-island arrival transition that begins the rejected reference clip, but end exactly at the supplied jungle dead-end frame. Begin on the same Matvey at the bridge exit, in the cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes, holding the rolled map. The title badge disappears as he turns away from the bridge and walks forward along the tropical trail. The camera follows him into the dense island foliage until the path is blocked by the exact wall of vines and the exact wooden sign with the spiral shell shown in the final reference. He stops at the dead end, still holding the map. Continuous movement and clear geography: bridge exit, jungle trail, blocked path. Match the supplied last frame precisely. No reaching for the shell yet, no sign turning, no vines opening, no extra people, no text.
+
+overall_soundscape: Soft island ambience, birds and leaves, no dialogue.
+
+non_diegetic_music: N/A

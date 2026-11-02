@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a NEW photorealistic live-action family pirate adventure movie still, 16:9, richly detailed natural wood, jungle, warm morning light. Image1 is ONLY a blank canvas defining aspect ratio; replace entirely. Image2 is costume reference, image3 is the exact real facial identity. The SAME real nine-year-old Matvey has short light brown hair, dark rectangular glasses, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers and brown leather shoes, holding one rolled parchment map at his waist with both hands. Whole boy close in the LEFT FOREGROUND, about two thirds of frame height, both shoes on firm rock BEFORE the bridge entrance, face clearly visible in three-quarter view. The main setting is a SHORT STRAIGHT WOODEN BEAM FOOTBRIDGE, about four meters long and one meter wide, crossing a deep narrow rocky jungle gorge with a stream EIGHT METERS BELOW. Camera looks ALMOST STRAIGHT ALONG THE BRIDGE from the near rock landing towards the far rock landing, so BOTH bridge sides and their complete length are clearly visible. The bridge entrance is in the LOWER MIDDLE-RIGHT, the far exit is in the UPPER MIDDLE-RIGHT, with a clearly visible dry rock landing at each end. SIMPLE COHERENT RECTANGULAR CARPENTRY: a continuous straight level plank deck rests on two thick longitudinal wooden beams spanning from near sill to far sill; both sills sit directly on the solid rock ledges. On BOTH EDGES are matching sturdy wooden handrails with vertical wooden balusters and one top rail per side. EACH of the two top rails runs UNINTERRUPTED for the ENTIRE bridge length from its near entrance post to its far exit post, exactly same length as the deck; BOTH rails END AT THE SAME FAR LANDING with no missing last section. Both lines of balusters reach all the way to the far edge. The railing design is symmetrical and clear, vanishing perspective consistent, full-width open lane between both rails, unobstructed entrance and exit. No rail crosses the entrance or Matveys body. Weathered rustic wood with simple iron bolts, ordinary sensible bridge with no unusual structures. NO ROPES OR CABLES ANYWHERE. The gorge below shows a long drop, sheer mossy rocks and thin mist around the stream, jungle ferns and palms on both shores. The boy is cautiously looking toward the other side, not frightened or falling. Detailed real face and materials, no modern objects, no text, no cartoon or CGI.",
+      "negative_prompt": "rope, ropes, cable, cables, string, suspension bridge, hanging lines, sagging deck, floating beam, floating post, disconnected rail, railing across entrance, railing crossing person, diagonal beam across person, tangled structure, extra limbs, distorted face, adult, cartoon, CGI, text, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v4_06_clean_timber_bridge"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11066240,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

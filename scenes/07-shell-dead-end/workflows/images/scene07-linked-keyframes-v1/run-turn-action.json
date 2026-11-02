@@ -1,0 +1,11 @@
+{
+  "id": "sign_turn_mid_action",
+  "workflow": "scene07-turn-action.json",
+  "prompt_id": "d2ba2425-801f-4d55-9c43-a4c7b083d71a",
+  "seed": 11070115,
+  "model": "Qwen Image 2.1",
+  "steps": 28,
+  "status": "completed",
+  "input": "inputs/scene07-matvey-at-shell-v1.png",
+  "output": "../../../frames/drafts/d2ba2425_000.png"
+}

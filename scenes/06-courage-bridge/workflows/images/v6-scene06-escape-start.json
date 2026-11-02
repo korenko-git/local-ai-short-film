@@ -1,0 +1,140 @@
+{
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v6_06_far_bank_before_crack"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-02.png"
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic live-action family pirate adventure film still, 16:9, sharp detailed face and wood, same natural misty jungle light. IMAGE1 defines the exact SAME long narrow U-sag rope suspension bridge, spaced wooden cross-slats, deep forest gorge and Matvey. IMAGE2 is only a wooden slat/cable construction reference, ignore its alpine background. IMAGE3 defines the costume and IMAGE4 the exact real nine-year-old boys facial identity, short light brown hair, dark rectangular glasses, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers and brown shoes. NEW CAMERA SETUP AT THE FAR END OF THIS SAME BRIDGE, a medium-wide three-quarter side view from the far stone landing, looking back towards the long dipping bridge behind the boy. The narrow bridge approaches diagonally from the LEFT BACKGROUND to its exit beside a firm dry ROCK PLATFORM filling the RIGHT FOREGROUND. It is still a flimsy exposed rope suspension bridge, not rigid timber. Correct two side handlines and lower load lines with regular vertical hangers and spaced thin wood cross-slats, deep void visible beneath. Matvey is centered LEFT, WHOLE BODY head to BOTH boots visible, large enough for clear face and hands. He faces RIGHT towards the nearby rock platform. He is only ONE SHORT STEP (about half a meter) from firm ground: rear boot is on an intact wooden plank; front boot is just beginning to touch the next plank. There is one narrow wood cross-plank under the front boot with a SMALL THIN HAIRLINE CRACK along its grain, still intact and almost level, not broken or falling yet. This is BEFORE the accident. All other slats are intact. The short gap to the stone bank is clearly visible to the RIGHT so he can plausibly make a quick short hop onto it. Right hand holds the existing side handrope for balance; left hand holds the SAME rolled parchment map against his waist. He looks down towards the front shoe with focused cautious expression, not at camera. Keep normal human proportions and exact real face, no hoodie or adult features. The same bridge continues far behind him into misty lush jungle, visible sag, no other people. Natural rope anchor lines meet the stone landing sides with simple believable attachments; no tangled cables crossing his body, no wooden guardrails. Warm skin highlights, tense inviting adventure movie atmosphere, no injury, no text, no logos, no cartoon, no CGI.",
+      "negative_prompt": "rigid timber bridge, solid wooden railings, thick wooden beams, park footbridge, solid continuous walkway, concrete deck, shallow ditch, tiny low bridge, giant anchoring A-frame, tangled ropes, disconnected cables, extra horizontal ropes across person, floating deck, duplicate boy, yellow jacket, adult, hoodie, extra limbs, distorted face, text, watermark, illustration, CGI",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ],
+      "images.image_4": [
+        "12",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene-06-courage-reference-bridge.png"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11069233,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  }
+}

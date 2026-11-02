@@ -1,0 +1,18 @@
+{
+  "negative_prompt": "looking at camera, eye contact, facing lens, front-facing portrait, sparse vegetation, cleared plants, bare rock clearing, empty background, removed foliage, fewer plants than image 3, duplicate boy, duplicate scooter, scooter in chest, duplicate helmet, helmet in chest, extra case, second chest, closed chest, changed clothes, extra people, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+  "sampler": "euler",
+  "resolution": 1024,
+  "seed": 11110108,
+  "scheduler": "simple",
+  "cfg": 1,
+  "steps": 28,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene11-sunset-departure-v2-reference.png",
+    "inputs/scene10-approved-gift-reveal.png"
+  ],
+  "output": "../../../frames/drafts/scene11-00-sunset-departure-v3.png",
+  "prompt": "scene11-00-sunset-departure-v3-prompt.txt",
+  "provider": "Qwen Image 2.1",
+  "status": "pending_validation"
+}

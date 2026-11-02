@@ -1,0 +1,120 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Direct continuity edit of image 1. Keep EXACTLY the same camera, long straight lane, small low slatted gate far away, low stone walls, jungle, tree at left, lighting, stone pedestal and large pivot-mounted hourglass with brass side axles and attached small brass bell on its RIGHT side. Same single Matvey, exact face and costume also from image 2. Next moment: he has stepped slightly toward the pedestal and leans forward curiously to watch the falling sand. The hand already holding the rolled map in image 1 MUST remain down at the SAME thigh, holding the SAME map in exactly that hand. His OTHER previously empty hand reaches across toward the little bell on the right side of the hourglass and lightly touches its handle. Do not swap hands or duplicate map. The hourglass has been flipped 180 degrees on its existing side pivots: MOST sand in upper bulb, thin falling stream, small mound below. Preserve identical frame construction and bell position. The same low gate in the far distance is now fully OPEN, both slatted leaves rotated toward the far side, clear central passage visible. No tall gate, no taller posts, no change to distance or path. Natural anatomy, realistic hands, exact glasses, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers, brown shoes. Photoreal cinematic still, 16:9. No extra people, no text, no collage.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene09_02_timer_v2"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11090112,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-01-establish-v2.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  }
+}

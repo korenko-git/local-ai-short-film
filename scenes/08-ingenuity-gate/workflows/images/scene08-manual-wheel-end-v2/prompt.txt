@@ -1,0 +1,7 @@
+Use case: cinematic storyboard keyframe
+Asset type: final reference image for the next Scene 08 video clip
+Input images: Image 1 is the exact current scene setting, camera and water state. Image 2 is only a pose reference for Matvey releasing the wheel and wiping his forehead.
+Primary request: Matvey has just finished a futile attempt to move the wooden waterwheel. He released it, stands beside it and wipes sweat from his forehead with one hand, looking disappointed.
+Scene/backdrop: Same stone courtyard, overhead camera, circular turntables, foliage, lighting and wooden wheel as Image 1.
+Constraints: Wheel remains fully stationary and in the same position/orientation as Image 1. Door stays fully closed. Preserve water from Image 1: visible only from the source to the first circular turntable, where it stops against the inner stone wall. Second turntable, all channels downstream and wheel stay dry. Same boy, clothes, face and glasses.
+Avoid: water downstream of first turntable, wheel rotation, door movement, collage, extra people, text, watermark.

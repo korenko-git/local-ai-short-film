@@ -1,0 +1,16 @@
+{
+  "purpose": "draft scene assembly with all generated FreeVideo audio",
+  "output": "video/drafts/scene11-review-v1.mp4",
+  "status": "rendered_pending_user_review",
+  "provider": "FFmpeg concat",
+  "segments": [
+    "scene11-01-sunset-transition-v1.mp4",
+    "scene11-02-blue-hour-transition-v1.mp4",
+    "scene11-03-night-briefing-v1.mp4",
+    "scene11-04-zipline-descent-v1.mp4",
+    "scene11-05-beach-first-ride-v1.mp4"
+  ],
+  "audio": "AAC 192kbps stereo; generated FreeVideo clip tracks concatenated and timestamps reset",
+  "duration_seconds": 37.285,
+  "video": "1344x768 H.264 24fps CRF18"
+}

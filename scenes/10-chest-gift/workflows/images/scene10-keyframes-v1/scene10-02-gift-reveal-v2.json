@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-jungle-continuity.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a single continuous moment in the exact same clearing, camera direction and warm late-afternoon light as image 1. There is exactly ONE boy in the entire image: the existing Matvey from image 1, still at the same side of the chest and in the same position, wearing the same glasses and exact clothes. Do not add or repeat him elsewhere in the frame; do not show any other person. He simply bends forward slightly to look into the same chest as its domed lid opens. Preserve the exact same single rounded dark teak chest and its existing lock and brass trim from image 1, changing only the lid from closed to fully open. Inside is one compact gray children’s kick scooter folded neatly and clearly visible: two small wheels, gray deck, folded handlebar stem, no motor, no seat. One closed gray bicycle helmet rests beside it. Keep the same single green-and-blue parrot perched at right, same rocky drop, taut descending cable and beach glimpse. Photorealistic family adventure film, medium-wide shot, no text.",
+      "negative_prompt": "second boy, duplicate boy, kneeling second boy, standing second boy added in background, extra people, other humans, face duplication, changed clothes, extra chest, changed chest design, multiple chests, extra brass bands or locks, second scooter, scooter with motor, scooter with seat, bicycle, bag, extra parrots, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene10_02_gift_reveal_v2"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11100103,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-01-arrival-v1.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene09-jungle-continuity.png"
+    }
+  }
+}

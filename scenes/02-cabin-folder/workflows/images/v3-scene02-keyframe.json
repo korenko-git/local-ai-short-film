@@ -1,0 +1,120 @@
+{
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "negative_prompt": "cartoon, illustration, CGI, extra fingers, extra hands, duplicate folder, text, letters, writing, watermark, modern objects",
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Photorealistic live-action family pirate adventure film still, 16:9, warm golden early morning light through the LEFT cabin window of the same old dark wooden sailing brig. Match the nautical desk, brown wood, parchment map, brass compass, inkwell and feather quill in image 2, but use a wider medium overhead three-quarter view inside the captain cabin. Dark curved wooden ribs and the small left window with blurred turquoise sea are visible along the upper edge. A closed plain buff paper dossier folder is held horizontally just five centimeters above the middle of the desk by ONE adult right hand gripping the right edge; navy-blue captain sleeve with simple gold cuff. The folder is about to be placed onto the desk. The front cover is entirely blank, no lettering or symbols; keep a large unobstructed flat rectangle on it. The folder spine is on the LEFT and the free edge on the RIGHT so it can naturally open leftwards like a book. Its bottom edge nearer camera, top edge away. A single folder of realistic paper thickness, no duplicate. Camera composition centered on the folder, desk fills most of frame. Realistic hand with five fingers, no other people or faces visible, natural materials, quiet adventurous mood. Image 1 only defines blank wide output canvas; replace it entirely. No cartoon, no illustration, no modern objects, no typography, no writing, no watermark.",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "resolution": 768
+    }
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "Matvey_v3_02_cabin_folder",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "5",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11025233,
+      "sampler_name": "euler",
+      "negative": [
+        "5",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "5",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": "Matvey_story_02_folder_00001_.png"
+    },
+    "class_type": "LoadImage"
+  }
+}

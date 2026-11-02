@@ -1,0 +1,8 @@
+{
+  "provider": "Drama 3",
+  "status": "completed_pending_audio_review",
+  "workflow": "scene10-narrator-molodec-v1.json",
+  "prompt_id": "865d86a7-9b8b-4d1e-9a5b-619e05aba7fd",
+  "seed": 11101007,
+  "output": "audio/voice/scene10-narrator-molodec-v1.flac"
+}

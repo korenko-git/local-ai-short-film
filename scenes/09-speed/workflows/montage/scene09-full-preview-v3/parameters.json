@@ -1,0 +1,67 @@
+{
+  "status": "approved_by_user",
+  "video": "1344x768 24fps H264 CRF18",
+  "voice_cues": [
+    {
+      "text": "Твоё любопытство сыграет с тобой злую шутку!",
+      "start": 4.5
+    },
+    {
+      "text": "Матвей, быстрее!",
+      "start": 10.6
+    },
+    {
+      "text": "Бежи!",
+      "start": 13.216667,
+      "embedded_in_clip": true
+    },
+    {
+      "text": "Скорость — есть!",
+      "start": 25.5
+    }
+  ],
+  "badge_start": 25.3,
+  "duration_seconds": 28.833008,
+  "output": "../../../work/scene09-full-preview-v3.mp4",
+  "new_generation": false,
+  "audio": "AAC192k stereo",
+  "clips": [
+    {
+      "file": "scene09-start-v1.mp4",
+      "start": 0,
+      "duration": 6.583333,
+      "accepted_copy": "../../../output/clips/scene09-start-v1.mp4",
+      "source_path": "video/raw/scene09-start-v1.mp4"
+    },
+    {
+      "file": "scene09-map-stow-v1.mp4",
+      "start": 6.583333,
+      "duration": 6.583333,
+      "accepted_copy": "../../../output/clips/scene09-map-stow-v1.mp4",
+      "source_path": "video/raw/scene09-map-stow-v1.mp4"
+    },
+    {
+      "file": "scene09-speed-camera-approved-v5.mp4",
+      "start": 13.166667,
+      "duration": 6.583333,
+      "accepted_copy": "../../../output/clips/scene09-speed-camera-approved-v5.mp4",
+      "source_path": "video/raw/scene09-speed-camera-approved-v5.mp4"
+    },
+    {
+      "file": "scene09-pass-v1-cut.mp4",
+      "start": 19.75,
+      "duration": 2.5,
+      "accepted_copy": "../../../output/clips/scene09-pass-v1-cut.mp4",
+      "source_path": "work/scene09-pass-v1-cut.mp4"
+    },
+    {
+      "file": "scene09-finale-v1.mp4",
+      "start": 22.25,
+      "duration": 6.583333,
+      "accepted_copy": "../../../output/clips/scene09-finale-v1.mp4",
+      "source_path": "video/raw/scene09-finale-v1.mp4"
+    }
+  ],
+  "map_seals": false,
+  "accepted_output": "../../../output/scene09-full-v3.mp4"
+}

@@ -1,0 +1,120 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a new wide establishing film still, 16:9 photorealism. Image 1 supplies only jungle stone texture and afternoon lighting. Image 2 supplies the exact single nine-year-old boy Matvey, his face, glasses and sailor costume. Camera at the START of a LONG STRAIGHT 25-metre dirt running lane through tropical jungle, wide angle with deep perspective, no telephoto compression. The lane occupies the central and right two thirds of the frame and narrows strongly into the far distance. At its VERY FAR END is a SMALL LOW rustic wooden wicket gate, only 90 centimetres high, made of two OPEN-SPACED slatted leaves, CLOSED across the lane. Low stone posts just 110 cm high, no tall pillars. Gate appears small in the distance, path clearly long enough for several seconds of sprinting. Low mossy stone walls line the lane. Left foreground: carved stone edge of the passage Matvey just exited. Beside it stands the same boy, full body three-quarter profile, looking down the lane, cream sailor shirt, navy waistcoat, red neckerchief, tan trousers, brown shoes, black rectangular glasses. His LEFT hand holds one rolled parchment map at his left thigh. Right hand empty. Beside him at the START, outside the clear lane, is a waist-high stone pedestal. It supports a large glass hourglass held inside an OPEN U-shaped wooden stand by TWO VISIBLE BRASS SIDE PIVOTS at the narrow middle of the hourglass, allowing the entire glass and inner frame to flip upside down. One small brass bell hangs from a bracket attached to the stand. All sand in lower bulb, upper bulb empty. Clear realistic mechanical construction. Warm dappled sunlight, cinematic natural colours, realistic anatomy. One boy only. No tall gate, no massive doors, no arch over gate, no obstacle on path, no water puzzle, no hat, no bag, no words, no collage.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene09_01_establish_v2"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11090111,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene08-exit-continuity.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  }
+}

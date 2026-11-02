@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One continuous cinematic live-action shot, a clear continuation of the previous bridge scene. Start on the same Matvey at the bridge exit, wearing the cream sailor shirt, navy vest, red neckerchief, tan trousers and brown shoes, with dark rectangular glasses and rolled map. The title badge from the previous challenge fades away as he turns from the bridge and walks along the island trail. The camera follows him through dense jungle toward the path. End on the supplied arrival frame: same Matvey alone on the trail, bridge behind him, moving into the island. Match his face, clothing and map. Clear geography, no teleporting, no duplicate or extra people, no text or overlays.
+
+overall_soundscape: Island birds and soft footsteps on the trail; jungle ambience grows slightly ominous as he walks deeper. No speech.
+
+non_diegetic_music: N/A

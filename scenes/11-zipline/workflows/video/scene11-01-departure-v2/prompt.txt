@@ -1,0 +1,5 @@
+A single photorealistic cinematic continuation using the supplied first and last images as exact endpoints. Preserve the exact camera framing and geography of the stone clearing, chest, bay, mountain ridges, coastline and dense vegetation throughout; do not shift, reshape or replace any mountain or plant. Begin on the approved gift-reveal image. Matvey takes the folded gray scooter and the single helmet from the chest, puts the scooter into its dark-gray carry case, secures the case on his back, and ends exactly on the supplied final image beside the now-empty open chest, holding the helmet and looking toward the distant bay. Keep one boy, one chest, one scooter, one helmet and one parrot. Natural restrained movement, fixed geography and smooth continuity. No spoken dialogue; do not mention or narrate sunset.
+
+overall_soundscape: Gentle island foliage, a few distant birds, coastal breeze and soft surf. No speech.
+
+non_diegetic_music: Original instrumental closing-adventure theme, warm strings, soft woodwinds and light percussion, reflective then quietly hopeful; no vocals or lyrics.

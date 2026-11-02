@@ -1,0 +1,15 @@
+{
+  "output": "../../../video/raw/scene11-03-night-briefing-v1.mp4",
+  "seconds": 8.5,
+  "seed": 11110122,
+  "height": 768,
+  "provider": "FreeVideo",
+  "base_steps": 16,
+  "status": "rendered_pending_user_review",
+  "audio": "FreeVideo generated soundtrack and ambience per prompt",
+  "width": 1344,
+  "two_pass": false,
+  "prompt": "prompt.txt",
+  "media": "media.json",
+  "actual_seconds": 8.708333
+}

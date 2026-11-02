@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-approved-gift-reveal.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create a photorealistic cinematic continuity frame on the exact same tropical clearing above the bay shown in image 2, at warm sunset. Use image 1 as the exact identity reference for nine-year-old Matvey and image 2 for the exact stone clearing, open chest, parrot, cliff, bay and dense lush vegetation. Preserve the existing greenery at full density: vines on the left stone wall, leafy plants framing the foreground and right edge, thick trees and jungle canopy along the cliff. Do not thin or remove any plants. Keep the same cream sailor shirt, dark vest, red necktie, tan trousers and brown shoes. The chest is open and completely empty. The single folded gray scooter is inside one dark-gray carry case strapped securely on Matvey's back. He holds exactly one gray helmet in his hand.\n\nRecompose the camera behind Matvey's left shoulder in a wide rear three-quarter view. Matvey stands at the left side of the chest, with his back and shoulder toward the camera. His head is turned to the right, away from the lens, looking out at the far bay and the distant sunset horizon. Show only the back of his head and a side profile; his eyes are not visible to camera. Absolutely no eye contact and no front-facing pose. The distant horizon is his clear eyeline. One boy, one chest, one carry case, one helmet, one parrot. Photorealistic family adventure film, sunset light with long soft shadows, no text.",
+      "negative_prompt": "looking at camera, eye contact, visible frontal eyes, front-facing boy, direct portrait, sparse vegetation, cleared plants, bare stone clearing, removed leaves, thinned jungle, duplicate boy, extra people, duplicate scooter, scooter in chest, duplicate helmet, helmet in chest, extra case, second chest, closed chest, changed clothes, missing parrot, extra parrot, cartoon, CGI, text, watermark, deformed hands, extra limbs",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene11_00_sunset_departure_v4"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11110109,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene10-approved-gift-reveal.png"
+    }
+  }
+}

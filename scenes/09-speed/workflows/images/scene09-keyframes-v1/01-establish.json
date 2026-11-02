@@ -1,0 +1,120 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 1024,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Create the next scene of this photoreal adventure film. Image 1 is continuity for ancient jungle stonework, warm dappled afternoon light and costume; image 2 is the exact face and costume of the same single nine-year-old Matvey. Wide cinematic 16:9 establishing shot from just outside an ancient stone passage whose carved edge is visible on the left. Matvey stands in the left foreground in three-quarter profile, full body, holding the rolled parchment map in his left hand, looking along a perfectly straight flat clear dirt running lane about 20 metres long. Dense tropical jungle flanks the lane. At the far end a CLOSED waist-high rustic wooden gate with two hinged leaves spans the entire lane between two stone pillars; low vine-covered stone walls extend on both sides preventing a shortcut. Beside Matvey at the start on the right edge of the lane is ONE compact waist-high stone pedestal carrying a large clearly visible glass hourglass in a pivoting wooden frame and a small brass bell hanging above it from a wooden bracket. All sand rests in the lower bulb, timer not started. The running lane must be visible continuously from start to gate, no obstacles, no steps, no bends. Match exact boy face, short brown hair, rectangular black glasses, cream sailor shirt with sailor collar, dark navy waistcoat, red neckerchief, tan trousers, brown shoes. Natural photographic anatomy, realistic film still, detailed jungle, coherent perspective. No other people, no hat, no bag, no text, no captions, no water channels, no water wheel. This is one single image, not a collage.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_scene09_01_establish_v1"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11090101,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "scene08-exit-continuity.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "Matvey_story_master_matvey_00001_.png"
+    }
+  }
+}

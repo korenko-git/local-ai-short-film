@@ -1,0 +1,18 @@
+{
+  "status": "rejected_no_trolley_grip",
+  "seed": 11110128,
+  "steps": 28,
+  "cfg": 1,
+  "provider": "Qwen Image 2.1",
+  "sampler": "euler",
+  "scheduler": "simple",
+  "resolution": 1024,
+  "input_references": [
+    "inputs/Matvey_story_master_matvey_00001_.png",
+    "inputs/scene10-gift-reveal-continuity.png"
+  ],
+  "prompt": "scene11-02-zipline-descent-v2-prompt.txt",
+  "negative_prompt": "two cables, parallel lines, multiple ropes, guy wires, extra support ropes, rope ladder, cable running sideways along coast, cable parallel to horizon, cable heading over open sea, cable missing beach, beach anchor invisible, cliff anchor invisible, rope ending in midair, floating rope, pulley trolley, extra posts, second boy, duplicate person, extra equipment, missing helmet, changed face, changed clothes, falling, upside down, daylight, sunset, cartoon, illustration, CGI, text, watermark, deformed hands, extra limbs",
+  "output": "../../../frames/drafts/rejected/scene11-02-zipline-descent-v2-rejected-no-trolley-grip.png",
+  "prompt_id": "12ad860c-5074-4cde-968d-47e95cb6110c"
+}

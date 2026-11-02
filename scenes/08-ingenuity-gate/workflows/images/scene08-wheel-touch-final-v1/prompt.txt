@@ -1,0 +1,10 @@
+Use case: cinematic storyboard keyframe
+Asset type: final reference frame for image-to-video in Scene 08
+Input images: Image 1 is the exact overhead courtyard layout and starting composition; Image 2 is the target action and Matvey pose reference.
+Primary request: Create one fresh, coherent final frame. Matvey has moved from crouching at the left turntable to standing beside the waterwheel on the right, leaning toward it and placing both hands on its rim as he begins to push. Make his position and pose visibly different from the start frame so a video model has a clear action change to animate.
+Scene/backdrop: Match the stone courtyard, fixed high overhead camera, lighting, foliage, circular channel turntables, water channels, and wooden waterwheel.
+Subject: Same recognizable boy, short brown hair, dark rectangular glasses, cream sailor shirt, navy vest, red neckerchief, tan trousers, brown shoes.
+Style/medium: Photorealistic live-action family adventure film.
+Composition/framing: Wide 16:9 overhead composition, stable perspective.
+Constraints: Keep the stone doorway firmly shut and motionless, with no opening, gaps, light, or glowing edges. Show lively continuous water moving through the channels and splashing onto the wheel. Keep the waterwheel clearly visible and geometrically intact.
+Avoid: collage, extra people, text, symbols, watermark.

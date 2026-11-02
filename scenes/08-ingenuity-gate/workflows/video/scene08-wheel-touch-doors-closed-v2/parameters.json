@@ -1,0 +1,23 @@
+{
+  "provider": "FFmpeg",
+  "operation": "composite closed-door panel into final approach frame",
+  "base_frame": "../../../work/scene08-approach-wheel-v1-review/frame-6-4.png",
+  "door_source": "../../../frames/approved/scene08-door-closes-when-wheel-stops-gpt-image-v1.png",
+  "overlay": {
+    "scale": [
+      1344,
+      768
+    ],
+    "crop": [
+      1124,
+      0,
+      220,
+      300
+    ],
+    "alpha_fade_bottom_px": 60
+  },
+  "output": "../../../frames/drafts/scene08-wheel-touch-doors-closed-v2-superseded.png",
+  "width": 1344,
+  "height": 768,
+  "status": "superseded_by_start_frame_door_composite_v8"
+}

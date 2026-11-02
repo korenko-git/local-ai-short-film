@@ -1,0 +1,17 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11100109,
+  "steps": 28,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "rejected_user_feedback_disconnected_from_existing_frames",
+  "input_references": [
+    "inputs/scene10-map-platform-v1.png",
+    "inputs/scene10-platform-environment.png",
+    "inputs/scene10-platform-environment.png"
+  ],
+  "output": "../../../frames/drafts/rejected/scene10-05-map-away-discovery-v1.png",
+  "prompt_id": "f332952d-ba1b-4945-ba53-08689314ad7a"
+}

@@ -1,0 +1,18 @@
+{
+  "workflow": "scene07-dialogue.json",
+  "prompt_id": "979ebfdb-f4c8-4aa2-8a0c-f705ea69c6dc",
+  "provider": "Drama 3",
+  "status": "completed_pending_audio_review",
+  "narrator_seed": 11070321,
+  "matvey_seed": 11070322,
+  "outputs": [
+    "audio/voice/scene07-narrator-deadend.flac"
+  ],
+  "removed_outputs": [
+    {
+      "status": "deleted_by_user",
+      "reason": "The exclamation is already present in the video.",
+      "path": "audio/voice/scene07-matvey-oh.flac"
+    }
+  ]
+}

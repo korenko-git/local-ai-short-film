@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen Image 2.1",
+  "prompt_id": "0e8fbcba-273f-4f98-a45e-8b992325002d",
+  "seed": 11110127,
+  "workflow": "scene11-01-night-cliff-v4.json",
+  "prompt": "scene11-01-night-cliff-v4-prompt.txt",
+  "parameters": "scene11-01-night-cliff-v4-parameters.json",
+  "output": "../../../frames/drafts/scene11-01-night-cliff-v4.png",
+  "status": "completed_pending_user_review",
+  "validation": "valid",
+  "notes": "One single cable from a rock-bolted upper anchor to one beach landing post; no secondary ropes."
+}

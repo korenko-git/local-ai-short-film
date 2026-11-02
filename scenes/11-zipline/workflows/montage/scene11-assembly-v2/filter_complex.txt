@@ -1,0 +1,14 @@
+[0:v]setpts=PTS-STARTPTS,settb=AVTB,format=yuv420p[v0];
+[1:v]trim=start_frame=1,setpts=PTS-STARTPTS,settb=AVTB,format=yuv420p[v1];
+[2:v]trim=start_frame=1,setpts=PTS-STARTPTS,settb=AVTB,format=yuv420p[v2];
+[3:v]setpts=PTS-STARTPTS,settb=AVTB,format=yuv420p[v3];
+[v0][v1]xfade=transition=fade:duration=0.15:offset=7.141667[v01];
+[v01][v2]xfade=transition=fade:duration=0.15:offset=14.950000[v012];
+[v012][v3]xfade=transition=fade:duration=0.283333:offset=24.750000,format=yuv420p[v];
+[0:a]aresample=48000,atrim=duration=7.291667,asetpts=PTS-STARTPTS,volume=0.80[a0];
+[1:a]aresample=48000,atrim=start=0.041667:duration=7.958333,asetpts=PTS-STARTPTS,volume=0.80[a1];
+[2:a]aresample=48000,atrim=start=0.041667:duration=10.083333,asetpts=PTS-STARTPTS,volume=1.00[a2];
+[3:a]aresample=48000,atrim=duration=7.291667,asetpts=PTS-STARTPTS,volume=0.80[a3];
+[a0][a1]acrossfade=d=0.15:c1=tri:c2=tri[a01];
+[a01][a2]acrossfade=d=0.15:c1=tri:c2=tri[a012];
+[a012][a3]acrossfade=d=0.283333:c1=tri:c2=tri,alimiter=limit=0.95[a]

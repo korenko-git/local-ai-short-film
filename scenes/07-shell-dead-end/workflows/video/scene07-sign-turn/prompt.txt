@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] One controlled medium-wide shot, same jungle dead end and same single Matvey. He grips the wooden board and physically rotates it around the central post; make the board visibly turn, not just his hand touch it. The rolled map stays in his other hand. As the board turns, its carved arrow becomes visible and points directly toward the vine wall that blocked the trail. At that exact moment the thick vines begin to part horizontally to the left and right. End on the supplied action frame with Matvey still touching the board, arrow readable, and the opening only beginning. Keep the same shell, geography, clothes and lighting. No cuts, no magic, no extra people, no branch in his hands, no text.
+
+overall_soundscape: Wooden sign creak and latch click, leaves beginning to rustle apart, subdued jungle insects. No dialogue.
+
+non_diegetic_music: N/A

@@ -1,0 +1,130 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "weight_dtype": "default",
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+    }
+  },
+  "22": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "image-reference-04.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "device": "default",
+      "type": "qwen_image",
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "prompt": "Photorealistic live-action family pirate adventure film still, natural golden morning light, 16:9 wide frame, real child anatomy. Image1 blank wide canvas only defines output aspect ratio, replace entirely. Image2 defines Matvey costume, image3 defines his exact real face: SAME nine-year-old boy, short straight light brown hair, dark rectangular eyeglasses, no beautification or adult features. He wears the same cream cotton sailor shirt, navy waistcoat, red neckerchief, tan trousers and practical brown leather shoes. Full-body medium-wide shot showing his head, BOTH hands, BOTH feet, the whole small boat and dry sand. The boy is standing INSIDE ONE SMALL SIMPLE WOODEN ROWBOAT grounded on a tropical sandy beach. Boat bow is firmly beached on wet sand near center-left; stern is in only a few centimeters of calm shallow water at lower-left. Boat has low sides only thirty centimeters high, no cabin, no sails, no motor, no duplicate boat. The boy stands inside near the bow, holding ONE rolled cream parchment map in his LEFT hand, resting RIGHT hand on the low wooden gunwale for balance, about to step OUT ONTO DRY SAND to the RIGHT. Both feet still inside boat. His body faces right three-quarter view, face unobstructed and naturally curious. At right side of frame a clear dry sandy footpath leads from beach into dense palms and ferns toward the same steep green rocky island mountain, natural welcoming jungle entrance. Calm turquoise sea is visible on the left, level horizon; camera only one meter above the beach, a believable shore-level view, no aerial height, no cliff. A dark wooden two-masted brig with cream sails is anchored far offshore at the far LEFT background and small in frame. Rope tied from the boat bow to a short stake in sand, normal simple maritime details. No adult faces or other foreground people. No lettering, no logos, no cartoon, no CGI, no collage.",
+      "negative_prompt": "cartoon, illustration, CGI, extra limbs, deformed hands, missing feet, adult boy, hat, duplicate boats, motorboat, ship on land, cliff, aerial view, text, writing, watermark",
+      "images.image_2": [
+        "10",
+        0
+      ],
+      "images.image_3": [
+        "11",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ],
+      "filename_prefix": "Matvey_v3_05_landing"
+    }
+  },
+  "21": {
+    "class_type": "KSampler",
+    "inputs": {
+      "scheduler": "simple",
+      "denoise": 1,
+      "latent_image": [
+        "20",
+        2
+      ],
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 11055233,
+      "sampler_name": "euler",
+      "negative": [
+        "20",
+        1
+      ],
+      "cfg": 1,
+      "positive": [
+        "20",
+        0
+      ],
+      "steps": 28
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "wide-canvas.png"
+    }
+  },
+  "6": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "4971bc5d_002.png"
+    }
+  }
+}

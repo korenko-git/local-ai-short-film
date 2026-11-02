@@ -1,0 +1,93 @@
+{
+  "provider": "Qwen Image 2.1",
+  "steps": 28,
+  "sampler": "euler",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "frame_1_5_pending_user_review",
+  "story_order": [
+    {
+      "id": "arrival_from_bridge",
+      "workflow": "scene07-arrival-v2.json",
+      "seed": 11070114,
+      "prompt_id": "1c511a7d-51e3-49de-af8d-92c5417d837a",
+      "output": "../../../frames/drafts/1c511a7d_000.png",
+      "base": "inputs/scene06-last-frame.png"
+    },
+    {
+      "id": "frame_1_5_empty_dead_end",
+      "workflow": "scene07-empty-deadend.json",
+      "seed": 11070117,
+      "prompt_id": "7b9b8712-abc1-4c03-bdcf-a60744c48bdb",
+      "output": "../../../frames/drafts/7b9b8712_000.png",
+      "base": "inputs/scene07-deadend-start.png",
+      "note": "Same dead-end composition as frame 2, no Matvey; shell unlit."
+    },
+    {
+      "id": "sees_dead_end",
+      "workflow": "existing scene anchor",
+      "output": "../../../frames/drafts/scene07-deadend-start.png"
+    },
+    {
+      "id": "shell_glow_oh",
+      "workflow": "scene07-glow-oh.json",
+      "seed": 11070111,
+      "prompt_id": "f37c37c5-cc42-42d4-b266-daf04d7bee6f",
+      "output": "../../../frames/drafts/f37c37c5_000.png",
+      "base": "inputs/scene07-deadend-start.png"
+    },
+    {
+      "id": "approaches_sign",
+      "workflow": "scene07-same-sign.json",
+      "seed": 11070107,
+      "prompt_id": "ea636fe5-71e0-4d4d-88e4-987ba154210d",
+      "output": "../../../frames/drafts/ea636fe5_000.png",
+      "base": "inputs/scene07-deadend-start.png"
+    },
+    {
+      "id": "turn_arrow_and_vines_part",
+      "workflow": "scene07-turn-action.json",
+      "seed": 11070115,
+      "prompt_id": "d2ba2425-801f-4d55-9c43-a4c7b083d71a",
+      "output": "../../../frames/drafts/d2ba2425_000.png",
+      "base": "inputs/scene07-matvey-at-shell-v1.png"
+    },
+    {
+      "id": "open_passage",
+      "workflow": "scene07-sign-turn-arrow.json",
+      "seed": 11070112,
+      "prompt_id": "9b29bb27-e470-4ae0-afc3-539e3921c530",
+      "output": "../../../frames/drafts/9b29bb27_000.png",
+      "base": "inputs/scene07-matvey-at-shell-v1.png"
+    },
+    {
+      "id": "walk_away",
+      "workflow": "scene07-walk-away-open.json",
+      "seed": 11070116,
+      "prompt_id": "72088fc7-6a4d-4aa2-9408-e53f90d50123",
+      "output": "../../../frames/drafts/72088fc7_000.png",
+      "base": "inputs/scene07-arrow-open-v1.png"
+    }
+  ],
+  "transition_reference": {
+    "video": "../../video/drafts/rejected/scene07-curiosity-raw.mp4",
+    "review_contact": "../../work/old-bridge-entry-review.jpg",
+    "suggested_use": "Recreate/reuse the bridge-crossing entrance, then cut to the correct dead-end geography."
+  },
+  "rejected_variants": [
+    {
+      "output": "../../../frames/drafts/1b9c9963_000.png",
+      "seed": 11070110,
+      "reason": "duplicate Matvey from mixing bridge and dead-end reference images"
+    },
+    {
+      "output": "../../../frames/drafts/ecb0ceff_000.png",
+      "seed": 11070109,
+      "reason": "opening was unclear"
+    },
+    {
+      "output": "../../../frames/drafts/68d38f35_000.png",
+      "reason": "rolled map was not visible in the hand"
+    }
+  ]
+}

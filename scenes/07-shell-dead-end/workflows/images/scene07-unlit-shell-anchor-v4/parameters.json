@@ -1,0 +1,16 @@
+{
+  "provider": "Qwen Image 2.1",
+  "seed": 11070121,
+  "steps": 28,
+  "sampler": "euler",
+  "cfg": 1,
+  "resolution": 1024,
+  "status": "frame_ready_pending_user_review",
+  "workflow": "scene07-unlit-shell-anchor-v4.json",
+  "input_references": [
+    "inputs/scene07-empty-deadend.png",
+    "Matvey_story_master_matvey_00001_.png"
+  ],
+  "output": "../../../frames/drafts/scene07-deadend-with-matvey-unlit-v4.png",
+  "prompt_id": "d6e23ccd-0fa5-445b-9bcf-757547bbdb64"
+}
