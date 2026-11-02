@@ -7,9 +7,14 @@ From the repository root:
 ```text
 python scripts/build-article.py
 python scripts/build-site.py
+python scripts/preview-site.py
 ```
 
-No Python packages are required. Pages: `index.html`, `ru.html`, `uk.html`. Use `--offline` on the article builder for single-file HTML exports; video remains external.
+Open <http://127.0.0.1:8765/> to preview the site. No Python packages are required.
+
+JSON files are the editable text sources. The builder creates `index.html`, `ru.html` and `uk.html` for browsers; these generated files are ignored by Git. Edit the JSON, rather than the HTML, so rebuilding preserves changes. GitHub Actions generates the pages before publishing them to Pages.
+
+Use `--offline` on the article builder for single-file HTML exports; video remains external.
 
 Selected public stills and six web videos live in `assets/`: the film, bridge orbit, curiosity POV, wind in the hair (scene 4), first channel turn/water motion (scene 8), and accepted dynamic sprint v5 (scene 9). The sprint discussion includes the supplied anime-reference contact sheet and its camera/sound iteration history. Provenance: `assets.json` and `web-media.json`. Recreate viewing copies with `scripts/prepare-web-media.py` only when the local production media and FFmpeg are available. Originals are preserved.
 

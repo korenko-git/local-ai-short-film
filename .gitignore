@@ -53,6 +53,11 @@ Thumbs.db
 /docs/article/local-short-film-*.html
 /docs/article/matvey-island.html
 
+# Article pages are generated from content JSON during the Pages build.
+/docs/article/index.html
+/docs/article/ru.html
+/docs/article/uk.html
+
 # Explicitly approved voice-reference clips and their small encoded embeddings.
 !/shared/refs/audio/*.mp3
 !/shared/refs/audio/*.wav

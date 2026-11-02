@@ -56,15 +56,3 @@ I used an RTX 5070 Ti with 16 GB of VRAM. Video generation took roughly 1.5 minu
 - [Credits](CREDITS.md) — tools, music and source attribution.
 
 Selected footage and stills are included with the article. Raw generations, rejected takes, personal reference photographs and model weights are excluded. Shared voice references are in [shared/refs/audio](shared/refs/audio/README.md).
-
-## Preview the article locally
-
-With Python 3 installed, run these commands from the repository root. No additional Python packages are needed.
-
-```sh
-python scripts/build-article.py
-python scripts/build-site.py
-python scripts/preview-site.py
-```
-
-Open <http://127.0.0.1:8765/>. Edit the text in `docs/article/content/en.json`, `uk.json` or `ru.json`, then rebuild the pages.
