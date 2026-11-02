@@ -1,67 +1,70 @@
-# Generating a short film locally
+<div align="center">
 
-A personal birthday adventure made with local image, speech and video generation: **12 scenes, four trials, 4:10.250**, assembled at 1344 x 768 / 24 fps. This repository documents the production and contains a three-language article ready for GitHub Pages.
+<a href="https://github.com/korenko-git/local-ai-short-film/raw/refs/heads/main/docs/article/assets/film.mp4">
+  <img src="docs/article/assets/cover.jpg" alt="A sailing ship approaching a tropical island — watch the film" width="100%">
+</a>
 
-Read the article: [English](docs/article/index.html) · [Українська](docs/article/uk.html) · [Русский](docs/article/ru.html). Open the HTML files locally, or build a self-contained site for Pages. The film keeps its original Russian audio and lettering.
+<h1>Generating a Short Film Locally</h1>
 
-## The experiment
+<p><em>One island. Four trials. A birthday adventure made with AI.</em></p>
 
-I used Qwen Image 2.1 for most keyframes, GPT Image for some water-puzzle states, Drama 3 for speech and MiniMax H3 through FreeVideo for video. Codex and ComfyUI MCP helped orchestrate workflows and keep prompts, seeds and results organized; FFmpeg handled editing. My first Wan 2.2 attempt was faster but did not meet the quality I wanted.
+<p><strong>4:10</strong> &nbsp;·&nbsp; <strong>12 scenes</strong> &nbsp;·&nbsp; <strong>24 fps</strong> &nbsp;·&nbsp; <strong>16 GB VRAM</strong></p>
 
-The workstation had an RTX 5070 Ti with 16 GB VRAM. I observed roughly 52 GB of occupied system RAM during a speech run. Video took approximately 1.5 minutes of generation per output second in the working setup. These are project observations, not benchmark guarantees.
+<p>
+  <a href="https://github.com/korenko-git/local-ai-short-film/raw/refs/heads/main/docs/article/assets/film.mp4"><strong>▶ Watch the film</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#about-the-project">Behind the scenes</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#tools-and-hardware">Tools &amp; hardware</a>
+</p>
 
-The article covers camera changes, wind in hair, surprisingly good water motion, degraded detail from some GPT Image inputs, a convincing parrot and less convincing hourglass sand, plus the final edit fixes.
+<p><sub>Russian dialogue · MP4, 71 MB · Article in English / Українська / Русский</sub></p>
 
-## Build and preview the site
+</div>
 
-Python 3, standard library only:
+---
 
-```text
+## About the project
+
+I made a four-minute birthday adventure using image, speech and video generation. This repository contains the production notes, prompts, workflows and an [illustrated article](docs/article/README.md) about how it came together.
+
+The character arrives on an island, crosses a suspension bridge, finds a hidden path, solves a water puzzle and races through a closing gate. A chest, a talking parrot and a night-time zipline lead to the birthday ending.
+
+The finished edit runs **4 minutes 10 seconds**, with **12 scenes at 1344 × 768 and 24 fps**. I generated images, speech and video separately, then assembled the scenes with FFmpeg. Codex helped prepare workflows, organize the material and carry out editing changes.
+
+The article follows the actual attempts: camera moves guided by a reference, wind moving the character's hair, convincing water motion, a talking parrot, failed hourglass animation and the revisions needed to turn separate clips into a film.
+
+## Tools and hardware
+
+| Task | Tools |
+|---|---|
+| Keyframes | Qwen Image 2.1; GPT Image for some water-puzzle frames |
+| Speech | Drama 3 |
+| Video | MiniMax H3 through FreeVideo; an early experiment with Wan 2.2 |
+| Workflow assistance | Codex and ComfyUI MCP |
+| Editing and audio mixing | FFmpeg |
+
+I used an RTX 5070 Ti with 16 GB of VRAM. Video generation took roughly 1.5 minutes per second of footage in my setup. During one speech-generation run, occupied system RAM reached about 52 GB. The article describes the memory optimizations and community tools that made this workflow possible.
+
+## Explore the repository
+
+- [Scene index](scenes/README.md) — story, scene notes and production history.
+- [Production workflow](docs/SCENE-WORKFLOW.md) — keyframes, generation and editing.
+- [ComfyUI MCP guide](docs/COMFY-MCP-LLM.md) — setup and working with the local tools.
+- [Generation notes](docs/GENERATION-LEGACY.md) — model files, settings and earlier experiments.
+- [Article source](docs/article/README.md) — translations, assets and build instructions.
+- [Credits](CREDITS.md) — tools, music and source attribution.
+
+Selected footage and stills are included with the article. Raw generations, rejected takes, personal reference photographs and model weights are excluded. Shared voice references are in [shared/refs/audio](shared/refs/audio/README.md).
+
+## Preview the article locally
+
+With Python 3 installed, run these commands from the repository root. No additional Python packages are needed.
+
+```sh
 python scripts/build-article.py
 python scripts/build-site.py
 python scripts/preview-site.py
 ```
 
-Then open `http://127.0.0.1:8765/`. Use `--offline` with `build-article.py` for single-file HTML exports; video remains external. Selected public stills and smaller web videos are in `docs/article/assets/`. Regenerating web copies from the private production workspace requires FFmpeg and `python scripts/prepare-web-media.py`.
-
-The GitHub Actions workflow stages only the website. To use it, select **Settings > Pages > Source > GitHub Actions** in the GitHub repository. It runs on pushes to `main` or manual dispatch.
-
-## Production navigation
-
-- [Scene index](scenes/README.md): current plot, outputs and approval states.
-- [Agent instructions](AGENTS.md): repository rules.
-- [General scene workflow](docs/SCENE-WORKFLOW.md): directing, connected frames, editing and handoffs.
-- [Comfy MCP guide](docs/COMFY-MCP-LLM.md): correct interpreter, API checks and memory management.
-- [Historical generation workflow](docs/GENERATION-LEGACY.md): earlier layouts, model files and production procedure.
-- [Credits](CREDITS.md): tools, music and source attribution.
-
-```text
-docs/article/              public article, translations and selected assets
-scenes/NN-name/            scene notes, workflows and local production material
-shared/                   shared graphics, identity, voices and music
-scripts/                  generation launchers and website builders
-output/assemblies/        local full-film assemblies (ignored)
-work/                     local edits/history and staged site (ignored)
-```
-
-Scene-specific frames, dialogue, SFX and workflows stay with their scene. Shared identity/costume/voice references stay in `shared/`. Each shot keeps prompt, media, seed and settings. Originals stay in `video/raw/`; accepted clip copies go in `output/clips/`; the current accepted whole scene is the only full edit in its `output/` root. Previous full edits go in `work/archive/`.
-
-## What is intentionally local
-
-Raw/rejected media, local logs, private reference photographs, model weights and inventories are excluded by `.gitignore`; they are not deleted. The approved reusable voice clips, transcripts and small voice encodings are public under [shared/refs/audio](shared/refs/audio/README.md). Finished music/ambience remain in `shared/audio/`. Upstream FreeVideo is installed separately. A public clone does not include the private identity photographs or promise one-command reproduction of historical edits.
-
-Scene READMEs contain the complete English production notes, version history, settings and remaining tasks. Exact Russian dialogue and on-screen labels remain quoted. Film v3 is still marked pending full-film review in the production timeline; acceptance of individual scenes is recorded separately.
-
-## Generation tasks and model files
-
-New keyframes use Qwen Image 2.1 through local ComfyUI/Comfy MCP; speech uses Drama 3 and is saved in the scene's `audio/voice/`. API-format workflows must have their LoadImage/LoadAudio files uploaded and validated before running. The local input inventory is `COMFY-INPUTS.json`; reusable voice references are under `shared/refs/audio/`.
-
-New video uses FreeVideo only. Each `scenes/NN-name/workflows/video/TASK/` keeps `prompt.txt`, `media.json` and inputs. Frame paths inside media are relative to that media file. FreeVideo may generate sea/birds/leaves with the video; intelligible speech is separate Drama 3 and exact impacts/mechanisms can be separate `audio/sfx/`. Inspect sound after rendering rather than treating an audio stream as proof of quality. Sync suspense music in the edit.
-
-```powershell
-./scripts/Generate-Video.ps1 -Scene 06 -Task scene06-orbit -OutName orbit-new -Seconds 6.5 -Seed 11070233
-```
-
-The new raw clip remains pending review. The historical baseline is 1344 x 768, one pass, 16 steps. Unload idle ComfyUI models before video; bridge escape keyframes are already mirrored and must not be mirrored again.
-
-Install/cache/runtime paths are configurable launcher arguments, not repository-owned model installations. Required model filenames and the earlier runtime/input workflow are documented in `docs/GENERATION-LEGACY.md`. Models were not duplicated into the project; legacy assembly scripts require adapting former paths rather than promising a one-command exact rebuild.
+Open <http://127.0.0.1:8765/>. Edit the text in `docs/article/content/en.json`, `uk.json` or `ru.json`, then rebuild the pages.
