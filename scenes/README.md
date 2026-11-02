@@ -50,6 +50,7 @@ Storyboard: `../STORYBOARD.jpg`; the former `../STORYBOARD-OLD.jpg` is historica
 
 ## Production journal
 
+- 2026-11-02: expanded all three article editions with scene 04 wind, scene 08 water motion and scene 09's accepted dynamic-camera insert, supplied motion-reference contact sheet and production history. Web copies preserve the original scene files and approval states.
 - 2026-11-02: assembled scenes 01–12 in order with common 1344 x 768 / 24 fps picture and 48 kHz stereo sound. Full-film review was not automatically recorded as acceptance.
 - 2026-11-02: v2 was 253.208 s. Moved the bridge reward to the landing, trimmed repeated poses, moved failed-attempt narration after the turn, shortened chest reaction and removed the first-ride clip. Original files passed SHA-256 checks and the result decoded without errors. Edit parameters/timeline: `work/film-edit-v2/`.
 - 2026-11-02: v3 is 250.250 s: removed another 2.5 s by the wheel, restored 1.75 s of parrot flight/reaction, removed 2.25 s after packing. Source hashes still matched the pre-v2 record; prior v2 moved to `work/archive/assemblies/`. Parameters/timeline: `work/film-edit-v3/`. Full-film approval remains unrecorded.

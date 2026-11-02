@@ -19,5 +19,43 @@
     "purpose": "public viewing copy",
     "video": "H.264 CRF 25",
     "audio": "AAC 128 kbps"
+  },
+  {
+    "asset": "assets/hair-wind.mp4",
+    "source": "scenes/04-map/output/scene-04-matvey-gets-map-v4.mp4",
+    "purpose": "public viewing copy",
+    "video": "H.264 CRF 25",
+    "audio": "AAC 128 kbps"
+  },
+  {
+    "asset": "assets/water-first-turn.mp4",
+    "source": "scenes/08-ingenuity-gate/video/raw/scene08-correct-first-turn-v1.mp4",
+    "purpose": "public viewing copy",
+    "video": "H.264 CRF 25",
+    "audio": "AAC 128 kbps"
+  },
+  {
+    "asset": "assets/speed-dynamic.mp4",
+    "source": "scenes/09-speed/output/clips/scene09-speed-camera-approved-v5.mp4",
+    "purpose": "public viewing copy",
+    "video": "H.264 CRF 25",
+    "audio": "AAC 128 kbps"
+  },
+  {
+    "asset": "assets/water-first-turn.jpg",
+    "source": "scenes/08-ingenuity-gate/video/raw/scene08-correct-first-turn-v1.mp4",
+    "seconds": 4.5,
+    "purpose": "clip poster extracted without retouching"
+  },
+  {
+    "asset": "assets/speed-dynamic.jpg",
+    "source": "scenes/09-speed/output/clips/scene09-speed-camera-approved-v5.mp4",
+    "seconds": 2.5,
+    "purpose": "clip poster extracted without retouching"
+  },
+  {
+    "asset": "assets/speed-reference.jpg",
+    "source": "scenes/09-speed/refs/speed-camera/contact.jpg",
+    "purpose": "supplied anime motion-reference contact sheet; reference imagery, not a film render"
   }
 ]

@@ -125,4 +125,5 @@ Shared identity/costume references: `../../shared/refs/images/`; shared voice re
 
 ## Documentation maintenance
 
+- 2026-11-02: added the accepted v5 camera insert and `refs/speed-camera/contact.jpg` to all three article editions. The accompanying account follows the chat history: rejected style transfer, character photo references with written staging, the revised "Бежи!" cue, and vocal separation to retain music. Original media and approval states are unchanged.
 - 2026-11-02: consolidated the complete production decisions, version history, artifact references and speech directions into this English README. Russian spoken/onscreen text is retained in quotation marks. No render or approval state changed.

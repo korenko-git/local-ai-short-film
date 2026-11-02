@@ -139,4 +139,5 @@ These supplementary records belong to the versions described above; their presen
 
 ## Documentation maintenance
 
+- 2026-11-02: added a web copy of `video/raw/scene08-correct-first-turn-v1.mp4` to all three article editions to illustrate water motion. Source media and review status are unchanged.
 - 2026-11-02: consolidated the complete production decisions, version history, artifact references and speech directions into this English README. Russian spoken/onscreen text is retained in quotation marks. No render or approval state changed.

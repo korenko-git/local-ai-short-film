@@ -25,4 +25,5 @@ Shared identity/costume references: `../../shared/refs/images/`; shared voice re
 
 ## Documentation maintenance
 
+- 2026-11-02: added a web copy of `output/scene-04-matvey-gets-map-v4.mp4` to all three article editions as the wind-in-the-hair example. Source media and review status are unchanged.
 - 2026-11-02: consolidated the complete production decisions, version history, artifact references and speech directions into this English README. Russian spoken/onscreen text is retained in quotation marks. No render or approval state changed.

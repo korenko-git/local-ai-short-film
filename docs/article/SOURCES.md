@@ -10,6 +10,7 @@ This is the filmmaker's first-person production account. The English, Russian an
 - The filmmaker's later additions: Wan 2.2 comparison, about 52 GB occupied RAM during speech, camera examples, wind in hair, source-image degradation, water behaviour, parrot and hourglass evaluation.
 - Local FreeVideo documentation and generation launcher: MiniMax H3/VDN-H3 relationship, memory planning, int8 ConvRot cache and historical 1344 x 768 / 24 fps / single-pass / 16-step settings.
 - `assets.json` and `web-media.json`: still timestamps and video source paths, relative to the original workspace.
+- Added viewing examples use scene-4 v4, `scene08-correct-first-turn-v1.mp4` and accepted `scene09-speed-camera-approved-v5.mp4`. The speed-reference image is the supplied scene-9 `refs/speed-camera/contact.jpg`; it illustrates the borrowed motion language, not project-generated film imagery. The scene-9 chat and production journal support the rejected full anime-guide attempt, photo-reference/text-staging revision, Russian cue replacement, and CPU vocal-separation edit.
 - Audio source records and root `CREDITS.md`: music and sea attribution.
 
 ## Boundaries
