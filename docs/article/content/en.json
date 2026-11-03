@@ -29,17 +29,130 @@
   "lead": "I wanted to make a personal birthday film: an island, a pirate dossier, a shaky bridge, an ancient water puzzle and a talking parrot. Getting the images was only the beginning. The real work was keeping the character recognizable, making the actions understandable and turning separate generations into one continuous story.",
   "sections": [
     {
-      "id": "idea",
-      "nav": "The idea",
-      "title": "A birthday greeting becomes an adventure",
+      "id": "models",
+      "nav": "Choosing models",
+      "title": "A fast first attempt, then a much better image",
       "blocks": [
         [
           "p",
-          "It began with a ninth birthday and a gift: a grey two-wheeled scooter. I wanted it to become the reward at the end of an adventure. In the original “Island of Nine Treasures”, the treasures represented qualities and wishes: courage, curiosity, ingenuity, speed, agility, persistence, loyal friends, luck and a big dream. Long generation times and a tight deadline led me to shorten the route to four trials. The title kept its connection to the ninth birthday."
+          "My first video attempt used Wan 2.2. It was quick, but that older model’s result looked terrible to me for this project. The sound was usable; the picture and action were not. Switching to MiniMax H3 through FreeVideo made a major difference, especially in close-up detail. That improvement came with much longer waits, and it still depended on good keyframes."
+        ],
+        [
+          "table",
+          "What I used",
+          [
+            "Task",
+            "Tool",
+            "Role"
+          ],
+          [
+            [
+              "Keyframes",
+              "Qwen Image 2.1",
+              "The principal image tool for connected scene states."
+            ],
+            [
+              "Some puzzle images",
+              "GPT Image",
+              "Alternative states and corrections in trial three."
+            ],
+            [
+              "Intelligible speech",
+              "Drama 3",
+              "Consistent voices, short lines, pauses and performance."
+            ],
+            [
+              "Video",
+              "MiniMax H3 / FreeVideo",
+              "Motion, camera movement and environmental sound."
+            ],
+            [
+              "Orchestration and editing",
+              "Codex, ComfyUI MCP, FFmpeg",
+              "Workflows, inputs, run records, sound mixing and assembly."
+            ]
+          ]
         ],
         [
           "p",
-          "Treasure Island inspired the pirate atmosphere and the mock-serious dossier. I made the dossier illustrated and used a photorealistic character based on photographic references for the other scenes. For the dossier, I supplied a voice recording and a ticking-clock sound, then added sea ambience. When the text started appearing and disappearing in an early animation, part of the image had to stay still. Codex helped me solve this: it quickly cropped the video to separate the text from the character animation. The result reminded me of photographs in Harry Potter, where the people in the pictures repeat their movements."
+          "MiniMax H3 is the model; FreeVideo is the local inference tool I used to run it. Its documentation describes the VDN-H3 work from OpenVDN and Video DeltaNet. In this project I called FreeVideo through its CLI, while Qwen and Drama ran in local ComfyUI workflows through MCP."
+        ],
+        [
+          "p",
+          "Codex and ComfyUI MCP saved me a lot of manual setup. The agent found installed models, worked out how to use them, prepared workflows, connected nodes and kept the outputs organized. I still had to direct the scene and reject bad results. Many of the most useful instructions were specific observations: the river is frozen, the rope goes the wrong way, the character has not actually touched the sign."
+        ]
+      ]
+    },
+    {
+      "id": "memory",
+      "nav": "Memory and time",
+      "title": "16 GB of VRAM, and about 52 GB of system RAM",
+      "blocks": [
+        [
+          "p",
+          "I worked with an RTX 5070 Ti with 16 GB of VRAM. That is GPU memory, separate from system RAM. During a speech-generation run, I saw RAM usage reach roughly 52 GB. These are observations from my setup, not universal memory requirements for the models."
+        ],
+        [
+          "p",
+          "Other developers’ work made this practical. FreeVideo coordinates weights across VRAM, RAM and disk using techniques such as weight streaming, prefetching and chunked computation. My setup used its prepared int8 ConvRot cache. Qwen’s model and text encoder also used int8 ConvRot weights, while the installed Drama variant was named w4a8experts_bf16. Ready-made inference engines, compressed weights and ComfyUI integrations were essential parts of the pipeline."
+        ],
+        [
+          "p",
+          "I was building on the model developers’ work, OpenVDN and Video DeltaNet, FlashML-org’s FreeVideo, ComfyUI, PedroMarinhoDev’s Drama integration and the MCP tools. The agent helped connect those pieces. It did not invent the memory optimizations."
+        ],
+        [
+          "p",
+          "Speech generated relatively quickly even on the CPU. In my working setup, video took about a minute and a half per second of output at 24 fps. The basic settings were 1344 × 768, one pass and 16 steps. A ten-second test could mean fifteen minutes of waiting. A bad keyframe was expensive, so reviewing connected images before starting the video paid off."
+        ]
+      ]
+    },
+    {
+      "id": "pipeline",
+      "nav": "The production pipeline",
+      "title": "The folder structure became the film’s memory",
+      "blocks": [
+        [
+          "p",
+          "My early results exposed the difference between a description and a scene. There was too little action, the trials barely read, and the chest kept changing. I started treating every sequence as a set of shots: establish a problem, show the reaction, show the physical action, then its result. Reviewing each stage mattered more than making the prompt longer."
+        ],
+        [
+          "p",
+          "Once experiments started piling up, I organized the project around scenes and clips. Each scene got its own images, source video, voice lines, effects, workflows and edit. Shared faces, costume, voices and music lived separately. That helped the agent return to the same character and props instead of reinventing them."
+        ],
+        [
+          "quote",
+          "Story → connected keyframes → review → speech and video → edit → review"
+        ],
+        [
+          "p",
+          "I kept each shot’s prompt, media.json, input images, seed and generation parameters next to its task. The scene README recorded results, feedback, versions, approvals and remaining work. A main index tracked the whole story. A render finishing was different from me accepting it; an interrupted attempt did not become a finished clip."
+        ],
+        [
+          "code",
+          "scenes/\n  README.md                  story and current status\n  NN-scene-name/\n    README.md                decisions and scene journal\n    frames/                  connected keyframes\n    video/raw/               original generations\n    video/drafts/rejected/   rejected attempts\n    audio/voice/             dialogue\n    audio/sfx/               precise effects\n    workflows/               prompts, inputs, seeds, settings\n    output/                  current complete scene\n      clips/                 copies of accepted clips\n    work/archive/            superseded edits\nshared/                      common identity, voices, music\noutput/assemblies/           full-film assemblies"
+        ],
+        [
+          "p",
+          "I kept originals in video/raw, copies of accepted clips in output/clips and only one current complete scene in the root of output. Previous full edits went to work/archive. Some transitions used the actual last frame of the previous clip, including the move away from the chest toward the night-time cliff."
+        ]
+      ]
+    },
+    {
+      "id": "edit",
+      "nav": "Editing with GPT Luna",
+      "title": "Editing by GPT Luna",
+      "blocks": [
+        [
+          "p",
+          "I entrusted the editing to GPT Luna in Codex. I described the changes I wanted, and Luna prepared and ran FFmpeg commands and Python scripts: trimming and joining clips, aligning sound with the picture, freezing selected areas of a frame and adding graphic overlays. These changes used the existing material, so they did not require another video generation."
+        ],
+        [
+          "h3",
+          "Static text over a looping animation"
+        ],
+        [
+          "p",
+          "The dossier video was about 9–10 seconds long, while the voice-cloned narration lasted 20 seconds. To keep the picture running until the recording ended, the short animation had to loop. That also restarted the text reveal: the lettering disappeared and appeared again. Luna quickly solved the problem by cropping the area with the fully revealed text from the last frame and holding it over the video while the character animation continued moving. The result reminded me of photographs in Harry Potter, where the people in the pictures repeat their movements."
         ],
         [
           "figure",
@@ -48,8 +161,245 @@
           "An illustrated character in a pirate personnel dossier"
         ],
         [
+          "h3",
+          "Clip transitions and editing rhythm"
+        ],
+        [
           "p",
-          "My early results exposed the difference between a description and a scene. There was too little action, the trials barely read, and the chest kept changing. I started treating every sequence as a set of shots: establish a problem, show the reaction, show the physical action, then its result. Reviewing each stage mattered more than making the prompt longer."
+          "Using the same keyframe at the end of one clip and the start of another preserved the composition but sometimes created a noticeable pause. Luna trimmed repeated poses and moved the dialogue and achievement overlays along with the edit. It also moved the narrator’s line about the failed attempt to a point on the timeline after the wrong turn had actually happened."
+        ],
+        [
+          "table",
+          "The last edit notes",
+          [
+            "Problem",
+            "Change"
+          ],
+          [
+            [
+              "Bridge reward too early",
+              "Move it to the landing at 1:10."
+            ],
+            [
+              "Holds at puzzle joins",
+              "Trim duplicate poses in trials two and three."
+            ],
+            [
+              "Long freeze by the wheel",
+              "Remove another 2.5 seconds in v3."
+            ],
+            [
+              "Parrot cut too aggressively",
+              "Restore the flight and reaction: +1.75 seconds."
+            ],
+            [
+              "Waiting after packing",
+              "Remove 2.25 seconds before the departure."
+            ],
+            [
+              "Extra first-ride shot",
+              "Remove it before the birthday ending."
+            ]
+          ]
+        ],
+        [
+          "p",
+          "Assembly v2 ran for 253.208 seconds; v3 for 250.250. A few seconds matter when the character seems to be waiting for the next clip to start."
+        ],
+        [
+          "h3",
+          "One achievement template, four trials"
+        ],
+        [
+          "p",
+          "The achievement graphics were a pleasant surprise. I made one SVG template with a medallion, frame, colours and type, then reused it with a different title and trial number. They were added during editing, so I could change the wording, screen position or timing without asking the video model to regenerate anything."
+        ],
+        [
+          "figure",
+          "bridge-achievement",
+          "01:11 · The overlay appears after the bridge landing, independently of the source footage.",
+          "A courage achievement graphic over the completed bridge trial"
+        ],
+        [
+          "p",
+          "Originally the courage badge appeared before the character had crossed. Moving it to the landing, around 1:10 of the full film, fixed the problem. The same separation made it easy to change the trial count to four while keeping the design consistent."
+        ]
+      ]
+    },
+    {
+      "id": "voice",
+      "nav": "Voices and sound",
+      "title": "A performance assembled from several attempts",
+      "blocks": [
+        [
+          "p",
+          "I kept shared voice references for continuity and saved each scene’s actual lines beside its footage. The dossier used the recording I supplied. The narrator, short character lines and parrot used their own established references. Drama 3’s expressive tags, pauses and pronunciation choices made a substantial difference."
+        ],
+        [
+          "p",
+          "For the dossier, I supplied a voice recording and a ticking-clock sound, then added sea ambience."
+        ],
+        [
+          "p",
+          "For the parrot I wanted a rolled ‘r’, a pause after the cannons and an excited finish. One attempt had a wonderfully inarticulate opening cry; another was cut off. I combined the first two seconds of the early cry with a later spoken version, removing its first half-second. The accident became a character moment: the chest opens, the parrot wakes with a squawk and launches into its rehearsed speech."
+        ],
+        [
+          "p",
+          "FreeVideo could supply useful sea, foliage, birds and sometimes music together with the picture. I used Drama 3 for intelligible speech. In the speed sequence, the video model added nonsense voices, so the sound needed further editing. Precisely timed cracks, impacts and mechanism sounds could be separate effects."
+        ],
+        [
+          "p",
+          "Not all the audio was generated. Early scenes used Kevin MacLeod’s Adventures in Adventureland, and the sea ambience came from Joseph Sardin / BigSoundBank. I kept the source and licensing records with the project; the attribution is also included below."
+        ]
+      ]
+    },
+    {
+      "id": "details",
+      "nav": "Successful moments",
+      "title": "Successful moments",
+      "blocks": [
+        [
+          "h3",
+          "Two camera changes that mattered"
+        ],
+        [
+          "p",
+          "The second clip of the bridge trial is an orbit around the character and the bridge. It reveals the valley’s depth, so courage becomes something visible. Earlier versions had a bridge barely above the ground, implausible ropes or a structure that looked far too safe. The camera move only helped once the location itself felt dangerous."
+        ],
+        [
+          "clip",
+          "bridge-camera",
+          "The second bridge clip: an orbit that reveals the drop.",
+          "bridge"
+        ],
+        [
+          "p",
+          "The second clip of the curiosity trial does a different job: it changes the view to show the blocked path from the character’s perspective. Showing the empty dead end before the character enters gives the viewer a chance to understand the problem. This was more useful than cutting straight to someone standing beside a sign."
+        ],
+        [
+          "clip",
+          "curiosity-camera",
+          "The second clip of trial two: establishing the dead end from a new viewpoint.",
+          "shell"
+        ],
+        [
+          "h3",
+          "Wind in the hair"
+        ],
+        [
+          "p",
+          "In scene four, while the character receives the map on deck, the hair moves in the wind. It is a tiny detail, but I immediately noticed it. Along with the sea behind the ship, that movement makes the location feel like an actual breezy deck rather than a portrait pasted onto a background."
+        ],
+        [
+          "clip",
+          "hair-wind",
+          "Scene 4 · Watch the hair move in the sea breeze while the character unfolds the map.",
+          "map"
+        ],
+        [
+          "h3",
+          "Taking things out of the chest"
+        ],
+        [
+          "p",
+          "I liked how MiniMax handled the character collecting the gift. Hands, lid, clothing, scooter and helmet needed to interact within one scene. First I replaced an unconvincing keyframe in which the chest seemed to open by itself; the character now held its lid. Later he actually took the things with him."
+        ],
+        [
+          "figure",
+          "belongings",
+          "03:33 · The character physically takes the gift out of the chest.",
+          "The character lifting the folded scooter in its case from the chest"
+        ],
+        [
+          "h3",
+          "The parrot was a highlight"
+        ],
+        [
+          "p",
+          "The parrot turned out particularly well. I made a separate video insert in which its beak tries to move with a human pirate line. Drama 3 provided the clear speech; the video supplied the performance. The result suggests a bird repeating a memorized phrase, without requiring me to pretend that every phoneme is perfectly synchronized."
+        ],
+        [
+          "figure",
+          "parrot",
+          "03:24 · Beak movement and a separately generated human voice create the performance.",
+          "A close-up of the parrot speaking beside the chest"
+        ],
+        [
+          "h3",
+          "Directing speed from a motion reference"
+        ],
+        [
+          "p",
+          "For the fourth trial I wanted more than a run toward a gate. I brought in an anime reference for expressive camera turns, background blur and sparks beneath the shoes. I asked for the camera to come around from behind to a side profile, with the reference’s close-up and speed lines at the beginning. The contact sheet below shows the visual rhythm I was borrowing."
+        ],
+        [
+          "figure",
+          "speed-reference",
+          "Motion reference · Contact sheet from the anime clip I supplied during production. These are reference frames, not generated shots from my film.",
+          "Anime motion-reference contact sheet showing facial close-ups, speed lines, low running angles and sparks",
+          1536,
+          916
+        ],
+        [
+          "p",
+          "An early attempt fed the whole clip directly as a video guide and copied too much: the result brought over the anime look and another character. The successful version used only image references of my character and the corridor. The full motion reference was translated into written staging: a surprised close-up with streaks above and below, rear tracking, a move to the side, blurred walls and golden sparks around the shoes. FreeVideo generated the streaks and sparks inside the shot."
+        ],
+        [
+          "clip",
+          "speed-dynamic",
+          "Accepted speed insert v5 · 6.58 seconds, rear-to-side camera movement, generated streaks/sparks, retained music and the revised Russian cue.",
+          "speed-dynamic"
+        ]
+      ]
+    },
+    {
+      "id": "artifacts",
+      "nav": "Generation artifacts",
+      "title": "Generation artifacts",
+      "blocks": [
+        [
+          "h3",
+          "“Simulating” water with a local model"
+        ],
+        [
+          "p",
+          "Trial three was the most demanding sequence. The water needed to flow, stop against a wrongly aligned channel, reach the next obstruction after one turn and eventually drive the wheel. But the model kept forgetting to animate the water: the flow stayed frozen even though the scene depended on its movement. One successful moment did emerge: in the clip below, the water advances along the channel after the disc turns correctly. In that fragment, MiniMax surprised me with how convincing the movement looked."
+        ],
+        [
+          "clip",
+          "water-first-turn",
+          "Trial 3 · The correct first turn: water advances through disc A and stops inside disc B; the wheel remains still.",
+          "water-first-turn"
+        ],
+        [
+          "p",
+          "The prompt also had to specify what stayed still: the wheel should not start turning just because there is water somewhere in the shot."
+        ],
+        [
+          "h3",
+          "Detail lost through the keyframes"
+        ],
+        [
+          "p",
+          "At the same time, the GPT Image keyframes noticeably reduced the quality of the resulting video in this trial. In my attempts the character’s face and fine detail deteriorated. I tried adding a character reference to the video stage and later tried without it. A stronger video model could not simply recover detail and consistency that the input images had already lost. Qwen remained the main keyframe tool for the rest of the workflow."
+        ],
+        [
+          "h3",
+          "The hourglass did not work as well"
+        ],
+        [
+          "p",
+          "Trial four had a weaker detail: the hourglass. Its sand and mechanism were less convincing than the water in trial three. I liked the speed, camera angles and parrot much more than this prop."
+        ]
+      ]
+    },
+    {
+      "id": "film",
+      "nav": "The film",
+      "title": "Four minutes of local filmmaking",
+      "blocks": [
+        [
+          "film"
         ]
       ]
     },
@@ -61,6 +411,14 @@
         [
           "note",
           "The complete plot follows, including the gift and ending."
+        ],
+        [
+          "p",
+          "It began with a ninth birthday and a gift: a grey two-wheeled scooter. I wanted it to become the reward at the end of an adventure. In the original “Island of Nine Treasures”, the treasures represented qualities and wishes: courage, curiosity, ingenuity, speed, agility, persistence, loyal friends, luck and a big dream. Long generation times and a tight deadline led me to shorten the route to four trials. The title kept its connection to the ninth birthday."
+        ],
+        [
+          "p",
+          "Treasure Island inspired the pirate atmosphere and the mock-serious dossier. I made the dossier illustrated and used a photorealistic character based on photographic references for the other scenes."
         ],
         [
           "h3",
@@ -171,344 +529,6 @@
           "stars",
           "04:06 · The adventure ends with a personal birthday greeting on the beach.",
           "The character with a scooter beneath a starry sky and shooting star"
-        ]
-      ]
-    },
-    {
-      "id": "models",
-      "nav": "Choosing models",
-      "title": "A fast first attempt, then a much better image",
-      "blocks": [
-        [
-          "p",
-          "My first video attempt used Wan 2.2. It was quick, but that older model’s result looked terrible to me for this project. The sound was usable; the picture and action were not. Switching to MiniMax H3 through FreeVideo made a major difference, especially in close-up detail. That improvement came with much longer waits, and it still depended on good keyframes."
-        ],
-        [
-          "table",
-          "What I used",
-          [
-            "Task",
-            "Tool",
-            "Role"
-          ],
-          [
-            [
-              "Keyframes",
-              "Qwen Image 2.1",
-              "The principal image tool for connected scene states."
-            ],
-            [
-              "Some puzzle images",
-              "GPT Image",
-              "Alternative states and corrections in trial three."
-            ],
-            [
-              "Intelligible speech",
-              "Drama 3",
-              "Consistent voices, short lines, pauses and performance."
-            ],
-            [
-              "Video",
-              "MiniMax H3 / FreeVideo",
-              "Motion, camera movement and environmental sound."
-            ],
-            [
-              "Orchestration and editing",
-              "Codex, ComfyUI MCP, FFmpeg",
-              "Workflows, inputs, run records, sound mixing and assembly."
-            ]
-          ]
-        ],
-        [
-          "p",
-          "MiniMax H3 is the model; FreeVideo is the local inference tool I used to run it. Its documentation describes the VDN-H3 work from OpenVDN and Video DeltaNet. In this project I called FreeVideo through its CLI, while Qwen and Drama ran in local ComfyUI workflows through MCP."
-        ],
-        [
-          "p",
-          "Codex and ComfyUI MCP saved me a lot of manual setup. The agent found installed models, worked out how to use them, prepared workflows, connected nodes and kept the outputs organized. I still had to direct the scene and reject bad results. Many of the most useful instructions were specific observations: the river is frozen, the rope goes the wrong way, the character has not actually touched the sign."
-        ]
-      ]
-    },
-    {
-      "id": "memory",
-      "nav": "Memory and time",
-      "title": "16 GB of VRAM, and about 52 GB of system RAM",
-      "blocks": [
-        [
-          "p",
-          "I worked with an RTX 5070 Ti with 16 GB of VRAM. That is GPU memory, separate from system RAM. During a speech-generation run, I saw RAM usage reach roughly 52 GB. These are observations from my setup, not universal memory requirements for the models."
-        ],
-        [
-          "p",
-          "Other developers’ work made this practical. FreeVideo coordinates weights across VRAM, RAM and disk using techniques such as weight streaming, prefetching and chunked computation. My setup used its prepared int8 ConvRot cache. Qwen’s model and text encoder also used int8 ConvRot weights, while the installed Drama variant was named w4a8experts_bf16. Ready-made inference engines, compressed weights and ComfyUI integrations were essential parts of the pipeline."
-        ],
-        [
-          "p",
-          "I was building on the model developers’ work, OpenVDN and Video DeltaNet, FlashML-org’s FreeVideo, ComfyUI, PedroMarinhoDev’s Drama integration and the MCP tools. The agent helped connect those pieces. It did not invent the memory optimizations."
-        ],
-        [
-          "p",
-          "Speech generated relatively quickly even on the CPU. In my working setup, video took about a minute and a half per second of output at 24 fps. The basic settings were 1344 × 768, one pass and 16 steps. A ten-second test could mean fifteen minutes of waiting. A bad keyframe was expensive, so reviewing connected images before starting the video paid off."
-        ]
-      ]
-    },
-    {
-      "id": "details",
-      "nav": "Motion and its limits",
-      "title": "The little movements that make the scene work",
-      "blocks": [
-        [
-          "h3",
-          "Two camera changes that mattered"
-        ],
-        [
-          "p",
-          "The second clip of the bridge trial is an orbit around the character and the bridge. It reveals the valley’s depth, so courage becomes something visible. Earlier versions had a bridge barely above the ground, implausible ropes or a structure that looked far too safe. The camera move only helped once the location itself felt dangerous."
-        ],
-        [
-          "clip",
-          "bridge-camera",
-          "The second bridge clip: an orbit that reveals the drop.",
-          "bridge"
-        ],
-        [
-          "p",
-          "The second clip of the curiosity trial does a different job: it changes the view to show the blocked path from the character’s perspective. Showing the empty dead end before the character enters gives the viewer a chance to understand the problem. This was more useful than cutting straight to someone standing beside a sign."
-        ],
-        [
-          "clip",
-          "curiosity-camera",
-          "The second clip of trial two: establishing the dead end from a new viewpoint.",
-          "shell"
-        ],
-        [
-          "h3",
-          "Wind in the hair"
-        ],
-        [
-          "p",
-          "In scene four, while the character receives the map on deck, the hair moves in the wind. It is a tiny detail, but I immediately noticed it. Along with the sea behind the ship, that movement makes the location feel like an actual breezy deck rather than a portrait pasted onto a background."
-        ],
-        [
-          "clip",
-          "hair-wind",
-          "Scene 4 · Watch the hair move in the sea breeze while the character unfolds the map.",
-          "map"
-        ],
-        [
-          "h3",
-          "“Simulating” water with a local model"
-        ],
-        [
-          "p",
-          "Trial three was the most demanding sequence. The water needed to flow, stop against a wrongly aligned channel, reach the next obstruction after one turn and eventually drive the wheel. In the successful MiniMax shots, I was surprised by how plausible the movement looked."
-        ],
-        [
-          "clip",
-          "water-first-turn",
-          "Trial 3 · The correct first turn: water advances through disc A and stops inside disc B; the wheel remains still.",
-          "water-first-turn"
-        ],
-        [
-          "p",
-          "At the same time, the GPT Image keyframes noticeably reduced the quality of the resulting video in this trial. In my attempts the character’s face and fine detail deteriorated. I tried adding a character reference to the video stage and later tried without it. A stronger video model could not simply recover detail and consistency that the input images had already lost. Qwen remained the main keyframe tool for the rest of the workflow."
-        ],
-        [
-          "p",
-          "The prompt also had to specify what stayed still: the wheel should not start turning just because there is water somewhere in the shot."
-        ],
-        [
-          "h3",
-          "Taking things out of the chest"
-        ],
-        [
-          "p",
-          "I liked how MiniMax handled the character collecting the gift. Hands, lid, clothing, scooter and helmet needed to interact within one scene. First I replaced an unconvincing keyframe in which the chest seemed to open by itself; the character now held its lid. Later he actually took the things with him."
-        ],
-        [
-          "figure",
-          "belongings",
-          "03:33 · The character physically takes the gift out of the chest.",
-          "The character lifting the folded scooter in its case from the chest"
-        ],
-        [
-          "h3",
-          "The parrot was a highlight"
-        ],
-        [
-          "p",
-          "The parrot turned out particularly well. I made a separate video insert in which its beak tries to move with a human pirate line. Drama 3 provided the clear speech; the video supplied the performance. The result suggests a bird repeating a memorized phrase, without requiring me to pretend that every phoneme is perfectly synchronized."
-        ],
-        [
-          "figure",
-          "parrot",
-          "03:24 · Beak movement and a separately generated human voice create the performance.",
-          "A close-up of the parrot speaking beside the chest"
-        ],
-        [
-          "h3",
-          "The hourglass did not work as well"
-        ],
-        [
-          "p",
-          "Trial four had a weaker detail: the hourglass. Its sand and mechanism were less convincing than the water in trial three. I liked the speed, camera angles and parrot much more than this prop."
-        ],
-        [
-          "h3",
-          "Directing speed from a motion reference"
-        ],
-        [
-          "p",
-          "For the fourth trial I wanted more than a run toward a gate. I brought in an anime reference for expressive camera turns, background blur and sparks beneath the shoes. I asked for the camera to come around from behind to a side profile, with the reference’s close-up and speed lines at the beginning. The contact sheet below shows the visual rhythm I was borrowing."
-        ],
-        [
-          "figure",
-          "speed-reference",
-          "Motion reference · Contact sheet from the anime clip I supplied during production. These are reference frames, not generated shots from my film.",
-          "Anime motion-reference contact sheet showing facial close-ups, speed lines, low running angles and sparks",
-          1536,
-          916
-        ],
-        [
-          "p",
-          "An early attempt fed the whole clip directly as a video guide and copied too much: the result brought over the anime look and another character. The successful version used only image references of my character and the corridor. The full motion reference was translated into written staging: a surprised close-up with streaks above and below, rear tracking, a move to the side, blurred walls and golden sparks around the shoes. FreeVideo generated the streaks and sparks inside the shot."
-        ],
-        [
-          "clip",
-          "speed-dynamic",
-          "Accepted speed insert v5 · 6.58 seconds, rear-to-side camera movement, generated streaks/sparks, retained music and the revised Russian cue.",
-          "speed-dynamic"
-        ]
-      ]
-    },
-    {
-      "id": "voice",
-      "nav": "Voices and sound",
-      "title": "A performance assembled from several attempts",
-      "blocks": [
-        [
-          "p",
-          "I kept shared voice references for continuity and saved each scene’s actual lines beside its footage. The dossier used the recording I supplied. The narrator, short character lines and parrot used their own established references. Drama 3’s expressive tags, pauses and pronunciation choices made a substantial difference."
-        ],
-        [
-          "p",
-          "For the parrot I wanted a rolled ‘r’, a pause after the cannons and an excited finish. One attempt had a wonderfully inarticulate opening cry; another was cut off. I combined the first two seconds of the early cry with a later spoken version, removing its first half-second. The accident became a character moment: the chest opens, the parrot wakes with a squawk and launches into its rehearsed speech."
-        ],
-        [
-          "p",
-          "FreeVideo could supply useful sea, foliage, birds and sometimes music together with the picture. I used Drama 3 for intelligible speech. In the speed sequence, the video model added nonsense voices, so the sound needed further editing. Precisely timed cracks, impacts and mechanism sounds could be separate effects."
-        ],
-        [
-          "p",
-          "Not all the audio was generated. Early scenes used Kevin MacLeod’s Adventures in Adventureland, and the sea ambience came from Joseph Sardin / BigSoundBank. I kept the source and licensing records with the project; the attribution is also included below."
-        ]
-      ]
-    },
-    {
-      "id": "pipeline",
-      "nav": "The production pipeline",
-      "title": "The folder structure became the film’s memory",
-      "blocks": [
-        [
-          "p",
-          "Once experiments started piling up, I organized the project around scenes and clips. Each scene got its own images, source video, voice lines, effects, workflows and edit. Shared faces, costume, voices and music lived separately. That helped the agent return to the same character and props instead of reinventing them."
-        ],
-        [
-          "quote",
-          "Story → connected keyframes → review → speech and video → edit → review"
-        ],
-        [
-          "p",
-          "I kept each shot’s prompt, media.json, input images, seed and generation parameters next to its task. The scene README recorded results, feedback, versions, approvals and remaining work. A main index tracked the whole story. A render finishing was different from me accepting it; an interrupted attempt did not become a finished clip."
-        ],
-        [
-          "code",
-          "scenes/\n  README.md                  story and current status\n  NN-scene-name/\n    README.md                decisions and scene journal\n    frames/                  connected keyframes\n    video/raw/               original generations\n    video/drafts/rejected/   rejected attempts\n    audio/voice/             dialogue\n    audio/sfx/               precise effects\n    workflows/               prompts, inputs, seeds, settings\n    output/                  current complete scene\n      clips/                 copies of accepted clips\n    work/archive/            superseded edits\nshared/                      common identity, voices, music\noutput/assemblies/           full-film assemblies"
-        ],
-        [
-          "p",
-          "I kept originals in video/raw, copies of accepted clips in output/clips and only one current complete scene in the root of output. Previous full edits went to work/archive. Some transitions used the actual last frame of the previous clip, including the move away from the chest toward the night-time cliff."
-        ],
-        [
-          "h3",
-          "One achievement template, four trials"
-        ],
-        [
-          "p",
-          "The achievement graphics were a pleasant surprise. I made one SVG template with a medallion, frame, colours and type, then reused it with a different title and trial number. They were added during editing, so I could change the wording, screen position or timing without asking the video model to regenerate anything."
-        ],
-        [
-          "figure",
-          "bridge-achievement",
-          "01:11 · The overlay appears after the bridge landing, independently of the source footage.",
-          "A courage achievement graphic over the completed bridge trial"
-        ],
-        [
-          "p",
-          "Originally the courage badge appeared before the character had crossed. Moving it to the landing, around 1:10 of the full film, fixed the problem. The same separation made it easy to change the trial count to four while keeping the design consistent."
-        ]
-      ]
-    },
-    {
-      "id": "edit",
-      "nav": "Final edits",
-      "title": "Fixing the film without another generation",
-      "blocks": [
-        [
-          "p",
-          "Using the same keyframe at the end of one clip and the start of another preserved the composition but sometimes created a noticeable pause. I trimmed repeated poses and moved the lines and achievements with the edit. I also moved the narrator’s line about the failed attempt to a point on the timeline after the wrong turn had actually happened. To be honest, GPT Luna itself carried out all these editing changes."
-        ],
-        [
-          "table",
-          "The last edit notes",
-          [
-            "Problem",
-            "Change"
-          ],
-          [
-            [
-              "Bridge reward too early",
-              "Move it to the landing at 1:10."
-            ],
-            [
-              "Holds at puzzle joins",
-              "Trim duplicate poses in trials two and three."
-            ],
-            [
-              "Long freeze by the wheel",
-              "Remove another 2.5 seconds in v3."
-            ],
-            [
-              "Parrot cut too aggressively",
-              "Restore the flight and reaction: +1.75 seconds."
-            ],
-            [
-              "Waiting after packing",
-              "Remove 2.25 seconds before the departure."
-            ],
-            [
-              "Extra first-ride shot",
-              "Remove it before the birthday ending."
-            ]
-          ]
-        ],
-        [
-          "p",
-          "Assembly v2 ran for 253.208 seconds; v3 for 250.250. A few seconds matter when the character seems to be waiting for the next clip to start."
-        ],
-        [
-          "p",
-          "The useful outcome was a repeatable process: direct an action, check connected keyframes, generate manageable shots, then fix the rhythm from preserved materials. The last changes needed a new edit rather than a fresh round of slow video rendering."
-        ]
-      ]
-    },
-    {
-      "id": "film",
-      "nav": "The film",
-      "title": "Four minutes of local filmmaking",
-      "blocks": [
-        [
-          "film"
         ],
         [
           "sources",
@@ -546,5 +566,6 @@
       "Night-time zipline",
       "Birthday under the stars"
     ]
-  }
+  },
+  "introduction": "The useful outcome was a repeatable process: direct an action, check connected keyframes, generate manageable shots, then fix the rhythm from preserved materials. The last changes needed a new edit rather than a fresh round of slow video rendering."
 }

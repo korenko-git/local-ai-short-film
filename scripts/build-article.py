@@ -9,6 +9,7 @@ LABELS=['00:00','00:08','00:15','00:39','00:47','00:57','01:13','01:44','02:34',
 def esc(v):return html.escape(str(v),quote=True)
 def render(d):
     ui=d['ui'];lang=d['lang']
+    introduction=f'<p>{esc(d["introduction"])}</p>' if d.get('introduction') else ''
     def block(b):
         k=b[0]
         if k in ('p','h3'):return f'<{k}>{esc(b[1])}</{k}>'
@@ -39,7 +40,7 @@ def render(d):
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{esc(d['subtitle'])}"><meta property="og:type" content="article"><meta property="og:title" content="{esc(d['title'])}"><meta property="og:description" content="{esc(d['subtitle'])}"><meta name="author" content="Dmytro Korenko"><title>{esc(d['title'])}</title>{alt}<link rel="stylesheet" href="style.css"></head>
 <body data-enlarge="{esc(ui['enlarge'])}"><div class="progress" aria-hidden="true"></div><header class="masthead"><a href="#title">{esc(d['masthead'])}</a><nav class="languages" aria-label="{esc(ui['language'])}">{languages}</nav><span>{esc(d['date'])}</span></header>
 <main><section class="hero" aria-labelledby="title"><img src="assets/cover.jpg" alt="{esc(d['eyebrow'])}" width="1344" height="768" fetchpriority="high"><div class="hero-copy"><p class="eyebrow">{esc(d['eyebrow'])}</p><h1 id="title">{esc(d['title'])}</h1><p>{esc(d['subtitle'])}</p><a class="hero-link" href="#film">{esc(d['watch'])} ↗</a></div></section>
-<div class="intro"><p class="eyebrow">{esc(d['byline'])}</p><p class="lead">{esc(d['lead'])}</p><div class="facts">{stats}</div></div><div class="layout"><nav class="contents" aria-label="{esc(d['contents'])}"><p>{esc(d['contents'])}</p>{''.join(nav)}</nav><article>{''.join(sections)}</article></div></main>
+<div class="intro"><p class="eyebrow">{esc(d['byline'])}</p><p class="lead">{esc(d['lead'])}</p>{introduction}<div class="facts">{stats}</div></div><div class="layout"><nav class="contents" aria-label="{esc(d['contents'])}"><p>{esc(d['contents'])}</p>{''.join(nav)}</nav><article>{''.join(sections)}</article></div></main>
 <footer><p>{esc(d['title'])}</p><span>Dmytro Korenko · 2026</span><a href="#title">{esc(ui['back'])} ↑</a></footer><dialog class="lightbox" aria-label="{esc(ui['enlarge'])}"><button class="close" aria-label="{esc(ui['close'])}">{esc(ui['close'])} ×</button><img alt=""><p></p></dialog><script src="script.js"></script></body></html>'''
 def main():
     p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');args=p.parse_args()
