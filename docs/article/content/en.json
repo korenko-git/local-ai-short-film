@@ -49,7 +49,7 @@
             [
               "Keyframes",
               "Qwen Image 2.1",
-              "The principal image tool for connected scene states."
+              "The main model for keyframes."
             ],
             [
               "Some puzzle images",
@@ -75,6 +75,10 @@
         ],
         [
           "p",
+          "Most image, speech and video generation ran on my own PC. The exception was some of the water-puzzle keyframes, for which I used GPT Image through an external service."
+        ],
+        [
+          "p",
           "MiniMax H3 is the model; FreeVideo is the local inference tool I used to run it. Its documentation describes the VDN-H3 work from OpenVDN and Video DeltaNet. In this project I called FreeVideo through its CLI, while Qwen and Drama ran in local ComfyUI workflows through MCP."
         ],
         [
@@ -89,8 +93,34 @@
       "title": "16 GB of VRAM, and about 52 GB of system RAM",
       "blocks": [
         [
+          "table",
+          "PC configuration",
+          [
+            "Component",
+            "Specification"
+          ],
+          [
+            [
+              "Graphics card",
+              "NVIDIA GeForce RTX 5070 Ti"
+            ],
+            [
+              "Video memory",
+              "16 GB VRAM"
+            ],
+            [
+              "Processor",
+              "AMD Ryzen 7 9800X3D"
+            ],
+            [
+              "System memory",
+              "64 GB RAM"
+            ]
+          ]
+        ],
+        [
           "p",
-          "I worked with an RTX 5070 Ti with 16 GB of VRAM. That is GPU memory, separate from system RAM. During a speech-generation run, I saw RAM usage reach roughly 52 GB. These are observations from my setup, not universal memory requirements for the models."
+          "During one speech-generation run, occupied system memory reached roughly 52 GB. That was the total RAM in use on my system at that moment, rather than an isolated measurement of the model’s consumption. The graphics card has its own memory: 16 GB of VRAM."
         ],
         [
           "p",
@@ -144,7 +174,7 @@
       "blocks": [
         [
           "p",
-          "I entrusted the editing to GPT Luna in Codex. I described the changes I wanted, and Luna prepared and ran FFmpeg commands and Python scripts: trimming and joining clips, aligning sound with the picture, freezing selected areas of a frame and adding graphic overlays. These changes used the existing material, so they did not require another video generation."
+          "I entrusted the editing to GPT Luna, the model I used in the Codex agent for video work. I described the changes I wanted, and Luna prepared and ran FFmpeg commands and Python scripts: trimming and joining clips, aligning sound with the picture, freezing selected areas of a frame and adding graphic overlays. These changes used the existing material, so they did not require another video generation."
         ],
         [
           "h3",
@@ -204,7 +234,7 @@
         ],
         [
           "p",
-          "Assembly v2 ran for 253.208 seconds; v3 for 250.250. A few seconds matter when the character seems to be waiting for the next clip to start."
+          "Assembly v2 ran for 253.2 seconds; v3 for 250.3. A few seconds matter when the character seems to be waiting for the next clip to start."
         ],
         [
           "h3",
@@ -233,11 +263,11 @@
       "blocks": [
         [
           "p",
-          "I kept shared voice references for continuity and saved each scene’s actual lines beside its footage. The dossier used the recording I supplied. The narrator, short character lines and parrot used their own established references. Drama 3’s expressive tags, pauses and pronunciation choices made a substantial difference."
+          "To keep voices consistent across scenes, I used shared voice references and saved each scene’s actual lines beside its footage. The narrator, short character lines and parrot used their own established references. Drama 3’s expressive tags, pauses and pronunciation choices made a substantial difference."
         ],
         [
           "p",
-          "For the dossier, I supplied a voice recording and a ticking-clock sound, then added sea ambience."
+          "For the dossier, I supplied a recording with a cloned voice and a ticking-clock sound, then added sea ambience."
         ],
         [
           "p",
@@ -264,7 +294,7 @@
         ],
         [
           "p",
-          "The second clip of the bridge trial is an orbit around the character and the bridge. It reveals the valley’s depth, so courage becomes something visible. Earlier versions had a bridge barely above the ground, implausible ropes or a structure that looked far too safe. The camera move only helped once the location itself felt dangerous."
+          "The second clip of the bridge trial is an orbit around the character and the bridge. It reveals the valley’s depth and the height of the crossing ahead. The camera movement helps convey the danger."
         ],
         [
           "clip",
@@ -316,7 +346,7 @@
         ],
         [
           "p",
-          "The parrot turned out particularly well. I made a separate video insert in which its beak tries to move with a human pirate line. Drama 3 provided the clear speech; the video supplied the performance. The result suggests a bird repeating a memorized phrase, without requiring me to pretend that every phoneme is perfectly synchronized."
+          "The parrot turned out particularly well. I made a separate video insert in which its beak tries to move with a human pirate line. Drama 3 provided the clear speech; the video supplied the performance. The synchronization is imperfect, but the parrot is convincing, as though it were repeating a memorized phrase."
         ],
         [
           "figure",
@@ -814,7 +844,7 @@
         ],
         [
           "p",
-          "I decided to end the story in the spirit of the Tomb Raider series: after finding the treasure, the character escapes the cave along a sloping zipline leading straight to the beach. The scooter goes into a case. In the final staging, the character holds the handle of a suspended trolley with both hands, replacing the earlier idea of using ice axes."
+          "I decided to end the story in the spirit of the Tomb Raider series: after finding the treasure, the character descends along a sloping zipline straight to the beach. The scooter goes into a case. In the final staging, the character holds the handle of a suspended trolley with both hands, replacing the earlier idea of using ice axes."
         ],
         [
           "p",
@@ -861,7 +891,8 @@
       "Chest and gift",
       "Night-time zipline",
       "Birthday under the stars"
-    ]
+    ],
+    "seek": "Go to this moment in the film"
   },
   "introduction": "The useful outcome was a repeatable process: direct an action, check connected keyframes, generate manageable shots, then fix the rhythm from preserved materials. The last changes needed a new edit rather than a fresh round of slow video rendering."
 }

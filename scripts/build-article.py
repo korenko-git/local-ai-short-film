@@ -7,22 +7,37 @@ FILES={'en':'index.html','ru':'ru.html','uk':'uk.html'}
 TIMES=[0,8,15.292,38.583,46.583,56.708,73.458,103.667,153.833,182.667,210.167,233]
 LABELS=['00:00','00:08','00:15','00:39','00:47','00:57','01:13','01:44','02:34','03:03','03:30','03:53']
 def esc(v):return html.escape(str(v),quote=True)
+TIMECODE=re.compile(r'(?<![\w:])([0-5]?\d):([0-5]\d)(?:[,.](\d+))?(?:[–—-][0-5]?\d:[0-5]\d(?:[,.]\d+)?)?(?![\d:])')
+
+def timecoded(value,label):
+    value=str(value);parts=[];end=0
+    for match in TIMECODE.finditer(value):
+        seconds=int(match[1])*60+int(match[2])
+        if match[3]:seconds+=float('0.'+match[3])
+        stamp=match[0]
+        parts.append(esc(value[end:match.start()]))
+        parts.append(f'<a class="timecode" href="#film" data-time="{seconds:g}" aria-label="{esc(label)}: {esc(stamp)}">{esc(stamp)}</a>')
+        end=match.end()
+    parts.append(esc(value[end:]))
+    return ''.join(parts)
+
 def render(d):
     ui=d['ui'];lang=d['lang']
+    def text(value):return timecoded(value,ui['seek'])
     introduction=f'<p>{esc(d["introduction"])}</p>' if d.get('introduction') else ''
     def block(b):
         k=b[0]
-        if k in ('p','h3'):return f'<{k}>{esc(b[1])}</{k}>'
-        if k=='note':return f'<p class="note">{esc(b[1])}</p>'
-        if k=='quote':return f'<blockquote><p>{esc(b[1])}</p></blockquote>'
+        if k in ('p','h3'):return f'<{k}>{text(b[1])}</{k}>'
+        if k=='note':return f'<p class="note">{text(b[1])}</p>'
+        if k=='quote':return f'<blockquote><p>{text(b[1])}</p></blockquote>'
         if k=='code':return f'<pre><code>{esc(b[1])}</code></pre>'
         if k=='figure':
             width,height=b[4:6] if len(b)>=6 else (1344,768)
-            return f'<figure><img src="assets/{esc(b[1])}.jpg" alt="{esc(b[3])}" width="{width}" height="{height}" loading="lazy"><figcaption>{esc(b[2])}</figcaption></figure>'
+            return f'<figure><img src="assets/{esc(b[1])}.jpg" alt="{esc(b[3])}" width="{width}" height="{height}" loading="lazy"><figcaption>{text(b[2])}</figcaption></figure>'
         if k=='gallery':return '<div class="artifact-gallery">'+''.join(block(['figure',*item]) for item in b[1])+'</div>'
-        if k=='clip':return f'<figure class="clip-example"><video controls playsinline preload="none" poster="assets/{esc(b[3])}.jpg" aria-label="{esc(b[2])}"><source src="assets/{esc(b[1])}.mp4" type="video/mp4"></video><figcaption>{esc(b[2])}</figcaption></figure>'
+        if k=='clip':return f'<figure class="clip-example"><video controls playsinline preload="none" poster="assets/{esc(b[3])}.jpg" aria-label="{esc(b[2])}"><source src="assets/{esc(b[1])}.mp4" type="video/mp4"></video><figcaption>{text(b[2])}</figcaption></figure>'
         if k=='table':
-            head=''.join(f'<th scope="col">{esc(c)}</th>' for c in b[2]);rows=''.join('<tr>'+''.join(f'<td>{esc(c)}</td>' for c in r)+'</tr>' for r in b[3])
+            head=''.join(f'<th scope="col">{esc(c)}</th>' for c in b[2]);rows=''.join('<tr>'+''.join(f'<td>{text(c)}</td>' for c in r)+'</tr>' for r in b[3])
             return f'<div class="table-wrap"><table><caption>{esc(b[1])}</caption><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
         if k=='film':
             chapters=''.join(f'<li><button data-time="{t}">{label}</button> {esc(n)}</li>' for t,label,n in zip(TIMES,LABELS,ui['chapterNames']))

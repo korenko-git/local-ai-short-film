@@ -8,4 +8,17 @@ function preserveSection(fragment=location.hash){document.querySelectorAll('[dat
 addEventListener('hashchange',()=>preserveSection());preserveSection();
 const dialog=document.querySelector('.lightbox');let opener;
 if(typeof dialog.showModal==='function'){document.querySelectorAll('figure img').forEach(img=>{img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label',document.body.dataset.enlarge+': '+img.alt);function open(){opener=img;dialog.querySelector('img').src=img.src;dialog.querySelector('img').alt=img.alt;dialog.querySelector('p').textContent=img.closest('figure').querySelector('figcaption').textContent;dialog.showModal();}img.addEventListener('click',open);img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});dialog.querySelector('.close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});dialog.addEventListener('close',()=>opener?.focus());}
-const video=document.querySelector('#main-film');document.querySelectorAll('[data-time]').forEach(button=>button.addEventListener('click',()=>{const time=Number(button.dataset.time);function seek(){video.currentTime=time;video.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});video.focus();}if(video.readyState>=1)seek();else{video.addEventListener('loadedmetadata',seek,{once:true});video.load();}}));
+const video=document.querySelector('#main-film');
+document.querySelectorAll('[data-time]').forEach(control=>control.addEventListener('click',event=>{
+  event.preventDefault();
+  const time=Number(control.dataset.time);
+  document.querySelectorAll('video').forEach(clip=>{if(clip!==video)clip.pause();});
+  function seek(){
+    video.currentTime=time;
+    history.replaceState(null,'','#film');preserveSection('#film');
+    video.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    video.focus();
+  }
+  if(video.readyState>=1)seek();
+  else{video.addEventListener('loadedmetadata',seek,{once:true});video.load();}
+}));

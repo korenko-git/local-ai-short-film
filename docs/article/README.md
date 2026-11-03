@@ -20,4 +20,6 @@ Selected public stills and eight web videos live in `assets/`: the film, bridge 
 
 Artifact examples compare supplied keyframes with film frames and show puzzle development attempts. Galleries open images in the existing lightbox; small crops retain their natural size. The hourglass discussion distinguishes the supplied timer state from the bell-contact image actually used as the last frame in the video task. Proposed causes and manual keyframe cleanup remain hypotheses, not tested fixes.
 
+Timecodes in paragraphs, image/video captions and tables link to the corresponding moment in the main film. A range seeks to its start; fractional seconds are supported. Seeking pauses other example videos and does not start playback automatically. Full artifact galleries remain expanded.
+
 The Pages builder copies only referenced public files into `work/site-dist`, excluding content sources, local notes, chats, private inputs and machine inventories. See [general scene workflow](../SCENE-WORKFLOW.md) and [sources](SOURCES.md).
