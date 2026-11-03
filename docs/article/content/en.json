@@ -528,23 +528,12 @@
           "The references brought the scale and sense of danger I wanted, but new errors remained in the keyframe: rope railing on only one side, and three hands on the character—one holding the rope and two holding the rolled map. The agent missed them despite frequently regenerating other flawed images. I only noticed the extra hand near the end myself. By then I had started trusting Luna’s checks too much and was inspecting the results less carefully myself. At 00:56–00:58 it had already carried over into the final video. I left this example as a reminder to check both anatomy and the surrounding structure again after improving the composition."
         ],
         [
-          "gallery",
-          [
-            [
-              "artifact-bridge-key",
-              "Bridge keyframe · An extra hand is already visible around the rolled map.",
-              "Bridge keyframe · An extra hand is already visible around the rolled map.",
-              1376,
-              768
-            ],
-            [
-              "artifact-bridge-arm",
-              "00:56–00:58 · The video model carries the anatomy error into motion.",
-              "00:56–00:58 · The video model carries the anatomy error into motion.",
-              1344,
-              768
-            ]
-          ]
+          "figure",
+          "artifact-bridge-key",
+          "Bridge keyframe · An extra hand is already visible around the rolled map.",
+          "Bridge keyframe · An extra hand is already visible around the rolled map.",
+          1376,
+          768
         ],
         [
           "p",
