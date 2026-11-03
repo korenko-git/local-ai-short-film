@@ -82,5 +82,12 @@
     "source": "output/assemblies/film-scenes-01-12-review-v3.mp4",
     "seconds": 246,
     "kind": "frame_from_assembly_v3"
+  },
+  {
+    "asset": "assets/hero-4k.webp",
+    "source": "assets/cover.jpg",
+    "kind": "hero_image",
+    "width": 3840,
+    "height": 2194
   }
 ]

@@ -55,7 +55,7 @@ def render(d):
     return f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{esc(d['subtitle'])}"><meta property="og:type" content="article"><meta property="og:title" content="{esc(d['title'])}"><meta property="og:description" content="{esc(d['subtitle'])}"><meta name="author" content="Dmytro Korenko"><title>{esc(d['title'])}</title>{alt}<link rel="stylesheet" href="style.css"></head>
 <body data-enlarge="{esc(ui['enlarge'])}"><div class="progress" aria-hidden="true"></div><header class="masthead"><a href="#title">{esc(d['masthead'])}</a><nav class="languages" aria-label="{esc(ui['language'])}">{languages}</nav><span>{esc(d['date'])}</span></header>
-<main><section class="hero" aria-labelledby="title"><img src="assets/cover.jpg" alt="{esc(d['eyebrow'])}" width="1344" height="768" fetchpriority="high"><div class="hero-copy"><p class="eyebrow">{esc(d['eyebrow'])}</p><h1 id="title">{esc(d['title'])}</h1><p>{esc(d['subtitle'])}</p><a class="hero-link" href="#film">{esc(d['watch'])} ↗</a></div></section>
+<main><section class="hero" aria-labelledby="title"><img src="assets/hero-4k.webp" alt="{esc(d['eyebrow'])}" width="3840" height="2194" fetchpriority="high"><div class="hero-copy"><p class="eyebrow">{esc(d['eyebrow'])}</p><h1 id="title">{esc(d['title'])}</h1><p>{esc(d['subtitle'])}</p><a class="hero-link" href="#film">{esc(d['watch'])} ↗</a></div></section>
 <div class="intro"><p class="eyebrow">{esc(d['byline'])}</p><p class="lead">{esc(d['lead'])}</p>{introduction}<div class="facts">{stats}</div></div><div class="layout"><nav class="contents" aria-label="{esc(d['contents'])}"><p>{esc(d['contents'])}</p>{''.join(nav)}</nav><article>{''.join(sections)}</article></div></main>
 <footer><p>{esc(d['title'])}</p><span>Dmytro Korenko · 2026</span><a href="#title">{esc(ui['back'])} ↑</a></footer><dialog class="lightbox" aria-label="{esc(ui['enlarge'])}"><button class="close" aria-label="{esc(ui['close'])}">{esc(ui['close'])} ×</button><img alt=""><p></p></dialog><script src="script.js"></script></body></html>'''
 def main():
@@ -69,7 +69,7 @@ def main():
         if args.offline:
             text=text.replace('<link rel="stylesheet" href="style.css">','<style>'+(SITE/'style.css').read_text(encoding='utf-8')+'</style>')
             text=text.replace('<script src="script.js"></script>','<script>'+(SITE/'script.js').read_text(encoding='utf-8')+'</script>')
-            text=re.sub(r'(src|poster)="(assets/[^\"]+\.jpg)"',lambda m:m[1]+'="data:image/jpeg;base64,'+base64.b64encode((SITE/m[2]).read_bytes()).decode()+'"',text)
+            text=re.sub(r'(src|poster)="(assets/[^\"]+\.(?:jpg|webp))"',lambda m:m[1]+'="data:image/'+('webp' if m[2].endswith('.webp') else 'jpeg')+';base64,'+base64.b64encode((SITE/m[2]).read_bytes()).decode()+'"',text)
             (SITE/f'local-short-film-{d["lang"]}.html').write_text(text,encoding='utf-8')
         print(FILES[d['lang']],len(d['sections']),'sections')
 if __name__=='__main__':main()
