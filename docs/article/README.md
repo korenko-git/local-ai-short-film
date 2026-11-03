@@ -22,4 +22,6 @@ Artifact examples compare supplied keyframes with film frames and show puzzle de
 
 Timecodes in paragraphs, image/video captions and tables link to the corresponding moment in the main film. A range seeks to its start; fractional seconds are supported. Seeking pauses other example videos and does not start playback automatically. Full artifact galleries remain expanded.
 
+The article builder also copies the canonical achievement SVG template and Python renderer from `shared/graphics/`, fills a Russian first-trial SVG preview using only the standard library, and includes their download links and template source in the editing section. It does not execute the Pillow renderer. Offline exports embed the SVG preview; downloadable source files remain external.
+
 The Pages builder copies only referenced public files into `work/site-dist`, excluding content sources, local notes, chats, private inputs and machine inventories. See [general scene workflow](../SCENE-WORKFLOW.md) and [sources](SOURCES.md).

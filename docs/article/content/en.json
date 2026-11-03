@@ -242,7 +242,17 @@
         ],
         [
           "p",
-          "The achievement graphics were a pleasant surprise. I made one SVG template with a medallion, frame, colours and type, then reused it with a different title and trial number. They were added during editing, so I could change the wording, screen position or timing without asking the video model to regenerate anything."
+          "The achievement graphics were a pleasant surprise. GPT Luna created a shared SVG template with a medallion, frame, colours and type. For each trial, it filled in the title and number while keeping the design consistent. The graphics were added during editing, so the wording, screen position and timing could change without another video generation."
+        ],
+        [
+          "svg-example",
+          "achievement-example",
+          "Example from GPT Luna’s shared SVG template: the first trial’s achievement. The text stays Russian, as it is in the film.",
+          "Example from GPT Luna’s shared SVG template: the first trial’s achievement. The text stays Russian, as it is in the film."
+        ],
+        [
+          "p",
+          "Beside the template is render_trial_achievement.py. The script takes the trial number, title and total count, validates the number and adjusts the title font size to fit. It saves an SVG with those values filled in, then draws a separate transparent PNG with Pillow, first at twice the resolution and then down to 400 × 92. That PNG can be overlaid on video with FFmpeg."
         ],
         [
           "figure",
@@ -252,7 +262,7 @@
         ],
         [
           "p",
-          "Originally the courage badge appeared before the character had crossed. Moving it to the landing, around 1:10 of the full film, fixed the problem. The same separation made it easy to change the trial count to four while keeping the design consistent."
+          "Originally the courage badge appeared before the character had crossed. Luna moved it to the landing, around 1:10 of the full film. The same separation made it easy to change the trial count to four while keeping the design consistent."
         ]
       ]
     },
@@ -892,7 +902,10 @@
       "Night-time zipline",
       "Birthday under the stars"
     ],
-    "seek": "Go to this moment in the film"
+    "seek": "Go to this moment in the film",
+    "svgTemplate": "Download SVG template",
+    "rendererScript": "Download Python script",
+    "viewSVG": "View SVG template source"
   },
   "introduction": "The useful outcome was a repeatable process: direct an action, check connected keyframes, generate manageable shots, then fix the rhythm from preserved materials. The last changes needed a new edit rather than a fresh round of slow video rendering."
 }

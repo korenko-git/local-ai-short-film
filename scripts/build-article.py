@@ -1,11 +1,21 @@
 """Generate three equivalent buildless pages. Python standard library only."""
-import argparse,base64,html,json,re
+import argparse,base64,html,json,re,shutil
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'docs/article'
 FILES={'en':'index.html','ru':'ru.html','uk':'uk.html'}
 TIMES=[0,8,15.292,38.583,46.583,56.708,73.458,103.667,153.833,182.667,210.167,233]
 LABELS=['00:00','00:08','00:15','00:39','00:47','00:57','01:13','01:44','02:34','03:03','03:30','03:53']
+
+def prepare_achievement_example():
+    graphics=ROOT/'shared/graphics';assets=SITE/'assets'
+    template=(graphics/'trial-achievement-template.svg').read_text(encoding='utf-8')
+    (assets/'achievement-template.svg').write_text(template,encoding='utf-8')
+    values={'NUMBER':'1','TITLE':'СМЕЛОСТЬ','TITLE_SIZE':'29','SUBTITLE':'ИСПЫТАНИЕ 1 ИЗ 4'}
+    example=template
+    for key,value in values.items():example=example.replace('{{'+key+'}}',esc(value))
+    (assets/'achievement-example.svg').write_text(example,encoding='utf-8')
+    shutil.copy2(graphics/'render_trial_achievement.py',assets/'render_trial_achievement.py')
 def esc(v):return html.escape(str(v),quote=True)
 TIMECODE=re.compile(r'(?<![\w:])([0-5]?\d):([0-5]\d)(?:[,.](\d+))?(?:[–—-][0-5]?\d:[0-5]\d(?:[,.]\d+)?)?(?![\d:])')
 
@@ -35,6 +45,9 @@ def render(d):
             width,height=b[4:6] if len(b)>=6 else (1344,768)
             return f'<figure><img src="assets/{esc(b[1])}.jpg" alt="{esc(b[3])}" width="{width}" height="{height}" loading="lazy"><figcaption>{text(b[2])}</figcaption></figure>'
         if k=='gallery':return '<div class="artifact-gallery">'+''.join(block(['figure',*item]) for item in b[1])+'</div>'
+        if k=='svg-example':
+            template=(SITE/'assets/achievement-template.svg').read_text(encoding='utf-8')
+            return f'<figure class="svg-example"><img src="assets/{esc(b[1])}.svg" alt="{esc(b[3])}" width="400" height="92" loading="lazy"><figcaption>{text(b[2])}</figcaption></figure><p class="asset-downloads"><a href="assets/achievement-template.svg" download>{esc(ui["svgTemplate"])}</a> · <a href="assets/render_trial_achievement.py" download>{esc(ui["rendererScript"])}</a></p><details class="svg-source"><summary>{esc(ui["viewSVG"])}</summary><pre><code>{esc(template)}</code></pre></details>'
         if k=='clip':return f'<figure class="clip-example"><video controls playsinline preload="none" poster="assets/{esc(b[3])}.jpg" aria-label="{esc(b[2])}"><source src="assets/{esc(b[1])}.mp4" type="video/mp4"></video><figcaption>{text(b[2])}</figcaption></figure>'
         if k=='table':
             head=''.join(f'<th scope="col">{esc(c)}</th>' for c in b[2]);rows=''.join('<tr>'+''.join(f'<td>{text(c)}</td>' for c in r)+'</tr>' for r in b[3])
@@ -60,6 +73,7 @@ def render(d):
 <footer><p>{esc(d['title'])}</p><span>Dmytro Korenko · 2026</span><a href="#title">{esc(ui['back'])} ↑</a></footer><dialog class="lightbox" aria-label="{esc(ui['enlarge'])}"><button class="close" aria-label="{esc(ui['close'])}">{esc(ui['close'])} ×</button><img alt=""><p></p></dialog><script src="script.js"></script></body></html>'''
 def main():
     p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');args=p.parse_args()
+    prepare_achievement_example()
     items=[json.loads((SITE/'content'/f'{c}.json').read_text(encoding='utf-8')) for c in FILES]
     expected=[s['id'] for s in items[0]['sections']]
     for d in items:
@@ -69,7 +83,7 @@ def main():
         if args.offline:
             text=text.replace('<link rel="stylesheet" href="style.css">','<style>'+(SITE/'style.css').read_text(encoding='utf-8')+'</style>')
             text=text.replace('<script src="script.js"></script>','<script>'+(SITE/'script.js').read_text(encoding='utf-8')+'</script>')
-            text=re.sub(r'(src|poster)="(assets/[^\"]+\.(?:jpg|webp))"',lambda m:m[1]+'="data:image/'+('webp' if m[2].endswith('.webp') else 'jpeg')+';base64,'+base64.b64encode((SITE/m[2]).read_bytes()).decode()+'"',text)
+            text=re.sub(r'(src|poster)="(assets/[^\"]+\.(?:jpg|webp|svg))"',lambda m:m[1]+'="data:image/'+{'.jpg':'jpeg','.webp':'webp','.svg':'svg+xml'}[Path(m[2]).suffix]+';base64,'+base64.b64encode((SITE/m[2]).read_bytes()).decode()+'"',text)
             (SITE/f'local-short-film-{d["lang"]}.html').write_text(text,encoding='utf-8')
         print(FILES[d['lang']],len(d['sections']),'sections')
 if __name__=='__main__':main()
