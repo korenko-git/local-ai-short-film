@@ -1,0 +1,178 @@
+[
+  {
+    "asset": "assets/artifact-map-early.jpg",
+    "source": "docs/article/assets/film.mp4 at 52.2 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-map-late.jpg",
+    "source": "Filmmaker-supplied film frame, 03:01–03:03",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1347,
+    "height": 748
+  },
+  {
+    "asset": "assets/artifact-bridge-key.jpg",
+    "source": "scenes/06-courage-bridge/frames/approved/scene-06-courage-reference-bridge.png",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1376,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-bridge-arm.jpg",
+    "source": "docs/article/assets/film.mp4 at 57 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-water-key.jpg",
+    "source": "scenes/08-ingenuity-gate/frames/approved/scene08-puzzle-solved-gpt-image-v2.png",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "asset": "assets/artifact-timer-before.jpg",
+    "source": "scenes/09-speed/frames/approved/scene09-01-establish-v3.png",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-timer-after.jpg",
+    "source": "scenes/09-speed/frames/approved/scene09-02-timer-v6.png",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-timer-bell.jpg",
+    "source": "scenes/09-speed/frames/approved/scene09-03-bell-v1.png",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-timer-glitch.jpg",
+    "source": "Filmmaker-supplied film crop, 02:34–02:36",
+    "kind": "metadata-stripped viewing copy",
+    "width": 173,
+    "height": 278
+  },
+  {
+    "asset": "assets/artifact-water-step-1.jpg",
+    "source": "docs/article/assets/film.mp4 at 143 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-water-step-2.jpg",
+    "source": "docs/article/assets/film.mp4 at 144 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-water-step-3.jpg",
+    "source": "docs/article/assets/film.mp4 at 145 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-water-step-4.jpg",
+    "source": "docs/article/assets/film.mp4 at 145.2 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-water-step-5.jpg",
+    "source": "docs/article/assets/film.mp4 at 145.4 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-water-step-6.jpg",
+    "source": "docs/article/assets/film.mp4 at 145.7 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-water-step-7.jpg",
+    "source": "docs/article/assets/film.mp4 at 146.1 seconds; replacement for an unavailable supplied crop",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "asset": "assets/artifact-puzzle-candidate-1.jpg",
+    "source": "Filmmaker-supplied puzzle keyframe development example 1",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 731
+  },
+  {
+    "asset": "assets/artifact-puzzle-candidate-2.jpg",
+    "source": "Filmmaker-supplied puzzle keyframe development example 2",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 731
+  },
+  {
+    "asset": "assets/artifact-puzzle-candidate-3.jpg",
+    "source": "Filmmaker-supplied puzzle keyframe development example 3",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 731
+  },
+  {
+    "asset": "assets/artifact-puzzle-candidate-4.jpg",
+    "source": "Filmmaker-supplied puzzle keyframe development example 4",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 731
+  },
+  {
+    "asset": "assets/artifact-puzzle-candidate-5.jpg",
+    "source": "Filmmaker-supplied puzzle keyframe development example 5",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 731
+  },
+  {
+    "asset": "assets/artifact-puzzle-candidate-6.jpg",
+    "source": "Filmmaker-supplied puzzle keyframe development example 6",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "asset": "assets/artifact-hourglass.mp4",
+    "source": "docs/article/assets/film.mp4",
+    "seconds": 154,
+    "duration": 2.5,
+    "kind": "film excerpt; original audio retained"
+  },
+  {
+    "asset": "assets/artifact-speech.mp4",
+    "source": "docs/article/assets/film.mp4",
+    "seconds": 178,
+    "duration": 3,
+    "kind": "film excerpt; original audio retained"
+  },
+  {
+    "asset": "assets/artifact-speech.jpg",
+    "source": "docs/article/assets/film.mp4",
+    "seconds": 179,
+    "kind": "film frame",
+    "width": 1344,
+    "height": 768
+  }
+]

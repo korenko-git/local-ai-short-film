@@ -18,6 +18,7 @@ Shared SVG: `../../shared/graphics/trial-achievement-template.svg`; rendered sce
 
 ## Production journal
 
+- 2026-11-03: the filmmaker identified the third hand already present in `frames/approved/scene-06-courage-reference-bridge.png`, carried into the film around 00:56–00:58. Retained as a keyframe-review example in all three article editions; source images, footage and approval records are unchanged.
 - 2026-11-01: changed the badge from "ИСПЫТАНИЕ 1 ИЗ 8" to "ИСПЫТАНИЕ 1 ИЗ 4", rendered complete v2 and retained the earlier file.
 - 2026-11-02: left the current complete scene alone in the `output/` root, copied three accepted shots into `output/clips/` and archived complete v1. `video/raw/` originals did not move.
 - 2026-11-02: made the landing-timed montage revision described above; it awaits review.

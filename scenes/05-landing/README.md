@@ -11,6 +11,7 @@ Scene assembled in the selected sequence. Current result: `output/scene-05-landi
 
 ## Production journal
 
+- 2026-11-03: the article documents the viewer-facing map in the final film around 00:50–00:52. The filmmaker identified the missing action keyframe and need for a shared prop reference; no footage was changed.
 - 2026-11-01: material moved into the scene folder; status carried forward from the production plan.
 
 ## Material layout

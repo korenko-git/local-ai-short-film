@@ -139,5 +139,6 @@ These supplementary records belong to the versions described above; their presen
 
 ## Documentation maintenance
 
+- 2026-11-03: article artifact examples document the filmmaker's Qwen perspective/staging difficulties, more suitable but noisy/inconsistent GPT Image frames, and the shifted outlet in `scene08-puzzle-solved-gpt-image-v2.png` leading to uphill water. Manual cleanup remains an untested suggestion. Added viewing copies and film-frame sequence; original media and review states are unchanged.
 - 2026-11-02: added a web copy of `video/raw/scene08-correct-first-turn-v1.mp4` to all three article editions to illustrate water motion. Source media and review status are unchanged.
 - 2026-11-02: consolidated the complete production decisions, version history, artifact references and speech directions into this English README. Russian spoken/onscreen text is retained in quotation marks. No render or approval state changed.

@@ -19,6 +19,7 @@ def render(d):
         if k=='figure':
             width,height=b[4:6] if len(b)>=6 else (1344,768)
             return f'<figure><img src="assets/{esc(b[1])}.jpg" alt="{esc(b[3])}" width="{width}" height="{height}" loading="lazy"><figcaption>{esc(b[2])}</figcaption></figure>'
+        if k=='gallery':return '<div class="artifact-gallery">'+''.join(block(['figure',*item]) for item in b[1])+'</div>'
         if k=='clip':return f'<figure class="clip-example"><video controls playsinline preload="none" poster="assets/{esc(b[3])}.jpg" aria-label="{esc(b[2])}"><source src="assets/{esc(b[1])}.mp4" type="video/mp4"></video><figcaption>{esc(b[2])}</figcaption></figure>'
         if k=='table':
             head=''.join(f'<th scope="col">{esc(c)}</th>' for c in b[2]);rows=''.join('<tr>'+''.join(f'<td>{esc(c)}</td>' for c in r)+'</tr>' for r in b[3])

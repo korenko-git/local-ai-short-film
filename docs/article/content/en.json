@@ -359,6 +359,119 @@
       "blocks": [
         [
           "h3",
+          "A map for the viewer rather than the character"
+        ],
+        [
+          "p",
+          "At 00:50–00:52 the character seems to read the map, but its drawing faces the viewer. Without a dedicated keyframe for that action, the video model posed the character as though he were presenting a prop to the camera. At 03:01–03:03 the mistake returns, and the map itself differs from the one at the beginning. I should have made a shared reference for the map and other important props and reused it across scenes."
+        ],
+        [
+          "gallery",
+          [
+            [
+              "artifact-map-early",
+              "00:50–00:52 · The map faces the viewer although the character is supposed to read it.",
+              "00:50–00:52 · The map faces the viewer although the character is supposed to read it.",
+              1344,
+              768
+            ],
+            [
+              "artifact-map-late",
+              "03:01–03:03 · The pose repeats, but the map’s drawing and shape have changed.",
+              "03:01–03:03 · The pose repeats, but the map’s drawing and shape have changed.",
+              1347,
+              748
+            ]
+          ]
+        ],
+        [
+          "h3",
+          "A third hand inherited from a keyframe"
+        ],
+        [
+          "p",
+          "At 00:56–00:58 the character has a third hand. The mistake was already in the keyframe: one hand holds the rope and two more hold the rolled map. The agent missed it despite frequently regenerating other flawed images. I only noticed the extra hand near the end of production myself. I decided to leave it as a reminder to inspect keyframes carefully before generating video: an image error can carry over into motion."
+        ],
+        [
+          "gallery",
+          [
+            [
+              "artifact-bridge-key",
+              "Bridge keyframe · An extra hand is already visible around the rolled map.",
+              "Bridge keyframe · An extra hand is already visible around the rolled map.",
+              1376,
+              768
+            ],
+            [
+              "artifact-bridge-arm",
+              "00:56–00:58 · The video model carries the anatomy error into motion.",
+              "00:56–00:58 · The video model carries the anatomy error into motion.",
+              1344,
+              768
+            ]
+          ]
+        ],
+        [
+          "h3",
+          "Qwen missed the puzzle; GPT Image complicated the frames"
+        ],
+        [
+          "p",
+          "I could not get suitable keyframes for trial three from Qwen: in my attempts it struggled with the perspective and the idea of the water puzzle itself. Below are early staging attempts and a later GPT Image frame. The camera angle, channel shapes, character position and mechanism changed between attempts."
+        ],
+        [
+          "gallery",
+          [
+            [
+              "artifact-puzzle-candidate-1",
+              "Early attempt · An almost frontal view of the character and puzzle.",
+              "Early attempt · An almost frontal view of the character and puzzle.",
+              1280,
+              731
+            ],
+            [
+              "artifact-puzzle-candidate-2",
+              "Early attempt · An overhead view and square channel pieces.",
+              "Early attempt · An overhead view and square channel pieces.",
+              1280,
+              731
+            ],
+            [
+              "artifact-puzzle-candidate-3",
+              "Early attempt · A different perspective, character position and water route.",
+              "Early attempt · A different perspective, character position and water route.",
+              1280,
+              731
+            ],
+            [
+              "artifact-puzzle-candidate-4",
+              "Early attempt · The platform geometry and channel depth change.",
+              "Early attempt · The platform geometry and channel depth change.",
+              1280,
+              731
+            ],
+            [
+              "artifact-puzzle-candidate-5",
+              "Early attempt · Another angle on interacting with a square piece.",
+              "Early attempt · Another angle on interacting with a square piece.",
+              1280,
+              731
+            ],
+            [
+              "artifact-puzzle-candidate-6",
+              "Later GPT Image frame · Round discs and clearer staging, but a great deal of fine detail.",
+              "Later GPT Image frame · Round discs and clearer staging, but a great deal of fine detail.",
+              1280,
+              720
+            ]
+          ]
+        ],
+        [
+          "p",
+          "GPT Image understood the scene better, but its images were overloaded with fine detail and visual noise. The keyframes differed from one another, and the resulting video lost facial detail and image stability. I tried adding a character reference at the video stage and then tried without it. I think manually cleaning up and matching the GPT Image keyframes might have improved these fragments. I did not test that approach."
+        ],
+        [
+          "h3",
           "“Simulating” water with a local model"
         ],
         [
@@ -377,19 +490,142 @@
         ],
         [
           "h3",
-          "Detail lost through the keyframes"
+          "Water flowing up a wall"
         ],
         [
           "p",
-          "At the same time, the GPT Image keyframes noticeably reduced the quality of the resulting video in this trial. In my attempts the character’s face and fine detail deteriorated. I tried adding a character reference to the video stage and later tried without it. A stronger video model could not simply recover detail and consistency that the input images had already lost. Qwen remained the main keyframe tool for the rest of the workflow."
+          "The stream shifted in the solved-puzzle keyframe: the channel outlet sat below the point where water fed the wheel. The video model continued that geometry, sending the water uphill along the stone wall and into the wheel. It is less obvious in motion, but the frame sequence makes the broken physics clear. The successful first-disc turn above does not mean that the whole water sequence worked."
+        ],
+        [
+          "figure",
+          "artifact-water-key",
+          "Solved-puzzle keyframe · The height difference between the channel and wheel is already inconsistent.",
+          "Solved-puzzle keyframe · The height difference between the channel and wheel is already inconsistent.",
+          1672,
+          941
+        ],
+        [
+          "gallery",
+          [
+            [
+              "artifact-water-step-1",
+              "02:23 · Before the second disc turns.",
+              "02:23 · Before the second disc turns.",
+              1344,
+              768
+            ],
+            [
+              "artifact-water-step-2",
+              "02:24 · The disc changes position.",
+              "02:24 · The disc changes position.",
+              1344,
+              768
+            ],
+            [
+              "artifact-water-step-3",
+              "02:25 · Water reaches the channel outlet.",
+              "02:25 · Water reaches the channel outlet.",
+              1344,
+              768
+            ],
+            [
+              "artifact-water-step-4",
+              "02:25.2 · The channel ends below the wheel’s feed point.",
+              "02:25.2 · The channel ends below the wheel’s feed point.",
+              1344,
+              768
+            ],
+            [
+              "artifact-water-step-5",
+              "02:25.4 · Water begins climbing the wall.",
+              "02:25.4 · Water begins climbing the wall.",
+              1344,
+              768
+            ],
+            [
+              "artifact-water-step-6",
+              "02:25.7 · Water reaches the top of the stone projection.",
+              "02:25.7 · Water reaches the top of the stone projection.",
+              1344,
+              768
+            ],
+            [
+              "artifact-water-step-7",
+              "02:26.1 · The flow and spray rise toward the wheel.",
+              "02:26.1 · The flow and spray rise toward the wheel.",
+              1344,
+              768
+            ]
+          ]
         ],
         [
           "h3",
-          "The hourglass did not work as well"
+          "The hourglass flip"
         ],
         [
           "p",
-          "Trial four had a weaker detail: the hourglass. Its sand and mechanism were less convincing than the water in trial three. I liked the speed, camera angles and parrot much more than this prop."
+          "At 02:34–02:36 the model failed to flip the hourglass convincingly: the glass deforms instead of following a clear rotation. The sand and mechanism were less successful than the good water movement or camera work. I left this fragment in the film as an example of an error."
+        ],
+        [
+          "gallery",
+          [
+            [
+              "artifact-timer-before",
+              "Starting state · Sand below, gates closed.",
+              "Starting state · Sand below, gates closed.",
+              1344,
+              768
+            ],
+            [
+              "artifact-timer-after",
+              "Timer keyframe · Sand above, gates open. This shows the state after starting, not an intermediate rotation.",
+              "Timer keyframe · Sand above, gates open. This shows the state after starting, not an intermediate rotation.",
+              1344,
+              768
+            ],
+            [
+              "artifact-timer-bell",
+              "Actual last image in the video task · The character touches the bell; the sand is already above.",
+              "Actual last image in the video task · The character touches the bell; the sand is already above.",
+              1344,
+              768
+            ],
+            [
+              "artifact-timer-glitch",
+              "02:34–02:36 · An unconvincing intermediate hourglass state in the video.",
+              "02:34–02:36 · An unconvincing intermediate hourglass state in the video.",
+              173,
+              278
+            ]
+          ]
+        ],
+        [
+          "p",
+          "I checked the saved prompt.txt and media.json for scene09-start-v1. The prompt explicitly asks the glass to flip on horizontal side pivots after the bell, with the wooden stand fixed and the sand moving with the glass. The rotation instruction was therefore present. The actual inputs were the starting image and the bell-contact image, rather than the establish/timer pair shown above. Neither shows an intermediate rotation."
+        ],
+        [
+          "p",
+          "These materials suggest two possible difficulties: the model had to infer the rotation path between endpoint states, and the same 6.5 seconds also had to fit the bell, moving sand, opening gates and the character’s reaction. These are possible explanations rather than a proven diagnosis. A clearer intermediate frame and a separate short shot of the flip would be worth testing in another attempt."
+        ],
+        [
+          "clip",
+          "artifact-hourglass",
+          "02:34–02:36.5 · Final-film excerpt showing the failed flip in motion.",
+          "artifact-timer-glitch"
+        ],
+        [
+          "h3",
+          "Video-model speech becomes unintelligible"
+        ],
+        [
+          "p",
+          "At 02:58–03:01 I left an example of failed speech in the film. In my generations the video model struggled with voices in languages other than English, producing unintelligible sounds instead of a clear line. I kept the moment as an example of that limitation. For intelligible Russian dialogue elsewhere, I used Drama 3."
+        ],
+        [
+          "clip",
+          "artifact-speech",
+          "02:58–03:01 · Original final-film audio retained: the unintelligible speech is the point of this example.",
+          "artifact-speech"
         ]
       ]
     },
@@ -533,7 +769,7 @@
         [
           "sources",
           "About the material",
-          "I reconstructed this account from my production chats, scene journals, workflow records and the v3 edit timeline. Stills are extracted from that assembly without retouching; their captions show the frame timestamp, not the scene start. Model comparisons, water behaviour, image degradation, timing and RAM usage are observations from my own attempts rather than controlled benchmarks."
+          "I reconstructed this account from production chats, scene journals, workflows and the v3 timeline. Illustrations include film frames, original keyframes and crops I supplied; the captions distinguish them. Timecodes refer to the final assembly. Model comparisons, water motion, image degradation, speed and RAM figures are observations from my attempts rather than controlled benchmarks."
         ],
         [
           "credits",
