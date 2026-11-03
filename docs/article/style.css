@@ -14,3 +14,24 @@
 .timecode{white-space:nowrap;text-decoration-style:dotted;font-variant-numeric:tabular-nums}
 
 .svg-example img{display:block;width:400px;max-width:100%;height:auto;margin:0 auto}.asset-downloads{font:14px/1.6 Arial,sans-serif}.svg-source{margin-bottom:30px}
+
+/* Thumb-friendly section navigation on small screens. */
+.mobile-contents{display:none}
+@media(max-width:740px){
+  body{padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+  .contents{display:none}
+  .mobile-contents{display:block;position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:16px;right:16px;z-index:9;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 4px 24px #112b2926}
+  .mobile-contents summary{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;min-height:56px;padding:12px 15px;list-style:none;color:var(--ink);border-radius:12px}
+  .mobile-contents summary::-webkit-details-marker{display:none}
+  .mobile-contents-label{font:11px/1.4 Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+  .mobile-current{font:13px/1.5 Arial,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobile-contents summary svg{color:var(--accent)}
+  .mobile-contents[open] summary svg{transform:rotate(180deg)}
+  .mobile-contents nav{position:absolute;bottom:calc(100% + 8px);left:-1px;right:-1px;max-height:65vh;max-height:min(65dvh,480px);overflow-y:auto;overscroll-behavior:contain;padding:8px;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 4px 24px #112b2926}
+  .mobile-contents nav a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:7px;font:14px/1.5 Arial,sans-serif;color:var(--ink);text-decoration:none}
+  .mobile-contents nav a.active{background:#e3e8dc;color:var(--accent);font-weight:bold}
+}
+@media print{.mobile-contents{display:none!important}body{padding-bottom:0}}
+
+/* Reserve gallery space before lazy images acquire intrinsic dimensions. */
+.artifact-gallery img{width:100%;max-width:var(--gallery-width);max-height:none}

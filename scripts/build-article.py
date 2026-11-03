@@ -47,7 +47,9 @@ def render(d):
         if k=='code':return f'<pre><code>{esc(b[1])}</code></pre>'
         if k=='figure':
             width,height=b[4:6] if len(b)>=6 else (1344,768)
-            return f'<figure><img src="assets/{esc(b[1])}.jpg" alt="{esc(b[3])}" width="{width}" height="{height}" loading="lazy"><figcaption>{text(b[2])}</figcaption></figure>'
+            gallery_width=min(width,420*width/height)
+            dimensions=f'--gallery-width:{gallery_width:g}px;aspect-ratio:{width}/{height}'
+            return f'<figure><img src="assets/{esc(b[1])}.jpg" alt="{esc(b[3])}" width="{width}" height="{height}" style="{dimensions}" loading="lazy"><figcaption>{text(b[2])}</figcaption></figure>'
         if k=='gallery':return '<div class="artifact-gallery">'+''.join(block(['figure',*item]) for item in b[1])+'</div>'
         if k=='svg-example':
             template=(SITE/'assets/achievement-template.svg').read_text(encoding='utf-8')
@@ -74,7 +76,7 @@ def render(d):
 <body data-enlarge="{esc(ui['enlarge'])}"><div class="progress" aria-hidden="true"></div><header class="masthead"><a href="#title">{esc(d['masthead'])}</a><nav class="languages" aria-label="{esc(ui['language'])}">{languages}</nav><span>{esc(d['date'])}</span></header>
 <main><section class="hero" aria-labelledby="title"><img src="assets/hero-4k.webp" alt="{esc(d['eyebrow'])}" width="3840" height="2194" fetchpriority="high"><div class="hero-copy"><p class="eyebrow">{esc(d['eyebrow'])}</p><h1 id="title">{esc(d['title'])}</h1><p>{esc(d['subtitle'])}</p><a class="hero-link" href="#film">{esc(d['watch'])} ↗</a></div></section>
 <div class="intro"><p class="eyebrow">{esc(d['byline'])}</p><p class="lead">{esc(d['lead'])}</p>{introduction}<div class="facts">{stats}</div></div><div class="layout"><nav class="contents" aria-label="{esc(d['contents'])}"><p>{esc(d['contents'])}</p>{''.join(nav)}</nav><article>{''.join(sections)}</article></div></main>
-<footer><p>{esc(d['title'])}</p><span>Dmytro Korenko · 2026</span><a href="#title">{esc(ui['back'])} ↑</a></footer><dialog class="lightbox" aria-label="{esc(ui['enlarge'])}"><button class="close" aria-label="{esc(ui['close'])}">{esc(ui['close'])} ×</button><img alt=""><p></p></dialog><script src="script.js"></script></body></html>'''
+<footer><p>{esc(d['title'])}</p><span>Dmytro Korenko · 2026</span><a href="#title">{esc(ui['back'])} ↑</a></footer><details class="mobile-contents"><summary><span class="mobile-contents-label">{esc(ui['sections'])}</span><span class="mobile-current" data-placeholder="{esc(ui['chooseSection'])}">{esc(ui['chooseSection'])}</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="m5 11 4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><nav aria-label="{esc(ui['sections'])}">{''.join(nav)}</nav></details><dialog class="lightbox" aria-label="{esc(ui['enlarge'])}"><button class="close" aria-label="{esc(ui['close'])}">{esc(ui['close'])} ×</button><img alt=""><p></p></dialog><script src="script.js"></script></body></html>'''
 def main():
     p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');args=p.parse_args()
     prepare_achievement_example()

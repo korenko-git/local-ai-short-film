@@ -55,4 +55,3 @@ My PC had an **RTX 5070 Ti with 16 GB VRAM, AMD Ryzen 7 9800X3D and 64 GB RAM**.
 - [Article source](docs/article/README.md) — translations, assets and build instructions.
 - [Credits](CREDITS.md) — tools, music and source attribution.
 
-Selected footage, keyframes and failed examples are included with the article. Full production video archives, personal reference photographs and model weights are excluded. Shared voice references are in [shared/refs/audio](shared/refs/audio/README.md).
