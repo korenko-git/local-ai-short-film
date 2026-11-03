@@ -490,7 +490,7 @@
         ],
         [
           "p",
-          "The references brought the scale and sense of danger I wanted, but new errors remained in the keyframe: rope railing on only one side, and three hands on the character—one holding the rope and two holding the rolled map. The agent missed them despite frequently regenerating other flawed images. I only noticed the extra hand near the end myself. At 00:56–00:58 it had already carried over into the final video. I left this example as a reminder to check both anatomy and the surrounding structure again after improving the composition."
+          "The references brought the scale and sense of danger I wanted, but new errors remained in the keyframe: rope railing on only one side, and three hands on the character—one holding the rope and two holding the rolled map. The agent missed them despite frequently regenerating other flawed images. I only noticed the extra hand near the end myself. By then I had started trusting Luna’s checks too much and was inspecting the results less carefully myself. At 00:56–00:58 it had already carried over into the final video. I left this example as a reminder to check both anatomy and the surrounding structure again after improving the composition."
         ],
         [
           "gallery",
@@ -510,6 +510,18 @@
               768
             ]
           ]
+        ],
+        [
+          "p",
+          "There was a reason for that trust: Luna often spotted obvious failures on its own. For example, when creating an ending keyframe, the local model received the starting frame, an appearance reference for the character and a request to change his position. Instead of using the reference only to preserve his appearance, the model inserted it into the scene as a second character. Luna rejected that version. After seeing those checks work, both the agent and I found it easier to miss the extra hand in the bridge frame."
+        ],
+        [
+          "figure",
+          "artifact-reference-duplicate",
+          "Rejected keyframe · The appearance reference became a second character instead of helping reposition the original one.",
+          "Rejected keyframe · The appearance reference became a second character instead of helping reposition the original one.",
+          1280,
+          731
         ],
         [
           "h3",
