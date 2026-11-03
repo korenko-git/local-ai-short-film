@@ -386,11 +386,71 @@
         ],
         [
           "h3",
-          "A third hand inherited from a keyframe"
+          "The bridge keyframe: references helped, but did not fix everything"
         ],
         [
           "p",
-          "At 00:56–00:58 the character has a third hand. The mistake was already in the keyframe: one hand holds the rope and two more hold the rolled map. The agent missed it despite frequently regenerating other flawed images. I only noticed the extra hand near the end of production myself. I decided to leave it as a reminder to inspect keyframes carefully before generating video: an image error can carry over into motion."
+          "The agent first tried to make the keyframe with local Qwen. Instead of a test of courage, it produced safe-looking bridges: a short crossing almost at ground level, or a sturdy wooden structure with solid railings. Even once a deep valley appeared, the bridge itself looked too substantial. Replacing the timber rails with ropes still did not give it the precarious feel I wanted."
+        ],
+        [
+          "gallery",
+          [
+            [
+              "artifact-bridge-attempt-1",
+              "Early Qwen attempt · A short bridge above a shallow stream hardly looks like a trial.",
+              "Early Qwen attempt · A short bridge above a shallow stream hardly looks like a trial.",
+              1024,
+              576
+            ],
+            [
+              "artifact-bridge-attempt-2",
+              "Next attempt · There is height, but the bridge resembles a sturdy pedestrian crossing.",
+              "Next attempt · There is height, but the bridge resembles a sturdy pedestrian crossing.",
+              1280,
+              714
+            ],
+            [
+              "artifact-bridge-attempt-3",
+              "Another version · A wide deck and substantial railings still look reassuringly solid.",
+              "Another version · A wide deck and substantial railings still look reassuringly solid.",
+              1280,
+              714
+            ],
+            [
+              "artifact-bridge-attempt-4",
+              "Rope version · The materials change, but the deck and supports remain too substantial.",
+              "Rope version · The materials change, but the deck and supports remain too substantial.",
+              1280,
+              714
+            ]
+          ]
+        ],
+        [
+          "p",
+          "I only got the bridge I wanted after supplying photographs as references: a long suspended span, widely spaced boards and a pronounced sag. They helped communicate exactly what needed to look dangerous."
+        ],
+        [
+          "gallery",
+          [
+            [
+              "artifact-bridge-reference-1",
+              "Photographic reference I supplied · Widely spaced boards and rope construction. A real bridge photograph, not a film frame.",
+              "Photographic reference I supplied · Widely spaced boards and rope construction. A real bridge photograph, not a film frame.",
+              500,
+              694
+            ],
+            [
+              "artifact-bridge-reference-2",
+              "Second photographic reference I supplied · A long suspended span with a pronounced sag. A real bridge photograph, not project-generated imagery.",
+              "Second photographic reference I supplied · A long suspended span with a pronounced sag. A real bridge photograph, not project-generated imagery.",
+              739,
+              415
+            ]
+          ]
+        ],
+        [
+          "p",
+          "The references brought the scale and sense of danger I wanted, but new errors remained in the keyframe: rope railing on only one side, and three hands on the character—one holding the rope and two holding the rolled map. The agent missed them despite frequently regenerating other flawed images. I only noticed the extra hand near the end myself. At 00:56–00:58 it had already carried over into the final video. I left this example as a reminder to check both anatomy and the surrounding structure again after improving the composition."
         ],
         [
           "gallery",

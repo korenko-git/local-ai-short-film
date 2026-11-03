@@ -18,6 +18,7 @@ Shared SVG: `../../shared/graphics/trial-achievement-template.svg`; rendered sce
 
 ## Production journal
 
+- 2026-11-03: expanded the article with four filmmaker-supplied local-Qwen bridge attempts and two real-bridge photographic references. The user confirms that reference images produced the desired precarious span but the resulting keyframe had both a third hand and rope railing on only one side. Existing final-keyframe copies were deduplicated in the presentation; no production media or approval states changed.
 - 2026-11-03: the filmmaker identified the third hand already present in `frames/approved/scene-06-courage-reference-bridge.png`, carried into the film around 00:56–00:58. Retained as a keyframe-review example in all three article editions; source images, footage and approval records are unchanged.
 - 2026-11-01: changed the badge from "ИСПЫТАНИЕ 1 ИЗ 8" to "ИСПЫТАНИЕ 1 ИЗ 4", rendered complete v2 and retained the earlier file.
 - 2026-11-02: left the current complete scene alone in the `output/` root, copied three accepted shots into `output/clips/` and archived complete v1. `video/raw/` originals did not move.

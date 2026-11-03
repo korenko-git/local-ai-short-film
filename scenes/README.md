@@ -50,6 +50,7 @@ Storyboard: `../STORYBOARD.jpg`; the former `../STORYBOARD-OLD.jpg` is historica
 
 ## Production journal
 
+- 2026-11-03: expanded the bridge artifact account with early Qwen attempts, supplied photographic references and the resulting anatomy/railing errors. All article translations and generated pages updated; production media unchanged.
 - 2026-11-03: expanded the three-language article with the filmmaker's artifact review: map orientation/continuity, inherited third hand, puzzle keyframe development, uphill water, failed hourglass flip and unintelligible speech. Read the actual scene-09 prompt and endpoint references; proposed causes are labelled as hypotheses. Prepared metadata-stripped viewing copies and short final-film excerpts, preserving production media and approval records.
 - 2026-11-02: expanded all three article editions with scene 04 wind, scene 08 water motion and scene 09's accepted dynamic-camera insert, supplied motion-reference contact sheet and production history. Web copies preserve the original scene files and approval states.
 - 2026-11-02: assembled scenes 01–12 in order with common 1344 x 768 / 24 fps picture and 48 kHz stereo sound. Full-film review was not automatically recorded as acceptance.

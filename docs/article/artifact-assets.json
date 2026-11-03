@@ -174,5 +174,47 @@
     "kind": "film frame",
     "width": 1344,
     "height": 768
+  },
+  {
+    "asset": "assets/artifact-bridge-attempt-1.jpg",
+    "source": "Filmmaker-supplied early local Qwen bridge attempt 1",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1024,
+    "height": 576
+  },
+  {
+    "asset": "assets/artifact-bridge-attempt-2.jpg",
+    "source": "Filmmaker-supplied early local Qwen bridge attempt 2",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 714
+  },
+  {
+    "asset": "assets/artifact-bridge-attempt-3.jpg",
+    "source": "Filmmaker-supplied early local Qwen bridge attempt 3",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 714
+  },
+  {
+    "asset": "assets/artifact-bridge-attempt-4.jpg",
+    "source": "Filmmaker-supplied early local Qwen bridge attempt 4",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1280,
+    "height": 714
+  },
+  {
+    "asset": "assets/artifact-bridge-reference-1.jpg",
+    "source": "Filmmaker-supplied real-bridge reference photograph; not generated film imagery",
+    "kind": "metadata-stripped viewing copy",
+    "width": 500,
+    "height": 694
+  },
+  {
+    "asset": "assets/artifact-bridge-reference-2.jpg",
+    "source": "Filmmaker-supplied real-bridge reference photograph; not generated film imagery",
+    "kind": "metadata-stripped viewing copy",
+    "width": 739,
+    "height": 415
   }
 ]

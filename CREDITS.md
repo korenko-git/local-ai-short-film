@@ -21,3 +21,5 @@ Tools and models retain their upstream licenses. Model weights are not included.
 - Generated dialogue/environmental sound is documented in scene records. Reusable synthetic voice references are included under `shared/refs/audio/` with source notes and transcripts; the filmmaker approved their inclusion on 2 November 2026.
 
 Article illustrations include v3 film frames, selected generated keyframes and filmmaker-supplied crops; timestamps/provenance are in `docs/article/assets.json` and `docs/article/artifact-assets.json`. The site build excludes personal reference photographs, chats, raw generation archives and process logs. Selected failed examples are included for the artifact discussion. No blanket license is claimed over third-party material or personal likenesses.
+
+The bridge artifact discussion also reproduces two bridge reference photographs supplied during production. Captions identify them as photographic references, separate from generated film imagery; they are not claimed as original project photography.
