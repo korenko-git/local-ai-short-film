@@ -172,17 +172,17 @@ Not all the audio was generated. Early scenes used Kevin MacLeod’s Adventures 
 
 The second clip of the bridge trial is an orbit around the character and the bridge. It reveals the valley’s depth and the height of the crossing ahead. The camera movement helps convey the danger.
 
-[The second bridge clip: an orbit that reveals the drop.](../article/assets/bridge-camera.mp4?raw=true)
+[The second bridge clip: an orbit that reveals the drop.](../article/assets/bridge-camera.mp4)
 
 The second clip of the curiosity trial does a different job: it changes the view to show the blocked path from the character’s perspective. Showing the empty dead end before the character enters gives the viewer a chance to understand the problem. This was more useful than cutting straight to someone standing beside a sign.
 
-[The second clip of trial two: establishing the dead end from a new viewpoint.](../article/assets/curiosity-camera.mp4?raw=true)
+[The second clip of trial two: establishing the dead end from a new viewpoint.](../article/assets/curiosity-camera.mp4)
 
 ### Wind in the hair
 
 In scene four, while the character receives the map on deck, the hair moves in the wind. It is a tiny detail, but I immediately noticed it. Along with the sea behind the ship, that movement makes the location feel like an actual breezy deck rather than a portrait pasted onto a background.
 
-[Scene 4 · Watch the hair move in the sea breeze while the character unfolds the map.](../article/assets/hair-wind.mp4?raw=true)
+[Scene 4 · Watch the hair move in the sea breeze while the character unfolds the map.](../article/assets/hair-wind.mp4)
 
 ### Taking things out of the chest
 
@@ -212,7 +212,7 @@ Motion reference · Contact sheet from the anime clip I supplied during producti
 
 An early attempt fed the whole clip directly as a video guide and copied too much: the result brought over the anime look and another character. The successful version used only image references of my character and the corridor. The full motion reference was translated into written staging: a surprised close-up with streaks above and below, rear tracking, a move to the side, blurred walls and golden sparks around the shoes. FreeVideo generated the streaks and sparks inside the shot.
 
-[Accepted speed insert v5 · 6.58 seconds, rear-to-side camera movement, generated streaks/sparks, retained music and the revised Russian cue.](../article/assets/speed-dynamic.mp4?raw=true)
+[Accepted speed insert v5 · 6.58 seconds, rear-to-side camera movement, generated streaks/sparks, retained music and the revised Russian cue.](../article/assets/speed-dynamic.mp4)
 
 <a id="artifacts"></a>
 
@@ -306,7 +306,7 @@ GPT Image understood the scene better, but its images were overloaded with fine 
 
 Trial three was the most demanding sequence. The water needed to flow, stop against a wrongly aligned channel, reach the next obstruction after one turn and eventually drive the wheel. But the model kept forgetting to animate the water: the flow stayed frozen even though the scene depended on its movement. One successful moment did emerge: in the clip below, the water advances along the channel after the disc turns correctly. In that fragment, MiniMax surprised me with how convincing the movement looked.
 
-[Trial 3 · The correct first turn: water advances through disc A and stops inside disc B; the wheel remains still.](../article/assets/water-first-turn.mp4?raw=true)
+[Trial 3 · The correct first turn: water advances through disc A and stops inside disc B; the wheel remains still.](../article/assets/water-first-turn.mp4)
 
 The prompt also had to specify what stayed still: the wheel should not start turning just because there is water somewhere in the shot.
 
@@ -370,19 +370,19 @@ I checked the saved prompt.txt and media.json for scene09-start-v1. The prompt e
 
 These materials suggest two possible difficulties: the model had to infer the rotation path between endpoint states, and the same 6.5 seconds also had to fit the bell, moving sand, opening gates and the character’s reaction. These are possible explanations rather than a proven diagnosis. A clearer intermediate frame and a separate short shot of the flip would be worth testing in another attempt.
 
-[02:34–02:36.5 · Final-film excerpt showing the failed flip in motion.](../article/assets/artifact-hourglass.mp4?raw=true)
+[02:34–02:36.5 · Final-film excerpt showing the failed flip in motion.](../article/assets/artifact-hourglass.mp4)
 
 ### Video-model speech becomes unintelligible
 
 At 02:58–03:01 I left an example of failed speech in the film. In my generations the video model struggled with voices in languages other than English, producing unintelligible sounds instead of a clear line. I kept the moment as an example of that limitation. For intelligible Russian dialogue elsewhere, I used Drama 3.
 
-[02:58–03:01 · Original final-film audio retained: the unintelligible speech is the point of this example.](../article/assets/artifact-speech.mp4?raw=true)
+[02:58–03:01 · Original final-film audio retained: the unintelligible speech is the point of this example.](../article/assets/artifact-speech.mp4)
 
 <a id="film"></a>
 
 ## Four minutes of local filmmaking
 
-[Watch the film](../article/assets/film.mp4?raw=true)
+[Watch the film](../article/assets/film.mp4)
 
 Working cut v3 · 4:10.250 · Russian audio
 

@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="article/assets/film.mp4?raw=true">
+<a href="article/assets/film.mp4">
   <img src="article/assets/cover.jpg" alt="A sailing ship approaching a tropical island" width="100%">
 </a>
 
@@ -11,7 +11,7 @@
 <p><strong>4:10</strong> &nbsp;·&nbsp; <strong>12 scenes</strong> &nbsp;·&nbsp; <strong>3 days</strong> &nbsp;·&nbsp; <strong>16 GB VRAM</strong></p>
 
 <p>
-  <a href="article/assets/film.mp4?raw=true"><strong>▶ Watch the film</strong></a>
+  <a href="article/assets/film.mp4"><strong>▶ Watch the film</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#about-the-project">Behind the scenes</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;

@@ -31,12 +31,12 @@ def markdown(d):
         if k=='crosslink':return b[3]+'['+b[2]+'](#'+b[1]+').'
         if k=='figure':return '!['+b[3]+']('+asset+b[1]+'.jpg)\n\n'+b[2]
         if k=='gallery':return '\n\n'.join(block(['figure',*item]) for item in b[1])
-        if k=='clip':return '['+b[2]+']('+asset+b[1]+'.mp4?raw=true)'
+        if k=='clip':return '['+b[2]+']('+asset+b[1]+'.mp4)'
         if k=='svg-example':return '!['+b[3]+']('+asset+b[1]+'.svg)\n\n'+b[2]+'\n\n[SVG template]('+asset+'achievement-template.svg) · [Python renderer]('+asset+'render_trial_achievement.py)'
         if k=='table':
             row=lambda cells:'| '+' | '.join(str(c).replace('|','\\|').replace('\n','<br>') for c in cells)+' |'
             return b[1]+'\n\n'+row(b[2])+'\n'+row(['---']*len(b[2]))+'\n'+'\n'.join(row(r) for r in b[3])
-        if k=='film':return '['+d['watch']+']('+asset+'film.mp4?raw=true)\n\n'+d['ui']['filmLabel']
+        if k=='film':return '['+d['watch']+']('+asset+'film.mp4)\n\n'+d['ui']['filmLabel']
         if k=='sources':return '### '+b[1]+'\n\n'+b[2]
         if k=='credits':return b[1]+'\n\n[Credits](../CREDITS.md)'
         raise ValueError(k)
