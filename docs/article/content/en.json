@@ -1,7 +1,7 @@
 {
   "lang": "en",
   "title": "Generating a short film locally",
-  "subtitle": "How I turned a birthday greeting into a four-minute adventure with Codex, ComfyUI and a 16 GB graphics card.",
+  "subtitle": "How a four-minute birthday film turned into a three-day adventure with Codex, ComfyUI and a GPU with 16 GB of VRAM.",
   "eyebrow": "One character · four trials · a complete short film",
   "masthead": "A local filmmaking experiment",
   "date": "31 October – 2 November 2026",
@@ -162,7 +162,7 @@
         ],
         [
           "h3",
-          "Clip transitions and editing rhythm"
+          "Cuts and editing rhythm"
         ],
         [
           "p",
