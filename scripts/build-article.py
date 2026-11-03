@@ -37,7 +37,11 @@ def render(d):
     introduction=f'<p>{esc(d["introduction"])}</p>' if d.get('introduction') else ''
     def block(b):
         k=b[0]
-        if k in ('p','h3'):return f'<{k}>{text(b[1])}</{k}>'
+        if k=='p':return f'<p>{text(b[1])}</p>'
+        if k=='h3':
+            anchor=f' id="{esc(b[2])}"' if len(b)>2 else ''
+            return f'<h3{anchor}>{text(b[1])}</h3>'
+        if k=='crosslink':return f'<p>{esc(b[3])}<a href="#{esc(b[1])}">{esc(b[2])}</a>.</p>'
         if k=='note':return f'<p class="note">{text(b[1])}</p>'
         if k=='quote':return f'<blockquote><p>{text(b[1])}</p></blockquote>'
         if k=='code':return f'<pre><code>{esc(b[1])}</code></pre>'

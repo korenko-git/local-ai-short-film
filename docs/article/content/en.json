@@ -178,6 +178,40 @@
         ],
         [
           "h3",
+          "How Luna reviewed generated video"
+        ],
+        [
+          "p",
+          "After generation, Luna checked the result before editing. It used FFmpeg to extract one frame per second, resize the frames to 448 × 256 and assemble them into a 4 × 2 contact sheet. This put the sequence of actions in one image: the character’s location, changing pose and whether the intended action actually happened. It checked the file duration with ffprobe. In the example below, the clip lasted 6.58 seconds; seven frames filled seven cells, leaving the last empty."
+        ],
+        [
+          "figure",
+          "luna-video-review-contact",
+          "Scene 7 review contact sheet · Seven frames from a 6.58-second clip, sampled at one frame per second.",
+          "Scene 7 review contact sheet · Seven frames from a 6.58-second clip, sampled at one frame per second.",
+          1792,
+          512
+        ],
+        [
+          "p",
+          "When a result had an obvious error, Luna could reject it and restart generation on its own. That happened with the run in scene nine: instead of transferring the movement, the video guide pulled the result toward anime. Luna wrote in the production chat:"
+        ],
+        [
+          "quote",
+          "“This version does not work: the video-guide mode almost copied the anime… I’m rejecting it.”"
+        ],
+        [
+          "p",
+          "It then restarted the task using images of the character and corridor. The video reference became a staging guide translated into written direction: a close-up with speed lines, a camera move around to the side and running with sparks. This preserved the intended movement without copying the anime character."
+        ],
+        [
+          "crosslink",
+          "speed-reference",
+          "Directing speed from a motion reference",
+          "Full breakdown and final clip: "
+        ],
+        [
+          "h3",
           "Static text over a looping animation"
         ],
         [
@@ -366,7 +400,8 @@
         ],
         [
           "h3",
-          "Directing speed from a motion reference"
+          "Directing speed from a motion reference",
+          "speed-reference"
         ],
         [
           "p",

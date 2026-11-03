@@ -50,6 +50,7 @@ Storyboard: `../STORYBOARD.jpg`; the former `../STORYBOARD-OLD.jpg` is historica
 
 ## Production journal
 
+- 2026-11-03: added a contact-sheet example of Luna's video inspection and the recorded rejection/retry of the scene-09 anime-like sprint to the article's editing section. All translations and generated pages updated; production footage and approval records unchanged.
 - 2026-11-03: added the filmmaker's rejected duplicate-character example beside the article's missed third hand, explaining the risk of trusting successful agent checks too much. Viewing copy and all translations updated; production media and approval states unchanged.
 - 2026-11-03: expanded the bridge artifact account with early Qwen attempts, supplied photographic references and the resulting anatomy/railing errors. All article translations and generated pages updated; production media unchanged.
 - 2026-11-03: expanded the three-language article with the filmmaker's artifact review: map orientation/continuity, inherited third hand, puzzle keyframe development, uphill water, failed hourglass flip and unintelligible speech. Read the actual scene-09 prompt and endpoint references; proposed causes are labelled as hypotheses. Prepared metadata-stripped viewing copies and short final-film excerpts, preserving production media and approval records.

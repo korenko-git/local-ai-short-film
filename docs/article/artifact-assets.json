@@ -223,5 +223,14 @@
     "kind": "metadata-stripped viewing copy",
     "width": 1280,
     "height": 731
+  },
+  {
+    "asset": "assets/luna-video-review-contact.jpg",
+    "source": "Filmmaker-supplied scene-7 video-review contact sheet",
+    "kind": "metadata-stripped viewing copy",
+    "width": 1792,
+    "height": 512,
+    "review_filter": "fps=1,scale=448:256,tile=4x2",
+    "reviewed_video_seconds": 6.583333
   }
 ]

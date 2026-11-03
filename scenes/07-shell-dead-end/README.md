@@ -33,6 +33,8 @@ At joins between clips 3–6, six frames were removed from each side of the comm
 
 Article note, 3 November 2026: the filmmaker supplied a rejected duplicate-character image illustrating an appearance reference inserted into the edited scene. It accompanies the bridge third-hand discussion about overreliance on agent checks. This scene's `workflows/images/scene07-linked-keyframes-v1/run-arrival.json` also records `rejected_duplicate_character`; no exact run identity is inferred for the supplied image. Production media and approval states are unchanged.
 
+Article note, 3 November 2026: added the filmmaker-supplied review contact sheet for `scene07-curiosity-v2-raw.mp4`, with seven frames from 6.583333 s using `fps=1,scale=448:256,tile=4x2`. It illustrates Luna's post-generation inspection in the editing section. No footage or approval state changed.
+
 Originals remain in `video/raw/`; copies with the same filenames are in `output/clips/`:
 
 | Order | Filename | Action |
