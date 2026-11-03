@@ -1,7 +1,7 @@
 """Create web copies from preserved local footage. Requires FFmpeg."""
 import json,subprocess,shutil
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1];DEST=ROOT/'docs/article/assets'
+ROOT=Path(__file__).resolve().parents[1];DEST=ROOT/'article/assets'
 SOURCES={
     'film.mp4':'output/assemblies/film-scenes-01-12-review-v3.mp4',
     'bridge-camera.mp4':'scenes/06-courage-bridge/output/clips/scene06-orbit-hq.mp4',

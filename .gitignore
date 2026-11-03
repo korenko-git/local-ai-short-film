@@ -31,8 +31,8 @@
 *.wav
 *.flac
 *.mp3
-!docs/article/assets/*.mp4
-!docs/article/assets/*.mp3
+!article/assets/*.mp4
+!article/assets/*.mp3
 
 # Runtimes, models and secrets.
 __pycache__/
@@ -50,13 +50,13 @@ node_modules/
 *.pid
 .DS_Store
 Thumbs.db
-/docs/article/local-short-film-*.html
-/docs/article/matvey-island.html
+/article/local-short-film-*.html
+/article/matvey-island.html
 
 # Article pages are generated from content JSON during the Pages build.
-/docs/article/index.html
-/docs/article/ru.html
-/docs/article/uk.html
+/article/index.html
+/article/ru.html
+/article/uk.html
 
 # Explicitly approved voice-reference clips and their small encoded embeddings.
 !/shared/refs/audio/*.mp3

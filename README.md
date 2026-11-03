@@ -1,7 +1,7 @@
 <div align="center">
 
-<a href="https://github.com/korenko-git/local-ai-short-film/raw/refs/heads/main/docs/article/assets/film.mp4">
-  <img src="docs/article/assets/cover.jpg" alt="A sailing ship approaching a tropical island" width="100%">
+<a href="article/assets/film.mp4?raw=true">
+  <img src="article/assets/cover.jpg" alt="A sailing ship approaching a tropical island" width="100%">
 </a>
 
 <h1>Generating a Short Film Locally</h1>
@@ -11,7 +11,7 @@
 <p><strong>4:10</strong> &nbsp;·&nbsp; <strong>12 scenes</strong> &nbsp;·&nbsp; <strong>3 days</strong> &nbsp;·&nbsp; <strong>16 GB VRAM</strong></p>
 
 <p>
-  <a href="https://github.com/korenko-git/local-ai-short-film/raw/refs/heads/main/docs/article/assets/film.mp4"><strong>▶ Watch the film</strong></a>
+  <a href="article/assets/film.mp4?raw=true"><strong>▶ Watch the film</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#about-the-project">Behind the scenes</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -26,7 +26,7 @@
 
 ## About the project
 
-I made a four-minute birthday adventure using image, speech and video generation. This repository contains the production notes, prompts, workflows and the source of an [illustrated article](docs/article/README.md) about how it came together. Most generation ran on my PC; some water-puzzle keyframes were made with GPT Image through an external service.
+I made a four-minute birthday adventure using image, speech and video generation. This repository contains the production notes, prompts, workflows and the source of an [illustrated article](docs/ARTICLE.md) about how it came together. Most generation ran on my PC; some water-puzzle keyframes were made with GPT Image through an external service.
 
 The character arrives on an island, crosses a suspension bridge, finds a hidden path, solves a water puzzle and races through a closing gate. A chest, a talking parrot and a night-time zipline lead to the birthday ending.
 
@@ -52,6 +52,7 @@ My PC had an **RTX 5070 Ti with 16 GB VRAM, AMD Ryzen 7 9800X3D and 64 GB RAM**.
 - [Production workflow](docs/SCENE-WORKFLOW.md) — keyframes, generation and editing.
 - [ComfyUI MCP guide](docs/COMFY-MCP-LLM.md) — setup and working with the local tools.
 - [Generation notes](docs/GENERATION-LEGACY.md) — model files, settings and earlier experiments.
-- [Article source](docs/article/README.md) — translations, assets and build instructions.
+- [Article](docs/ARTICLE.md) — the full illustrated Markdown edition.
+- [Article source](article/README.md) — translations, assets and build instructions.
 - [Credits](CREDITS.md) — tools, music and source attribution.
 

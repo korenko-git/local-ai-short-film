@@ -14,7 +14,7 @@ FreeVideo may create ambience with video. Use Drama 3 for intelligible speech, a
 
 ## Public article
 
-Edit `docs/article/content/{en,ru,uk}.json`, then run `python scripts/build-article.py`. English is the default; translations must have matching sections. Write in the filmmaker's first person and call the protagonist the character (or the translation), rather than naming the child throughout the article. Do not invent approvals or measurements.
+Edit `article/content/{en,ru,uk}.json`, then run `python scripts/build-article.py`. English is the default; translations must have matching sections. Write in the filmmaker's first person and call the protagonist the character (or the translation), rather than naming the child throughout the article. Do not invent approvals or measurements.
 
 Run `python scripts/build-site.py` to stage and validate GitHub Pages files. Public pages must not link to private/local production directories. Exclude raw chats, local inventories, private reference inputs, weights and process logs. Preserve original footage when preparing smaller web copies. Preparation does not authorize a Git push or deployment.
 

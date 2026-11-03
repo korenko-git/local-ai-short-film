@@ -1,11 +1,51 @@
 """Generate three equivalent buildless pages. Python standard library only."""
-import argparse,base64,html,json,re,shutil
+import argparse,base64,html,json,re,shutil,os,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-SITE=ROOT/'docs/article'
+SITE=ROOT/'article'
 FILES={'en':'index.html','ru':'ru.html','uk':'uk.html'}
 TIMES=[0,8,15.292,38.583,46.583,56.708,73.458,103.667,153.833,182.667,210.167,233]
 LABELS=['00:00','00:08','00:15','00:39','00:47','00:57','01:13','01:44','02:34','03:03','03:30','03:53']
+
+def repository_url():
+    value=os.environ.get('GITHUB_REPOSITORY_URL','')
+    if not value:
+        result=subprocess.run(['git','remote','get-url','origin'],cwd=ROOT,capture_output=True,text=True)
+        value=result.stdout.strip()
+        if value.startswith('git@github.com:'):value='https://github.com/'+value.split(':',1)[1]
+        if value.endswith('.git'):value=value[:-4]
+    if not value.startswith(('https://','http://')):raise ValueError('Set GITHUB_REPOSITORY_URL to the public repository URL')
+    return value
+
+def markdown(d):
+    asset='../article/assets/'
+    lines=['# '+d['title'],'',d['subtitle'],'',d['byline'],'',d['lead'],'']
+    if d.get('introduction'):lines += [d['introduction'],'']
+    lines += [' · '.join(str(n)+' '+label for n,label in d['facts']),'']
+    def block(b):
+        k=b[0]
+        if k in ('p','note'):return b[1]
+        if k=='h3':return '### '+b[1]
+        if k=='quote':return '> '+b[1].replace('\n','\n> ')
+        if k=='code':return '```\n'+b[1]+'\n```'
+        if k=='crosslink':return b[3]+'['+b[2]+'](#'+b[1]+').'
+        if k=='figure':return '!['+b[3]+']('+asset+b[1]+'.jpg)\n\n'+b[2]
+        if k=='gallery':return '\n\n'.join(block(['figure',*item]) for item in b[1])
+        if k=='clip':return '['+b[2]+']('+asset+b[1]+'.mp4?raw=true)'
+        if k=='svg-example':return '!['+b[3]+']('+asset+b[1]+'.svg)\n\n'+b[2]+'\n\n[SVG template]('+asset+'achievement-template.svg) · [Python renderer]('+asset+'render_trial_achievement.py)'
+        if k=='table':
+            row=lambda cells:'| '+' | '.join(str(c).replace('|','\\|').replace('\n','<br>') for c in cells)+' |'
+            return b[1]+'\n\n'+row(b[2])+'\n'+row(['---']*len(b[2]))+'\n'+'\n'.join(row(r) for r in b[3])
+        if k=='film':return '['+d['watch']+']('+asset+'film.mp4?raw=true)\n\n'+d['ui']['filmLabel']
+        if k=='sources':return '### '+b[1]+'\n\n'+b[2]
+        if k=='credits':return b[1]+'\n\n[Credits](../CREDITS.md)'
+        raise ValueError(k)
+    for section in d['sections']:
+        lines += ['<a id="'+section['id']+'"></a>','', '## '+section['title'],'']
+        for b in section['blocks']:
+            if b[0]=='h3' and len(b)>2:lines += ['<a id="'+b[2]+'"></a>','']
+            lines += [block(b),'']
+    return '\n'.join(lines)
 
 def prepare_achievement_example():
     graphics=ROOT/'shared/graphics';assets=SITE/'assets'
@@ -74,7 +114,7 @@ def render(d):
     return f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{esc(d['subtitle'])}"><meta property="og:type" content="article"><meta property="og:title" content="{esc(d['title'])}"><meta property="og:description" content="{esc(d['subtitle'])}"><meta name="author" content="Dmytro Korenko"><title>{esc(d['title'])}</title>{alt}<link rel="stylesheet" href="style.css"></head>
 <body data-enlarge="{esc(ui['enlarge'])}"><div class="progress" aria-hidden="true"></div><header class="masthead"><a href="#title">{esc(d['masthead'])}</a><nav class="languages" aria-label="{esc(ui['language'])}">{languages}</nav><span>{esc(d['date'])}</span></header>
-<main><section class="hero" aria-labelledby="title"><img src="assets/hero-4k.webp" alt="{esc(d['eyebrow'])}" width="3840" height="2194" fetchpriority="high"><div class="hero-copy"><p class="eyebrow">{esc(d['eyebrow'])}</p><h1 id="title">{esc(d['title'])}</h1><p>{esc(d['subtitle'])}</p><a class="hero-link" href="#film">{esc(d['watch'])} ↗</a></div></section>
+<main><section class="hero" aria-labelledby="title"><img src="assets/hero-4k.webp" alt="{esc(d['eyebrow'])}" width="3840" height="2194" fetchpriority="high"><div class="hero-copy"><p class="eyebrow">{esc(d['eyebrow'])}</p><h1 id="title">{esc(d['title'])}</h1><p>{esc(d['subtitle'])}</p><div class="hero-actions"><a class="hero-link" href="#film">{esc(d['watch'])} ↗</a><a class="hero-link" href="{esc(repository_url())}">{esc(ui['repository'])} ↗</a></div></div></section>
 <div class="intro"><p class="eyebrow">{esc(d['byline'])}</p><p class="lead">{esc(d['lead'])}</p>{introduction}<div class="facts">{stats}</div></div><div class="layout"><nav class="contents" aria-label="{esc(d['contents'])}"><p>{esc(d['contents'])}</p>{''.join(nav)}</nav><article>{''.join(sections)}</article></div></main>
 <footer><p>{esc(d['title'])}</p><span>Dmytro Korenko · 2026</span><a href="#title">{esc(ui['back'])} ↑</a></footer><details class="mobile-contents"><summary><span class="mobile-contents-label">{esc(ui['sections'])}</span><span class="mobile-current" data-placeholder="{esc(ui['chooseSection'])}">{esc(ui['chooseSection'])}</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="m5 11 4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><nav aria-label="{esc(ui['sections'])}">{''.join(nav)}</nav></details><dialog class="lightbox" aria-label="{esc(ui['enlarge'])}"><button class="close" aria-label="{esc(ui['close'])}">{esc(ui['close'])} ×</button><img alt=""><p></p></dialog><script src="script.js"></script></body></html>'''
 def main():
@@ -86,6 +126,8 @@ def main():
         assert [s['id'] for s in d['sections']]==expected
         assert len(d['ui']['chapterNames'])==len(TIMES)
         text=render(d);(SITE/FILES[d['lang']]).write_text(text,encoding='utf-8')
+        mdname='ARTICLE.md' if d['lang']=='en' else f"ARTICLE.{d['lang']}.md"
+        (ROOT/'docs'/mdname).write_text(markdown(d),encoding='utf-8')
         if args.offline:
             text=text.replace('<link rel="stylesheet" href="style.css">','<style>'+(SITE/'style.css').read_text(encoding='utf-8')+'</style>')
             text=text.replace('<script src="script.js"></script>','<script>'+(SITE/'script.js').read_text(encoding='utf-8')+'</script>')

@@ -4,7 +4,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote,urlsplit
 ROOT=Path(__file__).resolve().parents[1]
-SOURCE=ROOT/'docs/article';DEST=ROOT/'work/site-dist'
+SOURCE=ROOT/'article';DEST=ROOT/'work/site-dist'
 class Links(HTMLParser):
     def __init__(self):super().__init__();self.refs=[];self.ids=[]
     def handle_starttag(self,tag,attrs):

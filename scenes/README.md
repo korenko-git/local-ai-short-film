@@ -33,7 +33,7 @@ The ending was simplified from earlier plans to three scenes: chest/gift, night-
 
 Read the selected scene README, [general workflow](../docs/SCENE-WORKFLOW.md), and [Comfy MCP guide](../docs/COMFY-MCP-LLM.md). Show connected frames before FreeVideo and wait for feedback. Update result paths, feedback, tasks, parameters and a short journal after work. Interrupted/rejected/unreviewed results are distinct from accepted ones. Never launch another scene while organizing files.
 
-Public article: [English](../docs/article/index.html), [Ukrainian](../docs/article/uk.html), [Russian](../docs/article/ru.html). The earlier local PDF in `output/pdf/` predates the multilingual rewrite.
+Public article: [English](../article/index.html), [Ukrainian](../article/uk.html), [Russian](../article/ru.html). The earlier local PDF in `output/pdf/` predates the multilingual rewrite.
 
 
 ## Ending development and continuity
@@ -49,6 +49,8 @@ Selected scene-11 clip 2 begins with clip 1's actual last frame and turns toward
 Storyboard: `../STORYBOARD.jpg`; the former `../STORYBOARD-OLD.jpg` is historical. The initial article/PDF edition was prepared from v3; the site now has equivalent English, Ukrainian and Russian first-person editions.
 
 ## Production journal
+
+- 2026-11-03: moved the public article source to root `article/`, generated three Markdown editions in `docs/`, and updated README/video links and the Actions repository URL. Article/site builds validated; no production media or approval states changed.
 
 - 2026-11-03: added a contact-sheet example of Luna's video inspection and the recorded rejection/retry of the scene-09 anime-like sprint to the article's editing section. All translations and generated pages updated; production footage and approval records unchanged.
 - 2026-11-03: added the filmmaker's rejected duplicate-character example beside the article's missed third hand, explaining the risk of trusting successful agent checks too much. Viewing copy and all translations updated; production media and approval states unchanged.

@@ -35,3 +35,5 @@
 
 /* Reserve gallery space before lazy images acquire intrinsic dimensions. */
 .artifact-gallery img{width:100%;max-width:var(--gallery-width);max-height:none}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center}

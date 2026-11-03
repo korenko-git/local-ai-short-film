@@ -943,7 +943,8 @@
     "rendererScript": "Download Python script",
     "viewSVG": "View SVG template source",
     "sections": "Sections",
-    "chooseSection": "Choose a section"
+    "chooseSection": "Choose a section",
+    "repository": "Repository"
   },
   "introduction": "The useful outcome was a repeatable process: direct an action, check connected keyframes, generate manageable shots, then fix the rhythm from preserved materials. The last changes needed a new edit rather than a fresh round of slow video rendering."
 }

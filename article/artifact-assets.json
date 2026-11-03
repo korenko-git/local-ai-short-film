@@ -1,7 +1,7 @@
 [
   {
     "asset": "assets/artifact-map-early.jpg",
-    "source": "docs/article/assets/film.mp4 at 52.2 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 52.2 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
@@ -22,7 +22,7 @@
   },
   {
     "asset": "assets/artifact-bridge-arm.jpg",
-    "source": "docs/article/assets/film.mp4 at 57 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 57 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
@@ -64,49 +64,49 @@
   },
   {
     "asset": "assets/artifact-water-step-1.jpg",
-    "source": "docs/article/assets/film.mp4 at 143 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 143 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
   },
   {
     "asset": "assets/artifact-water-step-2.jpg",
-    "source": "docs/article/assets/film.mp4 at 144 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 144 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
   },
   {
     "asset": "assets/artifact-water-step-3.jpg",
-    "source": "docs/article/assets/film.mp4 at 145 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 145 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
   },
   {
     "asset": "assets/artifact-water-step-4.jpg",
-    "source": "docs/article/assets/film.mp4 at 145.2 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 145.2 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
   },
   {
     "asset": "assets/artifact-water-step-5.jpg",
-    "source": "docs/article/assets/film.mp4 at 145.4 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 145.4 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
   },
   {
     "asset": "assets/artifact-water-step-6.jpg",
-    "source": "docs/article/assets/film.mp4 at 145.7 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 145.7 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
   },
   {
     "asset": "assets/artifact-water-step-7.jpg",
-    "source": "docs/article/assets/film.mp4 at 146.1 seconds; replacement for an unavailable supplied crop",
+    "source": "article/assets/film.mp4 at 146.1 seconds; replacement for an unavailable supplied crop",
     "kind": "metadata-stripped viewing copy",
     "width": 1344,
     "height": 768
@@ -155,21 +155,21 @@
   },
   {
     "asset": "assets/artifact-hourglass.mp4",
-    "source": "docs/article/assets/film.mp4",
+    "source": "article/assets/film.mp4",
     "seconds": 154,
     "duration": 2.5,
     "kind": "film excerpt; original audio retained"
   },
   {
     "asset": "assets/artifact-speech.mp4",
-    "source": "docs/article/assets/film.mp4",
+    "source": "article/assets/film.mp4",
     "seconds": 178,
     "duration": 3,
     "kind": "film excerpt; original audio retained"
   },
   {
     "asset": "assets/artifact-speech.jpg",
-    "source": "docs/article/assets/film.mp4",
+    "source": "article/assets/film.mp4",
     "seconds": 179,
     "kind": "film frame",
     "width": 1344,

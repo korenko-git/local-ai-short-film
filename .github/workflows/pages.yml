@@ -22,6 +22,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/build-article.py
+        env:
+          GITHUB_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
       - run: python scripts/build-site.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

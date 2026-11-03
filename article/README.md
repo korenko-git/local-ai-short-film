@@ -26,4 +26,6 @@ At widths up to 740 px, a fixed bottom section picker replaces the inline conten
 
 The article builder also copies the canonical achievement SVG template and Python renderer from `shared/graphics/`, fills a Russian first-trial SVG preview using only the standard library, and includes their download links and template source in the editing section. It does not execute the Pillow renderer. Offline exports embed the SVG preview; downloadable source files remain external.
 
-The Pages builder copies only referenced public files into `work/site-dist`, excluding content sources, local notes, chats, private inputs and machine inventories. See [general scene workflow](../SCENE-WORKFLOW.md) and [sources](SOURCES.md).
+The Pages builder copies only referenced public files into `work/site-dist`, excluding content sources, local notes, chats, private inputs and machine inventories. See [general scene workflow](../docs/SCENE-WORKFLOW.md) and [sources](SOURCES.md).
+
+The builder also generates the complete Markdown editions in `docs/ARTICLE.md`, `docs/ARTICLE.ru.md` and `docs/ARTICLE.uk.md`. README links to the English edition. Hero repository links use `GITHUB_REPOSITORY_URL` when supplied by Actions, otherwise the local origin remote.
